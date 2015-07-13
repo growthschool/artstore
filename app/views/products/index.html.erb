@@ -1,4 +1,26 @@
-<h1> Products </h1>
-<table class="table">
-  
-</table>
+<h1> Product List </h1>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <td> # </td>
+        <td> Product Pic </td>
+        <td> Name </td>
+        <td> Price </td>
+        <td> Options </td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td> <%= product.id %> </td>
+          <td>  </td>
+          <td> <%= product.title %> </td>
+          <td> <%= product.price %> </td>
+          <td>  </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
