@@ -1,2 +1,3 @@
 module Admin::ProductsHelper
+
 end
