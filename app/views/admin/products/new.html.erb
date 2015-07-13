@@ -1,21 +1,11 @@
-<%= form_for [:admin, @product] do |f| %>
-  <div class="form-group">
-    <%= f.label("標題：") %>
-    <%= f.text_field :title, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label("描述：") %>
-    <%= f.text_field :description, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label("數量：") %>
-    <%= f.text_field :quantity, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label("價格：") %>
-    <%= f.text_field :price, class: "form-control" %>
-  </div>
+<h2>新增產品</h2>
+<%= simple_form_for [:admin, @product] do |f| %>
+  <%= f.input :title, class: "form-control" %>
+  <%= f.input :description, class: "form-control" %>
+  <%= f.input :quantity, class: "form-control" %>
+  <%= f.input :price, class: "form-control" %>
 
+  <hr>
   <%= f.submit "送出", disabled_with: 'Submiting...', class: "btn btn-default" %>
 
 <% end %>
