@@ -1,0 +1,9 @@
+<h2> 後台管理 </h2>
+<%= link_to("新增", new_admin_product_path) %>
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <%= link_to(product.title, admin_products_path(product)) %>
+    </li>
+  <% end %>
+</ul>
