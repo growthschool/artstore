@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'carrierwave'
+gem 'mini_magick'
 gem 'simple_form'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5'

@@ -14,7 +14,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
         <li><%= link_to("產品", products_path) %></li>
-        <% if current_user.is_admin %>
+        <% if current_user && current_user.is_admin %>
         <li> <%= link_to("後台管理", admin_products_path) %> </li>
         <% end %>
       </ul>
