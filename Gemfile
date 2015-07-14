@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'annotate'
 gem 'rails', '4.2.2'
 gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
@@ -12,6 +13,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'simple_form'
 gem 'jbuilder', '~> 2.0'
+gem "mini_magick"
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
