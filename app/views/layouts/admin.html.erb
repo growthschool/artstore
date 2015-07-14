@@ -10,25 +10,18 @@
 
   <div class="container">
     <%= render "common/navbar" %>
+    <%= notice_message %>
 
     <div class="row">
       <div class="col-md-2 col-xs-2">
         <ul class="nav nav-pills nav-stacked">
           <li> <%= link_to("產品", admin_products_path) %> </li>
         </ul>
-
-
       </div>
       <div class="col-md-10 col-xs-10">
-
         <%= yield %>
       </div>
-
     </div>
-
-
-
-
 
   </div>
 </body>

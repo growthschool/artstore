@@ -18,7 +18,7 @@ class Admin::ProductsController < ApplicationController
     @product = Product.create(product_params)
 
     if @product.save
-      redirect_to(admin_products_path)
+      redirect_to admin_products_path
     else
       render :new
     end
