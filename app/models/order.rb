@@ -31,6 +31,11 @@ class Order < ActiveRecord::Base
     self.token = SecureRandom.uuid
   end
 
+
+  def paid?
+    is_paid
+  end
+  
 end
 
 # == Schema Information
