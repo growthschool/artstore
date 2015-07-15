@@ -18,7 +18,13 @@ class Order < ActiveRecord::Base
       item.save
     end
   end
-    
+
+
+  def calculate_total!(cart)
+    self.total = cart.total_price
+    self.save
+  end
+
 end
 
 # == Schema Information
