@@ -1,50 +1,41 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
       <a class="navbar-brand" href="/">ArtStore</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <%= link_to("Products", products_path) %>
-        </li>
-
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to("產品", products_path) %></li>
+        <% if current_user && current_user.is_admin %>
+        <li> <%= link_to("後台管理", admin_products_path) %> </li>
+        <% end %>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
 
-        <li> 
+      <ul class="nav navbar-nav navbar-right">
+        <li>
           <%= link_to "#" do  %>
             購物車 <i class="fa fa-shopping-cart"> </i> (0)
           <% end %>
         </li>
-
-
         <% if !current_user %>
         <li> <%= link_to("登入", new_user_session_path) %> </li>
         <% else %>
-
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            Hi!, <%= current_user.email %>  
-            <b class="caret"></b>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            嗨，<%= current_user.email %> <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <% if current_user.admin? %>
-              <li> 
-                <%= link_to("Admin 選單", admin_products_path ) %>
-              </li>
-            <% end %>
-            <li> 
-              <%= link_to("登出", destroy_user_session_path, :method => :delete ) %>
-            </li>
-
+            <li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li>
           </ul>
         </li>
-
-     
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

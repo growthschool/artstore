@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  
+
+  root 'products#index'
+
   devise_for :users
-  
-  namespace :admin do 
-    resources :products
-  end
 
   resources :products
 
-  root :to => "products#index"
+  namespace :admin do
+    resources :products
+  end
+
 end

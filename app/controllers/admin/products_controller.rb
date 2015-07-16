@@ -1,9 +1,13 @@
 class Admin::ProductsController < ApplicationController
-  
+
   layout "admin"
-  
+
   before_action :authenticate_user!
   before_action :admin_required
+
+  def index
+    @products = Product.all
+  end
 
   def new
     @product = Product.new
@@ -11,7 +15,7 @@ class Admin::ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(product_params)
+    @product = Product.create(product_params)
 
     if @product.save
       redirect_to admin_products_path
@@ -30,19 +34,14 @@ class Admin::ProductsController < ApplicationController
     if @product.update(product_params)
       redirect_to admin_products_path
     else
-      render :edit
-    end
+     render :edit
+   end
   end
-  
-  def index
-    @products = Product.all
-  end
-
 
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price, :photos_attributes => [:image] )
+    params.require(:product).permit(:title, :description, :quantity, :price, photos_attributes: [:image])
   end
 
 end

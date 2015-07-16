@@ -1,6 +1,5 @@
 module ApplicationHelper
 
-
   def notice_message
     alert_types = { :notice => :success, :alert => :danger }
 
@@ -18,5 +17,4 @@ module ApplicationHelper
 
     alerts.join("\n").html_safe
   end
-  
 end
