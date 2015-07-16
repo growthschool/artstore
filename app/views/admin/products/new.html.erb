@@ -1,19 +1,10 @@
-<%= form_for [:admin, @product] do |f| %>
-  <div class="group">
-    <%= f.label("標題") %>
-    <%= f.text_field :title %>
-  </div>
-  <div class="group">
-    <%= f.label("敘述") %>
-    <%= f.text_area :description %>
-  </div>
-  <div class="group">
-    <%= f.label("數量") %>
-    <%= f.text_field :quantity %>
-  </div>
-  <div class="group">
-    <%= f.label("價錢") %>
-    <%= f.text_field :price %>
-  </div>
-  <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+<%= simple_form_for [:admin, @product] do |f| %>
+  <%= f.input :title, label: "標題" %>
+  <%= f.input :description, label: "敘述" %>
+  <%= f.input :quantity, label: "數量" %>
+  <%= f.input :price, label: "價錢" %>
+  <%= f.simple_fields_for :photos do |c| %>
+  	<%= c.input :image, label: "上傳商品圖片", as: :file %>
+  <% end  %>
+  <%= f.button :submit, "新增商品", :disable_with => 'Submiting...' %>
 <% end %>

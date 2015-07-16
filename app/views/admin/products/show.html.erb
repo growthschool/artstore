@@ -1,0 +1,4 @@
+<h1>Hello, show <%= @product.title %></h1>
+<% @product.photos.each do |thing| %>
+	<%= image_tag thing.image %>
+<% end %>
