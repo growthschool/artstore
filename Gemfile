@@ -1,5 +1,16 @@
 source 'https://rubygems.org'
 
+# addtional packages
+gem "bootstrap-sass"
+gem "devise"
+gem "simple_form"
+gem "carrierwave"
+gem "mini_magick"
+gem "font-awesome-rails"
+
+group :development do
+  gem "annotate"
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
