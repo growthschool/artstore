@@ -15,4 +15,6 @@ module ProductsHelper
 
     image_tag(image_url, :class => "thumbnail")
   end
+
+  
 end
