@@ -1,12 +1,10 @@
 <div class="row">
   <div class="col-xs-6 col-md-3">
-    
     <% @products.each do |product| %>
       <%= link_to product_path(product) do %>
-        <%= image_tag(product.photos.first.image.small.url) %>
+        <%= image_tag(product.default_photo.image.small.url) %>
       <% end %>
       <%= product.title %> $ <%= product.price %>
     <% end %>
-
   </div> 
 </div>
