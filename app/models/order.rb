@@ -6,7 +6,8 @@ class Order < ActiveRecord::Base
   has_one :info, class_name: "OrderInfo", dependent: :destroy
 
   accepts_nested_attributes_for :info
-
+  
+  scope :recent, -> { order("id DESC")}
 
 
   def build_item_cache_from_cart(cart)
