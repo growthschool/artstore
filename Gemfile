@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+group :development do
+  gem "annotate"
+end
+
+gem "font-awesome-rails"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'simple_form'
