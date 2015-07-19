@@ -1,31 +1,48 @@
 class Admin::ProductsController < ApplicationController
 
-  before_action :authenticate_user!  #必須要先登入才能存取後台
-  before_action :admin_required      #登入後台的使用者必須是admin
+  layout "admin"
 
+  before_action :authenticate_user!
+  before_action :admin_required
+ 
   def new
     @product = Product.new
+    @photo = @product.photos.new
   end
-
+ 
   def create
     @product = Product.new(product_params)
-
+ 
     if @product.save
       redirect_to admin_products_path
     else
       render :new
     end
   end
-
-  def index                    #建立後台產品列表
+ 
+  def edit
+    @product = Product.find(params[:id])
+  end
+ 
+  def update
+    @product = Product.find(params[:id])
+ 
+    if @product.update(product_params)
+      redirect_to admin_products_path
+    else
+      render :edit
+    end
+  end
+  
+  def index
     @products = Product.all
   end
-
-
+ 
+ 
   private
-
+ 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price)
+    params.require(:product).permit(:title, :description, :quantity, :price, :photos_attributes => [:image] )
   end
 
 end
