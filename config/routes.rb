@@ -6,6 +6,12 @@ Rails.application.routes.draw do
 
   resources :products
 
+  resources :products do
+    member do
+      post :add_to_cart
+    end
+  end
+
   root :to => "products#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
