@@ -11,11 +11,11 @@ class Admin::ProductsController < ApplicationController
 
   def new
     @product = Product.new
-    @photo = @product.photos.new
+    @photos = @product.photos.new
   end
 
   def create
-    @product = Product.create(product_params)
+    @product = Product.new(product_params)
 
     if @product.save
       redirect_to admin_products_path
