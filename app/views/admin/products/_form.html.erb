@@ -1,0 +1,27 @@
+<%= simple_form_for [:admin, @product] do |f| %>
+ 
+  <div class="group">
+    <%= f.input :title %>
+  </div>
+  
+  <div class="group">
+    <%= f.fields_for :photos do |ff| %>
+      <%= ff.input :image %>
+    <% end %>
+  </div>
+
+  <div class="group">
+    <%= f.input :description %>
+  </div>
+  
+  <div class="group">
+    <%= f.input :quantity %>
+  </div>
+  
+  <div class="group">
+    <%= f.input :price %>
+  </div>
+ 
+  <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+ 
+<% end %>
