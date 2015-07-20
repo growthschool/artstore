@@ -1,5 +1,15 @@
- <div class="row">
-   <div class="col-md-12">
+<div class="row">
+  <div class="col-md-12">
+    <%=
+      link_to(
+        "清空購物車",
+        clean_carts_path ,
+        method: :delete ,
+        :class => "pull-right",
+        :style => "text-decoration: underline;",
+        data: { confirm: "你確定要清空整個購物車嗎？"}
+      )
+    %>
 
     <h2> 購物車 </h2>
 
@@ -12,13 +22,13 @@
         </tr>
       </thead>
       <tbody>
-        <% current_cart.items.each do |product| %>
+        <% current_cart.cart_items.each do |item| %>
         <tr>
-          <td><%= render_product_photo(product.default_photo) %></td>
+          <td><%= render_product_photo(item.product.default_photo) %></td>
             <td>
-              <%= link_to(product.title, product_path(product)) %>
+              <%= link_to(item.product.title, product_path(item.product)) %>
             </td>
-            <td> <%= product.price %> </td>
+            <td> <%= item.product.price %> </td>
           </tr>
           <% end %>
         </tbody>
