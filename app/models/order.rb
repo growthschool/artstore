@@ -11,6 +11,14 @@ class Order < ActiveRecord::Base
     self.token = SecureRandom.uuid
   end
 
+  def paid?
+    is_paid
+  end
+
+  def pay!
+    self.update_column(:is_paid, true )
+  end
+
   def build_item_cache_from_cart(cart)
     cart.items.each do |cart_item|
       item = items.build
@@ -25,19 +33,25 @@ class Order < ActiveRecord::Base
     self.total = cart.total_price
     self.save
   end
+
+  def set_payment_with!(method)
+    self.update_column(:payment_method, method)
+  end
 end
 
 # == Schema Information
 #
 # Table name: orders
 #
-#  id         :integer          not null, primary key
-#  user_id    :integer
-#  total      :integer          default(0)
-#  paid       :boolean          default(FALSE)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  token      :string
+#  id             :integer          not null, primary key
+#  user_id        :integer
+#  total          :integer          default(0)
+#  paid           :boolean          default(FALSE)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  token          :string
+#  is_paid        :boolean          default(FALSE)
+#  payment_method :string
 #
 # Indexes
 #
