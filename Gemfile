@@ -6,7 +6,10 @@ gem 'devise'
 gem 'bootstrap-sass'
 # web form
 gem 'simple_form'
-
+# add schema to each models
+gem 'annotate'
+# shopping cart
+gem 'font-awesome-rails'
 # image upload
 gem 'carrierwave'
 # image process
