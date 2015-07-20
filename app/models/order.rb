@@ -1,4 +1,11 @@
 class Order < ActiveRecord::Base
+
+  before_create :generate_token
+
+  def generate_token
+    self.token = SecureRandom.uuid
+  end
+
   belongs_to :user
   has_many :items, :class_name => "OrderItem", :dependent => :destroy
   has_one :info, :class_name => "OrderInfo", :dependent => :destroy
