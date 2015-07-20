@@ -18,5 +18,7 @@ Rails.application.routes.draw do
 	  end
   end
 
+  resources :orders
+  
   root :to => "products#index"
 end
