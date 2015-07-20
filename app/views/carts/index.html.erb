@@ -19,6 +19,7 @@
           <th>商品資訊</th>
           <th></th>
           <th>單價</th>
+          <th>操作選項 </th>
         </tr>
       </thead>
       <tbody>
@@ -29,6 +30,10 @@
               <%= link_to(item.product.title, product_path(item.product)) %>
             </td>
             <td> <%= item.product.price %> </td>
+            <td> <%= link_to  cart_item_path(current_cart, item), :method => :delete do %>
+              <i class="fa fa-trash"></i>
+              <% end %>
+            </td>
           </tr>
           <% end %>
         </tbody>
