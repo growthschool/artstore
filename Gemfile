@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'aasm'
 group :development do
   gem 'annotate'
 end
