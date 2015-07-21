@@ -1,6 +1,8 @@
 class Order < ActiveRecord::Base
   include AASM
 
+  scope :recent, -> { order("id DESC")}
+
   aasm do
     state :order_placed, initial: true
     state :paid,         after_commit: :pay!

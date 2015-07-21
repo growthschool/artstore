@@ -4,8 +4,6 @@ Rails.application.routes.draw do
     resources :products
   end
 
-  resources :products
-
   resources :products do
     member do
       post :add_to_cart
@@ -25,6 +23,10 @@ Rails.application.routes.draw do
     member do
       get :pay_with_credit_card
     end
+  end
+
+  namespace :account do
+    resources :orders
   end
 
   root :to => "products#index"
