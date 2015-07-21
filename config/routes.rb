@@ -10,7 +10,17 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :carts
+  resources :carts do
+    collection do
+      post :checkout
+    end
+  end
+  
+  resources :orders do 
+    member do
+      get 'pay_with_credit_card'
+    end
+  end
   
   root 'products#index'
 end
