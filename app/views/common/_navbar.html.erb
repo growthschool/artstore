@@ -21,7 +21,7 @@
         </li>
 
         <% if !current_user %>
-        <li> <%= link_to("登入", new_user_session_path) %> </li>
+          <li> <%= link_to("登入", new_user_session_path) %> </li>
         <% else %>
 
         <li class="dropdown">
@@ -35,6 +35,9 @@
                 <%= link_to("Admin 選單", admin_products_path ) %>
               </li>
             <% end %>
+            <li>
+              <%= link_to("訂單列表", account_orders_path ) %>
+            </li>
             <li>
               <%= link_to("登出", destroy_user_session_path, :method => :delete ) %>
             </li>
