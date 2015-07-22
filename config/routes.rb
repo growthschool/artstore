@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+  
   namespace :admin do 
     resources :products
   end
@@ -13,12 +14,17 @@ Rails.application.routes.draw do
   resources :carts do
     collection do
       post :checkout
+      delete :clean
     end
+    
+    resources :items, :controller => "cart_items"
   end
   
+
+
   resources :orders do 
     member do
-      get 'pay_with_credit_card'
+      get :pay_with_credit_card
     end
   end
   
