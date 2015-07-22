@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :carts do
     collection do
       post 'checkout'
+      delete 'clean' #清空購物車
     end
   end
   #不須限定某一個
