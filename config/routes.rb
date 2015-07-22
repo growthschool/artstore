@@ -4,9 +4,36 @@ Rails.application.routes.draw do
     resources :products
   end
 
-    resources :products
-    root 'products#index'
+  resources :products do 
+    member do 
+      post :add_to_cart #ProductsController裡定義add_to_cart method
+    end
+  end
+  #把某一個產品加入購物車
+  #add_to_cart_product POST   /products/:id/add_to_cart(.:format) products#add_to_cart
+    
+  resources :carts do
+    collection do
+      post 'checkout'
+    end
+  end
+  #不須限定某一個
+  #checkout_carts POST   /carts/checkout(.:format)           carts#checkout
+
+
+  resources :orders do
+    member do
+      get 'pay_with_credit_card'
+    end
+  end
   
+  root 'products#index'
+  
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
