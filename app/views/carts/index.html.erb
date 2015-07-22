@@ -10,21 +10,26 @@
           <th>商品資訊</th>
           <th></th>
           <th>單價</th>
+          <th>操作選項</th>
         </tr>
       </thead>
       <tbody>
-        <% current_cart.items.each do |product| %>
+
+        <% current_cart.cart_items.each do |item| %>
         <tr>
-          <td><%= render_product_photo(product.default_photo) %></td>
- 
-            <td> 
-              
-              <%= link_to(product.title, product_path(product)) %>
-              
-            </td>
-            <td> <%= product.price %> </td>
-          </tr>
-          <% end %>
+
+
+          <td><%= render_product_photo(item.product.default_photo) %></td>
+          <td><%= link_to(item.product.title, product_path(item.product)) %></td>        
+          <td><%= item.product.price %> </td>
+          <td><%= link_to  cart_item_path(current_cart, item),data: { confirm: "你確定要將此商品從購物車內刪除嗎？"} ,:method => :delete do %>
+            <i class="fa fa-trash"></i>
+            <% end %>
+          </td>
+
+
+        </tr>
+        <% end %>
  
         </tbody>
       </table>

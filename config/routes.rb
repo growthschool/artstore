@@ -17,6 +17,8 @@ Rails.application.routes.draw do
       post 'checkout'
       delete 'clean' #清空購物車
     end
+
+    resources :items, :controller => "cart_items"
   end
   #不須限定某一個
   #checkout_carts POST   /carts/checkout(.:format)           carts#checkout
