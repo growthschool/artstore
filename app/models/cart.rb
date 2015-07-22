@@ -6,10 +6,10 @@ class Cart < ActiveRecord::Base
 
 
   def add_product_to_cart(product,amount)
-    cart_items = cart_items.build
-    cart_items.product = product
-    cart_items.quantity = amount
-    cart_items.save
+    cart_item = cart_items.build
+    cart_item.product = product
+    cart_item.quantity = amount
+    cart_item.save
   end
 
   def total_price
