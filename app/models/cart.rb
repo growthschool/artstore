@@ -5,14 +5,16 @@ class Cart < ActiveRecord::Base
   #Cart.find(1).items.all 某台購物車裡所有產品
 
 
-  def add_product_to_cart(product)
-    items << product
+  def add_product_to_cart(product,amount)
+    cart_items = cart_items.build
+    cart_items.product = product
+    cart_items.quantity = amount
+    cart_items.save
   end
 
   def total_price
     #byebug 中斷點
-    items.inject(0) { |sum, item| sum + item.price}
- 
+    cart_items.inject(0) {|sum, item| sum + (item.product.price * item.quantity) }
  
     # sum = 0
  
