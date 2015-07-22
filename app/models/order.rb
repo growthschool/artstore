@@ -31,6 +31,8 @@ class Order < ActiveRecord::Base
  
   accepts_nested_attributes_for :info
 
+  scope :recent, -> { order("id DESC") }
+
   def generate_token
     self.token = SecureRandom.uuid
   end
