@@ -16,12 +16,12 @@ Rails.application.routes.draw do
    end
   end
 
-  resources :carts
-
   resources :carts do
     collection do
       post 'checkout'
+      delete 'clean'
     end
+    resources :items, :controller => "cart_items"
   end
 
   resources :orders do
