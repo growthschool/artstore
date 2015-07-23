@@ -7,6 +7,8 @@ class Order < ActiveRecord::Base
 
   before_create :generate_token
 
+  scope :recent, -> {order("id DESC")}
+
   def generate_token
     self.token = SecureRandom.uuid
   end
@@ -31,7 +33,7 @@ class Order < ActiveRecord::Base
   end
 
   def pay!
-    self.update_column(:is_paid, true )
+    self.update_column(:is_paid, true)
   end
 
   def set_payment_with!(method)
@@ -85,6 +87,7 @@ end
 #  token          :string
 #  payment_method :string
 #  aasm_state     :string           default("order_placed")
+#  is_paid        :boolean          default("f")
 #
 # Indexes
 #

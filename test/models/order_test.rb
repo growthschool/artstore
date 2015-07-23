@@ -19,6 +19,7 @@ end
 #  token          :string
 #  payment_method :string
 #  aasm_state     :string           default("order_placed")
+#  is_paid        :boolean          default("f")
 #
 # Indexes
 #
