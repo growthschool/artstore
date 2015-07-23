@@ -44,6 +44,7 @@ gem "aasm"
 
 group :development do
   gem "annotate"
+  gem "letter_opener"
 end
 
 group :development, :test do
