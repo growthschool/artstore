@@ -42,8 +42,12 @@ gem "font-awesome-rails"
 
 gem "aasm"
 
+gem "activemerchant",         "~> 1.43.1"
+gem "active_merchant_allpay", ">=0.1.2"
+
 group :development do
   gem "annotate"
+  gem "letter_opener"
 end
 
 group :development, :test do
