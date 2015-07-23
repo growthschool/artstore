@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       post 'checkout'
       delete 'clean'
     end
-    
+
     resources :items, controller: "cart_items"
   end
 
@@ -29,5 +29,8 @@ Rails.application.routes.draw do
     resources :products
   end
 
+  namespace :account do
+    resources :orders
+  end
 
 end
