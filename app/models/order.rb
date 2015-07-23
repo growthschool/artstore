@@ -47,6 +47,7 @@ class Order < ActiveRecord::Base
   end
 
 
+
   include AASM
  
   aasm do
