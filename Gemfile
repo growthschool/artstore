@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -50,6 +49,7 @@ gem "active_merchant_allpay", ">=0.1.2"
 group :development do
   gem "annotate"
   gem "letter_opener"
+  gem "sqlite3"
 end
 
 group :development, :test do
@@ -63,3 +63,8 @@ group :development, :test do
   gem 'spring'
 end
 
+
+group :production do 
+  gem "pg"
+  gem "rails_12factor"
+end
