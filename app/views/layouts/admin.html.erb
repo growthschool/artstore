@@ -9,13 +9,15 @@
 <body>
 
   <div class="container">
+
     <%= render "common/navbar" %>
 
     <div class="row">
 
       <div class="col-md-2">
         <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-          <li> <%= link_to("產品", admin_products_path) %> </li>
+          <li> <%= link_to("產品管理", admin_products_path) %> </li>
+          <li> <%= link_to("訂單管理", admin_orders_path) %> </li>
         </ul>
       </div>
 

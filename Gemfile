@@ -14,6 +14,10 @@ gem 'font-awesome-rails'
 gem 'carrierwave'
 # image process
 gem 'mini_magick'
+# state machine
+gem 'aasm'
+
+gem 'byebug'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'

@@ -1,3 +1,15 @@
+class Product < ActiveRecord::Base
+
+  has_many :photos
+
+  accepts_nested_attributes_for :photos
+
+  def default_photo
+    photos.first
+  end
+
+end
+
 # == Schema Information
 #
 # Table name: products
@@ -10,13 +22,3 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
-
-class Product < ActiveRecord::Base
-  has_many :photos
-
-  accepts_nested_attributes_for :photos
-
-  def default_photo
-    photos.first
-  end
-end

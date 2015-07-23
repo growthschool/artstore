@@ -1,3 +1,17 @@
+class User < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :orders
+
+  def admin?
+    is_admin
+  end
+
+end
+
 # == Schema Information
 #
 # Table name: users
@@ -17,14 +31,8 @@
 #  updated_at             :datetime         not null
 #  is_admin               :boolean          default(FALSE)
 #
-
-class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
-
- def admin?
-   is_admin
- end
-end
+# Indexes
+#
+#  index_users_on_email                 (email) UNIQUE
+#  index_users_on_reset_password_token  (reset_password_token) UNIQUE
+#

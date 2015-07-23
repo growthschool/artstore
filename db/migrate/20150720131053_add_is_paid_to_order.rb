@@ -1,0 +1,7 @@
+class AddIsPaidToOrder < ActiveRecord::Migration
+  def change
+    def change
+      add_column :orders, :is_paid, :boolean, :default => false
+    end
+  end
+end

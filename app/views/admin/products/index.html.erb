@@ -1,38 +1,45 @@
-<h2> 管理員產品列表 </h2>
+<h2> 產品管理 for admin </h2>
 
 <div class="pull-right" style="padding-bottom: 20px;">
   <%= link_to("新增產品", new_admin_product_path, :class => "btn btn-primary btn-sm") %>
 </div>
 
 <table class="table table-bordered">
+
   <thead>
     <tr>
       <th>編號</th>
       <th width="220">產品照片</th>
-      <th>品名</th>
+      <th>名稱</th>
       <th>價錢</th>
+      <th>剩餘數量</th>
       <th width="100">動作</th>
     </tr>
   </thead>
+
   <tbody>
     <% @products.each do |product| %>
-    <tr>
-      <td> <%= product.id %>
-      <td>
-        <%= render_product_photo(product.default_photo) %>
-      </td>
+      <tr>
+        <td> <%= product.id %>
+        <td>
+          <%= render_product_photo(product.default_photo) %>
+        </td>
 
-      <td>
-        <%= product.title %>
-      </td>
+        <td>
+          <%= product.title %>
+        </td>
 
-      <td>
-        <%= product.price %>
-      </td>
+        <td>
+          <%= product.price %>
+        </td>
 
-      <td> <%= link_to("編輯", edit_admin_product_path(product)) %> </td>
-    </tr>
+        <td>
+          <%= product.quantity %>
+        </td>
+
+        <td> <%= link_to("編輯", edit_admin_product_path(product)) %> </td>
+      </tr>
     <% end %>
-
   </tbody>
+
 </table>
