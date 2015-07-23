@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# Any link with the data-confirm attribute will trigger a Bootstrap modal.
+gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 gem 'aasm'
 group :development do
   gem 'annotate'

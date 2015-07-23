@@ -16,4 +16,12 @@
 //= require bootstrap/dropdown
 //= require bootstrap/collapse
 //= require bootstrap/alert
+//= require bootstrap/modal
+//= require data-confirm-modal
 //= require_tree .
+dataConfirmModal.setDefaults({
+  size: 'sm',
+  title: '確認',
+  commit: '是',
+  cancel: '否'
+});

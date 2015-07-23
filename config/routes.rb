@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   resources :carts do
     collection do
       post 'checkout'
+      delete 'clean'
     end
+    
+    resources :items, controller: "cart_items"
   end
 
   resources :products do
@@ -25,5 +28,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :products
   end
+
 
 end
