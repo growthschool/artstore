@@ -25,7 +25,7 @@
          <td>
            <%# item.quantity %>
            <%= simple_form_for item, url: cart_item_path(current_cart, item) do |f| %>
-             <%= f.input :quantity, collection: 1..10, label: false, class: "form-control" %>
+             <%= f.input :quantity, collection: 1..item.product.quantity, label: false, class: "form-control" %>
              <%= f.submit "update", disabled_with: 'Submitting', class: "form-control" %>
 
            <% end %>
