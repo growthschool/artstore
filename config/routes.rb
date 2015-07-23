@@ -29,6 +29,10 @@ Rails.application.routes.draw do
       get 'pay_with_credit_card'
     end
   end
+
+  namespace :account do
+    resources :orders
+  end
   
   root 'products#index'
   
