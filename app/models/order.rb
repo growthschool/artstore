@@ -1,17 +1,17 @@
 class Order < ActiveRecord::Base
   include AASM
 
-  scope :recent, -> { order("id DESC")}
+  scope :recent, -> { order("id DESC") }
 
   aasm do
     state :order_placed, initial: true
-    state :paid,         after_commit: :pay!
+    state :paid
     state :shipping
     state :shipped
     state :order_cancelled
     state :good_returned
 
-    event :make_payment do
+    event :make_payment, after_commit: :pay! do
       transitions from: :order_placed, to: :paid
     end
 
@@ -49,7 +49,7 @@ class Order < ActiveRecord::Base
   end
 
   def pay!
-    self.update_column(:is_paid, true )
+    self.update_column(:is_paid, true)
   end
 
   def build_item_cache_from_cart(cart)
