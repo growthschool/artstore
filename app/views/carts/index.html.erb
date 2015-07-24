@@ -1,0 +1,78 @@
+<div class="row">
+   <div class="col-md-12">
+ 
+
+    <%= link_to("清空購物車", clean_carts_path , method: :delete , :class => "pull-right", :style => "text-decoration: underline;", data: { confirm: "你確定要清空整個購物車嗎？"} )%>
+
+    <h2> 購物車 </h2>
+ 
+      
+
+     </div>
+
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>商品資訊</th>
+          <th></th>
+          <th>單價</th>
+          <th> 數量 </th>
+          <th>操作選項 </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% current_cart.cart_items.each do |item| %>
+        <tr>
+          <td><%= render_product_photo(item.product.default_photo) %></td>
+ 
+            <td> 
+              
+ 
+              <%= link_to(item.product.title, product_path(item.product)) %>
+
+            </td>
+            <td> <%= item.product.price %> </td>
+
+            <td> <%= item.quantity %> 
+
+             <%= form_for item, :url => cart_item_path(current_cart, item) do |f| %>
+                <%= f.select :quantity, 1..item.product.quantity %>
+                <%= f.submit "update", :disable_with => 'Submiting...' %>
+             <% end -%>
+            </td>
+
+            <td><%= link_to cart_item_path(current_cart, item), :method => :delete do %>
+              <i class="fa fa-trash fa-2x"></i>
+              <% end %>
+            </td>
+
+
+          </tr>
+          <% end %>
+ 
+        </tbody>
+      </table>
+ 
+
+      <br>
+
+      <div class="total clearfix">
+        <span class="pull-right">
+           <span> 總計 <%= render_cart_total_price(current_cart) %> NTD  </span>
+        </span>
+      </div>
+  
+      <hr>
+
+
+
+      <div class="checkout clearfix">
+         <%= link_to("確認結賬", checkout_carts_path , :method => :post , :class => "btn btn-primary btn-lg btn-danger pull-right") %>
+      </div>
+ 
+ 
+    </div>
+ 
+ 
+  </div>

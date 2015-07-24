@@ -4,6 +4,11 @@ gem "devise"
 gem "bootstrap-sass"
 gem "carrierwave"
 gem "mini_magick"
+gem "simple_form"
+gem "carrierwave"
+gem "mini_magick"
+gem "aasm"
+gem "font-awesome-rails"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
