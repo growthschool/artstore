@@ -28,6 +28,10 @@ class Cart < ActiveRecord::Base
     cart_items.destroy_all
   end
 
+  def pay!
+    self.update_column(:is_paid, true)
+  end
+
 end
 
 
