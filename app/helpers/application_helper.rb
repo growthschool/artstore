@@ -1,6 +1,5 @@
 module ApplicationHelper
 
-
   def notice_message
     alert_types = { :notice => :success, :alert => :danger }
 
@@ -17,6 +16,10 @@ module ApplicationHelper
     end
 
     alerts.join("\n").html_safe
+  end
+
+  def render_cart_items_count(cart)
+    cart.cart_items.count
   end
   
 end

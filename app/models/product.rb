@@ -20,6 +20,4 @@ class Product < ActiveRecord::Base
   def default_photo
     photos.first
   end
-
-  
 end
