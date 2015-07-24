@@ -9,6 +9,7 @@ class Order < ActiveRecord::Base
   
   scope :recent, -> { order("id DESC")}
 
+  include Tokenable
 
   def build_item_cache_from_cart(cart)
     cart.cart_items.each do |cart_item|
@@ -24,12 +25,6 @@ class Order < ActiveRecord::Base
   def calculate_total!(cart)
     self.total = cart.total_price
     self.save
-  end
-
-  before_create :generate_token
-
-  def generate_token
-    self.token = SecureRandom.uuid
   end
 
 
