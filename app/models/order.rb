@@ -7,6 +7,8 @@ class Order < ActiveRecord::Base
 
   before_create :generate_token
 
+  scope :recent, -> { order("id DESC") }
+
   def generate_token
     self.token = SecureRandom.uuid
   end

@@ -3,7 +3,12 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :products
+    resources :orders
    end
+  
+  namespace :account do
+    resources :orders
+  end
   
   resources :products do
     member do
@@ -18,14 +23,15 @@ Rails.application.routes.draw do
   end
 
 
+
   resources :carts do
     collection do
       post 'checkout'
       delete 'clean'
     end
+  resources :items, :controller => "cart_items"
   end
 
-  resources :items, :controller => "cart_items"
   
   root :to => 'products#index'
 
