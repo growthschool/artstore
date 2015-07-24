@@ -31,7 +31,7 @@
             <td> <%= item.quantity %> 
 
              <%= form_for item, :url => cart_item_path(current_cart, item) do |f| %>
-                <%= f.select :quantity, [1,2,3,4,5] %>
+                <%= f.select :quantity, 1..item.product.quantity %>
                 <%= f.submit "update", :disable_with => 'Submiting...' %>
              <% end %>
             </td>
@@ -58,7 +58,7 @@
 
 
       <div class="checkout clearfix">
-          <%= link_to("確認結賬", "#" , :method => :post , :class => "btn btn-primary btn-lg btn-danger pull-right") %>
+          <%= link_to("確認結賬", checkout_carts_path , :method => :post , :class => "btn btn-primary btn-lg btn-danger pull-right") %>
       </div>
   </div>
 </div>
