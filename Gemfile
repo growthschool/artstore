@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'annotate'
+gem 'aasm'
 gem 'font-awesome-rails'
 gem 'rails', '4.2.2'
 gem 'sqlite3'
