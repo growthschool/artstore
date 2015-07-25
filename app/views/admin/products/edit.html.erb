@@ -1,18 +1,18 @@
-<h2> 編輯產品 </h2>
- 
+<h2> 編輯 <%= @product.title %> </h2>
+
 <%= simple_form_for [:admin, @product ] , :html => { :class => "form form-horizontal"  } do |f| %>
- 
+
   <div class="form-group">
   
     <div class="col-sm-10">
-      <%= f.input :title, label: "標題" %>
+      <%= f.input :title %>
     </div>
   </div>
   
   <div class="form-group">
   
     <div class="col-sm-10">
-      <%= f.input :description,label: "敘述", :as => :text %>
+      <%= f.input :description, :as => :text %>
     </div>
   </div>
   
@@ -21,18 +21,17 @@
   <div class="form-group">
   
     <div class="col-sm-1">
-      <%= f.input :quantity, label: "數量" %>
-    </div>
-  </div>
- 
- 
-  <div class="form-group">
-  
-    <div class="col-sm-1">
-      <%= f.input :price, label: "價格" %>
+      <%= f.input :quantity %>
     </div>
   </div>
 
+
+  <div class="form-group">
+  
+    <div class="col-sm-1">
+      <%= f.input :price %>
+    </div>
+  </div>
 
 
   <div class="form-group">
@@ -41,12 +40,12 @@
     <% end %>
 
   </div>
- 
+
   <div class="form-group">
     <%= f.submit "Submit", :class => "btn btn-default" , :disable_with => 'Submiting...' %>
   </div>
- 
- 
- 
- 
+
+
+
+
 <% end %>
