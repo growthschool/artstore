@@ -68,13 +68,13 @@ class Order < ActiveRecord::Base
  
   aasm do
     state :order_placed, initial: true
-    state :paid,         after_commit: :pay!
+    state :paid        
     state :shipping
     state :shipped
     state :order_cancelled
     state :good_returned
 
-    event :make_payment do
+    event :make_payment, after_commit: :pay! do
       transitions from: :order_placed, to: :paid
     end
  
@@ -94,4 +94,7 @@ class Order < ActiveRecord::Base
       transitions from: [:order_placed, :paid], to: :order_cancelled
     end
   end
+
+  
+  
 end
