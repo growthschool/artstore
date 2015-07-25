@@ -4,6 +4,7 @@ group :development do
   gem "annotate"
 end
 
+gem 'aasm'
 gem "font-awesome-rails"
 gem 'carrierwave'
 gem 'mini_magick'

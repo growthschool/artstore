@@ -38,6 +38,37 @@ class Order < ActiveRecord::Base
     self.update_column(:is_paid, true )
   end
 
+  include AASM
+
+  aasm do
+    state :order_placed, initial: true   #已下單
+    state :paid                          #已付款
+    state :shipping                      #出貨中
+    state :shipped                       #到貨
+    state :order_cancelled               #取消訂單
+    state :good_returned                 #退貨
+
+    event :make_payment, after_commit: :pay! do  #設定當狀態轉為paid時，自動將訂單『is_paid』設為true
+      transitions from: :order_placed, to: :paid  #付款後，訂單(order_placed)狀態會轉為已付款(paid)狀態
+    end
+
+    event :ship do  #出貨後，(paid)狀態會轉為出貨中(shipping)狀態
+      transitions from: :paid, to: :shipping
+    end
+
+    event :deliver do #遞送到貨後，(shipping)狀態會轉為到貨(shipped)狀態
+      transitions from: :shipping, to: :shipped
+    end
+
+    event :return_good do  #商品退回後，(shipped)狀態會轉為退貨(good_returned)狀態
+      transitions from: :shipped, to: :good_returned
+    end
+
+    event :cancel_order do  #只有在已下單(order_placed)、已付款(paid)的狀態下，才能退貨。
+      transitions from: [:order_placed, :paid], to: :order_cancelled
+    end
+  end
+
 end
 
 # == Schema Information
