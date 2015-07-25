@@ -45,7 +45,7 @@ class Admin::ProductsController < ApplicationController
       :description,
       :quantity,
       :price,
-      :photos_attributes => [:image]
+      :photos_attributes => [:id, :image]
     )
   end
 end
