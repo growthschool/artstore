@@ -4,6 +4,7 @@ class Order < ActiveRecord::Base
   has_many :items, :class_name => "OrderItem", :dependent => :destroy
   has_one :info, :class_name => "OrderInfo", :dependent => :destroy
   before_create :generate_token
+  scope :recent, -> {order("id DESC")} 
 
   accepts_nested_attributes_for :info
  
