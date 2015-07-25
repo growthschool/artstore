@@ -1,7 +1,7 @@
 <h2> 編輯 <%= @product.title %> </h2>
- 
+
 <%= simple_form_for [:admin, @product ] , :html => { :class => "form form-horizontal"  } do |f| %>
- 
+
   <div class="form-group">
   
     <div class="col-sm-10">
@@ -24,28 +24,28 @@
       <%= f.input :quantity %>
     </div>
   </div>
- 
- 
+
+
   <div class="form-group">
   
     <div class="col-sm-1">
       <%= f.input :price %>
     </div>
   </div>
- 
- 
+
+
   <div class="form-group">
     <%= f.simple_fields_for :photos do |c| %>
       <%= c.input :image , :as => :file %>
     <% end %>
- 
+
   </div>
- 
+
   <div class="form-group">
     <%= f.submit "Submit", :class => "btn btn-default" , :disable_with => 'Submiting...' %>
   </div>
- 
- 
- 
- 
+
+
+
+
 <% end %>

@@ -4,7 +4,7 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = 'be766549decd517a259b04cc0f55a998a748dbb430d1e1f18b26d29f57e8eed5c51a15842b4df383e3afde0cfebd60f0f668e4faf2548cc087d47b7312655548'
+  # config.secret_key = 'b571acb924088dcb5cfe2e7105af2d2f73cdcb933aad990fb53f2bbbd409fd8f21a957c731e588dc1090bc074f749e808c570805e2c4c876ccc06188bcfe9060'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -61,7 +61,7 @@ Devise.setup do |config|
   # :database      = Support basic authentication with authentication key + password
   # config.http_authenticatable = false
 
-  # If http headers should be returned for AJAX requests. True by default.
+  # If 401 status code should be returned for AJAX requests. True by default.
   # config.http_authenticatable_on_xhr = true
 
   # The realm used in Http Basic Authentication. 'Application' by default.
@@ -97,7 +97,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = 'e5e82423859d63eb8a180b0baa40c97a6e1ab3600632f057c1a6d00d6d9261cedf6e6e89398c41634f5402a1ad0ec63be4d4d7d7782ac622ae9b6bbba2333df5'
+  # config.pepper = '81f762af007f643c286e929b3ebe76387c5409470435d1daa70d2b5d1cf58d52c65d7bf8fb7520d62ea10d41cbcfe17070c6e2bd160f5e93043bb7c34d0d8199'
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -127,6 +127,9 @@ Devise.setup do |config|
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
   # config.remember_for = 2.weeks
+
+  # Invalidates all the remember me tokens when the user signs out.
+  config.expire_all_remember_me_on_sign_out = true
 
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false
@@ -176,7 +179,7 @@ Devise.setup do |config|
   # config.unlock_in = 1.hour
 
   # Warn on the last attempt before the account is locked.
-  # config.last_attempt_warning = false
+  # config.last_attempt_warning = true
 
   # ==> Configuration for :recoverable
   #
