@@ -11,10 +11,14 @@ class ProductsController < ApplicationController
   def add_to_cart
  
     @product = Product.find(params[:id])
- 
+
     if !current_cart.items.include?(@product)
-      current_cart.add_product_to_cart(@product)
-      flash[:notice] = "你已成功將 #{@product.title} 加入購物車"
+      if @product.quantity > 0
+        current_cart.add_product_to_cart(@product, 1 )
+        flash[:notice] = "你已成功將 #{@product.title} 加入購物車"
+      else
+        flash[:warning] = "此物品已停止銷售，你無法將它加入購物車"
+      end
     else
       flash[:warning] = "你的購物車內已有此物品"
     end
@@ -22,4 +26,25 @@ class ProductsController < ApplicationController
     redirect_to :back
  
   end
+
+  def add_to_cart
+ 
+    @product = Product.find(params[:id])
+
+    if !current_cart.items.include?(@product)
+      if @product.quantity > 0
+        current_cart.add_product_to_cart(@product, 1 )
+        flash[:notice] = "你已成功將 #{@product.title} 加入購物車"
+      else
+        flash[:warning] = "此物品已停止銷售，你無法將它加入購物車"
+      end
+    else
+      flash[:warning] = "你的購物車內已有此物品"
+    end
+ 
+    redirect_to :back
+ 
+  end
+
+  
 end

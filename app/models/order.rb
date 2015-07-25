@@ -12,11 +12,11 @@ class Order < ActiveRecord::Base
   end
   
   def build_item_cache_from_cart(cart)
-    cart.items.each do |cart_item|
+    cart.cart_items.each do |cart_item|
       item = items.build
-      item.product_name = cart_item.title
-      item.quantity = 1
-      item.price = cart_item.price
+      item.product_name = cart_item.product.title
+      item.quantity = cart_item.quantity
+      item.price = cart_item.product.price
       item.save
     end
   end
@@ -84,8 +84,10 @@ end
 #  token          :string
 #  is_paid        :boolean          default("f")
 #  payment_method :string
+#  aasm_state     :string           default("order_placed")
 #
 # Indexes
 #
-#  index_orders_on_token  (token)
+#  index_orders_on_aasm_state  (aasm_state)
+#  index_orders_on_token       (token)
 #
