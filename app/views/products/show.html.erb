@@ -19,12 +19,16 @@
     <div class="product-price"> $ <%= @product.price %> </div>
 
     <div class="pull-right">
-     <% if @product.quantity > 0 %>
-       <%= link_to("加入購物車", add_to_cart_product_path(@product) , :method => :post , :class => "btn btn-primary btn-lg btn-danger") %>
-     <% else %>
-        已銷售一空，無法購買
-     <% end %>
-
+      <p>$ <%= @product.price %> | 庫存 : <%= @product.quantity %></p>
+      <% if @product.quantity > 0 %>
+      <%= form_for :cart_item, url: add_to_cart_product_path(@product) do |f| %>
+         Quantity : <%= f.select :quantity, 1..@product.quantity %>
+         <hr/>
+         <%= f.submit "加入購物車", :disable_with => 'Submiting...', class: "btn btn-danger" %>
+      <% end %>
+      <% else %>
+      <%= link_to "Out of stock", '#', method: :post, :class => "btn btn-danger disabled" %>
+      <% end %>
     </div>
 
 
