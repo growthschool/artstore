@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-5">
+    <%= render_product_photo(@product.default_photo, :medium) %>
+  </div>
+
+  <div class="col-md-7">
+    <h2> <%= @product.title %> </h2>
+
+    <div style="height:100px;">
+      <p>
+
+        <%= @product.description %>
+      </p>
+
+
+    </div>
+    <div> 數量 : <%= @product.quantity %> </div>
+
+    <div class="product-price"> $ <%= @product.price %> </div>
+
+    <div class="pull-right">
+      <p>$ <%= @product.price %> | 庫存 : <%= @product.quantity %></p>
+      <% if @product.quantity > 0 %>
+      <%= form_for :cart_item, url: add_to_cart_product_path(@product) do |f| %>
+         Quantity : <%= f.select :quantity, 1..@product.quantity %>
+         <hr/>
+         <%= f.submit "加入購物車", :disable_with => 'Submiting...', class: "btn btn-danger" %>
+      <% end %>
+      <% else %>
+      <%= link_to "Out of stock", '#', method: :post, :class => "btn btn-danger disabled" %>
+      <% end %>
+    </div>
+
+
+</div>
