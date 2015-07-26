@@ -12,7 +12,13 @@ class CartItemsController < ApplicationController
   def update
     @cart = current_cart
     @item = @cart.cart_items.find(params[:id])
-    @item.update(item_params)
+    if @item.product.quantity >= (params[:cart_item][:quantity]).to_i
+      @item.update(item_params)
+      flash[:success] = "數量已變更"
+    else
+      flash[:danger] = "數量不足以加入購物車"
+    end
+    
     redirect_to carts_path
   end
 

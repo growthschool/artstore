@@ -14,7 +14,8 @@ class CartsController < ApplicationController
   end
 
   def clean
-    current_cart.cart_items.destroy_all
+    # current_cart.cart_items.destroy_all
+    current_cart.clean!
     flash[:warning] = "購物車已清空"
     redirect_to carts_path
   end
