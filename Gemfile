@@ -42,6 +42,11 @@ gem "font-awesome-rails"
 
 group :development do
   gem "annotate"
+  gem 'better_errors'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-stack_explorer'
+  gem 'pry-theme'
 end
 
 group :development, :test do

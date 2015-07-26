@@ -9,20 +9,25 @@
           <th>商品資訊</th>
           <th></th>
           <th>單價</th>
+					<th>操作項目</th>
         </tr>
       </thead>
       <tbody>
-        <% current_cart.items.each do |product| %>
+        <% current_cart.cart_items.each do |item| %>
         <tr>
-          <td><%= render_product_photo(product.default_photo) %></td>
+          <td><%= render_product_photo(item.product.default_photo) %></td>
  
             <td> 
               
  
-              <%= link_to(product.title, product_path(product)) %>
+              <%= link_to(item.product.title, product_path(item.product)) %>
               
             </td>
-            <td> <%= product.price %> </td>
+            <td> <%= item.product.price %> </td>
+						<td> <%= link_to  cart_item_path(current_cart, item), :method => :delete do %>
+              <i class="fa fa-trash"></i>
+              <% end %>
+             </td>
           </tr>
           <% end %>
  
@@ -44,7 +49,7 @@
       
       <div class="checkout clearfix">
         <%= link_to("確認結賬", checkout_carts_path , :method => :post , :class => "btn btn-primary btn-lg btn-danger pull-right") %>
-        <%= link_to("清空購物車", cart_path(current_cart) , :method => :delete , :class => "btn btn-primary btn-lg pull-right") %>
+				<%= link_to("清空購物車", cart_path(current_cart) , :method => :delete , :class => "btn btn-primary btn-lg pull-right", data: { confirm: "您確定要清空購物車？" }) %>
       </div>
  
  
