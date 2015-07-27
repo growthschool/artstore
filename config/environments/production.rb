@@ -77,6 +77,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # Set mail default host
+  config.action_mailer.default_url_options = { host: 'tranquil-cove-9223.herokuapp.com' }
+
   # Billing
   config.after_initialize do
     ActiveMerchant::Billing::Base.integration_mode = :development # 取得正式 key 以後再改成 :production
