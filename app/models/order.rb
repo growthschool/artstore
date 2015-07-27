@@ -1,5 +1,6 @@
 class Order < ActiveRecord::Base
   include AASM
+  include Tokenable
 
   scope :recent, -> { order("id DESC") }
 
@@ -37,12 +38,6 @@ class Order < ActiveRecord::Base
   has_one :info, class_name: "OrderInfo", dependent: :destroy
 
   accepts_nested_attributes_for :info
-
-  before_create :generate_token
-
-  def generate_token
-    self.token = SecureRandom.uuid
-  end
 
   def paid?
     is_paid
