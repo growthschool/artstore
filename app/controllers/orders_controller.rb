@@ -21,7 +21,7 @@ class OrdersController < ApplicationController
   end
 
   def pay_with_credit_card
-    @order = Order.find(params[:id])
+    @order = Order.find_by_token(params[:id])
     @order.set_payment_with!("credit_card")
 
     @order.pay!

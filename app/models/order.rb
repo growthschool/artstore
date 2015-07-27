@@ -52,6 +52,7 @@ end
 #  updated_at :datetime         not null
 #  token      :string
 #  is_paid    :boolean          default("f")
+#  paymethod  :string
 #
 # Indexes
 #
