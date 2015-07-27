@@ -5,7 +5,7 @@ class Admin::OrdersController < ApplicationController
   before_action :admin_required
 
   def index
-    @orders = Orders.recent
+    @orders = Order.recent
   end
 
   def show
