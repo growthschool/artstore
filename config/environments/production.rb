@@ -78,7 +78,16 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Set mail default host
-  config.action_mailer.default_url_options = { host: 'tranquil-cove-9223.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      ENV['MAILGUN_SMTP_LOGIN'], # 你的 mailgun 的 user_name ( 見第三堂作業 1 解答 )
+    password:       ENV['MAILGUN_SMTP_PASSWORD'], # 你的 mailgun 的 password ( 見第三堂作業 1 解答 )
+    domain:         ENV['MAILGUN_DOMAIN'],
+    authentication: :plain
+  }
 
   # Billing
   config.after_initialize do
