@@ -32,11 +32,11 @@ class Order < ActiveRecord::Base
   end
 
   def set_payment_with!(method)
-    self.update_to(:payment_method, method)
+    self.update_column(:payment_method, method)
   end
 
   def pay!
-    self.update_to_column(:is_paid, true)
+    self.update_column(:is_paid, true)
   end
 end
 
@@ -44,15 +44,15 @@ end
 #
 # Table name: orders
 #
-#  id         :integer          not null, primary key
-#  user_id    :integer
-#  total      :integer
-#  paid       :boolean
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  token      :string
-#  is_paid    :boolean          default("f")
-#  paymethod  :string
+#  id             :integer          not null, primary key
+#  user_id        :integer
+#  total          :integer
+#  paid           :boolean
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  token          :string
+#  is_paid        :boolean          default("f")
+#  payment_method :string
 #
 # Indexes
 #
