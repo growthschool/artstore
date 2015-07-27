@@ -41,9 +41,11 @@ gem "mini_magick"
 gem "font-awesome-rails"
 gem "aasm"
 gem "awesome_print"
+gem "roadie", "2.4.3"
 
 group :development do
   gem "annotate"
+  gem "letter_opener"
 end
 
 group :development, :test do

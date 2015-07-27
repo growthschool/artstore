@@ -9,6 +9,7 @@ class OrdersController < ApplicationController
       @order.calculate_total!(current_cart)
       # current_cart.cart_items.destroy_all
       current_cart.clean!
+      OrderMailer.notify_order_placed(@order).deliver!
       redirect_to order_path(@order.token)
     else
       render "carts/checkout"
