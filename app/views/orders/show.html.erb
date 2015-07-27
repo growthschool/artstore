@@ -67,9 +67,15 @@
  <% if !@order.paid? %>
  
     <div class="pull-right">
-      <%= link_to("以信用卡付款", pay_with_credit_card_order_path(@order.token) , :class => "btn btn-primary btn-lg btn-danger ") %>
- 
-      <%= link_to("以 ATM 付款", "#", :class => "btn btn-primary btn-lg btn-danger ") %>
+      <div class="pull-right" style="padding: 10px;">
+          <%= render_payment_service_button(@order, "credit_card") %>
+        </div>
+               <div class="pull-right" style="padding: 10px;">
+        <%= render_payment_service_button(@order, "cvs") %>
+         </div>
+          <div class="pull-right" style="padding: 10px;">
+        <%= render_payment_service_button(@order, "atm") %>
+      </div>
     </div>
  
     <% else %>
