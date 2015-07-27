@@ -26,6 +26,14 @@ class Order < ActiveRecord::Base
   def generate_token
     self.token = SecureRandom.uuid
   end
+
+  def paid?
+    is_paid
+  end
+
+  def set_payment_with!(method)
+    self.update_to(:payment_method, method)
+  end
 end
 
 # == Schema Information
@@ -39,6 +47,7 @@ end
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  token      :string
+#  is_paid    :boolean          default("f")
 #
 # Indexes
 #

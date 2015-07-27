@@ -20,6 +20,13 @@ class OrdersController < ApplicationController
     @order_items = @order.items
   end
 
+  def pay_with_credit_card
+    @order = Order.find(params[:id])
+    @order.set_payment_with!("credit_card")
+
+    redirect_to '/', :notice => "成功付款"
+  end
+
  
   private
  

@@ -20,7 +20,9 @@ Rails.application.routes.draw do
 		resources :item, :controller => "cart_items"
   end
 
-  resources :orders
+  resources :orders do
+    get 'pay_with_credit_card'
+  end
   
   root :to => "products#index"
 end
