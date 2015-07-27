@@ -2,8 +2,18 @@ source 'https://rubygems.org'
 
 group :development do
   gem "annotate"
+  gem "letter_opener"
+  gem "sqlite3"
 end
 
+group :production do 
+  gem "pg"
+  gem "rails_12factor"
+end
+
+gem "activemerchant", "~> 1.43.1"
+gem "active_merchant_allpay", ">=0.1.2"
+gem "roadie", "2.4.3"
 gem 'aasm'
 gem "font-awesome-rails"
 gem 'carrierwave'

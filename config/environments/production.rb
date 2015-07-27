@@ -1,4 +1,8 @@
 Rails.application.configure do
+
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.integration_mode = :development # 取得正式 key 以後再改成 :production
+  end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
