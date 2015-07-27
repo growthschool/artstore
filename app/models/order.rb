@@ -34,6 +34,10 @@ class Order < ActiveRecord::Base
   def set_payment_with!(method)
     self.update_to(:payment_method, method)
   end
+
+  def pay!
+    self.update_to_column(:is_paid, true)
+  end
 end
 
 # == Schema Information
