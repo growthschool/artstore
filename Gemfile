@@ -43,6 +43,7 @@ group :development, :test do
   gem 'spring'
 
   gem "annotate"
+  gem "letter_opener"
 end
 
 gem "devise"
