@@ -42,6 +42,9 @@ gem "font-awesome-rails"
 gem "aasm"
 gem "awesome_print"
 gem "roadie", "2.4.3"
+gem "activemerchant",         "~> 1.43.1"
+gem "active_merchant_allpay", ">=0.1.2"
+gem 'htmlbeautifier'
 
 group :development do
   gem "annotate"

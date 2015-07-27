@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   resources :orders do
     member do
       get :pay_with_credit_card
+      post :allpay_notify
     end
   end
   namespace :account do
