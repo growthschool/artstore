@@ -1,5 +1,20 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :allpay_notify
+
+  protect_from_forgery except: :allpay_notify
+
+  def allpay_notify
+    order = Order.find_by_token(params[:id])
+    type = params[:type]
+
+    if params[:RtnCode] == "1"
+      flash[:notice] = "付款成功"
+      order.set_payment_with!(type)
+      order.make_payment!
+    end
+
+    render text: '1|OK', status: 200
+  end
 
   def create
     @order = current_user.orders.new(order_params)
@@ -8,6 +23,8 @@ class OrdersController < ApplicationController
       @order.build_item_cache_from_cart(current_cart)
       @order.calculate_total!(current_cart)
       current_cart.clean!
+      OrderMailer.notify_order_placed(@order).deliver!
+
       redirect_to order_path(@order.token)
     else
       render "carts/checkout"

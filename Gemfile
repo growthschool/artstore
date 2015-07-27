@@ -1,10 +1,20 @@
 source 'https://rubygems.org'
 
+gem 'activemerchant', '~> 1.43.1'
+gem 'active_merchant_allpay', '>=0.1.2'
 # Any link with the data-confirm attribute will trigger a Bootstrap modal.
 gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 gem 'aasm'
+gem 'roadie', '2.4.3'
 group :development do
   gem 'annotate'
+  gem 'letter_opener'
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 gem 'font-awesome-rails'
 gem 'carrierwave'
@@ -14,8 +24,6 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
