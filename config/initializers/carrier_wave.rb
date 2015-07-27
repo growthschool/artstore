@@ -8,6 +8,11 @@ CarrierWave.configure do |config|
       region:                ENV['S3_REGION'] # 你的 S3 bucket 的 Region 位置
     }
     config.fog_directory  = ENV['S3_BUCKET_NAME'] # 你設定的 bucket name
+
+    # don't use ssl connection to aws s3
+    config.fog_use_ssl_for_aws false
+
+    # use fog to storage
     config.storage :fog
   else
     config.storage :file
