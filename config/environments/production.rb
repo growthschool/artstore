@@ -78,6 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #
+  config.action_mailer.default_url_options = { host: 'rocky-mountain-7237.herokuapp.com:3000' }
   config.after_initialize do
     ActiveMerchant::Billing::Base.integration_mode = :development # 取得正式 key 以後再改成 :production
   end
