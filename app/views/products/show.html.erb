@@ -1,0 +1,29 @@
+<div class="row">
+
+   <div class="col-md-5">
+     <%= render_product_photo(@product.default_photo, :medium) %>
+   </div>
+
+   <div class="col-md-7">
+     <h2> <%= @product.title %> </h2>
+     <div style="height:100px;">
+       <p>
+         <%= @product.description %>
+       </p>
+     </div>
+
+     <div> 數量 : <%= @product.quantity %> </div>
+     <div class="product-price"> $ <%= @product.price %> </div>
+
+     <div class="pull-right">
+      <% if @product.quantity > 0 %>
+        <%= link_to("加入購物車", add_to_cart_product_path(@product) , :method => :post , :class => "btn btn-primary btn-lg btn-danger") %>
+      <% else %>
+         已銷售一空，無法購買
+      <% end %>
+     </div>
+    </div>
+
+
+
+</div>
