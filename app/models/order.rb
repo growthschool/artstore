@@ -23,9 +23,10 @@ class Order < ActiveRecord::Base
     self.save
   end
  
-  def generate_token
-    self.token = SecureRandom.uuid #產生order前先生成亂數token
-  end
+  include Tokenable
+  #def generate_token
+   # self.token = SecureRandom.uuid #產生order前先生成亂數token
+  #end
 
   def paid?
     is_paid
