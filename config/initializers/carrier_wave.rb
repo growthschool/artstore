@@ -11,6 +11,10 @@ CarrierWave.configure do |config|
 
     # don't use ssl connection to aws s3
     config.fog_use_ssl_for_aws = false
+    config.fog_attributes      = { 'Cache-Control' => 'max-age=315576000' }
+
+    # Set S3 CNAME
+    config.asset_host          = "http://#{ENV['S3_BUCKET_NAME']}"
 
     # use fog to storage
     config.storage :fog
