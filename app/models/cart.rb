@@ -18,4 +18,11 @@ class Cart < ActiveRecord::Base
 
     # return sum
   end
+
+  def add_product_to_cart(product, amount)
+    cart_item = cart_items.build
+    cart_item.product = product
+    cart_item.quantity = amount
+    cart_item.save
+  end
 end
