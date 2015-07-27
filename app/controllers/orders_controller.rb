@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!
-  
+
+ before_action :authenticate_user!
+ 
   def create
     @order = current_user.orders.build(order_params)
  
@@ -14,6 +15,7 @@ class OrdersController < ApplicationController
     end
   end
 
+
   def show
     @order = Order.find_by_token(params[:id])
     @order_info = @order.info
@@ -25,14 +27,16 @@ class OrdersController < ApplicationController
     @order.set_payment_with!("credit_card")
 
     @order.pay!
-
+    
     redirect_to account_orders_path , :notice => "成功完成付款"
   end
-
  
   private
  
   def order_params
     params.require(:order).permit(:info_attributes => [:billing_name, :billing_address,:shipping_name, :shipping_address] )
   end
+
+
+
 end
