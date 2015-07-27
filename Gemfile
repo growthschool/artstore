@@ -32,6 +32,24 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "devise"
+gem "bootstrap-sass"
+gem "simple_form"
+
+gem 'carrierwave'
+gem "mini_magick"
+gem "font-awesome-rails"
+gem 'aasm'
+
+group :development do
+  gem "annotate"
+  gem 'better_errors'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-stack_explorer'
+  gem 'pry-theme'
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
