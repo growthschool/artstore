@@ -38,6 +38,8 @@ class Order < ActiveRecord::Base
   def pay!
     self.update_column(:is_paid, true)
   end
+
+  scope :recent, -> { order(id: "DESC") }
 end
 
 # == Schema Information
