@@ -1,5 +1,6 @@
 class Order < ActiveRecord::Base
   include AASM
+  include Tokenable
   belongs_to :user
   has_one :info, class_name: "OrderInfo", dependent: :destroy
   has_many :items, class_name: "OrderItem", dependent: :destroy
@@ -22,7 +23,7 @@ class Order < ActiveRecord::Base
     self.save
   end
 
-  before_create :generate_token
+  # before_create :generate_token
 
   def generate_token
     self.token = SecureRandom.uuid

@@ -1,9 +1,7 @@
-class Admin::ProductsController < ApplicationController
-  
-  layout "admin"
-  
-  before_action :authenticate_user!
-  before_action :admin_required
+class Admin::ProductsController < AdminController
+  # layout "admin"
+  # before_action :authenticate_user!
+  # before_action :admin_required
 
   def new
     @product = Product.new
@@ -33,7 +31,7 @@ class Admin::ProductsController < ApplicationController
       render :edit
     end
   end
-  
+
   def index
     @products = Product.all
   end
