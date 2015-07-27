@@ -1,8 +1,4 @@
-class Admin::OrdersController < ApplicationController
-  layout "admin"
-
-  before_action :authenticate_user!
-  before_action :admin_required
+class Admin::OrdersController < AdminController
   before_action :find_order, only: [:show, :ship, :shipped, :cancel, :return]
 
   def index
