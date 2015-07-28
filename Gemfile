@@ -59,6 +59,8 @@ gem "mini_magick"
 gem "simple_form"
 gem "font-awesome-rails"
 gem "aasm"
+gem "delayed_job_active_record"
+gem "fog"
 
 # For mail css
 gem "roadie", "2.4.3"
@@ -66,4 +68,4 @@ gem "roadie", "2.4.3"
 # Billing
 gem "activemerchant",         "~> 1.43.1"
 gem "active_merchant_allpay", ">=0.1.2"
-gem "fog"
+
