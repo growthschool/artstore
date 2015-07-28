@@ -11,7 +11,7 @@ module Account::OrdersHelper
       service.trade_desc          "order_sample"
       service.item_name           "order_sample"
       service.choose_payment      payment_gateway_type(payment_type)
-      service.client_back_url     root_url
+      service.client_back_url     allpay_notify_order_url(order.token, type: payment_type)
       service.return_url          allpay_notify_order_url(order.token, type: payment_type)
       service.encrypted_data
 

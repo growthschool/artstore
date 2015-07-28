@@ -78,12 +78,12 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #
-  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.default_url_options = { host: 'rocky-mountain-7237.herokuapp.com:3000' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     port: 587,
     address: "smtp.mailgun.org",
-    user_name: "postmaster",
+    user_name: "postmaster@sandboxdb13aaf817e3411cad4eb79a82b40f09.mailgun.org",
     password: "859afdc9286dcd77c645e3e6513c4ca9",
     domain: "sandboxdb13aaf817e3411cad4eb79a82b40f09.mailgun.org",
     authentication: :plain
