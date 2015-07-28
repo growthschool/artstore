@@ -5,6 +5,19 @@ Rails.application.configure do
     ActiveMerchant::Billing::Base.integration_mode = :development # 取得正式 key 以後再改成 :production
   end
 
+
+
+config.action_mailer.default_url_options = { host: 'obscure-woodland-3425.herokuapp' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      "postmaster@sandboxde7d688d4e4041f2ae8eeb80fcb58a5c.mailgun.org", # 你的 mailgun 的 user_name ( 見第三堂作業 1 解答 )
+    password:       "3437c590119d845213d055ca3e015736", # 你的 mailgun 的 password ( 見第三堂作業 1 解答 )
+    domain:         "sandboxd321bed1624b4744b456caca384107f8.mailgun.org",
+    authentication: :plain,
+  }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
