@@ -6,6 +6,7 @@ gem 'active_merchant_allpay', '>=0.1.2'
 gem 'data-confirm-modal', github: 'ifad/data-confirm-modal'
 gem 'aasm'
 gem 'roadie', '2.4.3'
+gem 'delayed_job_active_record'
 group :development do
   gem 'annotate'
   gem 'letter_opener'
@@ -15,6 +16,7 @@ end
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+  gem 'fog-aws'
 end
 gem 'font-awesome-rails'
 gem 'carrierwave'
