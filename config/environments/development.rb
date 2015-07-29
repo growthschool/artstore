@@ -9,7 +9,7 @@ Rails.application.configure do
     user_name:      "postmaster@sandboxde7d688d4e4041f2ae8eeb80fcb58a5c.mailgun.org", 
     password:       "3437c590119d845213d055ca3e015736", 
     domain:         "sandboxde7d688d4e4041f2ae8eeb80fcb58a5c.mailgun.org
-",
+      ",
     authentication: :plain,
   }
 

@@ -64,28 +64,28 @@
     </table>
  
  
- <% if !@order.paid? %>
+  <% if !@order.paid? %>
  
     <div class="pull-right">
+
       <div class="pull-right" style="padding: 10px;">
-          <%= render_payment_service_button(@order, "credit_card") %>
-        </div>
-               <div class="pull-right" style="padding: 10px;">
+        <%= render_payment_service_button(@order, "credit_card") %>
+      </div>
+
+      <div class="pull-right" style="padding: 10px;">
         <%= render_payment_service_button(@order, "cvs") %>
-         </div>
-          <div class="pull-right" style="padding: 10px;">
+      </div>
+
+      <div class="pull-right" style="padding: 10px;">
         <%= render_payment_service_button(@order, "atm") %>
       </div>
+
     </div>
  
-    <% else %>
+  <% else %>
  
     此訂單已完成付款
  
     <% end %>
- 
- 
   </div>
- 
- 
 </div>

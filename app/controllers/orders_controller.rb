@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   protect_from_forgery except: :allpay_notify
 
   def allpay_notify
-    order = Order.find_by_token(params[:id])
+    order = Order.find_by_token(params[:id])   # why no @ ?
     type = params[:type]
 
     if params[:RtnCode] == "1"
