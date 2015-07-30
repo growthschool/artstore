@@ -26,6 +26,8 @@ gem "roadie", "2.4.3"
 gem "activemerchant",         "~> 1.43.1"
 gem "active_merchant_allpay", ">=0.1.2"
 
+gem "fog-aws"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record

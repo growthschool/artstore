@@ -1,17 +1,9 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
-  # config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    port:           587,
-    address:        "smtp.mailgun.org",
-    user_name:      "postmaster@sandboxde7d688d4e4041f2ae8eeb80fcb58a5c.mailgun.org", 
-    password:       "3437c590119d845213d055ca3e015736", 
-    domain:         "sandboxde7d688d4e4041f2ae8eeb80fcb58a5c.mailgun.org
-      ",
-    authentication: :plain,
-  }
+  config.action_mailer.delivery_method = :letter_opener
+  #config.action_mailer.delivery_method = :smtp
+  
 
   config.after_initialize do
     ActiveMerchant::Billing::Base.integration_mode = :development
