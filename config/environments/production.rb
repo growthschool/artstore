@@ -4,7 +4,7 @@ Rails.application.configure do
     ActiveMerchant::Billing::Base.integration_mode = :development # 取得正式 key 以後再改成 :production
   end
 
-  config.action_mailer.default_url_options = { host: 'stark-fjord-4707.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'week3-store-demo.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     port:           587,
