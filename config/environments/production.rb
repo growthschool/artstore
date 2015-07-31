@@ -4,14 +4,14 @@ Rails.application.configure do
     ActiveMerchant::Billing::Base.integration_mode = :development # 取得正式 key 以後再改成 :production
   end
 
-  config.action_mailer.default_url_options = { host: 'serene-escarpment-2442.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'stark-fjord-4707.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     port:           587,
     address:        "smtp.mailgun.org",
     user_name:      "postmaster@sandbox8596d724e10c4f4a84a3ca6f7f0b7fb2.mailgun.org", # 你的 mailgun 的 user_name ( 見第三堂作業 1 解答 )
     password:       "614434eb7f20d8ec44cdb72cff746ba9", # 你的 mailgun 的 password ( 見第三堂作業 1 解答 )
-    domain:         "sandboxd321bed1624b4744b456caca384107f8.mailgun.org",
+    domain:         "sandboxd8596d724e10c4f4a84a3ca6f7f0b7fb2.mailgun.org",
     authentication: :plain,
   }
   # Settings specified here will take precedence over those in config/application.rb.
