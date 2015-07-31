@@ -13,6 +13,7 @@ end
 
 gem "activemerchant", "~> 1.43.1"
 gem "active_merchant_allpay", ">=0.1.2"
+
 gem "roadie", "2.4.3"
 gem 'aasm'
 gem "font-awesome-rails"

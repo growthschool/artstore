@@ -1,6 +1,5 @@
 class OrdersController < ApplicationController
 
-  before_action :authenticate_user!
   before_action :authenticate_user!, except: :allpay_notify
   protect_from_forgery except: :allpay_notify
 
