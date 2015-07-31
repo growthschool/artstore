@@ -28,6 +28,8 @@ gem "active_merchant_allpay", ">=0.1.2"
 
 gem "fog-aws"
 
+gem 'delayed_job_active_record'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record

@@ -4,9 +4,9 @@ CarrierWave.configure do |config|
       provider:               'AWS',
       aws_access_key_id:      ENV["S3_ID"],
       aws_secret_access_key:  ENV["S3_SECRET"],
-      region:                 'us-west-2'
+      region:                 ENV["S3_REGION"]
     }
-    config.fog_directory =    'forphoto'
+    config.fog_directory =    ENV["S3_BUCKET"]
   else
     config.storage :file
   end
