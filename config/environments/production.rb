@@ -1,6 +1,23 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.integration_mode = :development # 取得正式 key 以後再改成 :production
+  end
+
+
+
+  config.action_mailer.default_url_options = { host: 'shop-sample.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      ENV["MAIL_USER"], 
+    password:       ENV["MAIL_SECRET"], 
+    domain:         ENV["MAIL_DOMAIN"],
+    authentication: :plain,
+  }
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

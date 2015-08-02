@@ -1,0 +1,15 @@
+zh-TW:
+
+  orders:
+    order_state:
+      order_placed: 已下單
+      paid: 已付款
+      shipping: 出貨中
+      shipped: 已到貨
+      order_cancelled: 取消訂單
+      good_returned: 退貨
+
+    payment_type:
+      credit_card: "信用卡付款"
+      cvs: "超商付款"
+      atm: "ATM 付款"
