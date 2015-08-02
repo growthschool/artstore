@@ -5,6 +5,7 @@ group :development do
   gem 'sqlite3'
   gem 'letter_opener'
 end
+gem 'fog'
 gem "activemerchant",         "~> 1.43.1"
 gem "active_merchant_allpay", ">=0.1.2"
 gem "roadie", "2.4.3"
@@ -22,6 +23,7 @@ gem 'turbolinks'
 gem 'simple_form'
 gem 'jbuilder', '~> 2.0'
 gem "mini_magick"
+gem 'delayed_job_active_record'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do

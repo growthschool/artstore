@@ -78,8 +78,20 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      "letitbemine", # 你的 mailgun 的 user_name ( 見第三堂作業 1 解答 )
+    password:       "Aa123456", # 你的 mailgun 的 password ( 見第三堂作業 1 解答 )
+    domain:         "sandboxd321bed1624b4744b456caca384107f8.mailgun.org",
+    authentication: :plain,
+  }
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.default_url_options = { host: 'desolate-wildwood-6410.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'shopartstore.herokuapp.com' }
 
 end

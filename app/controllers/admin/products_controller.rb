@@ -1,8 +1,4 @@
 class Admin::ProductsController < AdminController
-  before_action :authenticate_user!
-  before_action :admin_required
-
-  layout 'admin'
 
   def new
     @product = Product.new

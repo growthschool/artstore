@@ -46,5 +46,13 @@ Rails.application.configure do
 
   #letter_opener
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+    config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      "letitbemine", # 你的 mailgun 的 user_name ( 見第三堂作業 1 解答 )
+    password:       "Aa123456", # 你的 mailgun 的 password ( 見第三堂作業 1 解答 )
+    domain:         "sandboxd321bed1624b4744b456caca384107f8.mailgun.org",
+    authentication: :plain,
+  }
   config.action_mailer.delivery_method = :letter_opener
 end
