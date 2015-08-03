@@ -80,4 +80,18 @@ Rails.application.configure do
   config.after_initialize do
     ActiveMerchant::Billing::Base.integration_mode = :development # 取得正式 key 以後再改成 :production
   end
+
+
+  config.action_mailer.default_url_options = { host: 'https://sheltered-cove-6086.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      "postmaster@sandboxa72cb9944c9141e192eb1abc22db6ce2.mailgun.org", # 你的 mailgun 的 user_name ( 見第三堂作業 1 解答 )
+    password:       "90ae8cee7940f9aa30c93f045d4a778f", # 你的 mailgun 的 password ( 見第三堂作業 1 解答 )
+    domain:         "sandboxa72cb9944c9141e192eb1abc22db6ce2.mailgun.org",
+    authentication: :plain,
+  }
+
+
 end
