@@ -36,6 +36,8 @@ gem "devise"
 
 gem "bootstrap-sass"
 
+gem "font-awesome-rails"
+
 gem "simple_form"
 
 gem "carrierwave"
