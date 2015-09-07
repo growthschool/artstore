@@ -1,0 +1,8 @@
+2015-09-07
+
+[ ] 加上 bootstrap
+[ ] 加上用 bootstrap 樣式的 nav bar
+[ ] 把內建的 form 換成 simple_form
+[ ] 加入修改產品的功能
+[ ] 實作圖片上傳，使用 carrierwave
+[ ] 顯示前台 product#show, products#index 實作
