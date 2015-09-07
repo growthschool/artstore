@@ -1,0 +1,19 @@
+<%= form_for [:admin, @product] do |form| %>
+	<div class="group">
+		<%= form.label("標題") %>
+		<%= form.text_field :title %>
+	</div>
+	<div class="group">
+		<%= form.label("敘述") %>
+		<%= form.text_area :description %>
+	</div>
+	<div class="group">
+		<%= form.label("數量") %>
+		<%= form.text_field :quantity %>
+	</div>
+	<div class="group">
+		<%= form.label("價錢") %>
+		<%= form.text_field :price %>
+	</div>
+	<%= form.submit "Submit", data: { disable_with: "Submitting..." } %>
+<% end %>
