@@ -1,4 +1,8 @@
 class Admin::ProductsController < ApplicationController
+
+	# 必須要可以登入
+	before_action :authenticate_user!
+
 	def index
 		@products = Product.all
 	end
