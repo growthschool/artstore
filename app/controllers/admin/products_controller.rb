@@ -2,6 +2,8 @@ class Admin::ProductsController < ApplicationController
 
 	# 必須要可以登入
 	before_action :authenticate_user!
+	# 使用者必須是 admin
+	before_action :admin_required
 
 	def index
 		@products = Product.all
