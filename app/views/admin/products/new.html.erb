@@ -1,0 +1,23 @@
+<%= form_for [:admin, @product] do |f| %>
+<div class="group">
+	<%= f.label("Title") %>
+	<%= f.text_field :title %>
+</div>
+
+<div class="group">
+	<%= f.label("Description") %>
+	<%= f.text_area :description %>
+</div>
+
+<div class="group">
+	<%= f.label("Quantity") %>
+	<%= f.text_field :quantity %>
+</div>
+
+<div class="group">
+	<%= f.label("Price") %>
+	<%= f.text_field :price %>
+</div>
+
+<%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+<% end %>
