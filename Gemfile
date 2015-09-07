@@ -56,3 +56,5 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 
 gem 'carrierwave'
+
+gem 'mini_magick'
