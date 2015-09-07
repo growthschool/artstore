@@ -1,6 +1,8 @@
 2015-09-07
 
-[ ] 加上 bootstrap
+[v] 加上 bootstrap
+  [v] 加上 Gemfile
+  [v] 設定 css 和 js
 [ ] 加上用 bootstrap 樣式的 nav bar
 [ ] 把內建的 form 換成 simple_form
 [ ] 加入修改產品的功能
