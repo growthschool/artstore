@@ -41,5 +41,14 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Use pry to debug
+  gem 'pry-rails'
+
+  # Use pry-remote due to using powder
+  gem 'pry-remote'
 end
 
+gem 'devise'
+
+gem 'bootstrap-sass'

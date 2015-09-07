@@ -1,0 +1,24 @@
+<%= form_for [:admin, @product] do |f| %>
+  <div class="group">
+    <%= f.label :title, class: "control-label" %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="group">
+    <%= f.label :description, class: "control-label" %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="group">
+    <%= f.label :quantity, class: "control-label" %>
+    <%= f.number_field :quantity, class: "form-control" %>
+  </div>
+
+  <div class="group">
+    <%= f.label :price, class: "control-label" %>
+    <%= f.number_field :price, class: "form-control" %>
+  </div>
+
+  <%= f.submit "Save", class: "btn btn-primary" %>
+
+<% end %>
