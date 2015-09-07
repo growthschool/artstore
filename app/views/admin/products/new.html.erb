@@ -5,6 +5,9 @@
       <%= f.input :description %>
       <%= f.input :quantity %>
       <%= f.input :price %>
+      <%= f.simple_fields_for :photos do |photo_form| %>
+        <%= photo_form.input :image %>
+      <% end %>
       <%= f.button :submit %>
     <% end %>
   </div>
