@@ -3,10 +3,10 @@
 [v] 加上 bootstrap
   [v] 加上 Gemfile
   [v] 設定 css 和 js
-[ ] 加上用 bootstrap 樣式的 nav bar
+[v] 加上用 bootstrap 樣式的 nav bar
   [v] 整理整個頁面的架構 (nav bar 和主要內容區)
-	[v] 把 nav bar 做成 partial
-	[ ] 把 nav bar 套上 bootstrap 的樣式
+  [v] 把 nav bar 做成 partial
+  [v] 把 nav bar 套上 bootstrap 的樣式
 [ ] 把內建的 form 換成 simple_form
 [ ] 加入修改產品的功能
 [ ] 實作圖片上傳，使用 carrierwave
