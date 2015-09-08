@@ -24,8 +24,10 @@ class Admin::ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      redirect_to admin_product_path(@product)
+      flash[:notice] = 'Create product successfully.'
+      redirect_to @product
     else
+      flash.now[:alert] = 'Fail to create product.'
       render :new
     end
   end
