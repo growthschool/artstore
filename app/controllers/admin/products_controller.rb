@@ -1,28 +1,44 @@
 class Admin::ProductsController < ApplicationController
   before_action :authenticate_user!
   before_action :admin_required
-def index
-  @products = Product.all
-end
-
-def new
-  @product = Product.new
-end
-
-def create
-  @product = Product.new(product_arams)
-
-  if @product.save
-    redirect_to admin_products_path
-  else
-    render :new
+  def index
+    @products = Product.all
   end
-end
 
-private
+  def new
+    @product = Product.new
+  end
 
-def product_params
-  params.require(:product).permit(:title, :description, :quantity, :price)
-end
+  def create
+    @product = Product.new(product_params)
+
+    if @product.save
+      redirect_to admin_products_path
+    else
+      render :new
+    end
+  end
+  def show
+    @product = Product.find(params[:id])
+    render :show
+  end
+  def edit
+    @product = Product.find(params[:id])
+    render :edit
+  end
+  def update
+    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      redirect_to admin_products_path
+    else
+      render :update
+    end
+  end
+
+  private
+
+  def product_params
+    params.require(:product).permit(:title, :description, :quantity, :price)
+  end
 
 end
