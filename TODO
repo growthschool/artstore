@@ -16,7 +16,7 @@
 [ ] 加入修改產品的功能
   [v] 在 admin>product controller 加入 edit, update methods
     [v] 加入編輯的 view
-  [ ] 在產品列表加入新增和編輯按鈕
+  [v] 在產品列表加入新增和編輯按鈕
   [ ] 抽出產品 form 成 partial
 [ ] 實作圖片上傳，使用 carrierwave
 [ ] 顯示前台 product#show, products#index 實作
