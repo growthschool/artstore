@@ -12,6 +12,7 @@
     [v] 設定 bootstrap 樣式
   [v] 修改表單，換上 simple_form
   [ ] 修改 devise 表單的樣式，換上 simple_form
+    [ ] 讓 devise 可以客製化 view
 [ ] 加入修改產品的功能
 [ ] 實作圖片上傳，使用 carrierwave
 [ ] 顯示前台 product#show, products#index 實作
