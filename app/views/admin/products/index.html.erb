@@ -1,7 +1,13 @@
 <ul>
   <% @products.each do |product| %>
-
-    <li> <%= link_to(product.title, admin_product_path(product)) %> </li>
+    <tr>
+      <td>
+        <li> 
+        	<%= link_to(product.title, admin_product_path(product)) %> 
+            <%= link_to("Edit",edit_admin_product_path(product)) %> 
+        </li>
+      </td>
+    </tr>
   <% end %>
 </ul>
 
