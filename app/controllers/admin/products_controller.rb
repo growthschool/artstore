@@ -31,7 +31,7 @@ class Admin::ProductsController < ApplicationController
     if @product.update(product_params)
       redirect_to admin_products_path
     else
-      render :update
+      render :edit
     end
   end
 
