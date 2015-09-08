@@ -14,7 +14,8 @@
   [v] 修改 devise 表單的樣式，換上 simple_form
     [v] 讓 devise 可以客製化 view
 [ ] 加入修改產品的功能
-  [ ] 在 admin>product controller 加入 edit, update methods
+  [v] 在 admin>product controller 加入 edit, update methods
+    [v] 加入編輯的 view
   [ ] 在產品列表加入新增和編輯按鈕
   [ ] 抽出產品 form 成 partial
 [ ] 實作圖片上傳，使用 carrierwave

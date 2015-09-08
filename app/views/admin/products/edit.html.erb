@@ -1,0 +1,18 @@
+<h2>編輯產品</h2>
+<hr>
+<%= simple_form_for [:admin, @product] do |form| %>
+	<div class="form-group">
+		<%= form.input :title, label: "產品標題", input_html: { class: "form-control" } %>
+	</div>
+	<div class="form-group">
+		<%= form.input :description, label: "產品敘述", as: :text, input_html: { class: "form-control" } %>
+	</div>
+	<div class="form-group">
+		<%= form.input :quantity, label: "數量", input_html: { class: "form-control" } %>
+	</div>
+	<div class="form-group">
+		<%= form.input :price, label: "價錢", input_html: { class: "form-control" } %>
+	</div>
+	<%= form.submit "送出", class: "btn btn-primary" , data: { disable_with: "Submitting..." } %>
+<% end %>
+
