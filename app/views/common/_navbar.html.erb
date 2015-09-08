@@ -17,9 +17,9 @@
               <li><a href="#">修改商品</a></li>
             </ul>
           </li>
-          <% #if current_user.is_admin? %>
+          <% if current_user && current_user.is_admin? %>
             <li><%= link_to "後台管理(問助教)", admin_products_path %></li>
-          <% #end %>
+          <% end %>
         </ul>
         <ul class="nav navbar-right navbar-nav">
           <% if !current_user %>
