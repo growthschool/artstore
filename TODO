@@ -7,16 +7,16 @@
   [v] 整理整個頁面的架構 (nav bar 和主要內容區)
   [v] 把 nav bar 做成 partial
   [v] 把 nav bar 套上 bootstrap 的樣式
-[ ] 把內建的 form 換成 simple_form
+[v] 把內建的 form 換成 simple_form
   [v] 加入 simple_form gem
     [v] 設定 bootstrap 樣式
   [v] 修改表單，換上 simple_form
   [v] 修改 devise 表單的樣式，換上 simple_form
     [v] 讓 devise 可以客製化 view
-[ ] 加入修改產品的功能
+[v] 加入修改產品的功能
   [v] 在 admin>product controller 加入 edit, update methods
     [v] 加入編輯的 view
   [v] 在產品列表加入新增和編輯按鈕
-  [ ] 抽出產品 form 成 partial
+  [v] 抽出產品 form 成 partial
 [ ] 實作圖片上傳，使用 carrierwave
 [ ] 顯示前台 product#show, products#index 實作
