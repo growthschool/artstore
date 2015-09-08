@@ -1,3 +1,14 @@
-<div class="row">
-  <%= render @products %>
-</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Product Photo</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @products %>
+  </tbody>
+</table>

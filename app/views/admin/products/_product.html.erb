@@ -1,9 +1,7 @@
-<div class="col-xs-6 col-md-3">
-  <%= link_to render_product_image(product.default_image), admin_product_path(product) %>
-  <div>
-    <%= product.title %>
-  </div>
-  <div>
-    <%= "$ #{product.price}" %>
-  </div>
-</div>
+<tr>
+  <td><%= product.id %></td>
+  <td><%= render_product_image(product.default_image) %></td>
+  <td><%= product.title %></td>
+  <td><%= product.price %></td>
+  <td><%= link_to "Edit", edit_admin_product_path(product) %></td>
+</tr>
