@@ -10,7 +10,8 @@
 [ ] 把內建的 form 換成 simple_form
   [v] 加入 simple_form gem
     [v] 設定 bootstrap 樣式
-  [ ] 修改表單，換上 simple_form
+  [v] 修改表單，換上 simple_form
+  [ ] 修改 devise 表單的樣式，換上 simple_form
 [ ] 加入修改產品的功能
 [ ] 實作圖片上傳，使用 carrierwave
 [ ] 顯示前台 product#show, products#index 實作
