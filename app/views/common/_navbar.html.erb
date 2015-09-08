@@ -1,0 +1,41 @@
+<nav class="navbar navbar-static">
+   <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" target="ext"><b>YS Baker</b></a>
+      <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="glyphicon glyphicon-chevron-down"></span>
+      </a>
+    </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">  
+          <li><%= link_to "產品列表", products_path %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">後台管理</a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "新增商品", new_admin_product_path %></li>
+              <li><a href="#">修改商品</a></li>
+            </ul>
+          </li>
+          <% #if current_user.is_admin? %>
+            <li><%= link_to "後台管理(問助教)", admin_products_path %></li>
+          <% #end %>
+        </ul>
+        <ul class="nav navbar-right navbar-nav">
+          <% if !current_user %>
+            <li><%= link_to("登入", new_user_session_path) %></li>
+          <% else %>
+            <li class="dropdown">
+
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hi, <%= current_user.email %> <i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+        					<li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li> 
+  	              <li><a href="#">Profile</a></li>
+  	              <li class="divider"></li>
+  	              <li><a href="#">About</a></li>
+               </ul>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+</nav><!-- /.navbar -->

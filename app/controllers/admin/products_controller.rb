@@ -24,6 +24,10 @@ class Admin::ProductsController < ApplicationController
 		@products = Product.find(params[:id])
 	end
 
+	def edit
+		@products = Product.find(params[:id])
+	end
+
 	private
 		def product_params
 			params.require(:product).permit(:title, :description, :quantity, :price)
