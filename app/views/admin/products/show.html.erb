@@ -1,4 +1,23 @@
-<%= "title: #{@product.title}" %>
-<%= "description: #{@product.description}" %>
-<%= "quantity: #{@product.quantity}" %>
-<%= "price: #{@product.price}" %>
+<div class="row">
+  <div class="col-md-5 col-xs-12">
+    <div class="product-image">
+      <%= render_product_image(@product.default_image, :medium) %>
+    </div>
+  </div>
+
+  <div class="col-md-7 col-xs-12">
+    <div class="product-title">
+      <h3><%= @product.title %></h3>
+    </div>
+    <div class="product-description">
+      <%= @product.description %>
+    </div>
+    <div class="product-quantity">
+      <%= "Quantity: #{@product.quantity}" %>
+    </div>
+    <div class="product-price">
+      <%= "Price: $#{@product.price}" %>
+    </div>
+    <%= link_to "Add to cart", '#', class: "btn btn-lg btn-danger pull-right" %>
+  </div>
+</div>
