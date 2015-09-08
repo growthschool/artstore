@@ -1,3 +1,12 @@
-<% @products.each do |product| %>
-	<%= link_to product.title, product %>
-<% end %>
+<h1>檢視商品</h1>
+
+
+<div class="group">
+	商品名稱：<%= @product.title %><br>
+	商品敘述：<%= @product.description %><br>
+	商品數量：<%= @product.quantity %><br>
+	商品價格：<%= @product.price %><br>
+</div>
+
+
+

@@ -1,5 +1,18 @@
-<ul>
-	<% @products.each do |product| %>
-		<li><%= link_to(product.title, admin_product_path(product)) %></li>
-	<% end %>	
-</ul>
+<h1>商品清單</h1>
+
+<% @products.each do |f| %>
+	<h3>商品名稱：<%= f.title %></h3><br>
+	商品說明：<%= f.description %><br>
+
+	<%= link_to "看細節", admin_product_path(f) %> 
+	| <%= link_to "修改", edit_admin_product_path(f) %> 
+	<hr>
+<% end %>	
+
+
+<%
+#<%= simple_form_for @products do |f| 
+#	商品名稱：<%= f.label :title <br>
+#	商品說明：<%= f.label :description 
+#<% end 
+%>

@@ -21,11 +21,21 @@ class Admin::ProductsController < ApplicationController
 	end
 
 	def show
-		@products = Product.find(params[:id])
+		@product = Product.find(params[:id])
 	end
 
 	def edit
-		@products = Product.find(params[:id])
+		@product = Product.find(params[:id])
+	end
+
+	def update
+		@product = Product.find(params[:id])
+
+		if @product.update(product_params)
+			redirect_to admin_products_path
+		else
+			render :edit
+		end
 	end
 
 	private
