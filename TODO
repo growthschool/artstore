@@ -8,8 +8,8 @@
   [v] 把 nav bar 做成 partial
   [v] 把 nav bar 套上 bootstrap 的樣式
 [ ] 把內建的 form 換成 simple_form
-  [ ] 加入 simple_form gem
-    [ ] 設定 bootstrap 樣式
+  [v] 加入 simple_form gem
+    [v] 設定 bootstrap 樣式
   [ ] 修改表單，換上 simple_form
 [ ] 加入修改產品的功能
 [ ] 實作圖片上傳，使用 carrierwave
