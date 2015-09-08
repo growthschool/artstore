@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= simple_form_for [:admin, @product] do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :quantity %>
+      <%= f.input :price %>
+      <%= f.simple_fields_for :photos do |photo_form| %>
+        <%= photo_form.input :image %>
+      <% end %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>

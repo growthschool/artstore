@@ -1,0 +1,7 @@
+<tr>
+  <td><%= product.id %></td>
+  <td><%= link_to render_product_image(product.default_image), product %></td>
+  <td><%= product.title %></td>
+  <td><%= product.price %></td>
+  <td><%= link_to "Edit", edit_admin_product_path(product) %></td>
+</tr>
