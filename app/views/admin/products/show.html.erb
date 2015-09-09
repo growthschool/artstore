@@ -1,5 +1,16 @@
-<p>標題：<%=@product.title %></p>
-<p>敘述：<%=@product.description %></p>
-<p>數量：<%=@product.quantity %></p>
-<p>價格：<%=@product.price %></p>
-<%= link_to("編輯", edit_admin_product_path(@product)) %>
+<ul>
+  <li>
+    <p>標題：<%=@product.title %></p>
+  </li>
+  <li>
+    <p>敘述：<%=@product.description %></p>
+  </li>
+  <li>
+    <p>數量：<%=@product.quantity %></p>
+  </li>
+  <li>
+    <p>價格：<%=@product.price %></p>
+  </li>
+</ul>
+<%= link_to("<button type='button' class='btn btn-success'>編輯</button>".html_safe, edit_admin_product_path(@product)) %>
+<%= link_to("<button type='button' class='btn btn-danger'>刪除</button>".html_safe, admin_product_path(@product), method: :delete) %>
