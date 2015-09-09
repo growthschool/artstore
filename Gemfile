@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem "devise"
 gem "bootstrap-sass"
 gem "simple_form"
+gem "carrierwave"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
