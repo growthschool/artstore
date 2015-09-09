@@ -3,32 +3,27 @@
     <%= link_to("新增產品", new_admin_product_path, class: "btn btn-primary pull-right") %>
   </div>
 
-  <table class="table table-hover">
+  <table class="table table-bordered">
     <thead>
       <tr>
         <td>#</td>
         <td>Title</td>
+        <td>Image</td>
         <td>Description</td>
         <td>Quantity</td>
         <td>Price</td>
-        <td>Image</td>
+        <td>Operation</td>
       </tr>
     </thead>
     <tbody>
       <% @products.each do |product| %>
         <tr>
-          <td>#</td>
+          <td><%= product.id %></td>
+          <td><%= render_product_photo(product.default_photo) %></td>
           <td><%= link_to(truncate(product.title, length: 15), admin_product_path(product)) %></td>
           <td><%= product.description %></td>
           <td><%= product.quantity %></td>
           <td><%= product.price %></td>
-          <td>
-            <% if product.default_photo.present? %>
-              <%= image_tag(product.default_photo.image.thumb.url, class: "thumbnail") %>
-            <% else %>
-              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-            <% end %>
-          </td>
           <td>
               <%= link_to("Edit", edit_admin_product_path(product), class: "btn btn-sm btn-default")%>
               <%= link_to("Delete", admin_product_path(product), class: "btn btn-sm btn-default",

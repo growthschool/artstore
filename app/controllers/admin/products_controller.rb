@@ -20,7 +20,7 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to admin_products_path
+      redirect_to admin_products_path(@product), notice: "新增產品成功！"
     else
       render :new
     end
@@ -36,7 +36,7 @@ class Admin::ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update(product_params)
-      redirect_to admin_products_path
+      redirect_to admin_products_path(@product), notice: "修改產品成功！"
     else
       render :edit
     end
@@ -45,7 +45,7 @@ class Admin::ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-    redirect_to admin_products_path
+    redirect_to admin_products_path(@product), notice: "產品已刪除！"
   end
 
   private

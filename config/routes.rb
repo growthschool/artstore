@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     resources :products
   end
 
+  resources :products
+
   root 'admin/products#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
