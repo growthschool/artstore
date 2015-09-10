@@ -18,9 +18,9 @@
     [v] 加入編輯的 view
   [v] 在產品列表加入新增和編輯按鈕
   [v] 抽出產品 form 成 partial
-[ ] 實作圖片上傳，使用 carrierwave
+[v] 實作圖片上傳，使用 carrierwave
   [v] 加入 carrierwave gem
   [v] 加入上傳圖片的功能
   [v] 一個產品可以對應到好幾張圖片
-  [ ] 照片可以縮圖成 800x800, 400x400, 200x200
+  [v] 照片可以縮圖成 800x800, 400x400, 200x200
 [ ] 顯示前台 product#show, products#index 實作
