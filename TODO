@@ -26,3 +26,7 @@
 [ ] 加上顯示用的畫面
   [v] 後台要能夠顯示 product 細節 (#show)
   [ ] 顯示前台 product#show, products#index 實作
+    [v] 設定好 controller, view 和 routes
+    [ ] 排版好內容
+      [ ] 產品列表
+      [ ] 產品內頁
