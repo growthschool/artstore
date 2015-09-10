@@ -12,7 +12,9 @@
 		<%= form.input :price, label: "價錢", input_html: { class: "form-control" } %>
 	</div>
 	<div class="form-group">
-		<%= form.file_field :image, label: "上傳產品照片", input_html: { class: "form-control" } %>
+		<%= form.simple_fields_for :photos, @product.photos do |photos_form| %>
+			<%= photos_form.input :image, as: :file %>
+		<% end %>
 	</div>
 	<%= form.submit "送出", class: "btn btn-primary" , data: { disable_with: "送出中..." } %>
 <% end %>

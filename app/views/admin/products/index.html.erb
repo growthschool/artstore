@@ -13,7 +13,11 @@
 	<% @products.each do |product| %>
 		<tr>
 			<td class="text-center"><%= product.id %></td>
-			<td><%= image_tag(product.image_url.to_s, width: "100%") %></td>
+			<% if product.photos.size > 0 %>
+				<td><%= image_tag(product.photos.first.image_url.to_s, width: "100%") %></td>
+			<% else %>
+				<td class="text-center">尚無圖片</td>
+			<% end %>
 			<td><%= link_to(product.title, admin_product_path(product)) %></td>
 			<td><%= link_to("編輯", edit_admin_product_path(product), class: "btn btn-primary btn-xs") %></td>
 		</tr>

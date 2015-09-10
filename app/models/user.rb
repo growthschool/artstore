@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
 	has_many :photos
+	accepts_nested_attributes_for :photos
 
 	def admin?
 		is_admin
