@@ -1,1 +1,23 @@
 <h2>產品列表</h2>
+<div class="row">
+	<table class="table">
+		<% @products.each do |product| %>
+			<tr>
+				<td class="col-md-2">
+					<%= image_tag(product.photos.first.image_url(:small).to_s, width: "80%", class: "img-thumbnail") %>
+				</td>
+				<td class="col-md-10">
+					<h3><%= link_to(product.title, product_path(product)) %></h3>
+					<p><%= product.description %></p>
+					<div class="row text-right">
+						<span id="products-list-price">$ <%= product.price %></span>
+					</div>
+					<div class="row text-right">
+						<hr>
+						<%= link_to("加入購物車", "#", class: "btn btn-danger") %>
+					</div>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+</div>
