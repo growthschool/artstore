@@ -28,5 +28,5 @@
   [ ] 顯示前台 product#show, products#index 實作
     [v] 設定好 controller, view 和 routes
     [ ] 排版好內容
-      [ ] 產品列表
+      [v] 產品列表
       [ ] 產品內頁
