@@ -1,0 +1,18 @@
+
+<div class="col-md-4 col-md-offset-4">
+<h2> 修改產品 </h2>
+  <%#= simple_form_for [:admin, @product ] , html:  { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
+  <%= simple_form_for [:admin, @product ] do |f| %>
+
+    <%= f.input :title ,label: "品名"  %>
+    <%= f.input :description, label: '商品敘述' %>
+    <%= f.input :quantity ,label: '數量' %>
+    <%= f.input :price , label:'價格' %>
+
+    <%= f.simple_fields_for :photos do |c| %>
+      <%= c.input :image , as: :file %>
+    <% end %>
+    <%= f.submit "Submit", :class => "btn btn-default", :disable_with => 'Submiting...' %>
+
+  <% end %>
+</div>
