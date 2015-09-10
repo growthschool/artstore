@@ -1,0 +1,47 @@
+<div class="col-md-12">
+  <div class="group">
+    <%= link_to("新增產品", new_admin_product_path, class: "btn btn-primary pull-right") %>
+  </div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Title</td>
+        <td>Image</td>
+        <td>Description</td>
+        <td>Quantity</td>
+        <td>Price</td>
+        <td>Operation</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.id %></td>
+          <td><%= render_product_photo(product.default_photo) %></td>
+          <td><%= link_to(truncate(product.title, length: 15), admin_product_path(product)) %></td>
+          <td><%= product.description %></td>
+          <td><%= product.quantity %></td>
+          <td><%= product.price %></td>
+          <td>
+              <%= link_to("Edit", edit_admin_product_path(product), class: "btn btn-sm btn-default")%>
+              <%= link_to("Delete", admin_product_path(product), class: "btn btn-sm btn-default",
+                          method: :delete, data: { confirm: "Are you sure?" } )%>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+
+  </table>
+
+</div>
+
+<!--
+<ul>
+  <% @products.each do |product| %>
+
+    <li> <%= link_to(product.title, admin_product_path(product)) %> </li>
+  <% end %>
+</ul>
+-->
