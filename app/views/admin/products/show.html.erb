@@ -1,0 +1,14 @@
+
+
+<div class="col-md-4 col-md-offset-4">
+
+  <%#= simple_form_for [:admin, @product ] , html:  { class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
+  <%= simple_form_for [:admin, @product ] do |f| %>
+
+    <%= f.input :title ,label: "品名"  %>
+    <%= f.input :description, label: '商品敘述' %>
+    <%= f.input :quantity ,label: '數量' %>
+    <%= f.input :price , label:'價格' %>
+
+  <% end %>
+</div>
