@@ -1,25 +1,17 @@
 <h3>新增商品</h3>
-<%= form_for [:admin, @product] do |f| %>
+<%= simple_form_for [:admin, @product] do |f| %>
 
-<div class="group">
-  <%= f.label("標題") %>
-  <%= f.text_field :title %>
+<div class="form-group">
+  <%= f.input :title %>
 </div>
-
-
-<div class="group">
-  <%= f.label("敘述") %>
-  <%= f.text_area :description %>
+<div class="form-group">
+  <%= f.input :description %>
 </div>
-
-<div class="group">
-  <%= f.label("數量") %>
-  <%= f.text_field :quantity %>
+<div class="form-group">
+  <%= f.input :quantity %>
 </div>
-
-<div class="group">
-  <%= f.label("價格") %>
-  <%= f.text_field :price %>
+<div class="form-group">
+  <%= f.input :price %>
 </div>
 
 <%= f.submit "Submit", data: {disable_with: "submitting...."} %>
