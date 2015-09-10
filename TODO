@@ -23,4 +23,6 @@
   [v] 加入上傳圖片的功能
   [v] 一個產品可以對應到好幾張圖片
   [v] 照片可以縮圖成 800x800, 400x400, 200x200
-[ ] 顯示前台 product#show, products#index 實作
+[ ] 加上顯示用的畫面
+  [ ] 後台要能夠顯示 product 細節 (#show)
+  [ ] 顯示前台 product#show, products#index 實作
