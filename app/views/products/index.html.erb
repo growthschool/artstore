@@ -1,14 +1,19 @@
-<h1>商品清單</h1>
-
-<% @products.each do |product| %>
-	<div class="col-xs-6 col-md-3">
-		<%= link_to product_path(product) do %>
-			<% if product.default_photo.present? %>
-				<%= image_tag(product.default_photo.image.thumb.url, class: "thumbnail") %>
-			<% else %>
-				<%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-	        <% end %>
-	      <% end %>
-		<%= product.title %>  $ <%= product.price %>
-	</div>
+<% @products.each_slice(3) do |products| %>
+<div class="row">
+	<% products.each do |product| %>
+		<div class="col-md-4">
+			<div class="product">
+				<div class="image_wrapper">
+					<% if product.default_photo.present? %>
+						<%= link_to image_tag(product.default_photo.image.medium.url),product %>
+					<% else %>
+						<%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+			        <% end %>
+			    </div>
+			    <h2><%= link_to product.title, product_path(product) %>  
+			    $<%= product.price %></h2> 				
+			</div>
+		</div>
+	<% end %>
+</div>
 <% end %>

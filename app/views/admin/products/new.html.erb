@@ -1,27 +1,4 @@
-<h1>新增商品</h1>
-
-<%= simple_form_for [:admin, @product] do |f| %>
-<div class="group">
-	<%= f.input :title, label: '標題' %>
+<div class="panel-heading">
+	<h1>新增商品</h1>
 </div>
-
-<div class="group">
-	<%= f.input :description, label: '敘述' %>
-</div>
-
-<div class="group">
-	<%= f.input :quantity, label: '數量' %>
-</div>
-
-<div class="group">
-	<%= f.input :price, label: '價錢' %>
-</div>
-
-<div class="form-group">
-	<%= f.simple_fields_for :photos do |c| %>
-		<%= c.input :image, as: :file %>
-	<% end %>
-</div>
-
-<%= f.button :submit %>
-<% end %>
+<%= render 'form' %>

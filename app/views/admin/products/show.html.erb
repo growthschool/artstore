@@ -1,11 +1,23 @@
-<h1>檢視商品</h1>
-
-
-<div class="group">
-	商品名稱：<%= @product.title %><br>
-	商品敘述：<%= @product.description %><br>
-	商品數量：<%= @product.quantity %><br>
-	商品價格：<%= @product.price %><br>
+<div class="main_content">
+	<div id="product_top" class="row">
+		<div class="col-md-4">
+			<% if @product.default_photo.present? %>
+				<%= image_tag @product.default_photo.image.medium.url, class: "product_image" %>
+			<% else %>
+				<%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+		    <% end %>	
+		</div>
+		<div class="col-md-8">
+			<div id="product_info">
+				<h1><%= @product.title %></h1>
+				<p class="description"><%= @product.description %></p><hr>
+				<h4>只要 $<%= @product.price %> 元</h4>	
+				<h4>現有 <%= @product.quantity %> 組</h4>	
+				<%= link_to "修改", edit_admin_product_path, class: "btn btn-default" %>
+				<%= link_to "刪除", admin_product_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-default" %>
+			</div>
+		</div>
+	</div>	
 </div>
 
 

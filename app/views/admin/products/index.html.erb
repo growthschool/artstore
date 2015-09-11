@@ -1,18 +1,22 @@
-<h1>商品清單</h1>
+<h1>後台管理 - 商品清單</h1>
 
-<% @products.each do |f| %>
-	<h3>商品名稱：<%= f.title %></h3><br>
-	商品說明：<%= f.description %><br>
-
-	<%= link_to "看細節", admin_product_path(f) %> 
-	| <%= link_to "修改", edit_admin_product_path(f) %> 
-	<hr>
+<% @products.each_slice(3) do |products| %>
+<div class="row">
+	<% products.each do |product| %>
+		<div class="col-md-4">
+			<div class="product">
+				<div class="image_wrapper">
+					<% if product.default_photo.present? %>
+						<%= link_to image_tag(product.default_photo.image.medium.url),admin_product_path(product) %>
+					<% else %>
+						<%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+					<% end %>
+				</div>
+				<h2><%= link_to product.title, admin_product_path(product)%></h2> 
+				<%= link_to "修改", edit_admin_product_path(product), class: "btn btn-default" %>
+			</div>
+		</div>
+	<% end %>	
+</div>
 <% end %>	
 
-
-<%
-#<%= simple_form_for @products do |f| 
-#	商品名稱：<%= f.label :title <br>
-#	商品說明：<%= f.label :description 
-#<% end 
-%>
