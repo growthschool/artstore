@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-5">
-    <%= image_tag(@product.default_photo.image.medium.url, class: "thumbnail") %>
+  <%= render_product_photo(@product.default_photo, :medium) %>
   </div>
 
   <div class="col-md-7">

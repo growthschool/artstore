@@ -2,11 +2,13 @@ class Admin::ProductsController < ApplicationController
  def index
  end
 
+layout "admin"
+
  before_action :authenticate_user!
  before_action :admin_required
 
  def index
-   @products = Product.all
+   @products = Product.order("id DESC")
  end
 
  def show
@@ -21,6 +23,7 @@ class Admin::ProductsController < ApplicationController
 
  def edit
   @product = Product.find(params[:id])
+  @photo = @product.photos.build
  end
 
 
@@ -36,7 +39,7 @@ end
 
 def update
   @product = Product.find(params[:id])
-
+  @photo = @product.photos.build
   if @product.update(product_params)
     redirect_to admin_products_path
   else
