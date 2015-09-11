@@ -1,3 +1,4 @@
+<h2>檢視產品</h2>
 <ul>
   <li>
     <p>標題：<%=@product.title %></p>
@@ -12,5 +13,18 @@
     <p>價格：<%=@product.price %></p>
   </li>
 </ul>
-<%= link_to("<button type='button' class='btn btn-success'>編輯</button>".html_safe, edit_admin_product_path(@product)) %>
-<%= link_to("<button type='button' class='btn btn-danger'>刪除</button>".html_safe, admin_product_path(@product), method: :delete) %>
+<% if @product.photos.count > 0 %>
+  <p> 產品圖片 </p>
+  <%= image_tag(@product.default_photo.image.thumb.url, class: "thumbnail") %>
+<% else %>
+  <p> 本產品無圖片 </p>
+<% end %>
+<div>
+  <div style="float:left; margin:10px">
+    <%= button_to "編輯", edit_admin_product_path(@product), :method => "get" ,class: "btn btn-success" %>
+  </div>
+  <div style="float:left; margin:10px">
+    <%= button_to "刪除", admin_product_path(@product), :method => "delete" ,class: "btn btn-danger" %>
+  </div>
+  <div style="clear:both;"></div>
+</div>

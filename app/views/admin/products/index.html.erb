@@ -1,5 +1,6 @@
+<h2>產品清單</h2>
 <ul>
-<% @products.each do | product | %>
-<li><%= link_to(product.title, admin_product_path(product)) %></li>
-<% end %>
+  <% @products.each do | product | %>
+    <li><%= link_to(product.title, admin_product_path(product)) %></li>
+  <% end %>
 </ul>

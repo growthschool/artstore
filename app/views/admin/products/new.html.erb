@@ -1,1 +1,13 @@
-<%= render :partial => "edit_product_form" %>
+<h2>新增產品</h2>
+<%= simple_form_for [:admin, @product] do |f| %>
+  <%= f.input :title, label:"標題" %>
+  <%= f.input :description, label:"敘述" %>
+  <%= f.input :quantity, label:"數量" %>
+  <%= f.input :price, label:"價格"  %>
+  <div class="form_group">
+    <%= f.simple_fields_for :photos do |c| %>
+      <% c.input :image, label:"圖片", as: :file %>
+    <% end %>
+  </div>
+  <%= f.button :submit, "儲存", data: {disable_with: "Submitting"} %>
+<% end %>
