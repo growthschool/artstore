@@ -4,7 +4,7 @@ class Admin::ProductsController < ApplicationController
 	before_action :find_product, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@products = Product.all
+		@products = Product.all.order("created_at DESC")
 	end
 
 	def show
@@ -27,6 +27,7 @@ class Admin::ProductsController < ApplicationController
 	end
 
 	def edit
+		@photo = @product.photos.build
 	end
 
 	def update
@@ -44,7 +45,7 @@ class Admin::ProductsController < ApplicationController
 
 	private
 		def product_params
-			params.require(:product).permit(:title, :description, :quantity, :price, 
+			params.require(:product).permit(:title, :description, :quantity, :price, :image,
 											photos_attributes: [:image])
 		end
 

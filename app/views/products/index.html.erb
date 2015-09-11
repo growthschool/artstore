@@ -4,11 +4,7 @@
 		<div class="col-md-4">
 			<div class="product">
 				<div class="image_wrapper">
-					<% if product.default_photo.present? %>
-						<%= link_to image_tag(product.default_photo.image.medium.url),product %>
-					<% else %>
-						<%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-			        <% end %>
+					<%= link_to render_product_photo(product.default_photo, :medium), product %>
 			    </div>
 			    <h2><%= link_to product.title, product_path(product) %>  
 			    $<%= product.price %></h2> 				
