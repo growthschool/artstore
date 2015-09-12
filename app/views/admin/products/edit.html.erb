@@ -18,5 +18,5 @@
     </div>
   <% end %>
   <%= f.button :submit, "儲存", class: "btn btn-success", data: {disable_with: "Submitting"} %>
-  <%= button_to "刪除", admin_product_path(@product), :method => "delete" ,class: "btn btn-danger", data: {confirm: "確定要刪除本產品？"} %>
 <% end %>
+<div ><%= button_to "刪除", admin_product_path(@product), :method => "delete" ,class: "btn btn-danger", data: {confirm: "確定要刪除本產品？"} , style: "float: right;" %></div>
