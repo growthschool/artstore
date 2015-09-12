@@ -1,11 +1,7 @@
-<h2>admin:檢視產品</h2>
+<h2>檢視產品</h2>
 <div class="row">
   <div class="col-md-5">
-    <% if @product.photos.count > 0 %>
-      <%= image_tag(@product.default_photo.image.medium.url, class: "medium") %>
-    <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=本產品無圖片", class: "thumbnail") %>
-    <% end %>
+    <%= render_product_photo(@product.default_photo) %>
   </div>
   <div class="col-md-7">
     <h2><%= @product.title %></h2>

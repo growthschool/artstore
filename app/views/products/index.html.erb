@@ -1,16 +1,4 @@
 <h2>產品清單</h2>
 <div class="row">
-  <% @products.each do |product| %>
-    <div class="col-xs-6 col-md-3">
-      <%= link_to product_path(product) do %>
-        <% if product.default_photo.present? %>
-          <%= image_tag(product.default_photo.image.thumb.url, class: "thumbnail")%>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=本產品無圖片", class: "thumbnail")%>
-        <% end %>
-      <%end%>
-      <li><%= product.title %><br/>
-        $<%= product.price %></li>
-    </div>
-  <% end %>
+  <%= render "product_item", products: @products %>
 </div>

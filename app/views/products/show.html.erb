@@ -1,30 +1,17 @@
 <h2>檢視產品</h2>
-<ul>
-  <li>
-    <p>標題：<%=@product.title %></p>
-  </li>
-  <li>
-    <p>敘述：<%=@product.description %></p>
-  </li>
-  <li>
-    <p>數量：<%=@product.quantity %></p>
-  </li>
-  <li>
-    <p>價格：<%=@product.price %></p>
-  </li>
-</ul>
-<% if @product.photos.count > 0 %>
-  <p> 產品圖片 </p>
-  <%= image_tag(@product.default_photo.image.thumb.url, class: "thumbnail") %>
-<% else %>
-  <p> 本產品無圖片 </p>
-<% end %>
-<div>
-  <div style="float:left; margin:10px">
-    <%= button_to "編輯", edit_admin_product_path(@product), :method => "get" ,class: "btn btn-success" %>
+<div class="row">
+  <div class="col-md-5">
+    <%= render_product_photo(@product.default_photo) %>
   </div>
-  <div style="float:left; margin:10px">
-    <%= button_to "刪除", admin_product_path(@product), :method => "delete" ,class: "btn btn-danger" %>
+  <div class="col-md-7">
+    <h2><%= @product.title %></h2>
+    <div style="height:100px;">
+      <p><%= @product.description %></p>
+    </div>
+    <div>數量：<%= @product.quantity %></div>
+    <div class="product-price"> $ <%= @product.price %></div>
+    <div class="pull-right">
+      <%= link_to("加入購物車", "#", :class =>"btn btn-primary btn-lg btn-danger") %>
+    </div>
   </div>
-  <div style="clear:both;"></div>
 </div>
