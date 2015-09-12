@@ -17,6 +17,6 @@
       <% end %>
     </div>
   <% end %>
-  <%= f.button :submit, "儲存", data: {disable_with: "Submitting"} %>
-  <%= link_to("<button type='button' class='btn btn-danger'>刪除</button>".html_safe, admin_product_path(@product), method: :delete, data: {confirm: "確定要刪除本產品？"}) %>
+  <%= f.button :submit, "儲存", class: "btn btn-success", data: {disable_with: "Submitting"} %>
+  <%= button_to "刪除", admin_product_path(@product), :method => "delete" ,class: "btn btn-danger", data: {confirm: "確定要刪除本產品？"} %>
 <% end %>
