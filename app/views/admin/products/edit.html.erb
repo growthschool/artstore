@@ -19,6 +19,11 @@
 
     <%= f.input :price %>
   </div>
+    <div class="group">
+    <%= f.simple_fields_for :photos do |c| %>
+      <%= c.input :image, as: :file %>
+    <% end %>
+  </div>
 
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 

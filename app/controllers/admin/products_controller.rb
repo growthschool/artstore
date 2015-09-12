@@ -26,12 +26,14 @@ class Admin::ProductsController < ApplicationController
   def edit
 
     @product = Product.find(params[:id])
+    @photo =@product.photos.build
 
   end
 
   def update
 
     @product = Product.find(params[:id])
+    @photo =@product.photos.build
 
     if @product.update(products_params)
 
