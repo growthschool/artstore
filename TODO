@@ -33,10 +33,10 @@
 
 === Week-1 bonus 及其他  ===
 
-[ ] 使用者可以編輯使用者名稱
-  [ ] 修改 user model, 新增 name 的欄位
-  [ ] 增加 使用者的編輯畫面
-  [ ] 右上角的 email 換成使用者的 nick name
+[v] 使用者可以編輯使用者名稱
+  [v] 修改 user model, 新增 name 的欄位 (需要加入 permit)
+  [v] 增加使用者的編輯畫面
+  [v] 右上角的 email 換成使用者的 nick name
 [v] 重構圖片相關程式碼
   [v] 加上 helper method 取用最後一張上傳圖片
   [v] 加上 helper method 取用無圖片該顯示的圖
