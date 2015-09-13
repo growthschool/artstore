@@ -25,6 +25,18 @@ class Admin::ProductsController < ApplicationController
 
   end
 
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    if @product.save
+      redirect_to admin_products_path
+    else
+      render :edit
+    end
+  end
+
 
 
 
