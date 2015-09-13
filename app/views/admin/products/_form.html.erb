@@ -1,8 +1,8 @@
-<%= simple_form_for [:admin,@product] do |f| %>
+<%= simple_form_for [:admin, @product], html: { multipart: true } do |f| %>
 	<div class="col-md-6 col-md-offset-3">
 		目前顯示商品圖 <br>
 		<%= render_product_photo(@product.default_photo, :medium)%>
-		<%= f.simple_fields_for :photo do |c| %>
+		<%= f.simple_fields_for :photos, @product.default_photo do |c| %>
 			<%= c.input :image, as: :file %>
 		<% end %>
 
