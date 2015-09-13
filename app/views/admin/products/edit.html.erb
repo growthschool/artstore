@@ -1,0 +1,22 @@
+<h2>編輯產品</h2>
+<%= simple_form_for [:admin, @product] do |f| %>
+  <%= f.input :title, label:"標題" %>
+  <%= f.input :description, label:"敘述" %>
+  <%= f.input :quantity, label:"數量" %>
+  <%= f.input :price, label:"價格"  %>
+  <% if ( @product.photos.present? ) %>
+    <p> 產品圖片 </p>
+    <%= image_tag(@product.default_photo.image.thumb.url, class: "thumbnail") %>
+  <% else %>
+    <% if !@photo %>
+      <% @photo = @product.photos.new %>
+    <% end %>
+    <div class="form_group">
+      <%= f.simple_fields_for :photos do |c| %>
+        <% c.input :image, label:"圖片", as: :file %>
+      <% end %>
+    </div>
+  <% end %>
+  <%= f.button :submit, "儲存", class: "btn btn-success", data: {disable_with: "Submitting"} %>
+<% end %>
+<div ><%= button_to "刪除", admin_product_path(@product), :method => "delete" ,class: "btn btn-danger", data: {confirm: "確定要刪除本產品？"} , style: "float: right;" %></div>
