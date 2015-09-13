@@ -37,9 +37,9 @@
   [ ] 修改 user model, 新增 name 的欄位
   [ ] 增加 使用者的編輯畫面
   [ ] 右上角的 email 換成使用者的 nick name
-[ ] 重構圖片相關程式碼
-  [ ] 加上 helper method 取用最後一張上傳圖片
-  [ ] 加上 helper	method 取用無圖片該顯示的圖
+[v] 重構圖片相關程式碼
+  [v] 加上 helper method 取用最後一張上傳圖片
+  [v] 加上 helper method 取用無圖片該顯示的圖
 [ ] 畫面可以顯示新增、編輯結果的提示訊息
 [ ] 調整後台的相關功能
   [ ] admin 後台要能有自己的 layout
