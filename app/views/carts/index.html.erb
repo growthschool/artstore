@@ -1,0 +1,38 @@
+<div class="panel-heading">
+	<h1>購物車</h1>	
+</div>
+
+<div class="row">
+	<div class="col-md-9 col-md-offset-2">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th width="220">商品資訊</th>
+					<th>商品名稱</th>
+					<th>商品價格</th>
+					<th>商品數量</th>
+					
+				</tr>
+				<% current_cart.cart_items.each do |product| %>
+				<tr>
+					<td><%= product.id %></td>
+					<td>
+						
+					</td>
+					<td></td>
+					<td></td>
+
+					<td>
+						<%= link_to "修改", edit_admin_product_path(product), class: "btn btn-default" %>
+						<%= link_to "刪除", admin_product_path(product), method: :delete, data: { confirm: "確定要刪除嗎？" } , class: "btn btn-default" %>
+					</td>			
+				</tr>
+				<% end %>
+				<tr>
+					<td colspan="5">總計 <%= render_cart_total_price(current_cart) %> NTD</td>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</div>
