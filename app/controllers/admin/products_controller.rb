@@ -1,5 +1,7 @@
 class Admin::ProductsController < ApplicationController
 
+	layout "admin"
+
 	# 必須要可以登入
 	before_action :authenticate_user!
 	# 使用者必須是 admin
