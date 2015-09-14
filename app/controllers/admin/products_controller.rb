@@ -24,7 +24,7 @@ class Admin::ProductsController < ApplicationController
 		@product = Product.new(product_params)
 		
 		if @product.save
-			redirect_to admin_products_path
+			redirect_to admin_products_path, notice: "新增產品完成"
 		else
 			render :new
 		end
@@ -39,7 +39,7 @@ class Admin::ProductsController < ApplicationController
 		@product = Product.find(params[:id])
 
 		if @product.update(product_params)
-			redirect_to admin_products_path
+			redirect_to admin_products_path, notice: "產品資訊成功儲存"
 		else
 			render :edit
 		end
