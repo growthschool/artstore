@@ -18,6 +18,26 @@ class ApplicationController < ActionController::Base
   		redirect_to "/"
   	end
   end
+
+  #controller裡設定的method只能在controller裡面用，要讓view也能用，就要加helper_method
+  helper_method :current_cart
+
+  def current_cart
+    @current_cart ||= find_cart
+  end
+
+  private
+
+    def find_cart
+      cart = Cart.find_by(id: session[:cart_id])
+
+      unless cart.present?
+        cart = Cart.create
+      end
+
+      session[:cart_id] = cart.id
+      cart
+    end
   
   
 end

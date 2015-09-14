@@ -10,7 +10,7 @@
 				<h4>還剩 <%= @products.quantity %> 組</h4>	
 				 <p class="price">$<%= @products.price %> </p>	
 				
-				<%= link_to "放入購物車", root_path, class: "btn btn-default pull-right" %>
+				<%= link_to "放入購物車", add_to_cart_product_path(@products), method: :post, class: "btn btn-default pull-right" %>
 			</div>
 		</div>
 	</div>	
