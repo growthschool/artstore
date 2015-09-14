@@ -1,0 +1,23 @@
+<h2>產品列表</h2>
+<div class="container text-right">
+	<%= link_to("新增產品", new_admin_product_path, class: "btn btn-warning") %>
+</div>
+<hr>
+<table class="table" id="products_table">
+	<tr>
+		<td class="col-md-1">#</td>
+		<td class="col-md-2">圖片</td>
+		<td class="col-md-6">產品名稱</td>
+		<td class="col-md-3">功能</td>
+	</tr>
+	<% @products.each do |product| %>
+		<tr>
+			<td class="text-center"><%= product.id %></td>
+			<td>
+				<%= render_product_photo(product.default_photo, :medium) %>
+			</td>
+			<td><%= link_to(product.title, admin_product_path(product)) %></td>
+			<td><%= link_to("編輯", edit_admin_product_path(product), class: "btn btn-primary btn-xs") %></td>
+		</tr>
+	<% end %>
+</table>

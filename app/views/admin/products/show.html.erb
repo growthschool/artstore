@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row text-right" id="product-actions-panel">
+		<%= link_to("編輯", edit_admin_product_path(@product), class: "btn btn-primary") %>
+	</div>
+	<div class="row">
+		<h2><%= @product.title %></h2>
+		<p id="product-description">
+		  <%= @product.description.to_s %>
+		</p>
+		<hr>
+		<ul>
+			<li><strong>數量 : </strong><%= @product.quantity.to_i %></li>
+			<li><strong>價格 : </strong><%= @product.price.to_i %></li>
+		</ul>
+	</div>
+	<div class="row">
+		<h3>商品圖片</h3>
+		<% @product.photos.each do |photo| %>
+			<%= image_tag(photo.image_url(:small)) %>
+		<% end %>
+	</div>
+</div>

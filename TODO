@@ -1,0 +1,50 @@
+2015-09-07
+
+[v] 加上 bootstrap
+  [v] 加上 Gemfile
+  [v] 設定 css 和 js
+[v] 加上用 bootstrap 樣式的 nav bar
+  [v] 整理整個頁面的架構 (nav bar 和主要內容區)
+  [v] 把 nav bar 做成 partial
+  [v] 把 nav bar 套上 bootstrap 的樣式
+[v] 把內建的 form 換成 simple_form
+  [v] 加入 simple_form gem
+    [v] 設定 bootstrap 樣式
+  [v] 修改表單，換上 simple_form
+  [v] 修改 devise 表單的樣式，換上 simple_form
+    [v] 讓 devise 可以客製化 view
+[v] 加入修改產品的功能
+  [v] 在 admin>product controller 加入 edit, update methods
+    [v] 加入編輯的 view
+  [v] 在產品列表加入新增和編輯按鈕
+  [v] 抽出產品 form 成 partial
+[v] 實作圖片上傳，使用 carrierwave
+  [v] 加入 carrierwave gem
+  [v] 加入上傳圖片的功能
+  [v] 一個產品可以對應到好幾張圖片
+  [v] 照片可以縮圖成 800x800, 400x400, 200x200
+[v] 加上顯示用的畫面
+  [v] 後台要能夠顯示 product 細節 (#show)
+  [v] 顯示前台 product#show, products#index 實作
+    [v] 設定好 controller, view 和 routes
+    [v] 排版好內容
+      [v] 產品列表
+      [v] 產品內頁
+
+=== Week-1 bonus 及其他  ===
+
+[v] 使用者可以編輯使用者名稱
+  [v] 修改 user model, 新增 name 的欄位 (需要加入 permit)
+  [v] 增加使用者的編輯畫面
+  [v] 右上角的 email 換成使用者的 nick name
+[v] 重構圖片相關程式碼
+  [v] 加上 helper method 取用最後一張上傳圖片
+  [v] 加上 helper method 取用無圖片該顯示的圖
+[v] 畫面可以顯示新增、編輯結果的提示訊息
+[v] 調整後台的相關功能
+  [v] admin 後台要能有自己的 layout
+  [v] 前台的使用者下拉選單，如果是管理者，要有可以前往後台的連結
+[v] 加入 fontawsome 套件
+[v] 加入暫時的購物車按鈕
+[v] 設定前台產品顯示順序：最新 ➡︎ 最舊
+[v] 加上價格的 css style
