@@ -10,7 +10,7 @@
 					<h3><%= link_to(product.title, product_path(product)) %></h3>
 					<p><%= product.description %></p>
 					<div class="row text-right">
-						<span id="products-list-price">$ <%= product.price %></span>
+						<span class="product-price" id="products-list-price">$ <%= product.price.to_i %></span>
 					</div>
 					<div class="row text-right">
 						<hr>

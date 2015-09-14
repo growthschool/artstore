@@ -18,9 +18,9 @@
 	<div class="col-md-8" id="product-content">
 		<h2><%= @product.title %></h2>
 		<p id="product-description"><%= @product.description %></p>
-		<span>數量：<%= @product.quantity %></span>
+		<span>數量：<%= @product.quantity.to_i %></span>
 		<br>
-		<span>$ <%= @product.price %></span>
+		<span class="product-price">$ <%= @product.price.to_i %></span>
 		<div class="row text-right">
 			<%= link_to("加入購物車", "#", class: "btn btn-danger") %>
 		</div>
