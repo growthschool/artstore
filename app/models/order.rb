@@ -6,6 +6,8 @@ class Order < ActiveRecord::Base
 
 	accepts_nested_attributes_for :info
 
+	before_create :generate_token
+
 	def build_item_cache_from_cart(cart)
 		cart.items.each do |cart_item|
 			item = item.build
@@ -15,5 +17,10 @@ class Order < ActiveRecord::Base
 			item.save
 		end
 	end
+
+	def generate_token
+		self.token = SecureRandom.uuid
+	end
+
 
 end
