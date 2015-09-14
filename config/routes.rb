@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   	end
   end
 
-  resources :carts
+  resources :carts do
+    post "checkout", on: :collection
+  end
   root 'products#index'
 end
