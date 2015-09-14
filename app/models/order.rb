@@ -8,9 +8,14 @@ class Order < ActiveRecord::Base
 
 	before_create :generate_token
 
+	def calculate_total!(cart)
+		self.total = cart.total_price
+		self.save
+	end
+
 	def build_item_cache_from_cart(cart)
 		cart.items.each do |cart_item|
-			item = item.build
+			item = items.build
 			item.product_name = cart_item.title
 			item.quantity = 1
 			item.price = cart_item.price
@@ -22,5 +27,11 @@ class Order < ActiveRecord::Base
 		self.token = SecureRandom.uuid
 	end
 
+	def set_payment_with!(method)
+		self.update_columns(payment_method: method)
+	end		
 
+	def pay!
+		self.update_columns(is_paid: true)
+	end
 end

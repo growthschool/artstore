@@ -32,10 +32,8 @@
 				<tr>
 					<td colspan="5">總計 <%= render_cart_total_price(current_cart) %> NTD</td>
 				</tr>
-				<tr>
-					<td colspan="5">確認結帳<%= render_cart_total_price(current_cart) %></td>
-				</tr>
 			</thead>
 		</table>
+		<%= link_to "確認結帳", checkout_carts_path, method: :post, class: 'btn btn-lg btn-default' %>
 	</div>
 </div>
