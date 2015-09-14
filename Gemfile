@@ -6,6 +6,7 @@ gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'aasm'
 
 gem 'rails', '4.2.2'
 gem 'sass-rails', '~> 5.0'
