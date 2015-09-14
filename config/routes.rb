@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   resources :carts do
     post "checkout", on: :collection
   end
+
+  resources :orders
   root 'products#index'
 end
