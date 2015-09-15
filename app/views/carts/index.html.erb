@@ -7,15 +7,18 @@
         <tr>
           <th colspan="2">Product Info</th>
           <th>Price</th>
+          <th></th>
         </tr>
       </thead>
 
       <tbody>
-        <% current_cart.items.each do |product| %>
+        <% current_cart.cart_items.each do |cart_item| %>
+          <% product = cart_item.product %>
           <tr>
             <td><%= render_product_image(product.default_image) %></td>
             <td><%= link_to product.title, product %></td>
             <td><%= product.price %></td>
+            <td><%= link_to "Delete", cart_item, method: :delete, class: "btn btn-danger pull-right" %></td>
           </tr>
         <% end %>
       </tbody>

@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :cart_items, only: [:destroy]
+
   resources :orders, only: [:create, :show] do
     member do
       get :pay_with_credit_card
