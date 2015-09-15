@@ -17,6 +17,6 @@ module ApplicationHelper
   end
 
   def render_cart_items_count(cart)
-    cart.cart_items.count
+    cart.cart_items.inject(0) { |sum, cart_item| sum += cart_item.quantity }
   end
 end

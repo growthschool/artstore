@@ -41,7 +41,7 @@ class OrdersController < ApplicationController
     @order = Order.find_by(token: params[:id])
     @order.set_payment_with!('credit_card')
     @order.make_payment!
-    redirect_to root_url, notice: 'Order has been paid.'
+    redirect_to accout_orders_path, notice: 'Order has been paid.'
   end
 
   private

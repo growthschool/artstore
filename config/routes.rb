@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :admin do
-  get 'orders/index'
+    get 'orders/index'
   end
 
   root 'products#index'
@@ -34,6 +34,9 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :account do
+    resources :orders, only: [:index]
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
