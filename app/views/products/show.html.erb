@@ -22,7 +22,7 @@
 		<br>
 		<span class="product-price">$ <%= @product.price.to_i %></span>
 		<div class="row text-right">
-			<%= link_to("加入購物車", "#", class: "btn btn-danger") %>
+			<%= link_to("加入購物車", add_to_cart_product_path(@product), method: :post, class: "btn btn-danger") %>
 		</div>
 	</div>
 </div>
