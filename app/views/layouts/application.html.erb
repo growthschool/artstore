@@ -8,7 +8,11 @@
 </head>
 <body>
 
-<%= yield %>
+<%= render 'shared/navbar' %>
+<div class="container">
+  <%= notice_message %>
+  <%= yield %>
+</div>
 
 </body>
 </html>

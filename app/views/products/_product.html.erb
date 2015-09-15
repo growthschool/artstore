@@ -1,0 +1,9 @@
+<div class="col-xs-6 col-md-3">
+  <%= link_to render_product_image(product.default_image), product_path(product) %>
+  <div>
+    <%= product.title %>
+  </div>
+  <div>
+    <%= "$ #{product.price}" %>
+  </div>
+</div>

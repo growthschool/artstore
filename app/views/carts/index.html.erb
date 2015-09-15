@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>Shopping Cart</h2>
+    <%= link_to "Clean all", clean_carts_path, method: :delete, class: "btn btn-danger pull-right" %>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Product Info</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% current_cart.cart_items.each do |cart_item| %>
+          <% product = cart_item.product %>
+          <tr>
+            <td><%= render_product_image(product.default_image) %></td>
+            <td><%= link_to product.title, product %></td>
+            <td><%= product.price %></td>
+            <td>
+              <%= simple_form_for cart_item do |f| %>
+                <%= f.input :quantity, label: false, input_html: { min: 1, max: product.quantity } %>
+                <%= f.submit "Update", class: "btn btn-primary" %>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to "Delete", cart_item, method: :delete, class: "btn btn-danger pull-right" %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <div class="tatal clearfix">
+      <span class="pull-right">
+        <span>Total: <%= render_cart_total_price(current_cart)  %> NTD</span>
+      </span>
+    </div>
+
+    <hr>
+
+    <div class="checkout clearfix">
+      <%= link_to "Checkout", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right" %>
+    </div>
+  </div>
+</div>

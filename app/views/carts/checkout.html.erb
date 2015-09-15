@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>Shopping Information</h2>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th width="80%">Product Info</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% current_cart.items.each do |product| %>
+          <tr>
+            <td><%= link_to product.title, product %></td>
+            <td><%= product.price %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <div class="total clearfix">
+      <span class="pull-right">
+        Total: <%= render_cart_total_price(current_cart) %> NTD
+      </span>
+    </div>
+
+    <hr>
+
+    <h2>Order Information</h2>
+    <div class="order-form">
+      <%= render 'orders/form', order: @order %>
+    </div>
+
+  </div>
+</div>
