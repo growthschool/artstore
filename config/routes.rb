@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 		post "checkout", on: :collection # 用 collection 的時候， path 中不用傳類似 :id 這種參數
 	end
 
+	resource :orders, only: [:create]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,43 @@
+<h2>購物明細</h2>
+<table class="table">
+	<tr>
+		<th class="col-md-10">商品名稱</th>
+		<th class="col-md-2">單價</th>
+	</tr>
+	<% current_cart.items.each do |product| %>
+		<tr>
+			<td><%= link_to(product.title, product_path(product)) %></td>
+			<td><%= product.price %></td>
+		</tr>
+	<% end %>
+</table>
+<div class="col-md-12 text-right">
+	總計 <%= render_cart_total_price(current_cart) %> 元
+</div>
+<hr>
+<h2>訂單資訊</h2>
+<%= simple_form_for @order do |form| %>
+	<%= form.simple_fields_for :info do |info_form| %>
+		<strong>訂購人</strong>
+		<div class="row">
+			<div class="form-group col-md-6">
+				<%= info_form.input :billing_name %>
+			</div>
+			<div class="form-group col-md-6">
+				<%= info_form.input :billing_address %>
+			</div>
+		</div>
+		<strong>收貨人</strong>
+		<div class="row">
+			<div class="form-group col-md-6">
+				<%= info_form.input :shipping_name %>
+			</div>
+			<div class="form-group col-md-6">
+				<%= info_form.input :shipping_address %>
+			</div>
+		</div>
+	<% end %>
+	<div class="checkout">
+		<%= form.submit "生成訂單", class: "btn btn-danger", data: { disable_with: "生成中..." } %>
+	</div>
+<% end %>
