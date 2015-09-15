@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 	has_many :photos
 	accepts_nested_attributes_for :photos
 
+	has_many :orders
+
 	def admin?
 		is_admin
 	end
