@@ -19,6 +19,14 @@ class OrdersController < ApplicationController
     end
   end
 
+  def pay_with_credit_card
+    @order = Order.find_by(token: params[:id])
+    @order.set_payment_with!('credit_card')
+    @order.pay!
+
+    redirect_to root_url, notice: 'Order has been paid.'
+  end
+
   private
 
   def order_params

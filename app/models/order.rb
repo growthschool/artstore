@@ -23,6 +23,14 @@ class Order < ActiveRecord::Base
     save
   end
 
+  def set_payment_with!(method)
+    update_attributes(payment_method: method)
+  end
+
+  def pay!
+    update_attributes(is_paid: true)
+  end
+
   private
 
   def generate_token

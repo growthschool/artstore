@@ -16,7 +16,11 @@ Rails.application.routes.draw do
     post :checkout, on: :collection
   end
 
-  resources :orders, only: [:create, :show]
+  resources :orders, only: [:create, :show] do
+    member do
+      get :pay_with_credit_card
+    end
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
