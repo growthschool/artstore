@@ -106,6 +106,12 @@ body {
 	padding: 2em 8%;
 }
 
+#product_price {
+	text-align: right;
+	font-size: 20px;
+	color: $red;
+}
+
 .product_image {
 	max-width: 100%;
 	border-radius: 5px;
