@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :cart_items, only: [:destroy]
+  resources :cart_items, only: [:update, :destroy]
 
   resources :orders, only: [:create, :show] do
     member do

@@ -7,6 +7,7 @@
         <tr>
           <th colspan="2">Product Info</th>
           <th>Price</th>
+          <th>Quantity</th>
           <th></th>
         </tr>
       </thead>
@@ -18,7 +19,15 @@
             <td><%= render_product_image(product.default_image) %></td>
             <td><%= link_to product.title, product %></td>
             <td><%= product.price %></td>
-            <td><%= link_to "Delete", cart_item, method: :delete, class: "btn btn-danger pull-right" %></td>
+            <td>
+              <%= simple_form_for cart_item do |f| %>
+                <%= f.input :quantity, label: false, input_html: { min: 1, max: product.quantity } %>
+                <%= f.submit "Update", class: "btn btn-primary" %>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to "Delete", cart_item, method: :delete, class: "btn btn-danger pull-right" %>
+            </td>
           </tr>
         <% end %>
       </tbody>
