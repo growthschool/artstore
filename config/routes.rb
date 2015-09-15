@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   end
 
   resources :carts, only: [:index] do
-    post :checkout, on: :collection
+    collection do
+      post :checkout
+      delete :clean
+    end
   end
 
   resources :orders, only: [:create, :show] do
