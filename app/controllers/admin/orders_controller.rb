@@ -5,7 +5,13 @@ class Admin::OrdersController < ApplicationController
   before_action :admin_required
 
   def index
-    @orders = Order.all
+    @orders = Order.recent
+  end
+
+  def show
+    @order = Order.find(params[:id])
+    @order_items = @order.items
+    @order_info = @order.info
   end
 
   def update_state

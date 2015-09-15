@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   devise_for :users
   namespace :admin do
     resources :products
-    resources :orders, only: [:index, :edit, :update] do
+    resources :orders, only: [:index, :show] do
       patch :update_state, on: :member
     end
   end
