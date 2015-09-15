@@ -5,4 +5,9 @@ class Cart < ActiveRecord::Base
 	def add_product_to_cart(product)
 		items << product
 	end
+
+	def total_price
+		# 預設值為 0 開始計算
+		items.inject(0) { |sum, item| sum + item.price }
+	end
 end
