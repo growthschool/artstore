@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
+  namespace :admin do
+  get 'orders/index'
+  end
+
   root 'products#index'
 
   devise_for :users
   namespace :admin do
     resources :products
+    resources :orders, only: [:index, :edit, :update] do
+      patch :update_state, on: :member
+    end
   end
 
   resources :products, only: [:index, :show] do

@@ -1,0 +1,12 @@
+<tr>
+  <td>
+    <%= link_to "#{order.id}", order_path(order.token) %>
+  </td>
+  <td><%= order.user.email %></td>
+  <td><%= order.total %></td>
+  <td><%= order.aasm_state %></td>
+  <td><%= order.created_at %></td>
+  <td>
+    <%= render_order_events(order) %>
+  </td>
+</tr>

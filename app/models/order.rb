@@ -33,6 +33,11 @@ class Order < ActiveRecord::Base
     update_attributes(is_paid: true)
   end
 
+  def update_state(event)
+    possible_events = aasm.events.map { |e| e.name.to_s }
+    possible_events.include?(event) ? self.send("#{event}!") : false
+  end
+
   aasm do
     state :order_placed, initial: true
     state :paid
