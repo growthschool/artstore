@@ -15,11 +15,10 @@ class OrdersController < ApplicationController
   def create
     @order = current_user.orders.build(order_params)
 
-    if @order.save
-      @order.build_item_cache_from_cart(current_cart)
+    if @order.build_item_cache_from_cart(current_cart) && @order.save
       @order.caculate_total!(current_cart)
       current_cart.destroy
-      redirect_to order_path(@order.token)
+      redirect_to order_url(@order.token)
     else
       render 'carts/checkout'
     end
@@ -30,7 +29,7 @@ class OrdersController < ApplicationController
     @order_items = @order.items
     if @order.update_attributes(order_params)
       flash[:notice] = 'Order information updated!'
-      redirect_to order_path(@order.token)
+      redirect_to order_url(@order.token)
     else
       flash[:alert] = 'Order information updated failed'
       render :edit
@@ -41,7 +40,7 @@ class OrdersController < ApplicationController
     @order = Order.find_by(token: params[:id])
     @order.set_payment_with!('credit_card')
     @order.make_payment!
-    redirect_to accout_orders_path, notice: 'Order has been paid.'
+    redirect_to accout_orders_url, notice: 'Order has been paid.'
   end
 
   private
