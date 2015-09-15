@@ -1,0 +1,23 @@
+<%= simple_form_for order, url: (order.new_record? ? orders_url : order_url(order.token)) do |f| %>
+  <%= f.simple_fields_for :info do |c| %>
+    <legend>Bill</legend>
+    <div class="form-group col-lg-6">
+      <%= c.input :billing_name %>
+    </div>
+    <div class="form-group col-lg-6">
+      <%= c.input :billing_address %>
+    </div>
+
+    <legend>Shipping</legend>
+    <div class="form-group col-lg-6">
+      <%= c.input :shipping_name %>
+    </div>
+    <div class="form-group col-lg-6">
+      <%= c.input :shipping_address %>
+    </div>
+  <% end %>
+  <div class="checkout">
+    <%= f.submit "Submit", class: "btn btn-lg btn-danger pull-right",
+      data: { disable_with: "Submitting..." } %>
+  </div>
+<% end %>
