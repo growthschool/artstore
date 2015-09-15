@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :configure_permitted_parameters, if: :devise_controller? 
 
+  #controller裡設定的method只能在controller裡面用，要讓view也能用，就要加helper_method
+  helper_method :current_cart
+
   protected
   	def configure_permitted_parameters
   		devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password, :password_confirmation) }
@@ -12,15 +15,11 @@ class ApplicationController < ActionController::Base
   		# devise_parameter_sanitizer.for(:sign_up) << :name
   	end
 
-
   def admin_required
   	if !current_user.admin?
   		redirect_to "/"
   	end
   end
-
-  #controller裡設定的method只能在controller裡面用，要讓view也能用，就要加helper_method
-  helper_method :current_cart
 
   def current_cart
     @current_cart ||= find_cart

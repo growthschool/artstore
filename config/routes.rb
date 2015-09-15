@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :admin do 
     resources :products
   end
+
   resources :products do
   	member do
   		post :add_to_cart
@@ -18,5 +19,7 @@ Rails.application.routes.draw do
       get :pay_with_credit_card
     end
   end
+
   root 'products#index'
+  
 end
