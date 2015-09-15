@@ -28,7 +28,7 @@
 				<% end %>
 				<tr>
 					<td colspan="5"> </td>
-					<td><%= link_to "全部清空", "#", method: :post, data: { confirm: "確定要全部清空嗎？" } , class: "btn btn-default" %></td>
+					<td><%= link_to "全部清空", cart_clean_path(current_cart), method: :post, data: { confirm: "確定要全部清空嗎？" } , class: "btn btn-default" %></td>
 					
 				</tr>
 			</thead>
