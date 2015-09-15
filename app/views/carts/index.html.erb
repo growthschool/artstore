@@ -22,13 +22,13 @@
 					<td></td>
 					<td></td>
 					<td>
-						<%= link_to "刪除", "#", method: :delete, data: { confirm: "確定要刪除嗎？" } , class: "btn btn-default" %>
+						<%= link_to "刪除", delete_from_cart_product_path(product), method: :post, data: { confirm: "確定要刪除嗎？" } , class: "btn btn-default" %>
 					</td>			
 				</tr>
 				<% end %>
 				<tr>
 					<td colspan="5"> </td>
-					<td><%= link_to "清空購物車", "#", method: :delete, data: { confirm: "確定要刪除嗎？" } , class: "btn btn-default" %></td>
+					<td><%= link_to "全部清空", "#", method: :post, data: { confirm: "確定要全部清空嗎？" } , class: "btn btn-default" %></td>
 					
 				</tr>
 			</thead>
