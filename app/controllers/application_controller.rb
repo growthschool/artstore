@@ -8,6 +8,24 @@ class ApplicationController < ActionController::Base
     if !current_user.admin?
       redirect_to "/"
     end
+  end
+
+  helper_method :current_cart
+
+  def current_cart
+    @current_car ||= find_cart
+  end
+
+  def find_cart
+    cart = Cart.find_by(id: session[:cart_id])
+
+    unless cart.present?
+      cart =Cart.create
+    end
+
+    session[:cart_id] = cart.id #放在迴圈裡面也可以？
+
+    return cart
 
   end
 end
