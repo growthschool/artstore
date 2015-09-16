@@ -6,6 +6,7 @@ class CartItemsController < ApplicationController
 		@item = @cart.cart_items.find(params[:id])
 		
 		if @item.product.quantity >= item_params[:quantity].to_i
+			#subtotal = @item.product.price * @item.quantity
 			@item.update(item_params)
 		else
 			flash[:warning] = "#{@item.product.title} 庫存數量不足！"			
@@ -26,6 +27,6 @@ class CartItemsController < ApplicationController
 
 	private
 		def item_params
-			params.require(:cart_item).permit(:quantity)
+			params.require(:cart_item).permit(:quantity, :subtotal)
 		end
 end

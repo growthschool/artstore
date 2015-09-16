@@ -13,14 +13,14 @@
         </tr>
       </thead>
       <tbody>
-        <% current_cart.items.each do |product| %>
+        <% current_cart.cart_items.each do |item| %>
           <tr>
             <td>
-              <%= link_to(product.title, product_path(product)) %>
+              <%= item.product.title %>
             </td>
-            <td>這裡放數量</td>
-            <td><%= product.price %></td>
-            <td>這裡放小計</td>
+            <td><%= item.quantity %></td>
+            <td><%= item.product.price %></td>
+            <td><%= item.product.price * item.quantity %></td>
           </tr>
         <% end %>
 
