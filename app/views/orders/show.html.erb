@@ -7,7 +7,7 @@
       <thead>
         <tr>
           <th>商品名稱</th>
-          <th>數量</th>
+          <th>購買數量</th>
           <th>單價</th>
           <th>小計</th>
         </tr>
@@ -18,9 +18,9 @@
             <td>
               <%= order_item.product_name %>
             </td>
-            <td>這裡放數量</td>
+            <td><%= order_item.quantity %></td>
             <td><%= order_item.price %></td>
-            <td>這裡放小計</td>
+            <td><%= order_item.price * order_item.quantity %></td>
           </tr>
         <% end %>
 
