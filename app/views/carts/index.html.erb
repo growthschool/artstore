@@ -8,27 +8,31 @@
 			<thead>
 				<tr>
 					<th>商品名稱</th>
-					<th>數量</th>
 					<th>單價</th>
-					<th>小計</th>
+					<th>數量</th>
 					<th>可買量</th>
 					<th>修改</th>	
 				</tr>
-				<% current_cart.items.each do |product| %>
+				<% current_cart.cart_items.each do |item| %>
 				<tr>
-					<td><%= product.title %></td>
-					<td></td>
-					<td><%= product.price %></td>
-					<td></td>
-					<td></td>
+					<td><%= item.product.title %></td>
+					<td><%= item.product.price %></td>
 					<td>
-						<%= link_to "刪除", delete_from_cart_product_path(product), method: :post, data: { confirm: "確定要刪除嗎？" } , class: "btn btn-default" %>
+						
+						<%= simple_form_for item, url: cart_item_path(current_cart, item) do |f| %>
+							<%= f.select :quantity, 1..item.product.quantity %>
+							<%= f.button :submit, "更新", class: "btn btn-sm btn-default" %>
+						<% end %>
+					</td>
+					<td><%= item.product.quantity%></td>
+					<td>
+						<%= link_to "刪除", cart_item_path(current_cart, item), method: :delete, data: { confirm: "確定要刪除嗎？" } , class: "btn btn-sm btn-default" %>
 					</td>			
 				</tr>
 				<% end %>
 				<tr>
-					<td colspan="5"> </td>
-					<td><%= link_to "全部清空", cart_clean_path(current_cart), method: :post, data: { confirm: "確定要全部清空嗎？" } , class: "btn btn-default" %></td>
+					<td colspan="4"> </td>
+					<td><%= link_to "全部清空", clean_carts_path, method: :delete, data: { confirm: "確定要全部清空嗎？" } , class: "btn btn-default" %></td>
 					
 				</tr>
 			</thead>

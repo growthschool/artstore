@@ -4,17 +4,14 @@ class CartsController < ApplicationController
 	def index
 	end
 
-	def show
-	end
-
 	def checkout
 		@order = current_user.orders.build
 		@info = @order.build_info
 	end
 
 	def clean
-		@cart = Cart.find(params[:cart_id])
-		@cart.items.clear
-		redirect_to :back
+		current_cart.clean!
+		flash[:warning] = "已清空購物車"
+		redirect_to carts_path
 	end
 end

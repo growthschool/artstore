@@ -12,8 +12,12 @@ Rails.application.routes.draw do
   end
 
   resources :carts do
-    post "checkout", on: :collection
-    post :clean
+    collection do
+      post 'checkout'
+      delete 'clean'
+    end
+
+    resources :items, controller: "cart_items"
   end
 
   resources :orders do 

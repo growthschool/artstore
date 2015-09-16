@@ -6,10 +6,6 @@ class Cart < ActiveRecord::Base
 		items << product
 	end
 
-	def delete_product_from_cart(product)
-		items.delete(product)
-	end
-
 	def total_price
 		#items.inject(0) { |sum, item| sum + item.price }
 
@@ -20,5 +16,9 @@ class Cart < ActiveRecord::Base
 		end
 
 		return sum
+	end
+
+	def clean!
+		cart_items.destroy_all
 	end
 end
