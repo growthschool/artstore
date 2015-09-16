@@ -10,4 +10,3 @@ class ProductsController < ApplicationController
 
 
 end
-
