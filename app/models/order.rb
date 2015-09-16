@@ -7,6 +7,13 @@ class Order < ActiveRecord::Base
 	# 有這行才可以用巢狀表單
 	accepts_nested_attributes_for :info
 
+	# 在資料建立前都跑 generater_token 這個 method
+	before_create :generate_token
+
+	def generate_token
+		self.token = SecureRandom.hex(7)
+	end
+
 	# 暫存交易紀錄
 	def build_item_cache_from_cart(cart)
 		cart.items.each do |cart_item|
