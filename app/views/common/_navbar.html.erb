@@ -28,7 +28,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hi, <%= current_user.name %> <i class="glyphicon glyphicon-user"></i> <i class="glyphicon glyphicon-chevron-down"></i></a>
               <ul class="dropdown-menu">
         					<li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li> 
-  	              <li><a href="#">Profile</a></li>
+  	              <li><%= link_to "我的訂單", account_orders_path %></a></li>
   	              <li class="divider"></li>
   	              <li><a href="#">About</a></li>
                </ul>
