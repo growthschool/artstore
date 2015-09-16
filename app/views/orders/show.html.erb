@@ -34,8 +34,14 @@
 </div>
 <hr>
 <div class="row">
-	<div class="col-md-12 text-right">
-		<%= link_to("以信用卡付款", "#", class: "btn btn-danger") %>
-		<%= link_to("以 ATM 付款", "#", class: "btn btn-danger") %>
-	</div>
+	<% if @order.paid? %>
+		<div class="col-md-12 text-center">
+			此訂單已經完成付款
+		</div>
+	<% else %>
+		<div class="col-md-12 text-right">
+			<%= link_to("以信用卡付款", pay_with_credit_card_order_path(@order.token), class: "btn btn-danger") %>
+			<%= link_to("以 ATM 付款", "#", class: "btn btn-danger") %>
+		</div>
+	<% end %>
 </div>

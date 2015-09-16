@@ -30,4 +30,19 @@ class Order < ActiveRecord::Base
 		self.total = cart.total_price
 		self.save
 	end
+
+	# 設定付款方式
+	def set_payment_with!(method)
+		self.update_column(:payment_method, method)
+	end
+
+	# 改變狀態為已經付款
+	def pay!
+		self.update_column(:is_paid, true)
+	end
+
+	# 取得付款狀態
+	def paid?
+		self.is_paid
+	end
 end
