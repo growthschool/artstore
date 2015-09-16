@@ -33,6 +33,7 @@ gem 'carrierwave', '~> 0.10.0'
 
 gem 'mini_magick', '~> 4.3.3'
 
+gem 'font-awesome-rails'
 
 
 # Use ActiveModel has_secure_password
