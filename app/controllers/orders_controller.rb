@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
 	def pay_with_credit_card
 		@order = Order.find_by_token(params[:id])
 		@order.set_payment_with!("credit_card")
-		@order.pay!
+		@order.make_payment! # 利用狀態機改變狀態，並會自動執行 :pay!
 
 		redirect_to "/", :notice => "成功完成付款"
 	end
