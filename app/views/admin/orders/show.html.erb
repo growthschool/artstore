@@ -2,6 +2,8 @@
   <div class="col-md-9 col-md-offset-2">
     <div class="panel-heading">
       <h1>訂單明細</h1> 
+      <p class="text-center"><%= render_order_paid_state(@order) %></p>
+      <%= render 'state_option', order: @order %>
     </div>
     <table class="table table-bordered">
       <thead>
@@ -13,7 +15,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @order.items.each do |order_item| %>
+        <% @order_items.each do |order_item| %>
           <tr>
             <td>
               <%= order_item.product_name %>
@@ -30,8 +32,6 @@
     <div id="product_price">
        <p>總金額 NT$ <%= @order.total %></p>
     </div>
-
-     <hr>
     
     <div class="panel-heading">
         <h1> 寄送資訊 </h1>
@@ -43,24 +43,15 @@
            <td>訂購人</td>
         </tr>
         <tr>
-          <td><%= @order.info.billing_name %> - <%= @order.info.billing_address %></td>
+          <td><%= @order_info.billing_name %> - <%= @order_info.billing_address %></td>
         </tr>
         <tr>
           <td>收貨人</td>
         </tr>
         <tr>
-          <td><%= @order.info.shipping_name %> - <%= @order.info.shipping_address %></td>
+          <td><%= @order_info.shipping_name %> - <%= @order_info.shipping_address %></td>
         </tr>
       </tbody>
     </table>
-
-    <% if !@order.is_paid? %>
-      <div class="pull-right">
-        <%= link_to("以信用卡付款", pay_with_credit_card_order_path(@order.token), class: "btn btn-lg btn-danger") %>
-        <%= link_to("以 ATM 付款", "#", class: "btn btn-lg btn-danger") %>
-      </div>
-    <% else %>
-      <p class="text-center">此訂單已完成付款</p>
-    <% end %>
   </div>
 </div>

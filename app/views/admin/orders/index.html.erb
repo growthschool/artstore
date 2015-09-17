@@ -23,7 +23,7 @@
 						<td>$ <%= order.total %></td>
 						<td><%= order.user.name %></td>
 						<td><%= t("orders.order_state.#{order.aasm_state}") %></td>
-						<td><%= t("orders.payment_method.#{order.payment_method}") || "尚未付款" %></td>
+						<td><%= t("orders.payment_method.#{order.payment_method}") %></td>
 					</tr>
 				<% end %>
 			</tbody>
