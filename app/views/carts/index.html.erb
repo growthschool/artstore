@@ -43,7 +43,9 @@
 		<div id="product_price">
 			<p>總金額 NT$ <%= render_cart_total_price(current_cart) %> </p>		
 		</div>
-		
+
+		<% if !current_cart.cart_items.blank? %>
 		<%= link_to "確認結帳", checkout_carts_path, method: :post, class: 'btn btn-lg btn-default pull-right' %>
+		<% end %>
 	</div>
 </div>
