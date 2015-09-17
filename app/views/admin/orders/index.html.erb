@@ -1,0 +1,36 @@
+<div class="panel-heading">
+	<h1>所有訂單</h1>	
+</div>
+
+<div class="row">
+	<div class="col-md-9 col-md-offset-2">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>訂單編號</th>
+					<th>訂購日期</th>
+					<th>總價</th>
+					<th>訂購人</th>
+					<th>訂單狀態</th>
+					<th>付款方式</th>	
+				</tr>
+			</thead>
+			<tbody>
+				<% @orders.each do |order| %>
+					<tr>
+						<td><%= link_to order.token, admin_order_path(order) %></td>
+						<td><%= order.created_at.strftime("%Y-%m-%d") %></td>
+						<td>$ <%= order.total %></td>
+						<td><%= order.user.name %></td>
+						<td><%= order.aasm_state %></td>
+						<td><%= order.payment_method %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+
+	
+	
