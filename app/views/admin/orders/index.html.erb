@@ -22,8 +22,8 @@
 						<td><%= order.created_at.strftime("%Y-%m-%d") %></td>
 						<td>$ <%= order.total %></td>
 						<td><%= order.user.name %></td>
-						<td><%= order.aasm_state %></td>
-						<td><%= order.payment_method %></td>
+						<td><%= t("orders.order_state.#{order.aasm_state}") %></td>
+						<td><%= t("orders.payment_method.#{order.payment_method}") || "尚未付款" %></td>
 					</tr>
 				<% end %>
 			</tbody>
