@@ -29,6 +29,7 @@
 	</div>
 	<hr>
 	<div class="col-md-12 text-right">
+		<%= link_to("清空購物車", clean_carts_path, method: :delete, class: "btn btn-default", data: { confirm: "確定要清空購物車嗎"} ) %>
 		<%= link_to("確認結帳", checkout_carts_path, method: :post, class: "btn btn-danger") %>
 	</div>
 </div>

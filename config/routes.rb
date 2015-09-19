@@ -14,7 +14,10 @@ Rails.application.routes.draw do
 	end
 
 	resources :carts, only: [:index] do
-		post "checkout", on: :collection # 用 collection 的時候， path 中不用傳類似 :id 這種參數
+		collection do # 用 collection 的時候， path 中不用傳類似 :id 這種參數
+			post "checkout"
+			delete "clean"
+		end
 	end
 
 	resources :orders, only: [:show, :create] do
