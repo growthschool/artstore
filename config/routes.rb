@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   resources :carts do
     post "checkout", on: :collection
+    delete "clean", on: :collection
   end
 
   resources :orders do
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
      get :pay_with_credit_card
     end
   end
+
+  resources :items, :controller => "cart_items"
 
   root "products#index"
 
