@@ -36,7 +36,7 @@
          <span> 總計 <%= render_cart_total_price(current_cart)%> NTD</span>
       </span>
     </div>
+    <%= link_to("確認結賬", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
 
-    <hr>
   </div>
 </div>
