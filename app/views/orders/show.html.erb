@@ -6,6 +6,8 @@
         <tr>
           <th width="80%">商品明細</th>
           <th>單價</th>
+          <th>數量</th>
+          <th>小計</th>
         </tr>
       </thead>
       <tbody>
@@ -16,6 +18,12 @@
             </td>
             <td>
               <%= order_item.price %>
+            </td>
+            <td>
+              <%= order_item.quantity %>
+            </td>
+            <td>
+              <%= order_item.price * order_item.quantity %>
             </td>
           </tr>
         <% end %>
