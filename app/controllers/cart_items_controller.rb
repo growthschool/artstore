@@ -15,4 +15,28 @@ class CartItemsController < ApplicationController
 
 		redirect_to :back
 	end
+
+	def update
+		@cart = current_cart
+		@item = @cart.cart_items.find(params[:id])
+		@product = @item.product
+		old_quantity = @item.quantity
+
+		@item.update(cart_item_params)
+		new_quantity = @item.quantity
+
+		quantity_changed = new_quantity - old_quantity
+		@product.quantity -= quantity_changed 
+		@product.save
+
+		flash[:notice] = "商品數量更新完成 #{new_quantity - old_quantity}"
+		
+		redirect_to carts_path
+	end
+
+	private
+
+	def cart_item_params
+		params.require(:cart_item).permit(:quantity)
+	end
 end
