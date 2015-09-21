@@ -1,11 +1,14 @@
 source 'https://rubygems.org'
 
+gem "rails-i18n"
 gem "devise"
+gem 'devise-i18n'
 gem "bootstrap-sass"
 gem "simple_form"
 gem "carrierwave"
 gem "mini_magick"
 gem "font-awesome-rails"
+gem "font-awesome-sass"
 gem "awesome_rails_console"
 gem "aasm"
 

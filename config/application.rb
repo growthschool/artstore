@@ -23,5 +23,8 @@ module Artstore
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.autoload_paths += %W({config.root}/app/uploaders)
+
+    config.i18n.load_path += Dir[Rails.root.join('locales', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :"zh-TW"
   end
 end
