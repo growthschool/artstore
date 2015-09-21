@@ -10,7 +10,7 @@
           <th colspan="2">商品資訊</th>
           <th>單價</th>
           <th>數量</th>
-          <th>總價</th>
+          <th>小計</th>
           <th>操作</th>
         </tr>
       </thead>
@@ -26,8 +26,17 @@
             <td>
               <%= product.price %>
             </td>
-            <td>選擇數量</td>
-            <td>計算總價</td>
+            <td>
+              <% item = current_cart.cart_items.find_by(product_id: product) %>
+              <%= form_for item, url: item_path(product) do |f| %>
+                <%= f.select :quantity, [1,2,3,4,5] %>
+                <%= f.submit "更新", data: {disable_with: "submiting..."} %>
+              <% end %>
+            </td>
+            <td>
+              <% item = current_cart.cart_items.find_by(product_id: product) %>
+              <%= render_cart_item_price(item) %>
+            </td>
             <td>
               <%= link_to item_path(product), method: :delete do %>
                 <i class="fa fa-trash-o"></i>

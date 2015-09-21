@@ -12,4 +12,7 @@ module CartsHelper
       link_to("清空購物車", clean_carts_path, method: :delete, class: "btn btn-danger btn-sm", data:{confirm: "你確定要清空整個購物車嗎？"})
     end
   end
+  def render_cart_item_price(item)
+    item.sum
+  end
 end
