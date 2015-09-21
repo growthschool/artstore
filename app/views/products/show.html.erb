@@ -18,11 +18,17 @@
 	<div class="col-md-8" id="product-content">
 		<h2><%= @product.title %></h2>
 		<p id="product-description"><%= @product.description %></p>
-		<span>數量：<%= @product.quantity.to_i %></span>
+		<% if @product.has_inventory? %>
+			<span>剩餘數量：<%= @product.quantity.to_i %></span>
+		<% else %>
+			<span>此商品已經售完</span>
+		<% end %>
 		<br>
 		<span class="product-price">$ <%= @product.price.to_i %></span>
 		<div class="row text-right">
-			<%= link_to("加入購物車", add_to_cart_product_path(@product), method: :post, class: "btn btn-danger") %>
+			<% if @product.has_inventory? %>
+				<%= link_to("加入購物車", add_to_cart_product_path(@product), method: :post, class: "btn btn-danger") %>
+			<% end %>
 		</div>
 	</div>
 </div>

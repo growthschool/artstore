@@ -14,7 +14,11 @@
 					</div>
 					<div class="row text-right">
 						<hr>
-						<%= link_to("加入購物車", add_to_cart_product_path(product), method: :post, class: "btn btn-danger") %>
+						<% if product.has_inventory? %>
+							<%= link_to("加入購物車", add_to_cart_product_path(product), method: :post, class: "btn btn-danger") %>
+						<% else %>
+							<span>此商品已經售完</span>
+						<% end %>
 					</div>
 				</td>
 			</tr>

@@ -5,4 +5,8 @@ class Product < ActiveRecord::Base
 	def default_photo
 		photos.last
 	end
+
+	def has_inventory?
+		self.quantity > 0
+	end
 end
