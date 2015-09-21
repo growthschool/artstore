@@ -29,7 +29,7 @@ class CartItemsController < ApplicationController
 		@product.quantity -= quantity_changed 
 		@product.save
 
-		flash[:notice] = "商品數量更新完成 #{new_quantity - old_quantity}"
+		flash[:notice] = "商品數量更新完成"
 		
 		redirect_to carts_path
 	end
