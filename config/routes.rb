@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   end
 
   resources :products
-
-  root :to => "products#index"
+    member do
+      post :add_to_cart
+    end
+  end
+    root :to => "products#index" 
+    resources :carts
 end
