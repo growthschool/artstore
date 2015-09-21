@@ -6,18 +6,22 @@
 		<th>商品名稱</th>
 		<th>單價</th>
 		<th>小計</th>
+		<th>刪除</th>
 	</tr>
-	<% current_cart.items.each do |product| %>
+	<% current_cart.cart_items.each do |item| %>
 		<tr>
-			<td><%= render_product_photo(product.default_photo, :small) %></td>
+			<td><%= render_product_photo(item.product.default_photo, :small) %></td>
 			<td>
-				<%= link_to(product.title, product_path(product)) %>
+				<%= link_to(item.product.title, product_path(item.product)) %>
 			</td>
 			<td>
-				<%= product.price %>
+				<%= item.product.price %>
 			</td>
 			<td>
-				<%= product.price %>
+				<%= item.product.price %>
+			</td>
+			<td>
+				<%= link_to("刪除", item_path(item), method: :delete, class: "btn btn-default", data: { confirm: "確定要移除這項商品？" }) %>
 			</td>
 		</tr>
 	<% end %>
