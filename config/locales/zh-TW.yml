@@ -1,2 +1,8 @@
 zh-TW:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      user:
+        email: 電子郵件
+        remember_me: 記住我
+        password: 密碼
