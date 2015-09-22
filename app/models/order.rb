@@ -45,7 +45,7 @@ class Order < ActiveRecord::Base
         state :order_cancelled
         state :good_returned
 
-        event :make_payment do
+        event :make_payment, after_commit: :pay! do
             transitions from: :order_placed, to: :paid
         end
 
