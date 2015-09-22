@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-md-5">
-    <%= image_tag(@product.default_photo.image.medium.url, class: "thumbnail") %>
+    <%#= image_tag(@product.default_photo.image.medium.url, class: "thumbnail") %>
+    <%= render_product_photo(@product.default_photo, :medium) %>
   </div>
 
   <div class="col-md-7">
@@ -17,7 +18,13 @@
     <div class="product-price"> $ <%= @product.price %> </div>
 
     <div class="pull-right">
-      <%= link_to("加入購物車", "#", :class => "btn btn-primary btn-lg btn-danger") %>
+      <%#= link_to("加入購物車", "#", :class => "btn btn-primary btn-lg btn-danger") %>
+      <% if @product.quantity > 0  %>
+        <%= link_to("加入購物車", add_to_cart_product_path(@product),method: :post, class: "btn btn-lg btn-danger") %>
+      <% else %>
+        已售完
+      <% end  %>
+
     </div>
   </div>
 </div>
