@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   private
 
   def find_cart
-    cart = Cart.find_by(id: session[:cart_id])
+    cart = Cart.find_by(id: session[:cart_id])  #cart_id 欄位是建立CartItem table的時候產生的。
 
     unless cart.present?
       cart = Cart.create
