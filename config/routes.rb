@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :carts do
       post "checkout", on: :collection
+      delete "clean", on: :collection
   end
 
   resources :orders do
