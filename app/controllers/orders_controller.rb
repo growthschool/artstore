@@ -30,7 +30,7 @@ class OrdersController < ApplicationController
 		@order.set_payment_with!("credit_card")
 		@order.make_payment! # 利用狀態機改變狀態，並會自動執行 :pay!
 
-		redirect_to "/", :notice => "成功完成付款"
+		redirect_to orders_path, :notice => "成功完成付款"
 	end
 
 	private
