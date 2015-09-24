@@ -21,15 +21,19 @@ class CartItemsController < ApplicationController
 		@item = @cart.cart_items.find(params[:id])
 		@product = @item.product
 		old_quantity = @item.quantity
-
-		@item.update(cart_item_params)
-		new_quantity = @item.quantity
-
+		new_quantity = cart_item_params[:quantity].to_i
 		quantity_changed = new_quantity - old_quantity
-		@product.quantity -= quantity_changed 
-		@product.save
 
-		flash[:notice] = "商品數量更新完成"
+		if (quantity_changed <= @product.quantity)
+			@item.update(cart_item_params)
+
+			@product.quantity -= quantity_changed 
+			@product.save
+			flash[:notice] = "商品數量更新完成"
+		else
+			not_enough = quantity_changed - @product.quantity
+			flash[:danger] = "商品不足 #{not_enough} 個，請重新選擇數量"
+		end
 		
 		redirect_to carts_path
 	end
