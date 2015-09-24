@@ -1,0 +1,808 @@
+  [1m[36m (6.4ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------------
+ActionDispatch::ExceptionWrapperTest: test_#extract_sources_fetches_source_fragments_for_every_backtrace
+--------------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+REPLTest: test_preserves_the_session_in_the_binding
+---------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------
+REPLTest: test_prompt_is_present
+--------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+REPLTest: test_sending_input_returns_the_result_as_output
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------
+REPLTest: test_session_preservation_requires_same_bindings
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ColorsTest: test_#background=_is_an_alias_of_#background
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ColorsTest: test_#background_can_be_explicitly_specified
+--------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------
+WebConsole::ColorsTest: test_#background_is_the_first_color_if_not_specified
+----------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+WebConsole::ColorsTest: test_#default_is_:light
+-----------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ColorsTest: test_#foreground=_is_an_alias_of_#foreground
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ColorsTest: test_#foreground_can_be_explicitly_specified
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------
+WebConsole::ColorsTest: test_#foreground_is_the_last_color_if_not_specified
+---------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------
+WebConsole::ColorsTest: test_#to_json_includes_the_background_and_the_foreground
+--------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------
+WebConsole::ColorsTest: test_.[]_is_an_alias_for_.themes#[]
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+WebConsole::ColorsTest: test_.register_theme_creates_Colors_instance_for_the_block
+----------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_can_be_used_as_slave_as_the_methods_are_delegated
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_create_gives_already_persisted_models
+--------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+WebConsole::ConsoleSessionTest: test_errors_aref
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------
+WebConsole::ConsoleSessionTest: test_find_coerces_ids
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+WebConsole::ConsoleSessionTest: test_model_naming
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_no_gives_not_persisted_models
+------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_not_found_exceptions_are_JSON_serializable
+-------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+WebConsole::ConsoleSessionTest: test_persisted?
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_persisted_models_knows_about_their_keys
+----------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_persisted_models_knows_that_they_are_in_memory
+-----------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_raises_ConsoleSession::Unavailable_on_not_found_sessions
+---------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_slave_methods_are_cached_on_the_singleton
+------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+WebConsole::ConsoleSessionTest: test_to_key
+-------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+WebConsole::ConsoleSessionTest: test_to_param
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+WebConsole::ConsoleSessionTest: test_to_partial_path
+----------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_GET_index_creates_new_console_session
+-------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_GET_pending_output_gives_the_slave_pending_output
+-------------------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Processing by WebConsole::ConsoleSessionsController#pending_output as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_GET_pending_output_raises_410_on_exitted_slave_processes
+--------------------------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Processing by WebConsole::ConsoleSessionsController#pending_output as HTML
+Completed 410 Gone in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_PUT_configuration_adjust_the_terminal_size
+------------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Processing by WebConsole::ConsoleSessionsController#configuration as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_PUT_input_sends_input_to_the_slave
+----------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Processing by WebConsole::ConsoleSessionsController#input as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_PUT_input_validates_for_missing_input
+-------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Processing by WebConsole::ConsoleSessionsController#input as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_allows_requests_from_whitelisted_ips
+------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_blocks_requests_from_non-whitelisted_ips
+----------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Filter chain halted as :prevent_unauthorized_requests! rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_index_generated_path
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_index_is_successful
+-------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------
+WebConsole::ControllerHelperTest: test_doesn't_inject_in_non_HTML_views
+-----------------------------------------------------------------------
+Processing by WebConsole::ControllerHelperTest::TestController#doesnt_render_console_on_non_html_requests as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ControllerHelperTest: test_injects_a_console_into_a_view
+--------------------------------------------------------------------
+Processing by WebConsole::ControllerHelperTest::TestController#render_console_ontop_of_text as HTML
+  Rendered /Users/rafaelfranca/src/rails/web-console/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------
+WebConsole::ControllerHelperTest: test_keeps_the_original_content
+-----------------------------------------------------------------
+Processing by WebConsole::ControllerHelperTest::TestController#render_console_ontop_of_text as HTML
+  Rendered /Users/rafaelfranca/src/rails/web-console/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.1ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+WebConsole::ControllerHelperTest: test_renders_console_only_once
+----------------------------------------------------------------
+Processing by WebConsole::ControllerHelperTest::TestController#renders_console_only_once as HTML
+  Rendered /Users/rafaelfranca/src/rails/web-console/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------
+WebConsole::EngineTest: test_blank_commands_are_expanded_to_the_rails_console
+-----------------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  begin transaction
+------------------------------------------------------
+WebConsole::EngineTest: test_custom_default_mount_path
+------------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+WebConsole::EngineTest: test_disabling_automounting
+---------------------------------------------------
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+WebConsole::EngineTest: test_present_commands_are_not_processed
+---------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+WebConsole::EngineTest: test_whitelist_multiple_networks
+--------------------------------------------------------
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------------------------------------------
+WebConsole::EngineTest: test_whitelist_whole_networks
+-----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------
+WebConsole::EngineTest: test_whitelisted_ips.include?_coerces_to_IPAddr
+-----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------
+WebConsole::EngineTest: test_whitelisted_ips.include?_works_with_IPAddr
+-----------------------------------------------------------------------
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------
+WebConsole::EngineTest: test_whitelisted_ips_are_courced_to_IPAddr
+------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+WebConsole::EngineTest: test_whitelisted_ips_are_normalized_and_unique_IPAddr
+-----------------------------------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------
+WebConsole::EngineTest: test_whitelisted_ips_with_IPv6_format_as_default
+------------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  begin transaction
+----------------------------------------------------------------------------------------
+WebConsole::ExceptionTest: test_#bindings_all_the_bindings_of_where_the_error_originated
+----------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------------------
+WebConsole::ExceptionTest: test_#bindings_goes_down_the_stack
+-------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------
+WebConsole::REPLSessionTest: test_create_gives_already_persisted_models
+-----------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------
+WebConsole::REPLSessionTest: test_find_coerces_ids
+--------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------------
+WebConsole::REPLSessionTest: test_no_gives_not_persisted_models
+---------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------------------------------------
+WebConsole::REPLSessionTest: test_not_found_exceptions_are_JSON_serializable
+----------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------------------------------------------
+WebConsole::REPLSessionTest: test_raises_WebConsole::REPLSession::NotFound_on_not_found_sessions
+------------------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------------------------
+WebConsole::SlaveTest: test_#configure_changes_@input_dimentions
+----------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#configure_only_changes_the_@input_dimentions_if_height_is_zero
+-------------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#configure_only_changes_the_@input_dimentions_if_width_is_zero
+------------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#dispose!_can_reraise_Errno::ESRCH_if_requested
+---------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#dispose!_sends_SIGKILL_to_the_process_and_detaches_it
+----------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#dispose_can_reraise_Errno::ESRCH_if_requested
+--------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#dispose_sends_SIGTERM_to_the_process_and_detaches_it
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#pending_output_always_encodes_output_in_UTF-8
+--------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#pending_output_raises_Slave::Closed_when_the_end_raises_EOFError
+---------------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#pending_output_raises_Slave::Closed_when_the_end_raises_Errno::EIO
+-----------------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#pending_output_returns_a_string_with_the_current_output
+------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#pending_output_returns_nil_on_no_pending_output
+----------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#send_input_raises_ArgumentError_on_bad_input
+-------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------------
+ActionDispatch::ExceptionWrapperTest: test_#extract_sources_fetches_source_fragments_for_every_backtrace
+--------------------------------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+REPLTest: test_preserves_the_session_in_the_binding
+---------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------
+REPLTest: test_prompt_is_present
+--------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------
+REPLTest: test_sending_input_returns_the_result_as_output
+---------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------
+REPLTest: test_session_preservation_requires_same_bindings
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ColorsTest: test_#background=_is_an_alias_of_#background
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ColorsTest: test_#background_can_be_explicitly_specified
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------
+WebConsole::ColorsTest: test_#background_is_the_first_color_if_not_specified
+----------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+WebConsole::ColorsTest: test_#default_is_:light
+-----------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ColorsTest: test_#foreground=_is_an_alias_of_#foreground
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ColorsTest: test_#foreground_can_be_explicitly_specified
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------
+WebConsole::ColorsTest: test_#foreground_is_the_last_color_if_not_specified
+---------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------
+WebConsole::ColorsTest: test_#to_json_includes_the_background_and_the_foreground
+--------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------
+WebConsole::ColorsTest: test_.[]_is_an_alias_for_.themes#[]
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+WebConsole::ColorsTest: test_.register_theme_creates_Colors_instance_for_the_block
+----------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_can_be_used_as_slave_as_the_methods_are_delegated
+--------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_create_gives_already_persisted_models
+--------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+WebConsole::ConsoleSessionTest: test_errors_aref
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------
+WebConsole::ConsoleSessionTest: test_find_coerces_ids
+-----------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+WebConsole::ConsoleSessionTest: test_model_naming
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_no_gives_not_persisted_models
+------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_not_found_exceptions_are_JSON_serializable
+-------------------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+WebConsole::ConsoleSessionTest: test_persisted?
+-----------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_persisted_models_knows_about_their_keys
+----------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_persisted_models_knows_that_they_are_in_memory
+-----------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_raises_ConsoleSession::Unavailable_on_not_found_sessions
+---------------------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------------
+WebConsole::ConsoleSessionTest: test_slave_methods_are_cached_on_the_singleton
+------------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+WebConsole::ConsoleSessionTest: test_to_key
+-------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+---------------------------------------------
+WebConsole::ConsoleSessionTest: test_to_param
+---------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+WebConsole::ConsoleSessionTest: test_to_partial_path
+----------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_GET_index_creates_new_console_session
+-------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_GET_pending_output_gives_the_slave_pending_output
+-------------------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Processing by WebConsole::ConsoleSessionsController#pending_output as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_GET_pending_output_raises_410_on_exitted_slave_processes
+--------------------------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Processing by WebConsole::ConsoleSessionsController#pending_output as HTML
+Completed 410 Gone in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_PUT_configuration_adjust_the_terminal_size
+------------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Processing by WebConsole::ConsoleSessionsController#configuration as HTML
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_PUT_input_sends_input_to_the_slave
+----------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+Processing by WebConsole::ConsoleSessionsController#input as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_PUT_input_validates_for_missing_input
+-------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+Processing by WebConsole::ConsoleSessionsController#input as HTML
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_allows_requests_from_whitelisted_ips
+------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_blocks_requests_from_non-whitelisted_ips
+----------------------------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Filter chain halted as :prevent_unauthorized_requests! rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_index_generated_path
+--------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------------------
+WebConsole::ConsoleSessionsControllerTest: test_index_is_successful
+-------------------------------------------------------------------
+Processing by WebConsole::ConsoleSessionsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------
+WebConsole::ControllerHelperTest: test_doesn't_inject_in_non_HTML_views
+-----------------------------------------------------------------------
+Processing by WebConsole::ControllerHelperTest::TestController#doesnt_render_console_on_non_html_requests as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------------------
+WebConsole::ControllerHelperTest: test_injects_a_console_into_a_view
+--------------------------------------------------------------------
+Processing by WebConsole::ControllerHelperTest::TestController#render_console_ontop_of_text as HTML
+  Rendered /Users/rafaelfranca/src/rails/web-console/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------
+WebConsole::ControllerHelperTest: test_keeps_the_original_content
+-----------------------------------------------------------------
+Processing by WebConsole::ControllerHelperTest::TestController#render_console_ontop_of_text as HTML
+  Rendered /Users/rafaelfranca/src/rails/web-console/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+WebConsole::ControllerHelperTest: test_renders_console_only_once
+----------------------------------------------------------------
+Processing by WebConsole::ControllerHelperTest::TestController#renders_console_only_once as HTML
+  Rendered /Users/rafaelfranca/src/rails/web-console/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.1ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------------
+WebConsole::EngineTest: test_blank_commands_are_expanded_to_the_rails_console
+-----------------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  begin transaction
+------------------------------------------------------
+WebConsole::EngineTest: test_custom_default_mount_path
+------------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+WebConsole::EngineTest: test_disabling_automounting
+---------------------------------------------------
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+WebConsole::EngineTest: test_present_commands_are_not_processed
+---------------------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+WebConsole::EngineTest: test_whitelist_multiple_networks
+--------------------------------------------------------
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------------------------------------------
+WebConsole::EngineTest: test_whitelist_whole_networks
+-----------------------------------------------------
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------------------
+WebConsole::EngineTest: test_whitelisted_ips.include?_coerces_to_IPAddr
+-----------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------------------------------------------------------------
+WebConsole::EngineTest: test_whitelisted_ips.include?_works_with_IPAddr
+-----------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------
+WebConsole::EngineTest: test_whitelisted_ips_are_courced_to_IPAddr
+------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------------------------------------
+WebConsole::EngineTest: test_whitelisted_ips_are_normalized_and_unique_IPAddr
+-----------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------------------
+WebConsole::EngineTest: test_whitelisted_ips_with_IPv6_format_as_default
+------------------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  begin transaction
+----------------------------------------------------------------------------------------
+WebConsole::ExceptionTest: test_#bindings_all_the_bindings_of_where_the_error_originated
+----------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------------------
+WebConsole::ExceptionTest: test_#bindings_goes_down_the_stack
+-------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------------------------------
+WebConsole::REPLSessionTest: test_create_gives_already_persisted_models
+-----------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------------------------
+WebConsole::REPLSessionTest: test_find_returns_a_persisted_object
+-----------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------
+WebConsole::REPLSessionTest: test_no_gives_not_persisted_models
+---------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------------------------------------
+WebConsole::REPLSessionTest: test_not_found_exceptions_are_JSON_serializable
+----------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------------------------------------------
+WebConsole::REPLSessionTest: test_raises_WebConsole::REPLSession::NotFound_on_not_found_sessions
+------------------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------------------------
+WebConsole::SlaveTest: test_#configure_changes_@input_dimentions
+----------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#configure_only_changes_the_@input_dimentions_if_height_is_zero
+-------------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#configure_only_changes_the_@input_dimentions_if_width_is_zero
+------------------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#dispose!_can_reraise_Errno::ESRCH_if_requested
+---------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#dispose!_sends_SIGKILL_to_the_process_and_detaches_it
+----------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#dispose_can_reraise_Errno::ESRCH_if_requested
+--------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+---------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#dispose_sends_SIGTERM_to_the_process_and_detaches_it
+---------------------------------------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+--------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#pending_output_always_encodes_output_in_UTF-8
+--------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+---------------------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#pending_output_raises_Slave::Closed_when_the_end_raises_EOFError
+---------------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#pending_output_raises_Slave::Closed_when_the_end_raises_Errno::EIO
+-----------------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#pending_output_returns_a_string_with_the_current_output
+------------------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#pending_output_returns_nil_on_no_pending_output
+----------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------------------------------
+WebConsole::SlaveTest: test_#send_input_raises_ArgumentError_on_bad_input
+-------------------------------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
