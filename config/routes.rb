@@ -15,10 +15,23 @@ Rails.application.routes.draw do
       get :pay_with_credit_card
     end
   end
+
+  namespace :account do
+    resources :orders
+  end
+
   devise_for :users
   namespace :admin do
     root to: "admin/products#index"
     resources :products
+    resources :orders do
+      member do
+        post :cancel
+        post :ship
+        post :shipped
+        post :return
+      end
+    end
   end
   root to: "products#index"
   # The priority is based upon order of creation: first created -> highest priority.

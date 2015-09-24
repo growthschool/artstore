@@ -1,8 +1,16 @@
 zh-TW:
-  hello: "Hello world"
+  orders:
+    order_state:
+      order_placed: 已下單
+      paid: 已付款
+      shipping: 出貨中
+      shipped: 已到貨
+      order_cancelled: 取消訂單
+      good_returned: 退貨
   activerecord:
     attributes:
       user:
         email: 電子郵件
         remember_me: 記住我
         password: 密碼
+        password_confirmation: 確認密碼

@@ -8,8 +8,7 @@ class Cart < ActiveRecord::Base
     items << product
   end
   def clean!
-    cart_items.clear
-    items.clear
+    cart_items.destroy_all
   end
   def hasItem?
     return (cart_items.count > 0)

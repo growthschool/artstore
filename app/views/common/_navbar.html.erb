@@ -24,6 +24,7 @@
             </a>
             <ul class="dropdown-menu">
               <!-- <li> <%= link_to("帳號設定", edit_user_registration_path )%></li> -->
+              <li><%= link_to("訂單管理", account_orders_path )%></li>
               <% if current_user.admin? %>
                 <li><%= link_to("新增產品", new_admin_product_path) %></li>
               <% end %>
