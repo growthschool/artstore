@@ -1,0 +1,20 @@
+<h2>訂單歷史</h2>
+
+<table class="table">
+	<tr>
+		<th class="col-md-2">狀態</th>
+		<th class="col-md-4">--</th>
+		<th class="col-md-1">金額</th>
+		<th class="col-md-4">最後更新時間</th>
+		<th class="col-md-1">動作</th>
+	</tr>
+	<% @orders.each do |order| %>
+		<tr>
+			<td class="text-center"><span class="label label-default"><%= order.status %></span></td>
+			<td><%= link_to("檢視訂單", order_path(order.token)) %></td>
+			<td><%= order.total %></td>
+			<td><%= order.updated_at %></td>
+			<td><%= link_to("刪除", "#", class: "btn btn-default") %></td>
+		</tr>
+	<% end %>
+</table>

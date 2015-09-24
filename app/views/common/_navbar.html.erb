@@ -30,6 +30,7 @@
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hi, <%= current_user.name %> <span class="caret"></span></a>
 				<ul class="dropdown-menu">
 					<li><a href="#">帳號頁面</a></li>
+					<li><%= link_to("我的訂單", orders_path) %></li>
 					<li role="separator" class="divider"></li>
 					<% if current_user.admin? %>
 						<li><%= link_to("前往後台", admin_products_path) %></li>
