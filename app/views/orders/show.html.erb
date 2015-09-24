@@ -3,8 +3,10 @@
 	<div class="col-md-12">
 		<table class="table">
 			<tr>
-				<th class="col-md-10">商品明細</th>
+				<th class="col-md-7">商品明細</th>
 				<th class="col-md-2">單價</th>
+				<th class="col-md-1">數量</th>
+				<th class="col-md-2">小計</th>
 			</tr>
 			<% @order_items.each do |order_item| %>
 				<tr>
@@ -14,6 +16,8 @@
 					<td>
 						<%= order_item.price %>
 					</td>
+					<td><%= order_item.quantity %></td>
+					<td><%= order_item.total %></td>
 				</tr>
 			<% end %>
 		</table>

@@ -16,11 +16,11 @@ class Order < ActiveRecord::Base
 
 	# 暫存交易紀錄
 	def build_item_cache_from_cart(cart)
-		cart.items.each do |cart_item|
+		cart.cart_items.each do |cart_item|
 			item = items.build
-			item.product_name = cart_item.title
-			item.quantity = 1
-			item.price = cart_item.price
+			item.product_name = cart_item.product.title
+			item.price = cart_item.product.price
+			item.quantity = cart_item.quantity 
 			item.save
 		end
 	end

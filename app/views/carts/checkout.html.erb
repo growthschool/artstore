@@ -1,13 +1,17 @@
 <h2>購物明細</h2>
 <table class="table">
 	<tr>
-		<th class="col-md-10">商品名稱</th>
+		<th class="col-md-7">商品名稱</th>
 		<th class="col-md-2">單價</th>
+		<th class="col-md-1">數量</th>
+		<th class="col-md-2">小計</th>
 	</tr>
-	<% current_cart.items.each do |product| %>
+	<% current_cart.cart_items.each do |item| %>
 		<tr>
-			<td><%= link_to(product.title, product_path(product)) %></td>
-			<td><%= product.price %></td>
+			<td><%= link_to(item.product.title, product_path(item.product)) %></td>
+			<td><%= item.product.price %></td>
+			<td><%= item.quantity %></td>
+			<td><%= item.total %></td>
 		</tr>
 	<% end %>
 </table>
