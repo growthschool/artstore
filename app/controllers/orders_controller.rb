@@ -8,6 +8,7 @@ class OrdersController < ApplicationController
             @order.build_item_cache_from_cart(current_cart)
             @order.calculate_total!(current_cart)
             #redirect_to order_path(@order)
+            current_cart.cart_items.destroy_all
             redirect_to order_path(@order.token)
         else
             render "carts/checkout"
