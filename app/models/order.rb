@@ -38,7 +38,7 @@ class Order < ActiveRecord::Base
 
     include AASM
 
-    assm do
+    aasm do
         state :order_placed, initial: true
         state :paid
         state :shipping
