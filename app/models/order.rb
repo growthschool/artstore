@@ -1,5 +1,6 @@
 class Order < ActiveRecord::Base
   belongs_to :user
+  before_create :generate_token
 
   has_many :items, class_name: "OrderItem", dependent: :destroy
   has_one :info, class_name: "OrderInfo", dependent: :destroy
@@ -21,6 +22,10 @@ class Order < ActiveRecord::Base
     self.save
   end
 
+  def generate_token
+    self.token = SecureRandom.uuid
+  end
+
 end
 
 # == Schema Information
@@ -33,4 +38,10 @@ end
 #  paid       :boolean          default(FALSE)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  token      :string
+#  is_paid    :boolean          default(FALSE)
+#
+# Indexes
+#
+#  index_orders_on_token  (token)
 #

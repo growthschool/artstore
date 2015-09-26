@@ -16,4 +16,10 @@ end
 #  paid       :boolean          default(FALSE)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  token      :string
+#  is_paid    :boolean          default(FALSE)
+#
+# Indexes
+#
+#  index_orders_on_token  (token)
 #
