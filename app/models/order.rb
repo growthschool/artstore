@@ -16,8 +16,8 @@ class Order < ActiveRecord::Base
     end
   end
 
-  def calculate_total(cart)
-    self.total = cart.total_price
+  def calculate_total!(current_cart)
+    self.total = current_cart.total_price
     self.save
   end
 

@@ -7,6 +7,6 @@ class CartsController < ApplicationController
 
   def checkout
     @order = current_user.orders.build
-    @info = order.build.info
+    @info = @order.build_info
   end
 end
