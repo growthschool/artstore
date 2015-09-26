@@ -14,6 +14,12 @@ Rails.application.routes.draw do
 
   root :to => "products#index" 
   
-  resources :carts
+  resources :carts do
+    collection do
+      post 'checkout'
+    end
+  end
+
+  resources :orders
 
 end

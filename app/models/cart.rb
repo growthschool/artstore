@@ -6,6 +6,10 @@ class Cart < ActiveRecord::Base
     items << product
   end
 
+  def total_price
+    items.inject(0) { |sum, item| sum + item.price}
+  end
+
 end
 
 # == Schema Information
