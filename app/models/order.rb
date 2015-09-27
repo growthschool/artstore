@@ -7,6 +7,8 @@ class Order < ActiveRecord::Base
 
   accepts_nested_attributes_for :info
 
+  scope :recent, -> { order("id DESC") }
+
   before_create :generate_token
 
   def generate_token
