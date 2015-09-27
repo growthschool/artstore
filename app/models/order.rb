@@ -19,6 +19,7 @@
 			item.product_name = cart_item.product.title
 			item.quantity = cart_item.quantity
 			item.price = cart_item.product.price
+			item.subtotal = cart_item.quantity * cart_item.product.price
 			item.save
 		end
 	end
