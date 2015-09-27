@@ -15,7 +15,12 @@ Rails.application.routes.draw do
   end
   root 'products#index'
 
-  resources :carts
+  resources :carts do
+    collection do
+      post :checkout
+    end
+  end
+  resources :orders
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
