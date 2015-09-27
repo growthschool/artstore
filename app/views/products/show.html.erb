@@ -1,17 +1,17 @@
 <div class="main_content">
 	<div id="product_top" class="row">
 		<div class="col-md-4">
-			<%= render_product_photo(@products.default_photo, :medium) %>
+			<%= render_product_photo(@product.default_photo, :medium) %>
 		</div>
 		<div class="col-md-8">
 			<div id="product_info">
-				<h1><%= @products.title %></h1>
-				<p class="description"><%= @products.description %></p><hr>
-				<h4>還剩 <%= @products.quantity %> 組</h4>	
-				 <p class="price">$<%= @products.price %> </p>	
+				<h1><%= @product.title %></h1>
+				<p class="description"><%= @product.description %></p><hr>
+				<h4>還剩 <%= @product.quantity %> 組</h4>	
+				 <p class="price">$<%= @product.price %> </p>	
 				
-				<% if @products.quantity != 0 %>
-					<%= link_to "放入購物車", add_to_cart_product_path(@products), method: :post, class: "btn btn-default pull-right" %>
+				<% if @product.quantity != 0 %>
+					<%= link_to "放入購物車", add_to_cart_product_path(@product), method: :post, class: "btn btn-default pull-right" %>
 				<% else %>
 					<div id="product_price">
 						<p>已售完！</p>

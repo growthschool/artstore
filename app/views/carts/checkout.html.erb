@@ -20,7 +20,7 @@
             </td>
             <td><%= item.quantity %></td>
             <td><%= item.product.price %></td>
-            <td><%= item.product.price * item.quantity %></td>
+            <td><%= render_item_sub_total_price(item) %></td>
           </tr>
         <% end %>
 
