@@ -10,6 +10,10 @@ class Cart < ActiveRecord::Base
     items.inject(0) { |sum, item| sum + item.price}
   end
 
+  def clean!
+    cart_items.destroy_all
+  end
+
 end
 
 # == Schema Information
