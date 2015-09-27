@@ -1,4 +1,7 @@
 class Order < ActiveRecord::Base
+
+  before_create :generate_token
+
   belongs_to :user
   has_many :items ,class_name: "OrderItem" ,dependent: :destroy
   has_one :info ,class_name: "OrderInfo" , dependent: :destroy
@@ -16,8 +19,12 @@ class Order < ActiveRecord::Base
   end
 
   def calculate_total!(cart)
-  self.total = cart.total_price
-  self.save
+    self.total = cart.total_price
+    self.save
+  end
+
+  def generate_token
+    self.token = SecureRandom.uuid
   end
 
 end
