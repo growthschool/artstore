@@ -13,6 +13,11 @@ class Cart < ActiveRecord::Base
       sum = sum + item.price
     end
     return sum
-
   end
+
+
+  def clean!
+    cart_items.destroy_all
+  end
+
 end
