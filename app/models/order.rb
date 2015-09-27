@@ -27,4 +27,16 @@ class Order < ActiveRecord::Base
     self.token = SecureRandom.uuid
   end
 
+  def is_paid?
+    is_paid
+  end
+
+  def set_payment_with!(method)
+    self.update_column(:payment_mtehod, method )
+  end
+
+  def pay!
+    self.update_column(:is_paid, true )
+  end
+
 end

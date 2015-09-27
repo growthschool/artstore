@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150927073939) do
+ActiveRecord::Schema.define(version: 20150927081105) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer  "cart_id"
@@ -48,9 +48,11 @@ ActiveRecord::Schema.define(version: 20150927073939) do
     t.integer  "user_id"
     t.integer  "total"
     t.boolean  "paid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
     t.string   "token"
+    t.boolean  "is_paid",        default: false
+    t.string   "payment_mtehod"
   end
 
   add_index "orders", ["token"], name: "index_orders_on_token"
