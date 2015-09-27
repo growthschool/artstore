@@ -10,14 +10,15 @@ end
 #
 # Table name: orders
 #
-#  id         :integer          not null, primary key
-#  user_id    :integer
-#  total      :integer          default(0)
-#  paid       :boolean          default(FALSE)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  token      :string
-#  is_paid    :boolean          default(FALSE)
+#  id             :integer          not null, primary key
+#  user_id        :integer
+#  total          :integer          default(0)
+#  paid           :boolean          default(FALSE)
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#  token          :string
+#  is_paid        :boolean          default(FALSE)
+#  payment_method :string
 #
 # Indexes
 #
