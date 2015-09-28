@@ -13,7 +13,7 @@
 	</tr>
 	<% @orders.each do |order| %>
 		<tr>
-			<td><span class="label label-info"><%= order.status %></span></td>
+			<td><span class="label label-info"><%= t("orders.order_status.#{order.status}") %></span></td>
 			<td>
 				<% case order.status %>
 				<% when "order_placed" %>
@@ -41,7 +41,7 @@
 			</td>
 			<td><%= order.user.email %></td>
 			<td><%= order.total %> 元</td>
-			<td><%= order.payment_method %> </td>
+			<td><%= t("orders.payment_method.#{order.payment_method}") if order.paid? %> </td>
 			<td><%= order.created_at %></td>
 			<td><%= order.updated_at %></td>
 			<td>

@@ -8,7 +8,7 @@ class Admin::OrdersController < ApplicationController
 	before_action :admin_required
 	
 	def index
-		@orders = Order.all
+		@orders = Order.all.order("updated_at DESC")
 	end
 
 	def show
