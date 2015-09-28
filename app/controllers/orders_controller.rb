@@ -25,7 +25,7 @@ class OrdersController < ApplicationController
     @order.set_payment_with!("credit_card")
     @order.make_payment!
 
-    redirect_to "/", notice: "付款成功"
+    redirect_to account_orders_path, notice: "付款成功"
   end
 
   private
