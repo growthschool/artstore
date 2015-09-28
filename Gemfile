@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# beauty console
+gem 'awesome_rails_console'
+
+gem "aasm"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
@@ -31,6 +35,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem "devise"
+
+gem "bootstrap-sass"
+
+gem "font-awesome-rails"
+
+gem "simple_form"
+
+gem "carrierwave"
+
+gem "mini_magick"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
