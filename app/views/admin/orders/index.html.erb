@@ -1,0 +1,52 @@
+<h2>訂單清單</h2>
+
+<table class="table">
+	<tr>
+		<th>目前狀態</th>
+		<th>出貨狀態</th>
+		<th>訂購人</th>
+		<th>總價</th>
+		<th>付款方式</th>
+		<th>建立時間</th>
+		<th>更新時間</th>
+		<th>&nbsp;</th>
+	</tr>
+	<% @orders.each do |order| %>
+		<tr>
+			<td><span class="label label-info"><%= order.status %></span></td>
+			<td>
+				<% case order.status %>
+				<% when "order_placed" %>
+					尚未付款 
+					<br>
+					<%= link_to("取消訂單", cancel_admin_order_path(order), method: :post, class: "btn btn-xs btn-default") %> 
+				<% when "paid" %>
+					已付款 
+					<br>
+					<%= link_to("出貨", ship_admin_order_path(order), method: :post, class: "btn btn-xs btn-success") %> 
+					<%= link_to("取消訂單", cancel_admin_order_path(order), method: :post, class: "btn btn-xs btn-default") %> 
+				<% when "order_cancelled" %>
+					訂單已取消
+				<% when "shipping" %>
+					已出貨
+					<br>
+					<%= link_to("到貨", shipped_admin_order_path(order), method: :post, class: "btn btn-xs btn-info") %> 
+				<% when "shipped" %>
+					已到貨
+					<br>
+					<%= link_to("退貨", return_admin_order_path(order), method: :post, class: "btn btn-xs btn-default") %> 
+				<% when "good_returned" %>
+					已退貨
+				<% end %>
+			</td>
+			<td><%= order.user.email %></td>
+			<td><%= order.total %> 元</td>
+			<td><%= order.payment_method %> </td>
+			<td><%= order.created_at %></td>
+			<td><%= order.updated_at %></td>
+			<td>
+				<%= link_to("詳細資訊", admin_order_path(order)) %>
+			</td>
+		</tr>
+	<% end %>
+</table>
