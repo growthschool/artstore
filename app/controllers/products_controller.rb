@@ -11,6 +11,7 @@ class ProductsController < ApplicationController
   def add_to_cart
 
     @product = Product.find(params[:id])
+    
 
     if !current_cart.items.include?(@pruduct)
       current_cart.add_product_to_cart(@product)
