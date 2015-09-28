@@ -13,6 +13,7 @@
         <tr>
           <th colspan="2">商品資訊</th>
           <th>單價</th>
+          <th>操作選項 </th>
         </tr>
       </thead>
       <tbody>
@@ -27,6 +28,11 @@
             </td>
             <td>
               <%= product.price %>
+            </td>
+            <td>
+              <%= link_to item_path(product), method: :delete do %>
+                <i class="fa fa-trash"></i>
+              <% end %>
             </td>
           </tr>
         <% end %>
