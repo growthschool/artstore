@@ -1,0 +1,23 @@
+<% case order.status %>
+<% when "order_placed" %>
+	尚未付款 
+	<br>
+	<%= link_to("取消訂單", cancel_admin_order_path(order), method: :post, class: "btn btn-xs btn-default") %> 
+<% when "paid" %>
+	已付款 
+	<br>
+	<%= link_to("出貨", ship_admin_order_path(order), method: :post, class: "btn btn-xs btn-success") %> 
+	<%= link_to("取消訂單", cancel_admin_order_path(order), method: :post, class: "btn btn-xs btn-default") %> 
+<% when "order_cancelled" %>
+	訂單已取消
+<% when "shipping" %>
+	已出貨
+	<br>
+	<%= link_to("到貨", shipped_admin_order_path(order), method: :post, class: "btn btn-xs btn-info") %> 
+<% when "shipped" %>
+	已到貨
+	<br>
+	<%= link_to("退貨", return_admin_order_path(order), method: :post, class: "btn btn-xs btn-default") %> 
+<% when "good_returned" %>
+	已退貨
+<% end %>
