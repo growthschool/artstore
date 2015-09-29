@@ -15,6 +15,7 @@
           <th>商品資訊</th>
           <th></th>
           <th>價錢</th>
+          <th>操作選項</th>
           </tr>
         </thead>
         <tbody>
@@ -24,6 +25,11 @@
             <td><%= render_product_photo(product.default_photo) %></td>
             <td><%= link_to(product.title,product_path(product)) %></td>
             <td><%= product.price %></td>
+            <td>
+              <%= link_to item_path(product), method: :delete do %>
+                <i class="fa fa-trash"></i>
+              <% end %>
+            </td>
           </tr>
           <% end %>
         </tbody>
