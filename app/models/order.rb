@@ -1,11 +1,43 @@
 class Order < ActiveRecord::Base
-
+  include AASM
   before_create :generate_token
 
   belongs_to :user
   has_many :items ,class_name: "OrderItem" ,dependent: :destroy
   has_one :info ,class_name: "OrderInfo" , dependent: :destroy
   accepts_nested_attributes_for :info
+
+  aasm do
+
+    state :order_placed, initial: true
+    state :paid ,after_commit: :pay!
+    state :shipping
+    state :shipped
+    state :order_cancelled
+    state :good_returned
+
+
+    event :make_payment , after_commit: :pay! do
+      transitions from: :order_placed, to: :paid
+    end
+
+    event :ship do
+      transitions from: :paid,         to: :shipping
+    end
+
+    event :deliver do
+      transitions from: :shipping,     to: :shipped
+    end
+
+    event :return_good do
+      transitions from: :shipped,      to: :good_returned
+    end
+
+    event :cancel_order do
+      transitions from: [:order_placed, :paid], to: :order_cancelled
+    end
+
+  end
 
   def build_item_cache_from_cart(cart)
 
