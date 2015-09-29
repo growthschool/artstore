@@ -30,7 +30,8 @@ class OrdersController < ApplicationController
     @order = Order.find_by_token(params[:id])
     @order.set_payment_with!("credit_card")
     @order.make_payment!
-    redirect_to "/", :notice => "成功完成付款"
+    #redirect_to "/", :notice => "成功完成付款"
+    redirect_to account_orders_path, :notice => "成功完成付款"
   end
 
 
