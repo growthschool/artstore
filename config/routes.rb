@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   resources :orders, except: [:index, :new, :destroy] do
     member do
       get :pay_with_credit_card
+      post :allpay_notify
     end
   end
 

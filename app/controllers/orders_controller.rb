@@ -43,6 +43,18 @@ class OrdersController < ApplicationController
     redirect_to account_orders_url, notice: 'Order has been paid.'
   end
 
+  def allpay_notify
+    order = Order.find_by_token(params[:id])
+    type = params[:type]
+
+    if params[:RtnCode] == "1"
+      order.set_payment_with!(type)
+      order.make_payment!
+    end
+
+    render text: '1|OK', status: 200
+  end
+
   private
 
   def order_params

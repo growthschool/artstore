@@ -13,8 +13,15 @@
       <p class="text-center">This order is paid.</p>
     <% else %>
       <div class="pull-right">
-        <%= link_to "Pay with credit card", pay_with_credit_card_order_path(@order.token), class: "btn btn-lg btn-danger" %>
-        <%= link_to "Pay with ATM", '#', class: "btn btn-lg btn-danger" %>
+        <div class="pull-right" style="padding: 10px;">
+          <%= render_payment_service_button(@order, "credit_card") %>
+        </div>
+        <div class="pull-right" style="padding: 10px;">
+          <%= render_payment_service_button(@order, "cvs") %>
+        </div>
+        <div class="pull-right" style="padding: 10px;">
+          <%= render_payment_service_button(@order, "atm") %>
+        </div>
       </div>
     <% end %>
   </div>
