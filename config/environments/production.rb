@@ -81,6 +81,8 @@ Rails.application.configure do
     ActiveMerchant::Billing::Base.integration_mode = :development
   end
 
+  host = 'artstore.yennanlin.com'
+  config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :port           => ENV['MAILGUN_SMTP_PORT'],
     :address        => ENV['MAILGUN_SMTP_SERVER'],
