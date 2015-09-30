@@ -1,4 +1,44 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    get 'orders/index'
+  end
+
+  root 'products#index'
+
+  devise_for :users
+  namespace :admin do
+    resources :products
+    resources :orders, only: [:index, :show] do
+      patch :update_state, on: :member
+    end
+  end
+
+  resources :products, only: [:index, :show] do
+    member do
+      post :add_to_cart
+    end
+  end
+
+  resources :carts, only: [:index] do
+    collection do
+      post :checkout
+      delete :clean
+    end
+  end
+
+  resources :cart_items, only: [:update, :destroy]
+
+  resources :orders, except: [:index, :new, :destroy] do
+    member do
+      get :pay_with_credit_card
+      post :allpay_notify
+    end
+  end
+
+  namespace :account do
+    resources :orders, only: [:index]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

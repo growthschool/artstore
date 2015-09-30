@@ -1,0 +1,23 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th width="80%">Product Info</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% order_items.each do |item| %>
+      <tr>
+        <td><%= item.product_name %></td>
+        <td><%= item.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="total clearfix">
+  <span class="pull-right">
+    Total: <%= order.total %> NTD
+  </span>
+</div>

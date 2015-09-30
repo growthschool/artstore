@@ -21,3 +21,15 @@
 
 en:
   hello: "Hello world"
+  orders:
+    order_state:
+      order_placed: order placed
+      paid: paid
+      shipping: shipping
+      shipped: shipped
+      order_cancelled: order cancelled
+      good_returned: good returned
+    payment_type:
+      credit_card: Pay with credit card
+      cvs: Pay with CVS
+      atm: Pay with ATM

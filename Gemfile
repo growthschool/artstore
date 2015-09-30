@@ -3,8 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -41,5 +40,45 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Use pry to debug
+  gem 'pry-rails'
+
+  # Use pry-remote due to using powder
+  gem 'pry-remote'
+
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
 end
 
+gem 'devise'
+
+gem 'bootstrap-sass'
+
+gem 'simple_form'
+
+gem 'carrierwave'
+
+gem 'mini_magick'
+
+gem 'font-awesome-rails'
+
+gem 'aasm'
+
+gem 'letter_opener', group: :development
+
+gem 'activemerchant', '~> 1.43.1'
+
+gem 'active_merchant_allpay', '0.1.2'
+
+gem 'roadie-rails'
+
+gem 'fog', '1.23.0'
+
+gem 'delayed_job_active_record'
+
+group :production do
+  gem 'pg'
+
+  gem 'rails_12factor'
+end

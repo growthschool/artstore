@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>Product Information</h2>
+    <%= render 'orders/product_info', order: @order, order_items: @order_items %>
+
+    <hr>
+
+    <h2>Order Information</h2>
+    <%= link_to "Edit", edit_order_path(@order.token), class: "btn btn-primary pull-right" %>
+    <%= render 'orders/order_info', order_info: @order_info %>
+
+    <% if @order.is_paid? %>
+      <p class="text-center">This order is paid.</p>
+    <% else %>
+      <div class="pull-right">
+        <div class="pull-right" style="padding: 10px;">
+          <%= render_payment_service_button(@order, "credit_card") %>
+        </div>
+        <div class="pull-right" style="padding: 10px;">
+          <%= render_payment_service_button(@order, "cvs") %>
+        </div>
+        <div class="pull-right" style="padding: 10px;">
+          <%= render_payment_service_button(@order, "atm") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

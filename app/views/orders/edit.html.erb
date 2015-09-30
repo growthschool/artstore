@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2>Product Information</h2>
+    <%= render 'orders/product_info', order: @order, order_items: @order_items %>
+
+    <hr>
+
+    <h2>Order Information</h2>
+    <div class="order-form">
+      <%= render 'orders/form', order: @order %>
+    </div>
+
+  </div>
+</div>
