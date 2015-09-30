@@ -1,5 +1,6 @@
 class Order < ActiveRecord::Base
   include AASM
+  include Tokenable
 
   belongs_to :user
 
@@ -7,8 +8,6 @@ class Order < ActiveRecord::Base
   has_many :items, class_name: 'OrderItem', dependent: :destroy
 
   accepts_nested_attributes_for :info
-
-  before_create :generate_token
 
   scope :recent, -> { order(created_at: :desc ) }
 
@@ -70,11 +69,5 @@ class Order < ActiveRecord::Base
     event :cancell_order do
       transitions from: [:order_placed, :paid], to: :order_cancelled
     end
-  end
-
-  private
-
-  def generate_token
-    self.token = SecureRandom.uuid
   end
 end

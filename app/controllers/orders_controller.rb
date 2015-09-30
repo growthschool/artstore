@@ -15,9 +15,8 @@ class OrdersController < ApplicationController
   def create
     @order = current_user.orders.build(order_params)
 
-    if @order.build_item_cache_from_cart(current_cart) && @order.save
-      @order.caculate_total!(current_cart)
-      current_cart.destroy
+    if @order.save
+      OrderPlacingService.new(current_cart, @order).place_order!
       redirect_to order_url(@order.token)
     else
       render 'carts/checkout'
