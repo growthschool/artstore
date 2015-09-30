@@ -27,7 +27,7 @@ class OrdersController < ApplicationController
 
     @order.make_payment!
 
-    redirect_to "/", :notice => "成功完成付款"
+    redirect_to account_orders_path, :notice => "成功完成付款"
   end
 
 

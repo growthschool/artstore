@@ -34,6 +34,7 @@ class Order < ActiveRecord::Base
     self.update_column(:is_paid, true)
   end
 
+  scope :recent, -> { order("id DESC") }
 
 
   include AASM

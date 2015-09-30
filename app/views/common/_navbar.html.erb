@@ -36,6 +36,10 @@
             <li>
               <%= link_to("Admin 選單", admin_products_path) %>
             </li>
+              <% else %>
+              <li>
+              <%= link_to("訂單選單", account_orders_path) %>
+              </li>
             <% end %>
           <li> <%= link_to("登出",destroy_user_session_path,method: :delete) %></li>
           </ul>
