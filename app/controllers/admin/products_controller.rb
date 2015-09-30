@@ -26,6 +26,15 @@ layout "admin"
   @photo = @product.photos.build
  end
 
+def add_to_cart
+  @product = Product.find(params[:id])
+
+  Current_cart.add_product_to_cart(@product)
+
+  redirect_to :back
+
+end
+
 
  def create
   @product = Product.new(product_params)

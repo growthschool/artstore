@@ -1,0 +1,572 @@
+<% @orders.each do |order| %>
+<tr>
+  <td> <%= link_to(order.id, admin_order_path(order)) %> </td>
+  <td> <%= render_order_timestamp(order) %> </td>
+  <td> <%= order.user.email %></td>
+  <td> <%= render_order_state(order) %> </td>
+</tr>
+
+<% end %>
+
+作業解答 ( Week-2 )
+
+作業 #1
+
+* 消費者可用「清空購物車功能」來手動清空購物車
+* 消費者可以「手動」從購物車內刪掉某些物品
+* 購物車加入「數量」設計
+    * 購物車的總價 => 小計 x 數量
+    * 數量為 0 的貨物不能「購買」
+    * 購物車不能手動更新超過庫存的數量
+
+作業 #2
+
+* 並修改訂單畫面
+* 產生訂單後，購物車應該被清空
+
+作業 #3
+
+* 建立 account/orders 可以看到該使用者過去所有訂單
+* 結賬後跳轉到 account/orders#index
+
+作業 #4
+
+* 建立 admin/orders 可以看到系統內所有訂單
+* admin 的 order 列表應要能顯示訂單狀態
+* 單張 order 應要可以依「按照狀態圖」改變狀態
+
+
+
+—————————
+
+
+
+清空購物車功能
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/Xnj8Nyy6jQof3mfmG72e4w]
+[Image: https://quip.com/-/blob/aAWAAAGVryU/gpajXhsybfebW8dI7l35sA]
+   <%= link_to("清空購物車", clean_carts_path ,
+               method: :delete , class: "pull-right",
+               style: "text-decoration: underline;",
+               data: { confirm: "你確定要清空整個購物車嗎？"} )%>
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/x35xFUMCfVDhEmg5-Z0BBw]
+  def clean
+    current_cart.clean!
+    flash[:warning] = "已清空購物車"
+    redirect_to carts_path
+  end
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/4KtZM-5kSLgU1F2X5XlxYQ]
+  def clean!
+    cart_items.destroy_all
+  end
+
+— — — —
+
+
+
+可以清除購物車內的某一商品
+
+
+rails g controller cart_items
+[Image: https://quip.com/-/blob/aAWAAAGVryU/6MHH-Fo5Q6VEuCwiJJLr8g]
+[Image: https://quip.com/-/blob/aAWAAAGVryU/93QyON-5JM57HZ3RExsI0w][Image: https://quip.com/-/blob/aAWAAAGVryU/y0jv6sGXJyHr6IwO-tGFOA]
+            <td>
+              <%= link_to item_path(product), method: :delete do %>
+                <i class="fa fa-trash"></i>
+              <% end %>
+            </td>
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/4WTUj4SOltPJo0P9wDUnIw]
+  before_action :authenticate_user!
+
+  def destroy
+    @cart = current_cart
+    @item = @cart.cart_items.find_by(product_id: params[:id])
+    @product = @item.product
+    @item.destroy
+
+    flash[:warning] = "成功將 #{@product.title} 從購物車刪除!"
+    redirect_to :back
+  end
+
+
+
+
+— — — —
+
+
+
+購物車加入「數量」設計
+
+cart_item 新增 quantity 欄位
+
+rails g migration add_quantity_to_cart_item quantity:integer
++ default: 1
+
+rake db:migrate
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/ke0qcGDPKHrTwOdp01drAQ]
+
+可以修改購物車內的單一商品數量
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/NGB6oq7pmJwcMkcQW_drpQ]
+  def update
+    @cart = current_cart
+    @item = @cart.cart_items.find_by(product_id: params[:id])
+
+    @item.update(item_params)
+
+    redirect_to carts_path
+  end
+
+
+  private
+
+  def item_params
+    params.require(:cart_item).permit(:quantity)
+  end
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/PZWZ1hs0v8RRIu5aS7XrZQ]
+            <td>
+              <% item = current_cart.cart_items.find_by(product_id: product) %>
+
+              <%= form_for item, url: item_path(product) do |f| %>
+                <%= f.select :quantity, [1,2,3,4,5] %>
+                <%= f.submit "更新", data: { disable_with: "Submiting..." } %>
+              <% end -%>
+            </td>
+
+
+
+購物車的總價 => 小計 x 數量
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/nZ2lOmdF72i0F-m5eoUZbg]
+cart_items.inject(0) { |sum, item| sum + (item.product.price * item.quantity) }
+
+
+
+數量為 0 的貨物不能「購買」
+
+* view 的設定
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/aXKID1ue-Eh-1yHGHJhMsg]
+      <% if @product.quantity > 0 %>
+        <%= link_to("加入購物車", add_to_cart_product_path(@product), method: :post,
+                    class: "btn btn-lg btn-danger") %>
+      <% else %>
+        已銷售一空，無法購買
+      <% end %>
+
+
+
+* controller 的設定
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/4SxDHRbqruQazfgIA4k7PQ]
+    if @item.product.quantity >= item_params[:quantity].to_i
+      @item.update(item_params)
+      flash[:notice] = "成功變更數量"
+    else
+      flash[:warning] = "數量不足以加入購物車"
+    end
+
+
+
+購物車不能手動更新超過庫存的數量
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/dvo5Vt6i580yzKIndmaI2w]
+
+訂單建立時也要把數量存進去
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/WX1Y61SnIQUgPjBSaGfw3w]
+      item.quantity = cart_items.find_by(product_id: cart_item).quantity
+
+
+
+定義 find_cart_item 來簡化常用的程式
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/YEkmlkkYaY4OqeSt3r4pEA]
+  def find_cart_item(product)
+    cart_items.find_by(product_id: product)
+  end
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/cfTV3ebpIxoIPp-EhE7dgQ][Image: https://quip.com/-/blob/aAWAAAGVryU/LIAKtZiBgyPpHQfF7d5AfQ][Image: https://quip.com/-/blob/aAWAAAGVryU/dSeDgpQiPrBBhXk3Fo9Z7g]
+
+— — — —
+
+
+
+修改結帳頁面 ( 增加數量欄位 )
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/1YM416Dg4ekI4Hk0s5vYCA]
+            <td>
+              <%= current_cart.find_cart_item(product).quantity %>
+            </td>
+
+
+
+— — — —
+
+
+
+修改訂單頁面 ( 增加數量欄位 )
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/uKz6VAYkTFKrpwqWWxIFVA]
+            <td>
+              <%= order_item.quantity %>
+            </td>
+
+
+
+— — — —
+
+
+
+產生訂單後，購物車應該被清空
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/tXtGmcdeagkLvO4YWq1Cuw]
+      current_cart.cart_items.destroy_all
+
+
+
+— — — —
+
+
+
+建立 account/orders 可以看到該使用者過去所有訂單
+
+
+rails g controller account::orders
+[Image: https://quip.com/-/blob/aAWAAAGVryU/LE-o_kURb2swS-_LxmHBlQ][Image: https://quip.com/-/blob/aAWAAAGVryU/wifaAatOsVHKzf2Jo1Synw]
+  namespace :account do
+    resources :orders
+  end
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/a4lZwZ2s64EJC6OjnyG7pQ]
+  before_action :authenticate_user!
+
+  def index
+    @orders = current_user.orders
+  end
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/JEfwnIgAPZOQZtSU3gQ2Og]
+<h2>訂單列表 </h2>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>生成時間</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <% @orders.each do |order| %>
+    <tr>
+      <td> <%= link_to(order.id, order_path(order.token)) %> </td>
+      <td> <%= order.created_at.to_s(:long) %> </td>
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+
+
+將訂單的排列順序按照 最新 - 最舊 排列
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/ttTDSybuuTf4FOkpw3zcEA]
+
+用 scope 包裝 index 的排列順序
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/hNtDJa5UrqVR_n1KtkssDA][Image: https://quip.com/-/blob/aAWAAAGVryU/nFt0yRs679WB5WSFlQ3LOQ]
+
+用 helper 包裝 order 的產生時間
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/dB1aUbCnBkBrX1bmpjYoAw]
+  def render_order_timestamp(order)
+    order.created_at.to_s(:long)
+  end
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/VdNgwu0eWQ30u15iHuBdgw]
+
+— — — —
+
+
+
+結賬後跳轉到 account/orders#index
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/JdLjTEJAqS1oFTPlKnOQ2w]
+
+navbar 新增個人訂單列表的連結
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/-mOsm4e1hNVxjZDIG79b2w]
+              <li>
+                <%= link_to("個人訂單列表", account_orders_path ) %>
+              </li>
+
+
+
+— — — —
+
+
+
+建立 admin/orders 可以看到系統內所有訂單
+
+
+rails g controller admin::orders
+[Image: https://quip.com/-/blob/aAWAAAGVryU/v-jOFzy7MR6HE-7IARrbIw][Image: https://quip.com/-/blob/aAWAAAGVryU/EQIw_ZB6N7XOet5sE5dAUw][Image: https://quip.com/-/blob/aAWAAAGVryU/ygajuJsle8S5VJhO1Ld7cQ]
+  layout "admin"
+
+  before_action :authenticate_user!
+  before_action :admin_required
+
+  def index
+    @orders = Order.recent
+  end
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/P5A6yj2auOk4Z3n47AGFvA]
+<h2>訂單列表 </h2>
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>生成時間</th>
+      <th>訂購者</th>
+      <th>訂單狀態</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+    <tr>
+      <td> <%= link_to(order.id, admin_order_path(order) ) %> </td>
+      <td> <%= render_order_timestamp(order) %> </td>
+      <td> <%= order.user.email %></td>
+      <td> <%= order.aasm_state %> </td>
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/dZF3SZkmnmARQZl5ZHpNtw]
+
+— — — —
+
+
+
+admin 的 order 列表應要能顯示訂單狀態
+
+用 i18n 機制將訂單狀態改為中文
+
+
+
+  def render_order_state(order)
+    t("orders.order_state.#{order.aasm_state}")
+  end
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/y-Djd4y9boMt8nF8kRjyTw][Image: https://quip.com/-/blob/aAWAAAGVryU/cewHemmxrQvXlk6eX0Fxvg]
+[Image: https://quip.com/-/blob/aAWAAAGVryU/V3nfn9gTjXZuzSgfeM50dw]
+[Image: https://quip.com/-/blob/aAWAAAGVryU/EAdUbfL8S75l_XtO2z1fng]
+zh-TW:
+  orders:
+    order_state:
+      order_placed: 已下單
+      paid: 已付款
+      shipping: 出貨中
+      shipped: 已到貨
+      order_cancelled: 取消訂單
+      good_returned: 退貨
+
+
+
+— — — —
+
+
+
+單張 order 應要可以要「按照狀態圖」改變狀態
+
+建立後台訂單頁面
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/3nKbvdz1Qb-nKQglFBnPcQ]
+  def show
+    @order = Order.find(params[:id])
+    @order_info = @order.info
+    @order_items = @order.items
+  end
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/32-EbCZPRU0bnycHKps_Vg]
+  def render_order_paid_state(order)
+    if order.paid?
+      "已付款"
+    else
+      "未付款"
+    end
+  end
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/4ceLmYs2zlbBAQf37PufxQ]
+<div class="row">
+   <div class="col-md-12">
+
+    <h2> 訂單明細 (<%= render_order_paid_state(@order) %>) </h2>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th width="80%">商品明細</th>
+          <th>單價</th>
+          <th>數量</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% @order_items.each do |order_item| %>
+          <tr>
+            <td>
+              <%= order_item.product_name %>
+            </td>
+            <td>
+              <%= order_item.price %>
+            </td>
+            <td>
+              <%= order_item.quantity %>
+            </td>
+          </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+
+    <div class="total clearfix">
+      <span class="pull-right">
+       <span> 總計 <%= @order.total %> NTD
+       </span>
+     </div>
+
+     <hr>
+
+     <h2> 寄送資訊 </h2>
+
+     <table class="table table-striped table-bordered">
+      <tbody>
+        <tr>
+          <td>
+            訂購人
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= @order_info.billing_name %> - <%= @order_info.billing_address %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            訂購人
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <%= @order_info.billing_name %> - <%= @order_info.billing_address %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+
+後台的訂單可以依照「按照狀態圖」改變狀態
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/fFN88ui8C51nsZHicCooQg]
+    resources :orders do
+      member do
+        post :cancel
+        post :ship
+        post :shipped
+        post :return
+      end
+    end
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/QHqguPrLaTPyEBj5A7f2uQ]
+  def ship
+    @order = Order.find(params[:id])
+    @order.ship!
+    redirect_to :back
+  end
+
+  def shipped
+    @order = Order.find(params[:id])
+    @order.deliver!
+    redirect_to :back
+  end
+
+  def cancel
+    @order = Order.find(params[:id])
+    @order.cancell_order!
+    redirect_to :back
+  end
+
+  def return
+    @order = Order.find(params[:id])
+    @order.return_good!
+    redirect_to :back
+  end
+
+
+[Image: https://quip.com/-/blob/aAWAAAGVryU/0ErnTV_3xkX2TheAlcdjTw]
+<div style="padding:10px; float:right;">
+
+  <% case order.aasm_state %>
+  <% when "order_placed" %>
+    <%= link_to("取消訂單",
+                cancel_admin_order_path(order),
+                class: "btn btn-default btn-sm", method: :post) %>
+
+  <% when "paid" %>
+    <%= link_to("取消訂單",
+                cancel_admin_order_path(order),
+                class: "btn btn-default btn-sm", method: :post) %>
+    <%= link_to("出貨",
+                ship_admin_order_path(order),
+                class: "btn btn-default btn-sm", method: :post) %>
+
+  <% when "shipping" %>
+    <%= link_to("設為已出貨",
+                shipped_admin_order_path(order),
+                class: "btn btn-default btn-sm", method: :post) %>
+
+  <% when "shipped" %>
+    <%= link_to("退貨",
+                return_admin_order_path(order),
+                class: "btn btn-default btn-sm", method: :post) %>
+
+  <% when "order_cancelled" %>
+    <span class="label label-default">訂單已取消</span>
+
+  <% when "good_returned" %>
+    <span class="label label-default">已退貨</span>
+
+  <% end %>
+
+</div>
+
