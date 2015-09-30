@@ -1,7 +1,9 @@
+<link rel="stylesheet" type="text/css" href="/assets/application.css" />
+
 <div class="row">
   <div class="col-md-12">
     <h2>
-      Order info <br>
+      Product Information <br>
       <small>
         <%= link_to "Order link", order_url(@order.token) %>
       </small>
@@ -37,18 +39,18 @@
 
     <hr>
 
-    <h2>Mail Info</h2>
+    <h2>Order Information</h2>
 
     <table class="table table-striped table-bordered">
       <tbody>
         <tr>
-          <td>Buyer</td>
+          <td>Billing</td>
         </tr>
         <tr>
           <td><%= @order_info.billing_name %> - <%= @order_info.billing_address %></td>
         </tr>
         <tr>
-          <td>Receiver</td>
+          <td>Shipping</td>
         </tr>
         <tr>
           <td><%= @order_info.shipping_name %> - <%= @order_info.shipping_address %></td>
