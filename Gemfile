@@ -75,6 +75,8 @@ gem 'roadie-rails'
 
 gem 'fog', '1.23.0'
 
+gem 'delayed_job_active_record'
+
 group :production do
   gem 'pg'
 
