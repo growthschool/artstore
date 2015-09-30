@@ -37,6 +37,10 @@ gem 'font-awesome-rails'
 
 gem 'aasm', '~> 4.3.0'
 
+gem "activemerchant",         "~> 1.43.1"
+
+gem "active_merchant_allpay", "0.1.2"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -47,10 +51,16 @@ gem 'aasm', '~> 4.3.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+group :production do
+  gem "pg"
+  gem "rails_12factor"
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
+  gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 

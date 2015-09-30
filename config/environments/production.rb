@@ -2,6 +2,11 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
+
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.integration_mode = :development #取得正式key之後再換
+  end
+
   config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and
