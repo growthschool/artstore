@@ -73,7 +73,7 @@ gem 'active_merchant_allpay', '0.1.2'
 
 gem 'roadie-rails'
 
-gem 'fog'
+gem 'fog', '1.23.0'
 
 group :production do
   gem 'pg'
