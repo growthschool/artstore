@@ -80,4 +80,16 @@ Rails.application.configure do
   config.after_initialize do
     ActiveMerchant::Billing::Base.integration_mode = :development #取得正式key以後再改成 :production
   end
+
+  config.action_mailer.default_url_options = { host: 'mysterious-taiga-5923.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        ENV['address'],
+    user_name:      ENV['user_name'], 
+    password:       ENV['mail_password'],
+    domain:         ENV['domain'],
+    authentication: :plain,
+  }
+
 end
