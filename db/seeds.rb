@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+create_products = for index in 1..10 do
+	product = Product.create(
+		name = "demo product ##{i}",
+		quantity = 200,
+		price = 100 * i
+	)
+end
