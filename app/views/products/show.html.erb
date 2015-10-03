@@ -1,4 +1,4 @@
-<% if current_user.admin? %>
+<% if current_user && current_user.admin? %>
 	<div class="row text-right">
 		<%= link_to("編輯此產品", edit_admin_product_path , class: "btn btn-primary") %>
 	</div>
