@@ -8,6 +8,7 @@ gem "mini_magick"
 gem "font-awesome-rails"
 gem "aasm"
 gem "pry"
+gem "roadie"
 
 group :development do
   gem "letter_opener"
