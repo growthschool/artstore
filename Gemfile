@@ -28,6 +28,8 @@ gem 'bootstrap-sass'
 
 gem 'simple_form', '~> 3.1.1'
 
+gem 'fog'
+
 gem 'carrierwave', '~> 0.10.0'
 
 gem 'mini_magick', '~> 4.3.3'
