@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.2.0"
+ruby "2.2.3"
 
 gem "devise"
 gem "bootstrap-sass"
@@ -18,6 +18,7 @@ end
 
 group :production do
   gem "pg"
+	gem "fog"
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
