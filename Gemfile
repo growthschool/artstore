@@ -9,6 +9,10 @@ gem "font-awesome-rails"
 gem "aasm"
 gem "pry"
 
+group :development do
+  gem "letter_opener"
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
