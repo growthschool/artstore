@@ -48,6 +48,8 @@ gem "aasm"
 
 gem "fog"
 
+gem "delayed_job_active_record"
+
 group :development do
   gem "sqlite3"
   gem "letter_opener"
