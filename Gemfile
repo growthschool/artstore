@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.2.3"
+ruby "2.1.7"
 
 gem "devise"
 gem "bootstrap-sass"
@@ -9,7 +9,8 @@ gem "mini_magick"
 gem "font-awesome-rails"
 gem "aasm"
 gem "pry"
-gem "roadie"
+gem 'roadie', '~> 2.4'
+gem "delayed_job_active_record"
 
 group :development do
   gem 'sqlite3'
