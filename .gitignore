@@ -19,3 +19,4 @@
 
 config/database.yml
 public/uploads
+config/initializers/carrier_wave.rb

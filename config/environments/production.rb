@@ -81,4 +81,14 @@ Rails.application.configure do
     ActiveMerchant::Billing::Base.integration_mode = :development # 取得正式 KEY 之後再改成 :production
   end
 
+  config.action_mailer.default_url_options = { host: 'artstore-sample-nelson.herokuapp.com' }
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      port:           587,
+      address:        "smtp.mailgun.org",
+      user_name:      "postmaster@sandboxc442bda7be994ee7907f05cb25b1924c.mailgun.org", # 你的 mailgun 的 user_name ( 見作業 1 解答 )
+      password:       "0389c59a4b9b4c5b2afd5b1197081373", # 你的 mailgun 的 password ( 見作業 1 解答 )
+      domain:         "sandboxc442bda7be994ee7907f05cb25b1924c.mailgun.org",
+      authentication: :plain,
+    }
 end

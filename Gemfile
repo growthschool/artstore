@@ -46,6 +46,8 @@ gem "mini_magick"
 
 gem "aasm"
 
+gem "fog"
+
 group :development do
   gem "sqlite3"
   gem "letter_opener"
