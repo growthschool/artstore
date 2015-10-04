@@ -44,6 +44,8 @@ gem "active_merchant_allpay", "0.1.2"
 
 gem 'roadie-rails', '~> 1.0'
 
+gem 'delayed_job_active_record'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
