@@ -17,6 +17,5 @@
 /tmp
 
 
-config/database.yml
 public/uploads
 rootkey.csv
