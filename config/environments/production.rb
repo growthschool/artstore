@@ -63,6 +63,16 @@ Rails.application.configure do
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      "postmaster@sandbox72ea713f621246988696577ca4bdee1f.mailgun.org", # 你的 mailgun 的 user_name ( 見作業 1 解答 )
+    password:       "12sqh38j", # 你的 mailgun 的 password ( 見作業 1 解答 )
+    domain:         "sandbox72ea713f621246988696577ca4bdee1f.mailgun.org",
+    authentication: :plain,
+  }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
