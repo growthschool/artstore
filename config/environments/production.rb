@@ -80,6 +80,6 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'limitless-plains-4640.herokuapp.com' }
 
   config.after_initialize do
-    Pay2go.integration_mode = :production
+    Pay2go.integration_mode = :development
   end
 end
