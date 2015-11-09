@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+u = User.new
+u.email = "admin@bindo.com"
+u.password = "02040204"
+u.password_confirmation = "02040204"
+u.is_admin = true
+u.save
