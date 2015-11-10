@@ -1,4 +1,4 @@
-<h2> 新增產品 </h2>
+<h2> 修改產品 </h2>
 
 <%= simple_form_for [:admin, @product] do |f| %>
 
@@ -28,7 +28,7 @@
 
   <div class="form-group">
     <%= f.simple_fields_for :photo do |c| %>
-       <%= c.input :image , as: :file %>
+      <%= c.input :image , as: :file %>
     <% end %>
   </div>
 

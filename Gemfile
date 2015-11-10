@@ -34,6 +34,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "devise"
 gem "bootstrap-sass"
 
+gem "simple_form"	#使用 simple_from 換掉 form
+
+gem "carrierwave" 	#實作圖片上傳 carrierwave
+gem "mini_magick"	#需安裝imagemagick
+
+gem "font-awesome-rails"	#用 icon 點綴頁面設計
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
