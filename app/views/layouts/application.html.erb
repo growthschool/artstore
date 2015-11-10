@@ -8,6 +8,12 @@
 </head>
 <body>
 
+  <% if !current_user %>
+    <%= link_to("登入", new_user_session_path) %>
+  <% else %>
+    <%= link_to("登出", destroy_user_session_path, method: :delete) %>
+  <% end %>
+
 <%= yield %>
 
 </body>
