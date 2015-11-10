@@ -3,19 +3,19 @@
 <%= simple_form_for [:admin, @product] do |f| %>
 
   <div class="group">
-    <%= f.input :title %>
+    <%= f.input :title, label: "標題" %>
   </div>
 
   <div class="group">
-    <%= f.input :description %>
+    <%= f.input :description, label: "敘述" %>
   </div>
 
   <div class="group">
-    <%= f.input :quantity %>
+    <%= f.input :quantity, label: "數量" %>
   </div>
 
   <div class="group">
-    <%= f.input :price %>
+    <%= f.input :price, label: "價錢" %>
   </div>
 
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
