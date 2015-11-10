@@ -3,14 +3,16 @@
     <%= image_tag(@product.photo.image.medium.url, class: "thumbnail") %>
   </div>
   <div class="col-md-6">
-    <h2><%= @product.title %></h2>
-    <div style="height:100px">
-      <p><%= @product.description %></p>
+    <h2> <%= @product.title %> </h2>
+    <div style="height:100px;">
+      <p>
+        <%= @product.description %>
+      </p>
     </div>
-    <div>Number: <%= @product.quantity %></div>
-    <div class="product-price">$ <%= @product.price %></div>
+    <div> 數量 : <%= @product.quantity %> </div>
+    <div class="product-price"> $ <%= @product.price %> </div>
     <div class="pull-right">
-      <%= link_to("Add to Cart", "#", class: "btn btn-primary btn-large btn-danger") %>
+      <%= link_to("加入購物車", "#", :class => "btn btn-primary btn-lg btn-danger") %>
     </div>
   </div>
 </div>
