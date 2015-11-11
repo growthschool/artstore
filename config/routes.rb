@@ -2,7 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   namespace :admin do
     resources :products
-    resources :users
+    resources :users do
+      post :to_admin
+      post :to_normal
+    end
   end
 
   resources :products
