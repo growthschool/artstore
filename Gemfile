@@ -32,9 +32,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# user login and registration functionality
 gem "devise"
-
+# bootstrap for outlook
 gem "bootstrap-sass"
+# simple form gem for simpler form
+gem "simple_form"
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

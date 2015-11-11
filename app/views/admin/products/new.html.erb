@@ -1,27 +1,29 @@
-<h3> admin/product/new.html.erb </h3>
+<div class="col-md-4 col-md-offset-4">
+<h1>新增商品</h1>
 
-<%= form_for [:admin, @product] do |f| %>
-	<div class="group">
-		<%= f.label("標題") %>
-		<%= f.text_field :title %>
-	</div>
+	<%= simple_form_for [:admin, @product] do |f| %>
+		<div class="form-group">
+			<%= f.label("標題") %>
+			<%= f.text_field :title %>
+		</div>
 
-	<div class="group">
-		<%= f.label("敘述") %>
-		<%= f.text_area :description %>
-	</div>
+		<div class="form-group">
+			<%= f.label("敘述") %>
+			<%= f.text_area :description %>
+		</div>
 
-	<div class="group">
-		<%= f.label("數量") %>
-		<%= f.text_field :quantity %>
-	</div>
+		<div class="form-group">
+			<%= f.label("數量") %>
+			<%= f.text_field :quantity %>
+		</div>
 
-	<div class="group">
-		<%= f.label("價錢") %>
-		<%= f.text_field :price %>
-	</div>
+		<div class="form-group">
+			<%= f.label("價錢") %>
+			<%= f.text_field :price %>
+		</div>
 
-	<%= f.submit "Submit", data: { disable_with: "Submitting..."} %>
+		<%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..."} %>
 
 
-<% end %>
+	<% end %>
+</div>
