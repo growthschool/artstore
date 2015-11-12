@@ -1,0 +1,36 @@
+<h2> User List </h2>
+<div class="pull-right" style="padding-bottom: 20px;">
+  <%= link_to("New User", new_user_registration_path, class: "btn btn-primary btn-sm") %>
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr class="info">
+      <th>User</th>
+      <th>isAdmin</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+          <%= user.email %>
+        </td>
+        <td>
+          <% if user.admin? %>
+            Admin
+          <% else %>
+            User  
+          <% end %>
+        </td>
+        <td>
+          <% if user.admin? %>
+            <%= link_to "toUser", admin_user_to_user_path(user), method: :post, class: "btn btn-info btn-sm" %>
+          <% else %>
+            <%= link_to "toAdmin",  admin_user_to_admin_path(user), method: :post, class: "btn btn-success btn-sm"%>
+          <% end %>  
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
