@@ -12,4 +12,13 @@ class User < ActiveRecord::Base
   def admin?
     is_admin
   end
+
+# 使用update_columns可直接更改attributes,這裏為is_admin欄位,但會省略掉vailidate和callback等動作，updated_at也不會更新
+  def to_admin
+    self.update_columns(is_admin: true)
+  end
+
+  def to_normal
+    self.update_columns(is_admin: false)
+  end
 end
