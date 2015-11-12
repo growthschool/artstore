@@ -1,0 +1,36 @@
+<h2>我的產品列表</h2>
+<div>
+  <%= link_to("新增商品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
+</div>
+<br>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th width="250" class="text-center">商品圖片</th>
+      <th class="text-center">商品名稱</th>
+      <th class="text-center">商品價錢</th>
+      <th class="text-center">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+    <tr>
+      <td><%= product.id %></td>
+      <td>
+        <%= link_to product_path(product), class: "thumbnail" do %>
+        <% if product.photo.present? %>
+          <%= image_tag(product.photo.image.thumb.url) %>
+        <% else %>
+          <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+        <% end %>
+       <% end %>
+      </td>
+      <td class="text-center"><%= product.title %></td>
+      <td class="text-center"> $ <%= product.price %></td>
+      <td><%= link_to("Edit", edit_admin_product_path(product), class: "btn btn-info btn-sm") %>
+      <%= link_to("Delete", "#", class: "btn btn-danger btn-sm pull-right") %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
