@@ -1,0 +1,32 @@
+<%= simple_form_for [:admin, @product] do |f| %>
+
+  <div class="group">
+    <%= f.label("標題") %>
+    <%= f.input :title, label: false %>
+  </div>
+
+  <div class="group">
+    <%= f.label("敘述") %>
+    <%= f.input :description, label: false %>
+  </div>
+
+  <div class="group">
+    <%= f.label("數量") %>
+    <%= f.input :quantity, label: false %>
+  </div>
+
+  <div class="group">
+    <%= f.label("價錢") %>
+    <%= f.input :price, label: false %>
+  </div>
+
+  <div class="group">
+    <%= f.simple_fields_for :photo do |ff| %>
+      <%= ff.file_field :image %>
+    <% end %>
+  </div>
+
+  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+  <%= link_to 'Back', root_path %>
+
+<% end %>

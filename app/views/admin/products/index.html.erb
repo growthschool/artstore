@@ -1,0 +1,13 @@
+<h1>Products List</h1>
+<ul>
+  <% @products.each do |product| %>
+
+    <li>
+      <%= link_to(product.title, admin_product_path(product)) %>
+      |
+      <%= link_to 'edit', edit_admin_product_path(product) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'New', new_admin_product_path, class: 'btn btn-primary' %>
