@@ -8,7 +8,12 @@
 </head>
 <body>
 
-<%= yield %>
+<%= render "layouts/common/navbar" %>
+
+<div class="container">
+<%= notice_message %>
+  <%= yield %>
+</div>
 
 </body>
 </html>
