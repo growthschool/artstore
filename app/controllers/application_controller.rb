@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
    end
  end
 
+ def index
+   @products = Product.all
+ end
+
 end
