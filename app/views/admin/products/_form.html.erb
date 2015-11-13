@@ -1,0 +1,28 @@
+<%= simple_form_for [:admin, @product] do |f| %>
+
+  <div class="group">
+    <%= f.input :title, label: "標題" %>
+  </div>
+
+  <div class="group">
+    <%= f.input :description, label: "敘述" %>
+  </div>
+
+  <div class="group">
+    <%= f.input :quantity, label: "數量" %>
+  </div>
+
+  <div class="group">
+    <%= f.input :price, label: "價錢" %>
+  </div>
+
+  <div class="group">
+    <%= f.simple_fields_for :photo do |ff| %>
+      <%= ff.input :image, as: :file, label: "圖片" %>
+    <% end %>
+  </div>
+
+  <%= f.submit "GO", data: { disable_with: "Submitting..." }, class: 'btn btn-success' %>
+  <%= link_to 'Back', root_path %>
+
+<% end %>
