@@ -14,6 +14,7 @@ class Admin::ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @photo = @product.build_photo
   end
 
   def edit
@@ -43,6 +44,6 @@ class Admin::ProductsController < ApplicationController
   private
   def product_params
     # 設定只能進入DB的欄位
-    params.require(:product).permit(:title, :description, :quantity, :price)
+    params.require(:product).permit(:title, :description, :quantity, :price, photo_attributes:[:image, :id])
   end
 end
