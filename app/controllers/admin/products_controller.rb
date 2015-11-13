@@ -3,7 +3,7 @@ class Admin::ProductsController < ApplicationController
   before_action :admin_required
 
   def index
-    @groducts = Product.all
+    @products = Product.all
   end
 
   def new
