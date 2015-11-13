@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'bootstrap-sass'
+gem 'simple_form'
 
 
 
