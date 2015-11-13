@@ -14,7 +14,14 @@
       <tr>
         <td><%= user.id %></td>
         <td><%= user.email %></td>
-        <td>權限 (待處理)</td>
+        <td>
+          <% if current_user.is_admin? %>
+            admin
+          <% else %>
+            user
+          <% end %>
+
+        </td>
         <td>轉換權限的按鈕 (待處理)</td>
       </tr>
     <% end %>
