@@ -24,9 +24,11 @@
         </td>
         <td>
           <% if user.is_admin? %>
-            <%= link_to("轉為一般使用者", "#", class: "btn btn-info") %>
+            <%= link_to("轉為一般使用者", admin_user_to_normal_path(user),
+                        method: :post, class: "btn btn-info") %>
           <% else %>
-            <%= link_to("轉為管理者", "#", class: "btn btn-primary") %>
+            <%= link_to("轉為管理者", admin_user_to_admin_path(user),
+                        method: :post, class: "btn btn-primary") %>
           <% end %>
         </td>
       </tr>
