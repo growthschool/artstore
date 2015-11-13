@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2376773839">
+  <component name="DataSourceManagerImpl" format="xml" hash="424598642">
     <data-source source="LOCAL" name="Rails artstore: development" uuid="a5fbb227-6e64-4295-8613-f984a009bc7f">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
