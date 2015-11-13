@@ -9,13 +9,11 @@ class User < ActiveRecord::Base
   end
 
   def to_admin
-    self.is_admin = true
-    self.save
+    self.update_columns(is_admin: true)
   end
 
   def to_normal
-    self.is_admin = false
-    self.save
+    self.update_columns(is_admin: false)
   end
 
 end
