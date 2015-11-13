@@ -1,10 +1,11 @@
-class Admin::ProductsController < ApplicationController
+class Admin::ProductsController < ProductsController
   before_action :authenticate_user!
   before_action :admin_required
+  layout 'admin'
 
   def new
     @product = Product.new
-    @photo = @product.photos.build
+    @photo = @product.build_photo
   end
 
   def create
@@ -17,12 +18,9 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
-  def edit
-    @product = Product.find(params[:id])
-  end
+  def edit ; end
 
   def update
-    @product = Product.find(params[:id])
     if @product.update(product_params)
       redirect_to root_path
     else
@@ -30,8 +28,19 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
-  def index
-   @products = Product.all
+  # def index
+  #  @products = Product.all
+  # end
+
+  # def show ; end
+
+  def destroy
+    if @product.destroy
+      flash[:success] = 'Product has been destroyed.'
+    else
+      flash[:danger] = 'Failed.'
+    end
+    redirect_to admin_products_path
   end
 
   private

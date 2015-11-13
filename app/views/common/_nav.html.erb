@@ -8,27 +8,30 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">ArtStore</a>
+      <%= link_to 'ArtStore', root_path, class: "navbar-brand" %>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/admin/products">Products</a></li>
-      </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
         <% if !current_user %>
           <li><%= link_to("登入", new_user_session_path) %></li>
         <% else %>
+        <li>
+          <%= link_to "#" do  %>
+            購物車 <i class="fa fa-shopping-cart"> </i> (0)
+          <% end %>
+        </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.email %> <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li class="dropdown-header">產品</li>
-              <li><%= link_to("新增產品", new_admin_product_path) %></li>
-              <li role="separator" class="divider"></li>
+              <% if current_user.admin? %>
+                <li class="dropdown-header">產品</li>
+                <li><%= link_to '所有產品', admin_products_path %></li>
+                <li><%= link_to("新增產品", new_admin_product_path) %></li>
+                <li role="separator" class="divider"></li>
+              <% end %>
               <li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li>
             </ul>
           </li>
-          
         <% end %>
 
       </ul>

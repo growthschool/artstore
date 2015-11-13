@@ -1,13 +1,26 @@
-<h1>Products List</h1>
-<ul>
+<h1>
+Products List
+<%= link_to 'New Product', new_admin_product_path, class: 'btn btn-primary pull-right' %>
+</h1>
+<div class="row">
   <% @products.each do |product| %>
-
-    <li>
-      <%= link_to(product.title, admin_product_path(product)) %>
+    <div class="col-xs-6 col-md-3 text-center">
+      <% if product.photo.present? %>
+        <%= link_to product_path(product) do %>
+          <%= image_tag product.photo.image.thumb.url, class: 'thumbnail' %>
+        <% end %>
+      <% else %>
+        <%= link_to product_path(product) do %>
+          <%= image_tag "http://placehold.it/200x200&text=No Pic", class: 'thumbnail' %>
+        <% end %>
+      <% end %>
+      <p class="product-info">
+        <%= product.title.capitalize %>
+        $ <%= product.price %>
+      </p>
+      <%= link_to 'Edit', edit_admin_product_path(product) %>
       |
-      <%= link_to 'edit', edit_admin_product_path(product) %>
-    </li>
+      <%= link_to 'Delete', admin_product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
   <% end %>
-</ul>
-
-<%= link_to 'New', new_admin_product_path, class: 'btn btn-primary' %>
+</div>
