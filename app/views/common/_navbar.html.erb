@@ -4,8 +4,15 @@
 			<a class="navbar-brand">Artstore</a>
 		</div>
 		<div class="collapse navbar-collapse">
-			<ul class="nav navbar-nav nabvar-right">
-				<li><%= link_to("登入1", '#') %></li>
+			<ul class="nav navbar-nav navbar-right">
+				<li><%= link_to("註冊", new_user_registration_path) %></li>
+				<li>
+					<% if !current_user %>
+						<%= link_to("登入", new_user_session_path) %>
+					<% else %>
+						<%= link_to("登出", destroy_user_session_path, method: :delete) %>
+					<% end %>				
+				</li>
 			</ul>
 		</div>
 	</div>
