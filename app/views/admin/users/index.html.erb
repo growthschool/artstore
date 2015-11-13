@@ -22,7 +22,13 @@
           <% end %>
 
         </td>
-        <td>轉換權限的按鈕 (待處理)</td>
+        <td>
+          <% if user.is_admin? %>
+            <%= link_to("轉為一般使用者", "#", class: "btn btn-info") %>
+          <% else %>
+            <%= link_to("轉為管理者", "#", class: "btn btn-primary") %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
