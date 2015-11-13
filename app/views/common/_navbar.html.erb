@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		
+		<!-- brand and toggle get groupded for better mobile display -->
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">Rails 101_v1</a>
+		</div>
+
+		<!-- collect nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+		        <% if user_signed_in? %>
+					<ul class="nav navbar-nav navbar-right">
+							
+							<li><%= link_to "Account", edit_user_registration_path %></li>
+							<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+						</ul>
+					<% else %>
+						<ul class="nav navbar-nav navbar-right">
+							<li><%= link_to "Sign Up", new_user_registration_path %></li>
+							<li><%= link_to "Sign In", new_user_session_path %></li>
+						</ul>
+					<% end %>
+		    </ul>	
+		</div>
+	</div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <ul class="nav navbar-nav">
+		        <li class="active">
+		        </li>        
+		    </ul>
+
+		    
+	    </div><!-- /.navbar-collapse -->
