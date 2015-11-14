@@ -1,5 +1,6 @@
 class Admin::ProductsController < ApplicationController
 
+  layout "admin"
   # AOP Start---
   before_action :authenticate_user!
 
