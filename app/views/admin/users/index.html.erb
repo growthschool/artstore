@@ -1,0 +1,38 @@
+<h2> User List </h2>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Email</th>
+      <th>Current Privilege</th>
+      <th>Administrator Control</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+          <%= user.id %>
+        </td>
+        <td>
+          <%= user.email %>
+        </td>
+        <td>
+          <% if user.admin? %>
+            Administrator
+          <% else %>
+            Normal
+          <% end %>
+        </td>
+        <td>
+          <% if user.admin? %>
+            <%= link_to("Disable", admin_user_to_normal_path(user), method: :post, class: "btn btn-primary disabled") %>
+          <% else %>
+            <%= link_to("Enable", admin_user_to_admin_path(user), method: :post, class: "btn btn-primary active") %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
