@@ -20,7 +20,7 @@
         </td>
         <td>
           <%= user.is_admin %>
-          <%= link_to("Quit Group", changeAdmin_admin_user_path(user), method: :post, class: "btn btn-danger")%>
+          <%= link_to("Change", changeAdmin_admin_user_path(user), method: :post, class: "btn btn-danger")%>
         </td>
       </tr>
     <% end %>
