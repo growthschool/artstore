@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+gem "font-awesome-rails"
+gem "mini_magick"
+gem "carrierwave"
+gem "simple_form"
+gem "bootstrap-sass"
+gem "devise"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
