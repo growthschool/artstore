@@ -16,5 +16,7 @@
 !/log/.keep
 /tmp
 
+# Ignore upload folder
+public/uploads
 
 config/database.yml
