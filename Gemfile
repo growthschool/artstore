@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "devise"
 gem "bootstrap-sass"
+gem "font-awesome-rails"
 gem 'simple_form', '~> 3.2'
 gem 'carrierwave', '~> 0.10.0'
 gem "mini_magick"

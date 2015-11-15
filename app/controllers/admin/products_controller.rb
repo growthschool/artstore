@@ -1,5 +1,7 @@
 class Admin::ProductsController < ApplicationController
 
+layout "admin"
+
 # devise helper
 before_action :authenticate_user!
 
@@ -9,6 +11,12 @@ before_action :admin_required
 def index
 	@products = Product.all
 end
+
+
+def show
+	@product = Product.find(params[:id])
+end
+
 
 def new
 	@product = Product.new
@@ -27,6 +35,8 @@ end
 
 def edit
 	@product = Product.find(params[:id])
+	
+	# what's this???
 	@photo = @product.photo
 end
 

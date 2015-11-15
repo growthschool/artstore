@@ -17,13 +17,6 @@
     <%= f.input :price %>
   </div>
 
-
-  <div class="form-group">
-    <%= f.simple_fields_for :photo do |c| %>
-      <%= c.input :image , as: :file %>
-    <% end %>
-  </div>
-
   <div class="form-group">
     <%= f.simple_fields_for :photo do |c| %>
       <%= c.input :image , as: :file %>

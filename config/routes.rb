@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
 
   devise_for :users
+
   namespace :admin do
     resources :products
+    
+    # set default admin path http://localhost:3000/admin/products/
+    root "admin/products#index" 
   end
 
-  root "admin/products#index"
+  resources :products
+
+
+  root "products#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
