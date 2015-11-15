@@ -1,0 +1,28 @@
+<h2> 管理使用者 </h2>
+ 
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>isAdmin</th>
+       
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+          <%= user.id %>
+        </td>
+        <td>
+          <%= user.email %>
+        </td>
+        <td>
+          <%= user.is_admin %>
+          <%= link_to("Quit Group", changeAdmin_admin_user_path(user), method: :post, class: "btn btn-danger")%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
