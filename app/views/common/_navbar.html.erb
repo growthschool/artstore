@@ -15,6 +15,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           <%= link_to carts_path do %>   <!-- 這裏為何使用 do?  Ans: 預設購物車明細的頁面連結 -->
+          <!-- 使用 helper render_cart_items_count(current_cart) 可讓日後閱讀方便 -->
           購物車 <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
           <% end %>
         </li>
