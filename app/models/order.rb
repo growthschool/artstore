@@ -9,6 +9,14 @@ class Order < ActiveRecord::Base
 
   before_create :generate_token
 
+  def set_payment_with!(method)
+    self.update_columns(payment_method: method )
+  end
+
+  def pay!
+    self.update_columns(is_paid: true )
+  end
+
   def generate_token
     self.token = SecureRandom.uuid   # 使用Rails內建產生獨特id後存入本身的token欄位
   end
