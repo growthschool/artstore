@@ -39,6 +39,7 @@
 
     <div class="total_clearfix">
       <span class="pull-right">
+        <!-- 設一個helper render_cart_total_price 讓view的code乾淨容易閱讀 -->
         <span> 總計 <%= render_cart_total_price(current_cart) %> NTD </span>
       </span>
     </div>
@@ -46,7 +47,7 @@
     <hr>
 
     <div class="checkout clearfix">
-      <%= link_to("確認結帳", "#", method: :post, class: "btn btn-lg btn-danger pull-right") %>
+      <%= link_to("確認結帳", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
     </div>
   </div>
 </div>
