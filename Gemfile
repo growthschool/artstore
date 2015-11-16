@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'aasm'
+
 gem 'font-awesome-rails' # 用icon點綴頁面設計
 
 gem 'carrierwave' # 上傳圖片用
