@@ -4,9 +4,9 @@
   <%= f.input :quantity, label: "數量", type: "number" %>
   <%= f.input :price, label: "價錢", type: "number" %>
   <div class="form-group">
-   <%= f.simple_fields_for :photo do |c| %>
-     <%= c.input :image , as: :file %>
-   <% end %>
+  <%= f.simple_fields_for :photo do |c| %>
+    <%= c.input :image , as: :file %>
+  <% end %>
   </div>
   <%= f.button :submit %>
 <% end %>
