@@ -36,6 +36,7 @@ class Admin::ProductsController < ApplicationController
 
 	def update
 		@product = Product.find(params[:id])
+		@photo = @product.photo || @product.build_photo
 
 		if @product.update(product_params)
 			redirect_to admin_products_path
