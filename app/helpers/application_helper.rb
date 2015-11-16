@@ -17,4 +17,8 @@ module ApplicationHelper
     alerts.join("\n").html_safe   # html_safe 哪來的 ??
   end
 
+  def render_cart_items_count(cart)
+    cart.cart_items.count
+  end
+
 end
