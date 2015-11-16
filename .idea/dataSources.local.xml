@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails artstore: development" uuid="a5fbb227-6e64-4295-8613-f984a009bc7f">
+    <data-source name="Sqlite (Xerial) - development.sqlite3" uuid="04f358d8-75b9-4614-a6a6-f0bea882d8cd">
+      <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
     </data-source>
   </component>
