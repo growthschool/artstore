@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :account do
+    resources :orders
+  end
+
   resources :products do
     member do    # 用在單筆資料對應時需宣告member  對自己定義的的action(非RESTful)
       post :add_to_cart
