@@ -22,6 +22,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :items, controller: "cart_items"
+
   resources :orders do
     member do
       get :pay_with_credit_card
