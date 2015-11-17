@@ -12,7 +12,7 @@ end
 
 def update
   @cart = current_cart
-  @item = @cart.cart_items.find_y(product_id: params[:id])
+  @item = @cart.cart_items.find_by(product_id: params[:id])
 
   @item.update(item_params)
   redirect_to carts_path
@@ -22,6 +22,7 @@ private
 
 def item_params
   params.require(:cart_item).permit(:quantity)
+end
 
 
 end

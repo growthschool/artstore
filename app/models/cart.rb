@@ -9,7 +9,7 @@ class Cart < ActiveRecord::Base
 
   # Ruby語法 .inject() 的黑魔法
   def total_price
-    items.inject(0) { |sum, item| sum + item.price }
+    cart_items.inject(0) { |sum, item| sum + (item.product.price  * item.quantity) }
   end
 
     # sum = 0
