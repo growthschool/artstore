@@ -1,0 +1,26 @@
+<h2> User List </h2>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>email</th>
+			<th>status</th>
+		</tr>
+	</thead>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.id %></td>
+			<td><%= user.email %></td>
+			<% if user.is_admin %>
+				<td> admin </td>
+			<% else %>
+				<td> user </td>
+			<% end %>
+			</td>
+		</tr>
+		<% end %>
+	<tbody>
+		
+	</tbody>
+</table>
