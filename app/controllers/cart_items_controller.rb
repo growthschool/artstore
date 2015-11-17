@@ -12,7 +12,7 @@ end
 
 def update
   @cart = current_cart
-  @item = @cart.cart_items.find_by(product_id: params[:id])
+  @item = @cart.find_cart_item(params[:id])  # 在cart.rb定義helper find_cart_item(product)以簡化常用程式碼
 
   if @item.product.quantity >= item_params[:quantity].to_i  # 在頁面選擇數量時form_for f.select存入的是string, 這裏用to_i比較保險
   @item.update(item_params)

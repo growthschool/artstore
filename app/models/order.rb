@@ -25,7 +25,7 @@ class Order < ActiveRecord::Base
     cart.items.each do |cart_item|
       item = items.build
       item.product_name = cart_item.title
-      item.quantity = 1
+      item.quantity = cart.find_cart_item(cart_item).quantity # 在cart.rb定義helper find_cart_item(product)以簡化常用程式碼
       item.price = cart_item.price
       item.save
     end
