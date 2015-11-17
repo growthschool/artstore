@@ -1,4 +1,22 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+  namespace :admin do  # admin底下有 products跟users兩個restful架構 , users底下的 to_admin to_normal action是post動作 (?)
+    resources :products
+    resources :users do
+      post :to_admin
+      post :to_normal
+    end
+  end
+
+  resources :products do
+    member do
+      post :add_to_cart
+    end
+  end
+
+  root "products#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
