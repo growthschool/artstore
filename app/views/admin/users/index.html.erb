@@ -13,11 +13,10 @@
 			<td><%= user.id %></td>
 			<td><%= user.email %></td>
 			<% if user.is_admin %>
-				<td> admin </td>
+				<td> <%=link_to("更改為一般用戶", to_user_admin_user_path(user), method: :post)%> </td>
 			<% else %>
-				<td> user </td>
+				<td> <%=link_to("更改為admin", to_admin_admin_user_path(user), method: :post)%> </td>
 			<% end %>
-			</td>
 		</tr>
 		<% end %>
 	<tbody>

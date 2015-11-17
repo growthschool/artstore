@@ -7,4 +7,12 @@ class User < ActiveRecord::Base
   def admin?
   	is_admin
   end
+
+  def make_admin
+ 		update!(is_admin: true)
+  end
+
+  def make_user
+  	update!(is_admin: false)
+  end
 end

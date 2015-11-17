@@ -14,7 +14,12 @@ Rails.application.routes.draw do
   devise_for :users
   namespace :admin do
     resources :products
-    resources :users
+    resources :users do
+      member do
+        post :to_admin
+        post :to_user
+      end
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
