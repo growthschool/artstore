@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b2a453c-0e5d-47e7-b220-73cb27007c9c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/orders_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/show.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/show.html.erb" />
     </list>
     <ignored path="artstore.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,10 +44,6 @@
         <option name="myItemId" value="Sqlite (Xerial) - development.sqlite3" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="users" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
     <PATH>
       <PATH_ELEMENT>
@@ -54,6 +52,10 @@
       </PATH_ELEMENT>
       <PATH_ELEMENT>
         <option name="myItemId" value="Sqlite (Xerial) - development.sqlite3" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="orders" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -78,27 +80,27 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/carts_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+              <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orders_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="orders_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24408284">
-              <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.67742">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7953488">
+              <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -130,6 +132,38 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DATABASE/04f358d8-75b9-4614-a6a6-f0bea882d8cd" pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/04f358d8-75b9-4614-a6a6-f0bea882d8cd">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>04f358d8-75b9-4614-a6a6-f0bea882d8cd</OriginalElement>
+              <nodes>
+                <node x="0.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:cart_items</node>
+                <node x="418.0" y="0.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_infos</node>
+                <node x="674.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:sqlite_sequence</node>
+                <node x="476.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:carts</node>
+                <node x="556.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:orders</node>
+                <node x="0.0" y="797.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:schema_migrations</node>
+                <node x="0.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:products</node>
+                <node x="278.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_items</node>
+                <node x="0.0" y="0.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:users</node>
+                <node x="238.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:photos</node>
+              </nodes>
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="0.7476958525345622" x="68.98613251155626" y="270.98613251155626" />
+              <SelectedNodes>
+                <node>04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:cart_items</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
             </state>
           </provider>
         </entry>
@@ -185,10 +219,10 @@
         <option value="$PROJECT_DIR$/app/views/carts/checkout.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/carts_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/order_info.rb" />
-        <option value="$PROJECT_DIR$/app/views/orders/show.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20151118125139_add_token_to_order.rb" />
         <option value="$PROJECT_DIR$/app/models/order.rb" />
         <option value="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/orders/show.html.erb" />
       </list>
     </option>
   </component>
@@ -739,7 +773,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447851369420</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="訂單建立完成導向的網址會是 token">
+      <created>1447851494532</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1447851494532</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TodoView">
@@ -788,7 +828,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[完成] 設定圖片上傳後裁切的尺寸" />
     <MESSAGE value="[完成] 商品修改頁也能修替換圖片" />
     <MESSAGE value="[完成] 將 uploads 資料夾放入 gitignore" />
     <MESSAGE value="[完成] 建立 products/index" />
@@ -813,7 +852,8 @@
     <MESSAGE value="寄件和收件⼈都需填寫資訊" />
     <MESSAGE value="新增 orders_controller 裡的 show action" />
     <MESSAGE value="產生訂單前，先亂數產生 token 並存進去" />
-    <option name="LAST_COMMIT_MESSAGE" value="產生訂單前，先亂數產生 token 並存進去" />
+    <MESSAGE value="訂單建立完成導向的網址會是 token" />
+    <option name="LAST_COMMIT_MESSAGE" value="訂單建立完成導向的網址會是 token" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,13 +862,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.2/lib/action_controller/metal.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="196" column="0" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.2/lib/action_dispatch/journey/router.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1169,26 +1202,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/carts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20151118125139_add_token_to_order.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09763314">
           <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.67742">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1203,8 +1220,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24408284">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/04f358d8-75b9-4614-a6a6-f0bea882d8cd">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>04f358d8-75b9-4614-a6a6-f0bea882d8cd</OriginalElement>
+          <nodes>
+            <node x="0.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:cart_items</node>
+            <node x="418.0" y="0.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_infos</node>
+            <node x="674.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:sqlite_sequence</node>
+            <node x="476.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:carts</node>
+            <node x="556.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:orders</node>
+            <node x="0.0" y="797.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:schema_migrations</node>
+            <node x="0.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:products</node>
+            <node x="278.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_items</node>
+            <node x="0.0" y="0.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:users</node>
+            <node x="238.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:photos</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7476958525345622" x="68.98613251155626" y="270.98613251155626" />
+          <SelectedNodes>
+            <node>04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:cart_items</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/carts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7953488">
+          <caret line="65" column="62" selection-start-line="65" selection-start-column="62" selection-end-line="65" selection-end-column="62" />
           <folding />
         </state>
       </provider>
