@@ -14,6 +14,7 @@ class OrdersController < ApplicationController
     if @order.save
       @order.build_item_cache_from_cart(current_cart)
       @order.calculate_total!(current_cart)
+      current_cart.clean!
       redirect_to order_path(@order.token)
     else
       render "carts/checkout"
@@ -26,7 +27,7 @@ class OrdersController < ApplicationController
     # @order.pay!
     @order.make_payment!
 
-    redirect_to "/", notice: "成功完成付款"
+    redirect_to account_orders_path, notice: "成功完成付款"
   end
 
 
