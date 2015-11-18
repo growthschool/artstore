@@ -10,11 +10,14 @@ Rails.application.routes.draw do
     end
   end
 
-  namespace :admin do
-    resources :users
+  resources :products do
+    member do
+      post :add_to_cart
+    end
   end
 
-  resources :products
+
+
   root "products#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
