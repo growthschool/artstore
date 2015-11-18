@@ -1,0 +1,25 @@
+<h2> User List </h2>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>email</th>
+			<th>status</th>
+		</tr>
+	</thead>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.id %></td>
+			<td><%= user.email %></td>
+			<% if user.is_admin %>
+				<td> <%=link_to("更改為一般用戶", to_user_admin_user_path(user), method: :post)%> </td>
+			<% else %>
+				<td> <%=link_to("更改為admin", to_admin_admin_user_path(user), method: :post)%> </td>
+			<% end %>
+		</tr>
+		<% end %>
+	<tbody>
+		
+	</tbody>
+</table>
