@@ -1,27 +1,36 @@
 <h2>使用者列表</h2>
-
-<table>
-  <thead>
+<div class="col-md-12">
+  <table class="table table-hover">
+    <thead>
     <th>#</th>
     <th>Email</th>
+    <th>上回登入時間</th>
+    <th>上回登入IP</th>
+    <th>本次登入時間</th>
+    <th>本次登入IP</th>
     <th>權限</th>
     <th>功能</th>
-  </thead>
+    </thead>
 
-  <tbody>
-      <% @users.each do |user| %>
-          <tr>
-            <td><%= user.id %></td>
-            <td><%= user.email %></td>
-            <td><%= is_admin?(user) %></td>
-            <td>
-              <% if user.is_admin == 't' %>
+    <tbody>
+    <% @users.each do |user| %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.email %></td>
+          <td><%= user.last_sign_in_at %></td>
+          <td><%= user.last_sign_in_ip %></td>
+          <td><%= user.current_sign_in_at %></td>
+          <td><%= user.current_sign_in_ip %></td>
+          <td><%= is_admin?(user) %></td>
+          <td>
+            <% if user.is_admin == 't' %>
                 <%= link_to("關閉管理者權限", to_normal_admin_user_path(user), method: :post, class: "btn btn-warning") %>
-              <% else %>
+            <% else %>
                 <%= link_to("啟用管理者權限", to_admin_admin_user_path(user), method: :post, class: "btn btn-primary") %>
-              <% end %>
-            </td>
-          </tr>
-      <% end %>
-  </tbody>
-</table>
+            <% end %>
+          </td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
