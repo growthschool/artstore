@@ -1,6 +1,13 @@
 class CartItemsController < ApplicationController
   before_action :authenticate_user!
 
+  def update
+    @cart = current_cart
+    @item = @cart.cart_items.find_by(product_id: params[:id])
+    @item.update(item_params)
+    redirect_to carts_path
+  end
+
   def destroy
     # key point: params[:id] is product id
     @cart = current_cart
@@ -12,5 +19,10 @@ class CartItemsController < ApplicationController
 
     redirect_to :back
     #redirect_to carts_path
+  end
+
+  private
+  def item_params
+    params.require(:cart_item).permit(:quantity)
   end
 end
