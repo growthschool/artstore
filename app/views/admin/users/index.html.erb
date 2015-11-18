@@ -1,0 +1,27 @@
+<h2>使用者列表</h2>
+
+<table>
+  <thead>
+    <th>#</th>
+    <th>Email</th>
+    <th>權限</th>
+    <th>功能</th>
+  </thead>
+
+  <tbody>
+      <% @users.each do |user| %>
+          <tr>
+            <td><%= user.id %></td>
+            <td><%= user.email %></td>
+            <td><%= is_admin?(user) %></td>
+            <td>
+              <% if user.is_admin == 't' %>
+                <%= link_to("關閉管理者權限", to_normal_admin_user_path(user), method: :post, class: "btn btn-warning") %>
+              <% else %>
+                <%= link_to("啟用管理者權限", to_admin_admin_user_path(user), method: :post, class: "btn btn-primary") %>
+              <% end %>
+            </td>
+          </tr>
+      <% end %>
+  </tbody>
+</table>

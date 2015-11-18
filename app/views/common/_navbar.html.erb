@@ -31,6 +31,9 @@
                 <li>
                   <%= link_to("商品管理",admin_products_path) %>
                 </li>
+                  <li>
+                    <%= link_to("會員管理", admin_users_path) %>
+                  </li>
               <% end %>
               <li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li>
             </ul>
