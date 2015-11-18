@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b2a453c-0e5d-47e7-b220-73cb27007c9c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20151118133428_add_aasm_state_to_order.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artstore.iml" afterPath="$PROJECT_DIR$/.idea/artstore.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/orders/show.html.erb" afterPath="$PROJECT_DIR$/app/views/orders/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="artstore.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -84,20 +90,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orders_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="orders_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.34171596">
+              <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3860465">
+            <state vertical-scroll-proportion="-8.032258">
               <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
               <folding />
             </state>
@@ -145,7 +151,7 @@
                 <node x="418.0" y="0.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_infos</node>
                 <node x="674.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:sqlite_sequence</node>
                 <node x="476.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:carts</node>
-                <node x="546.0" y="372.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:orders</node>
+                <node x="536.0" y="361.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:orders</node>
                 <node x="0.0" y="797.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:schema_migrations</node>
                 <node x="0.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:products</node>
                 <node x="278.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_items</node>
@@ -155,9 +161,7 @@
               <notes />
               <edges />
               <settings layout="Hierarchic Group" zoom="0.7476958525345622" x="68.98613251155626" y="310.98613251155626" />
-              <SelectedNodes>
-                <node>04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:cart_items</node>
-              </SelectedNodes>
+              <SelectedNodes />
               <Categories>
                 <Category>Key columns</Category>
                 <Category>Columns</Category>
@@ -193,7 +197,6 @@
         <option value="$PROJECT_DIR$/app/controllers/admin/products_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/views/layouts/admin.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/users/edit.html.erb" />
@@ -223,6 +226,8 @@
         <option value="$PROJECT_DIR$/db/migrate/20151118132139_add_payment_method_to_order.rb" />
         <option value="$PROJECT_DIR$/app/models/order.rb" />
         <option value="$PROJECT_DIR$/app/views/orders/show.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/db/migrate/20151118133428_add_aasm_state_to_order.rb" />
       </list>
     </option>
   </component>
@@ -815,7 +820,13 @@
       <option name="project" value="LOCAL" />
       <updated>1447853175756</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="訂單已付款就不會顯示付款按鈕">
+      <created>1447853323232</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1447853323232</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TodoView">
@@ -864,7 +875,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[完成] 加上 Bootstrap 的 Alert 效果" />
     <MESSAGE value="[完成] 建立購物車按鈕、用 icon 點綴頁面設計" />
     <MESSAGE value="[完成] 修飾 css, 讓售價顯示更美觀" />
     <MESSAGE value="[完成] 加入變更管理者權限功能" />
@@ -889,7 +899,8 @@
     <MESSAGE value="設定 order 信用卡付款的 action" />
     <MESSAGE value="order.rb 新增 payment_method 的欄位 ( 紀錄付款方式 )" />
     <MESSAGE value="設定 order 付款完成與付款方式紀錄的 method" />
-    <option name="LAST_COMMIT_MESSAGE" value="設定 order 付款完成與付款方式紀錄的 method" />
+    <MESSAGE value="訂單已付款就不會顯示付款按鈕" />
+    <option name="LAST_COMMIT_MESSAGE" value="訂單已付款就不會顯示付款按鈕" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -898,20 +909,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/rack-1.6.4/lib/rack/etag.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/rack-1.6.4/lib/rack/head.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.2/lib/action_dispatch/middleware/flash.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1216,14 +1213,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/carts_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20151118131205_add_is_paid_to_order.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1237,36 +1226,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/04f358d8-75b9-4614-a6a6-f0bea882d8cd">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>04f358d8-75b9-4614-a6a6-f0bea882d8cd</OriginalElement>
-          <nodes>
-            <node x="0.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:cart_items</node>
-            <node x="418.0" y="0.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_infos</node>
-            <node x="674.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:sqlite_sequence</node>
-            <node x="476.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:carts</node>
-            <node x="546.0" y="372.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:orders</node>
-            <node x="0.0" y="797.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:schema_migrations</node>
-            <node x="0.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:products</node>
-            <node x="278.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_items</node>
-            <node x="0.0" y="0.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:users</node>
-            <node x="238.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:photos</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.7476958525345622" x="68.98613251155626" y="310.98613251155626" />
-          <SelectedNodes>
-            <node>04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:cart_items</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
         </state>
       </provider>
     </entry>
@@ -1286,14 +1245,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/order.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1304,8 +1255,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3860465">
+        <state vertical-scroll-proportion="-8.032258">
           <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1464497">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/carts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/04f358d8-75b9-4614-a6a6-f0bea882d8cd">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>04f358d8-75b9-4614-a6a6-f0bea882d8cd</OriginalElement>
+          <nodes>
+            <node x="0.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:cart_items</node>
+            <node x="418.0" y="0.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_infos</node>
+            <node x="674.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:sqlite_sequence</node>
+            <node x="476.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:carts</node>
+            <node x="536.0" y="361.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:orders</node>
+            <node x="0.0" y="797.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:schema_migrations</node>
+            <node x="0.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:products</node>
+            <node x="278.0" y="383.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_items</node>
+            <node x="0.0" y="0.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:users</node>
+            <node x="238.0" y="612.0">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:photos</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7476958525345622" x="68.98613251155626" y="310.98613251155626" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151118133428_add_aasm_state_to_order.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2928994">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34171596">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
           <folding />
         </state>
       </provider>
