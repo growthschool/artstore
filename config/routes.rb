@@ -14,6 +14,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :orders
+
 
   devise_for :users
   namespace :admin do

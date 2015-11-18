@@ -12,7 +12,7 @@
 				<tbody>
 					<% current_cart.items.each do |product| %>
 						<tr>
-							<td> <%= link_to(product.title, product_path(product) %></td>
+							<td> <%= link_to(product.title, product_path(product)) %></td>
 							<td> <%= product.price %></td>
 						</tr>
 					<% end %>
