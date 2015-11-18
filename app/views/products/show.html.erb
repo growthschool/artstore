@@ -19,7 +19,11 @@
     </div>
     <br>
     <div class="pull-right">
-      <%= link_to "加入購物車", "#", class: "btn btn-danger" %>
+      <% if @product.quantity > 0 %>
+      <%= link_to "加入購物車",  add_to_cart_product_path(@product), method: :post, class: "btn btn-danger" %>
+      <% else %>
+      <p style="font-size: 24px; text-shadow: -1px -2px 7px #111111"><b>已銷售一空，無法購買</b></p>
+      <% end %>
     </div>
   </div>
 </div>

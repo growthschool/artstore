@@ -1,22 +1,50 @@
 Rails.application.routes.draw do
   devise_for :users
   namespace :admin do
+    resources :orders do
+      member do
+        post :cancel
+        post :ship
+        post :shipped
+        post :return
+      end
+    end
     resources :products
     resources :users do
       post 'to_admin'
       post 'to_normal'
     end
   end
-  resources :products, only: [:show, :index]
+  resources :products do
+    member do
+      post :add_to_cart
+    end
+  end
 
+  namespace :account do
+    resources :orders
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
   # You can have the root of your site routed with "root"
+  resources :orders do
+    member do
+      get :pay_with_credit_card
+    end
+  end
   root 'products#index'
+  resources :carts do
+    collection do
+      post :checkout
+      delete :clean
+    end
 
+
+  end
+   resources :items, controller: "cart_items"
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
