@@ -2,7 +2,8 @@ class Order < ActiveRecord::Base
 
   belongs_to :user
 
-  has_many :items, class_name: "OrderItem", dependent: :destroy
+  has_many :items, class_name: "OrderItem", dependent: :destroy  # 之後可用order.items呼叫
+  # has_many :order_items, dependet: :destroy   雖然這樣寫比較簡單 但之後要呼叫需要打order.order_items 太繞舌不方便閱讀
   has_one  :info,  class_name: "OrderInfo", dependent: :destroy
 
   accepts_nested_attributes_for :info

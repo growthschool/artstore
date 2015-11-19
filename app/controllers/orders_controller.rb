@@ -13,12 +13,14 @@ class OrdersController < ApplicationController
       render "carts/checkout"     # 退到不同的controller時, 複用templates
     end
 
-    def show
-      @order = Order.find_by_token(params[:id])
-      @order_info = @order.info
-      @order_items = @order.items
-    end
   end
+
+  def show
+    @order = Order.find_by_token(params[:id])
+    @order_info = @order.info
+    @order_items = @order.items
+  end
+
 
   def pay_with_credit_card
     @order = Order.find_by_token(params[:id])
