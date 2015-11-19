@@ -7,7 +7,11 @@ Rails.application.routes.draw do
       post :to_admin
       post :to_normal
     end
-    resources :orders
+    resources :orders do
+      member do
+        post :cancel
+      end
+    end
   end
 
   resources :products do

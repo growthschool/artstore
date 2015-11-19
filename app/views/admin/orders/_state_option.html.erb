@@ -1,0 +1,16 @@
+<div style="padding: 10px; float: right;">
+
+  <% case order.aasm_state %>
+  <% when "order_placed" %>
+    <%= link_to("Cancel", cancel_admin_order_path(order), method: :post,
+                class: "btn btn-default btn-sm") %>
+
+  <% when "paid" %>
+  <% when "shipping" %>
+  <% when "shipped" %>
+  <% when "order_cancelled" %>
+  <% when "good_returned" %>
+
+  <% end %>
+
+</div>
