@@ -16,7 +16,13 @@ class Admin::ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-    @photo = @product.photo
+
+
+    if !@product.photo.present?
+      @photo = @product.build_photo
+    else
+      @photo = @product.photo
+    end
   end
 
   def update
