@@ -48,7 +48,9 @@
       <column name="token" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="is_paid" sqlType="BOOLEAN" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="patment_method" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="aasm_state" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <primary-key columns="id"/>
+      <index name="index_orders_on_aasm_state" unique="true" columns="aasm_state"/>
       <index name="index_orders_on_token" unique="true" columns="token"/>
     </table>
     <table name="photos" schema="" catalog="" type="TABLE">
