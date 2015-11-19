@@ -12,3 +12,7 @@ u.password = "12345678"
 u.password_confirmation = "12345678"
 u.is_admin = true
 u.save
+
+for i in 1..10 do
+	Product.create(title: "Pd#{i}", description: "xxx", quantity: i+10, price: i)
+end
