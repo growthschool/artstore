@@ -22,6 +22,7 @@ root "products#index"
 resources :carts do
   collection do
     post :checkout
+    delete :clean
   end
 end
   # The priority is based upon order of creation: first created -> highest priority.
