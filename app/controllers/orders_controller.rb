@@ -7,6 +7,7 @@ class OrdersController < ApplicationController
     if @order.save
       @order.build_item_cache_from_cart(current_cart)
       @order.calculate_total!(current_cart)
+      current_cart.clean!
       #redirect_to order_path(@order) 訂單編碼顯示在網址中太危險了
       redirect_to order_path(@order.token) #將隨機產生的token取代網址編碼
     else
