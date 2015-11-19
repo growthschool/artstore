@@ -13,4 +13,10 @@ class Admin::OrdersController < ApplicationController
     @order_info = @order.info
     @order_items = @order.items
   end
+
+  def cancel
+    @order = Order.find(params[:id])
+    @order.cancel_order!
+    redirect_to :back
+  end
 end
