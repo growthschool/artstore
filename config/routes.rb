@@ -22,6 +22,8 @@ Rails.application.routes.draw do
       delete :clean
     end
   end
+
+  resources :items , controller: "cart_items"
   
   resources :orders do
     member do
