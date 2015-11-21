@@ -14,6 +14,7 @@
     <tr>
       <td> <%= link_to(order.id, order_path(order.token)) %> </td>
       <td> <%= order.created_at.to_s(:long) %> </td>
+      <td> <%= render_order_state(order) %> </td>
     </tr>
     <% end %>
 

@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
 
+
   def create
     @order = current_user.orders.build(order_params)
 
