@@ -1,7 +1,7 @@
 <nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">ArtStore</a>
-    </div>
+  <div class="navbar-header">
+    <a class="navbar-brand" href="/">ArtStore</a>
+  </div>
 
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse1">
 
@@ -14,7 +14,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li>
         <%= link_to carts_path do %>
-          購物車<i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart)%> )
+            購物車<i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
         <% end %>
       </li>
       <% if !current_user %>
@@ -28,9 +28,12 @@
             </a>
             <ul class="dropdown-menu">
               <% if current_user.admin? %>
-                <li>
-                  <%= link_to("商品管理",admin_products_path) %>
-                </li>
+                  <li>
+                    <%= link_to("商品管理", admin_products_path) %>
+                  </li>
+                  <li>
+                    <%= link_to("訂單管理", admin_orders_path) %>
+                  </li>
                   <li>
                     <%= link_to("會員管理", admin_users_path) %>
                   </li>
