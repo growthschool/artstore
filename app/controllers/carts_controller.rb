@@ -5,4 +5,10 @@ class CartsController < ApplicationController
     @order = current_user.orders.build
     @info = @order.build_info
   end
+
+  def clean
+    current_cart.clean!
+    flash[:warning] = "己清空購物車①"
+    redirect_to carts_path
+  end
 end
