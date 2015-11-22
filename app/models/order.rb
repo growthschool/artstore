@@ -33,6 +33,7 @@ class Order < ActiveRecord::Base
 
   def pay!
    self.update_columns(is_paid: true )
+  end
   
   def find_cart_item
     cart_items.find_by(product_id: product)
