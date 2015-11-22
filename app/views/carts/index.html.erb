@@ -32,7 +32,7 @@
 							<%= product.price %>
 						</td>
 						<td>
-							<% item = current_cart.cart_items.find_by(product_id: product) %>
+							<% item = current_cart.find_cart_item(product) %>
 							<%= form_for item, url: item_path(product) do |f| %>
 								<%= f.select :quantity, 1..product.quantity %>
 								<%= f.submit "更新", data: {disable_with: "submitting..."} %>
