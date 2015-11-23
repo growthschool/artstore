@@ -10,7 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @current_cart.items.each do |product| %>
+        <% current_cart.items.each do |product| %>
           <tr>
             <td>
               <%= link_to(product.title, product_path(product)) %>
