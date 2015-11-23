@@ -8,6 +8,7 @@
         <tr>
           <th width="80%">商品明細</th>
           <th>單價</th>
+          <th>數量</th>
         </tr>
       </thead>
       <tbody>
@@ -19,6 +20,9 @@
             </td>
             <td>
               <%= order_item.price %>
+            </td>
+            <td>
+              <%= order_item.quantity %>
             </td>
           </tr>
         <% end %>
@@ -61,13 +65,13 @@
       </tbody>
     </table>
 
-    <% if !@order.is_paid? %>
-      <div class="pull-right">
-       <%= link_to("以信用卡付款", pay_with_credit_card_order_path(@order.token), class: "btn btn-lg btn-danger") %>
-        <%= link_to("以ATM付款", "#", class: "btn btn-lg btn-danger") %>
-    <% else %>
-      <p class="text-center">此訂單己完成付款</p>
-    <% end %>
+      <% if !@order.is_paid? %>
+        <div class="pull-right">
+          <%= link_to("以信用卡付款", pay_with_credit_card_order_path(@order.token), class: "btn btn-lg btn-danger") %>
+          <%= link_to("以ATM付款", "#", class: "btn btn-lg btn-danger") %>
+      <% else %>
+        <p class="text-center">此訂單己完成付款</p>
+      <% end %>
     </div>
   </div>
 </div>
