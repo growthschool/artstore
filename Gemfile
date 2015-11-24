@@ -5,6 +5,7 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'font-awesome-rails'
+gem 'awesome_rails_console'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
