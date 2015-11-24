@@ -26,9 +26,15 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+
+  root "products#index"
+  
   namespace :admin do
     resources :products
   end
+
+  resources :products
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
