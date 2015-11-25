@@ -7,10 +7,12 @@ class Cart < ActiveRecord::Base
   end
 
   def total_price
-    sum = 0
-    items.each do |product|
-      sum += product.price
-    end
-    sum
+    items.inject(0) { |sum, product| sum + product.price }
+
+    # sum = 0
+    # items.each do |product|
+    #   sum += product.price
+    # end
+    # sum
   end
 end
