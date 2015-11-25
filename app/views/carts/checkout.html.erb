@@ -1,7 +1,26 @@
 <div class="row">
   <div class="col-md-12">
     <h2>購物明細</h2>
-    <table>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th width="80%">商品明細</th>
+          <th>單價</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% current_cart.items.each do |product| %>
+          <tr>
+            <td>
+              <%= link_to(product.title, product_path(product)) %>
+            </td>
+            <td>
+              <%= product.price %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
 
     </table>
 
