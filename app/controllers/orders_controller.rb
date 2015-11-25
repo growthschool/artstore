@@ -14,6 +14,12 @@ class OrdersController < ApplicationController
 
   end
 
+  def show
+    @order = current_user.orders.find(params[:id])
+    @order_info = @order.info
+    @order_items = @order.items
+  end
+
   private
   def order_params
     params.require(:order).permit(info_attributes: [:billing_name,

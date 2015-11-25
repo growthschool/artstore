@@ -1,0 +1,20 @@
+
+
+
+
+<% @order_items.each do |item| %>
+<%= item.product_name %>
+<%= item.price %>
+<%= item.quantity %>
+<% end %>
+
+
+<hr>
+
+total <%= @order.total  %> NTD
+<hr>
+
+<%= @order_info.billing_name %>
+<%= @order_info.billing_address %>
+<%= @order_info.shipping_name %>
+<%= @order_info.shipping_address %>
