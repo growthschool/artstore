@@ -8,25 +8,13 @@ class ProductsController < ApplicationController
   end
 
   def add_to_cart
-    cid = session[:cart_id]
-    if cid.nil?
-      c = Cart.create
-      session[:cart_id] = c.id
-    else
-      c = Cart.find_by(id: cid)
-      if c.nil?
-        c = Cart.new
-        session[:cart_id] = c.id
-      end
-    end
-
     @product = Product.find(params[:id])
 
-    if c.items.include?(@product)
-      flash[:warning] = "already have"
+    if current_cart.items.include?(@product)
+      flash[:warning] = "你的購物車內已有此物品"
     else
-      c.items << @product
-      flash[:notice] = "add ok"
+      current_cart.add_product_to_cart(@product)
+      flash[:notice] = "你已成功將 #{product.title} 加入購物車"
     end
 
     redirect_to :back
