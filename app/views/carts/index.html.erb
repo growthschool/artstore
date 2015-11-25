@@ -12,9 +12,13 @@
       <tbody>
         <% current_cart.items.each do |product| %>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>
+              <%= link_to product_path(product) do %>
+                <%= image_tag(product.photo.image.thumb.url, class: "thumbnail") %>
+              <% end %>
+            </td>
+            <td><%= link_to(product.title, product_path(product)) %></td>
+            <td><%= product.price %></td>
           </tr>
         <% end %>
       </tbody>
