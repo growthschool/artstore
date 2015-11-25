@@ -1,4 +1,6 @@
 class Order < ActiveRecord::Base
+  before_create :generate_token
+
   belongs_to :user
 
   has_many :items, class_name: "OrderItem", dependent: :destroy
@@ -23,4 +25,7 @@ class Order < ActiveRecord::Base
     self.save
   end
 
+  def generate_token
+    self.token = SecureRandom.uuid
+  end
 end
