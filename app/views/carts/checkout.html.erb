@@ -32,9 +32,34 @@
 
     <hr>
     <h2>訂單資訊</h2>
-    <div>
 
+    <div class="order-form">
+      <%= simple_form_for @order do |f| %>
+        <%= simple_fields_for :info do |c| %>
+          <legend>訂購人</legend>
+          <div class="form-group col-lg-6">
+            <%= c.input :billing_name %>
+          </div>
 
+          <div class="form-group col-lg-6">
+            <%= c.input :billing_address %>
+          </div>
+
+          <legend>收貨人</legend>
+          <div class="form-group col-lg-6">
+            <%= c.input :shipping_name %>
+          </div>
+          <div class="form-group col-lg-6">
+            <%= c.input :shipping_address  %>
+          </div>
+
+        <% end %>
+
+        <div class="checkout">
+          <%= f.submit "生成訂單", data: {disable_with: "Submitting..."},
+                       class: "btn btn-lg btn-danger pull-right" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
