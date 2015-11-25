@@ -5,4 +5,12 @@ class Cart < ActiveRecord::Base
   def add_product_to_cart(product)
     items << product
   end
+
+  def total_price
+    sum = 0
+    items.each do |product|
+      sum += product.price
+    end
+    sum
+  end
 end
