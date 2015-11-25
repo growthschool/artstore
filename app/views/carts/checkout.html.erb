@@ -35,7 +35,7 @@
 
     <div class="order-form">
       <%= simple_form_for @order do |f| %>
-        <%= simple_fields_for :info do |c| %>
+        <%= f.simple_fields_for :info do |c| %>
           <legend>訂購人</legend>
           <div class="form-group col-lg-6">
             <%= c.input :billing_name %>
