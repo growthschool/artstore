@@ -28,4 +28,11 @@ class Order < ActiveRecord::Base
   def generate_token
     self.token = SecureRandom.uuid
   end
+
+  def set_payment_with!("credit_card")
+  end
+
+  def pay!
+  end
+
 end

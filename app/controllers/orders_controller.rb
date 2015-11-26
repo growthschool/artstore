@@ -24,6 +24,14 @@ class OrdersController < ApplicationController
     @order_items = @order.items
   end
 
+  def pay_with_credit_card
+    @order = current_user.orders.find_by_token(params[:id])
+    @order.set_payment_with!("credit_card")
+    @order.pay!
+
+    redirect_to "/", notice: "pay finished"
+  end
+
   private
   def order_params
     params.require(:order).permit(info_attributes: [:billing_name,
