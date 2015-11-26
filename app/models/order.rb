@@ -29,10 +29,12 @@ class Order < ActiveRecord::Base
     self.token = SecureRandom.uuid
   end
 
-  def set_payment_with!("credit_card")
+  def set_payment_with!(method)
+    update_columns(payment_method: method)
   end
 
   def pay!
+    update_columns(is_paid: true)
   end
 
 end
