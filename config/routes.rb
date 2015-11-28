@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       post :to_admin
       post :to_normal
     end
+    resources :orders
   end
 
   namespace :account do
