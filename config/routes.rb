@@ -6,7 +6,15 @@ Rails.application.routes.draw do
       post :to_admin
       post :to_normal
     end
-    resources :orders
+    resources :orders do
+      member do
+        post :cancel
+        post :ship
+        post :shipped
+        post :return
+        post :paid
+      end
+    end
   end
 
   namespace :account do

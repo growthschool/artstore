@@ -1,0 +1,24 @@
+<div style="padding:10px; float: right;">
+
+    <% case @order.aasm_state %>
+    <% when "order_placed" %>
+      <%= render_link_to_cancel_order(@order) %>
+      <%= render_link_to_paid_order(@order) %>
+
+    <% when "paid" %>
+      <%= render_link_to_ship_order(@order) %>
+      <%= render_link_to_cancel_order(@order) %>
+
+    <% when "shipping" %>
+      <%= render_link_to_shipped_order(@order) %>
+
+    <% when "shipped" %>
+      <%= render_link_to_return_order(@order) %>
+
+    <% when "order_cancelled" %>
+      <span class="label label-default">訂單已取消</span>
+
+    <% when "good_returned" %>
+      <span class="label label-default">已退貨</span>
+    <% end %>
+</div>
