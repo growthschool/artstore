@@ -6,4 +6,8 @@ class Admin::OrdersController < ApplicationController
   def index
     @orders = Order.order("id DESC")
   end
+
+  def show
+    @order = Order.find_by(token: params[:id])
+  end
 end
