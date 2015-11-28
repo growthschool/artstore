@@ -15,4 +15,12 @@ class Cart < ActiveRecord::Base
     # end
     # sum
   end
+
+  def clean!
+    items.destroy_all
+  end
+
+  def empty?
+    items.empty?
+  end
 end
