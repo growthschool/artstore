@@ -14,6 +14,7 @@
         <tr>
           <th colspan="2">商品資訊</th>
           <th>單價</th>
+          <th>數量</th>
           <th>Operation</th>
         </tr>
       </thead>
@@ -31,6 +32,13 @@
             </td>
             <td><%= link_to(product.title, product_path(product)) %></td>
             <td><%= product.price %></td>
+            <td>
+              <% item = current_cart.cart_items.find_by(product_id: product.id) %>
+              <%= form_for item, url: item_path(product) do |f| %>
+                <%= f.select :quantity, [1,2,3,4,5] %>
+                <%= f.submit "更新" %>
+              <% end %>
+            </td>
             <td>
               <%= link_to(item_path(product), method: :delete,
                           data: {confirm: "確定删掉這項物品嗎??"}) do %>
