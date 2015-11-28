@@ -33,8 +33,9 @@
             <td><%= link_to(product.title, product_path(product)) %></td>
             <td><%= product.price %></td>
             <td>
-              <% item = current_cart.cart_items.find_by(product_id: product.id) %>
-              <%= form_for item, url: item_path(product) do |f| %>
+              <% cart_item = current_cart.find_cart_item_by_product(product) %>
+
+              <%= form_for cart_item, url: item_path(product) do |f| %>
                 <%= f.select :quantity, 1..product.quantity %>
                 <%= f.submit "更新" %>
               <% end %>

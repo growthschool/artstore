@@ -3,7 +3,8 @@ class CartItemsController < ApplicationController
 
   def update
     #params[:id] is product id
-    item = current_cart.cart_items.find_by(product_id: params[:id])
+    #item = current_cart.cart_items.find_by(product_id: params[:id])
+    item = current_cart.find_cart_item_by_product(params[:id])
 
     # check the number to buy
     user_want = cart_item_params[:quantity].to_i

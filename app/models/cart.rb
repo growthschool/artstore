@@ -25,4 +25,8 @@ class Cart < ActiveRecord::Base
   def empty?
     items.empty?
   end
+
+  def find_cart_item_by_product(product)
+    cart_items.find_by(product_id: product)
+  end
 end
