@@ -34,7 +34,7 @@ class OrdersController < ApplicationController
     #@order.pay!
     @order.make_payment! # use aasm
 
-    redirect_to "/", notice: "pay finished"
+    redirect_to account_orders_path, notice: "成功完成付款"
   end
 
   private
