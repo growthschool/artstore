@@ -5,7 +5,16 @@ class CartItemsController < ApplicationController
     #params[:id] is product id
     item = current_cart.cart_items.find_by(product_id: params[:id])
 
-    item.update(cart_item_params)
+    # check the number to buy
+    user_want = cart_item_params[:quantity].to_i
+    max = item.product.quantity
+
+    if user_want > max
+      flash[:warning] = "您的選擇 (#{user_want}) 超過庫存數量 (#{max})"
+    else
+      item.update(cart_item_params)
+      flash[:notice] = "成功變更數量"
+    end
 
     #item.quantity = cart_item_params[:quantity]
     #item.save
