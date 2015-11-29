@@ -29,6 +29,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :items, controller: "cart_items"
+
   root "products#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
