@@ -27,7 +27,7 @@
               Hi!, <%= current_user.email %>
               <b class="caret"></b>
             </a>
-               <ul class="dropdown-menu">
+              <ul class="dropdown-menu">
 
                 <% if current_user.admin? %>
                   <li>
@@ -36,9 +36,13 @@
                 <% end %>
 
                 <li>
-                <%= link_to("登出", destroy_user_session_path, method: :delete ) %>
-              </li>
-            </ul>
+                  <%= link_to("個人訂單紀錄", account_orders_path ) %>
+                </li>
+
+                <li>
+                  <%= link_to("登出", destroy_user_session_path, method: :delete ) %>
+                </li>
+              </ul>
           </li>
         <% end %>
 
