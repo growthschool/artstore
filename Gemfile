@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "pay2go"
 gem "roadie", "2.4.3"
 gem "letter_opener", group: :development
 gem "awesome_rails_console"
