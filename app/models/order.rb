@@ -13,10 +13,10 @@ class Order < ActiveRecord::Base
   end
 
   def build_item_cache_from_cart(cart)
-    cart.items.each do |cart_item| # 這裡名字取得很差，用 cart_item 容易讓人誤會
+    cart.items.each do |cart_item| # 這裡名字用 cart_item 容易讓人誤會，但又不能取 item ...
       item = self.items.build
       item.product_name = cart_item.title
-      item.quantity = 1
+      item.quantity = cart.find_cart_item(cart_item).quantity
       item.price = cart_item.price
       item.save
     end
