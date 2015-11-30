@@ -8,8 +8,6 @@ class Order < ActiveRecord::Base
 
   accepts_nested_attributes_for :info
 
-  before_create :generate_token
-
   def set_payment_with!(method)
     self.update_columns(payment_method: method )
   end
@@ -18,9 +16,8 @@ class Order < ActiveRecord::Base
     self.update_columns(is_paid: true )
   end
 
-  def generate_token
-    self.token = SecureRandom.uuid   # 使用Rails內建產生獨特id後存入本身的token欄位
-  end
+  # 將generate_token method 改用mixin的方式 引入Tokenable
+  include Tokenable
 
   def build_item_cache_from_cart(cart)
     cart.items.each do |cart_item|
