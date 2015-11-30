@@ -1,4 +1,8 @@
 Rails.application.configure do
+
+  config.after_initialize do
+    Pay2go.integration_mode = :production
+  end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
