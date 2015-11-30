@@ -1,4 +1,49 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+  namespace :admin do  # admin底下有 products跟users兩個restful架構 , users底下的 to_admin to_normal action是post動作 (?)
+    resources :products
+    resources :orders do
+      member do
+        post :cancel
+        post :ship
+        post :shipped
+        post :return
+      end
+    end
+    resources :users do
+      post :to_admin
+      post :to_normal
+    end
+  end
+
+  namespace :account do
+    resources :orders
+  end
+
+  resources :products do
+    member do    # 用在單筆資料對應時需宣告member  對自己定義的的action(非RESTful)
+      post :add_to_cart
+    end
+  end
+
+  resources :carts do
+    collection do
+      post :checkout
+      delete :clean
+    end
+  end
+
+  resources :items, controller: "cart_items"
+
+  resources :orders do
+    member do
+      get :pay_with_credit_card
+    end
+  end
+
+  root "products#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

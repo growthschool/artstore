@@ -1,5 +1,18 @@
 source 'https://rubygems.org'
 
+gem 'aasm'
+
+gem 'font-awesome-rails' # 用icon點綴頁面設計
+
+gem 'carrierwave' # 上傳圖片用
+
+gem 'mini_magick' # 上傳圖片用
+
+gem 'simple_form'
+
+gem 'devise'
+
+gem 'bootstrap-sass'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
