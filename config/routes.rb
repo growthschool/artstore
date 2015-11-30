@@ -39,7 +39,13 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :carts
+  resources :carts do
+    collection do
+      post :checkout
+    end
+  end
+
+  resources :orders
 
   # Example resource route with sub-resources:
   #   resources :products do
