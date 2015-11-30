@@ -1,7 +1,9 @@
 Rails.application.configure do
 
+  config.action_mailer.default_url_options = { host: 'hidden-lake-7176.herokuapp.com' } # 你的 heroku app 網址
+
   config.after_initialize do
-    Pay2go.integration_mode = :production
+    Pay2go.integration_mode = :development
   end
   # Settings specified here will take precedence over those in config/application.rb.
 
