@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'figaro'
+
 group :production do
   gem "pg"
   gem "rails_12factor"   #deploy 到 heroku的hack懶人包，治百病
