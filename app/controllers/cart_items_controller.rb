@@ -15,7 +15,7 @@ class CartItemsController < ApplicationController
     @cart = current_cart
     @item = @cart.cart_items.find_by(product_id: params[:id])
 
-    if @item.product.quantity >= item_params [:quantity].to_i
+    if @item.product.quantity >= item_params[:quantity].to_i
       @item.update(item_params)
       flash[:notice] = "成功變更數量"
     else
