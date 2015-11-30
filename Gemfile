@@ -4,6 +4,10 @@ gem 'sqlite3', group: :development
 gem "letter_opener", group: :development
 gem "roadie", "2.4.3"
 gem "pay2go"
+ group :production do
+   gem "pg"
+   gem "rails_12factor"
+ end
 
 # --week 3--
 
