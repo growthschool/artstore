@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "figaro"
 gem 'sqlite3', group: :development
 gem "letter_opener", group: :development
 gem "roadie", "2.4.3"
