@@ -5,6 +5,7 @@ gem "aasm"
 gem "roadie", "2.4.3"
 gem "letter_opener", group: :development
 gem "pay2go"
+gem "figaro"
 
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
