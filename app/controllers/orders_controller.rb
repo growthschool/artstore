@@ -11,6 +11,9 @@ class OrdersController < ApplicationController
       # since order is created, clear the cart
       current_cart.clean!
 
+      # send mail
+      OrderMailer.notify_order_placed(@order).deliver!
+
       #redirect_to order_path(@order)
       redirect_to order_path(@order.token)
     else
