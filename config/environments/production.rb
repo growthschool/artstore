@@ -4,7 +4,7 @@ Rails.application.configure do
     Pay2go.integration_mode = :development
   end
 
-  config.action_mailer.default_url_options = { host: 'https://still-harbor-2029.herokuapp.com'}
+  config.action_mailer.default_url_options = { host: 'https://rails-artstore.herokuapp.com'}
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
