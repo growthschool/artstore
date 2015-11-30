@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'roadie', "2.4.3"
+
+gem 'letter_opener', group: :development
+
 gem 'aasm'
 
 gem 'font-awesome-rails' # 用icon點綴頁面設計
