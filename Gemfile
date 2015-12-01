@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+
+
+
+gem "fog"
 gem 'awesome_rails_console'
 gem 'figaro'
 gem "pay2go"
