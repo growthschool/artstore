@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="/assets/application.css"/>
+
 <div class="row">
   <div class="col-md-12">
 
@@ -71,16 +73,6 @@
       </tbody>
     </table>
 
-     <% if !@order.is_paid? %>
-       <div class="pull-right" style="padding: 10px;">
-        <%= render "pay_with_credit_card", order: @order %>
-      </div>
-      <div class="pull-right" style="padding: 10px;">
-         <%= link_to("以 ATM 付款", "#", class: "btn btn-lg btn-danger") %>
-       </div>
-     <% else %>
-       <p class="text-center">此訂單已完成付款</p>
-     <% end %>
-    </div>
+
   </div>
 </div>
