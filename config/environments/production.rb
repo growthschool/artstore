@@ -8,7 +8,7 @@ Rails.application.configure do
     user_name:      ENV["mailgun_user"],
     password:       ENV["mailgun_secret"],
     domain:         "sandboxd12084d9b71b437aa3e1cc41b888db84.mailgun.org",
-    authentication: :plain,
+    authentication: :plain
   }
 
   # 串接智付寶的設定之一
