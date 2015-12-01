@@ -3,7 +3,7 @@ class Pay2goService
   def initialize(order)
     @order = order
     @timestamp = order.created_at.to_i
-    @merchant_order_no = order.id
+    @merchant_order_no = "#{order.id}s32"
     @total_price = order.total
   end
 
