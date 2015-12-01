@@ -5,11 +5,11 @@ CarrierWave.configure do |config|
       provider:              'AWS',
       aws_access_key_id:     ENV['aws_access_key_id'],      # 你的 key
       aws_secret_access_key: ENV['aws_secret_access'],      # 你的 secret key
-      region:                'tokyo' # 你的 S3 bucket 的 Region 位置
+      region:                'us-west-1' # 你的 S3 bucket 的 Region 位置
     }
-    config.fog_directory  = 'bucket-rails-ec' # 你設定的 bucket name
+    config.fog_directory  = 'test-artstore' # 你設定的 bucket name
 
-  else
-    config.storage :file
-  end
+   else
+     config.storage :file
+   end
 end
