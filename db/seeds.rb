@@ -19,3 +19,10 @@ u.password = "12345678"
 u.password_confirmation = "12345678"
 u.is_admin = false
 u.save
+
+u = User.new
+u.email = "jrubyuncle@gmail.com"
+u.password = "12345678"
+u.password_confirmation = "12345678"
+u.is_admin = false
+u.save
