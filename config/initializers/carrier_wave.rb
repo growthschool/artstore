@@ -4,7 +4,7 @@ CarrierWave.configure do |config|
     config.fog_credentials = {
       provider:              'AWS',
       aws_access_key_id:     ENV['aws_access_key_id'],      # 你的 key
-      aws_secret_access_key: ENV['aws_secret_access_key'],      # 你的 secret key
+      aws_secret_access_key: ENV['aws_secret_access'],      # 你的 secret key
       region:                'tokyo' # 你的 S3 bucket 的 Region 位置
     }
     config.fog_directory  = 'bucket-rails-ec' # 你設定的 bucket name
