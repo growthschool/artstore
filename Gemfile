@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'fog'
+gem 'fog' # AWS S3上傳圖片
 
 gem 'figaro'
 
