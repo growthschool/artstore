@@ -3,7 +3,7 @@ class CartItemsController < ApplicationController
 
 	def destroy
 		@cart = current_cart
-		@item = @cart.cart_items.find_by(product_id: params[:id])
+		@item = @cart.find_cart_item(params[:id])
 		@product = @item.product
 		@item.destroy
 
