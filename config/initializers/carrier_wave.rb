@@ -9,7 +9,7 @@ CarrierWave.configure do |config|
     }
     config.fog_directory  = 'test-artstore' # 你設定的 bucket name
 
-   else
+  else
      config.storage :file
-   end
+  end
 end
