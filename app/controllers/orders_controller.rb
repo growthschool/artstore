@@ -43,6 +43,7 @@ class OrdersController < ApplicationController
       render text: "交易失敗"
     end
   end
+
    def pay2go_atm_complete
     @order = Order.find_by_token(params[:id])
     json_data = JSON.parse(params["JSONData"])
