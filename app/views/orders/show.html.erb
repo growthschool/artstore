@@ -65,7 +65,7 @@
       </tbody>
     </table>
 
-      <% if ! @order.is_paid %>
+      <% if ! @order.is_paid && @order.total > 0 %>
         <div class="pull-right" style="padding: 10px;">
           <%= render "pay_with_credit_card", order: @order %>
         </div>
