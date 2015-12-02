@@ -12,8 +12,8 @@
 	<tbody>
 		<% @orders.each do |order| %>
 			<tr>
-				<td><%= order.id %> </td>
-				<td><%= order.created_at.to_s(:long) %></td>
+				<td><%= link_to order.id, admin_order_path(order) %> </td>
+				<td><%= render_order_timestamp(order) %></td>
 				<td><%= order.user.email %></td>
 				<td><%= render_order_state(order) %></td>
 			</tr>
