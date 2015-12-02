@@ -13,6 +13,7 @@ gem "roadie", "2.4.3"
 gem 'pay2go'
 gem 'figaro'
 gem 'fog'
+gem 'delayed_job_active_record'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
