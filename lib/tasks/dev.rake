@@ -1,4 +1,8 @@
 namespace :dev do
+  desc "Clear tmp, database and re-run all migrations and db:seed"
+  task build: ["tmp:clear", "log:clear", "db:drop", "db:create", "db:migrate"]
+  task rebuild: %w[dev:build db:seed]
+
   desc "建立 10 個 User 帳號"
   task :users => :environment do
     for i in 1..10 do

@@ -26,3 +26,11 @@ u.password = "12345678"
 u.password_confirmation = "12345678"
 u.is_admin = false
 u.save
+
+for i in 1..10 do
+  User.create(
+      email: "demo_user_#{i}@seed.com",
+      password: "12345678",
+      password_confirmation: "12345678"
+    )
+end
