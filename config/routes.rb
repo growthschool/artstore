@@ -52,6 +52,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :items, controller: "cart_items"
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
