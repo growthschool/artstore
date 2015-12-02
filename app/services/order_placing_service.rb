@@ -8,7 +8,9 @@ class OrderPlacingService
     @order.build_item_cache_from_cart(@cart)
     @order.calculate_total(@cart)
     @cart.clean!
-    OrderMailer.notify_order_placed(@order).deliver
+
+    #OrderMailer.notify_order_placed(@order).deliver
+    OrderMailer.delay.notify_order_placed(@order)
 
   end
 end
