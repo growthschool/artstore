@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 
-
+gem 'delayed_job_active_record' # executing longer tasks in the background
 gem "fog"
 gem 'awesome_rails_console'
 gem 'figaro'
