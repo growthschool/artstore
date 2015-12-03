@@ -4,8 +4,8 @@ class Order < ActiveRecord::Base
 	has_one :info, class_name: "OrderInfo", dependent: :destroy 
 
 	accepts_nested_attributes_for :info
-	before_create :generate_token
 
+	include Tokenable
 	include AASM
 
 	aasm do
@@ -35,11 +35,6 @@ class Order < ActiveRecord::Base
 		event :cancell_order do
 			transitions from: [:order_placed, :paid], to: :order_cancelled
 		end
-	end
-
-	def generate_token
-		self.token = SecureRandom.uuid
-		
 	end
 
 	def build_item_cache_from_cart(cart)
