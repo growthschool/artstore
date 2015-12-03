@@ -54,9 +54,10 @@ class OrdersController < ApplicationController
     json_data = JSON.parse(params["JSONData"])
 
     if json_data["Status"] == "SUCCESS"
-
-       @order.set_payment_with!("atm")
-       @order.make_payment!
+      if !@order.is_paid?
+        @order.set_payment_with!("atm")
+        @order.make_payment!
+      end
 
        flash[:notice] = "ATM 付款成功"
        redirect_to account_orders_path
