@@ -50,8 +50,8 @@ class OrdersController < ApplicationController
 
   def pay2go_atm_complete
     @order = Order.find_by_token(params[:id])
-
-    json_data = JSON.parse(params["JSONData"])
+    # JSON是跨語言的資料表示法, ruby把從智付寶端收到的data轉換成JSON的格式存進json_data
+        json_data = JSON.parse(params["JSONData"])
 
     if json_data["Status"] == "SUCCESS"
       if !@order.is_paid?
@@ -62,7 +62,7 @@ class OrdersController < ApplicationController
        # flash[:notice] = "ATM 付款成功"
        # redirect_to account_orders_path
 
-       render text: "交易失敗"
+       render text: "交易成功"
      else
       render text: "交易失敗"
     end
