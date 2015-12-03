@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'delayed_job_active_record'
+
 gem 'fog' # AWS S3上傳圖片!
 
 gem 'figaro'
