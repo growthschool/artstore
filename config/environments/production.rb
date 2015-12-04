@@ -81,7 +81,7 @@ Rails.application.configure do
     Pay2go.integration_mode = :development
   end
 
-  config.action_mailer.default_url_options = { host: 'glacial-caverns-4455.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'henryrails101.herokuapp.com' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
