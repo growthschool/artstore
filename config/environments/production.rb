@@ -91,5 +91,6 @@ Rails.application.configure do
     domain:         "sandbox924964d0b59040e2acdc5b733db668f8.mailgun.org",
     authentication: :plain,
   }
+  config.roadie.enabled = false
 
 end
