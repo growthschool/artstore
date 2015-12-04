@@ -81,6 +81,6 @@ Rails.application.configure do
     Pay2go.integration_mode = :development
   end
 
-  config.action_mailer.default_url_options = {host: 'https://thawing-tundra-4435.herokuapp.com'}
+  config.action_mailer.default_url_options = {host: 'artstore-rainyday309.herokuapp.com'}
 
 end
