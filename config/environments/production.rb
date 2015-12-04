@@ -89,7 +89,7 @@ Rails.application.configure do
     user_name:      ENV["mailgun_user"],
     password:       ENV["mailgun_secret"],
     domain:         "sandbox924964d0b59040e2acdc5b733db668f8.mailgun.org",
-    authentication: :plain,
+    authentication: :plain
   }
   config.roadie.enabled = false
 
