@@ -77,7 +77,9 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.action_mailer.default_url_options = {host: 'aqueous-refuge-9869.herokuapp.com'}
   config.after_initialize do
-    Pay2go.integration_mode = :production
+    # Pay2go.integration_mode = :production
+    Pay2go.integration_mode = :development
   end
 end
