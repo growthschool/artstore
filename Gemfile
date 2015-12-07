@@ -1,10 +1,25 @@
 source 'https://rubygems.org'
+gem 'devise'
+gem 'bootstrap-sass'
+gem 'simple_form'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'font-awesome-rails'
+gem 'awesome_rails_console'
+gem 'aasm'
 
+gem "letter_opener", group: :development
+gem "roadie", "2.4.3"
+gem 'pay2go'
+gem 'figaro'
+gem 'fog'
+gem 'delayed_job_active_record'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -43,3 +58,7 @@ group :development, :test do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
