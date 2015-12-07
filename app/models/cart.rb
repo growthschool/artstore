@@ -10,12 +10,6 @@ class Cart < ActiveRecord::Base
     items << product
   end
 
-  def subtotal_price
-    sum = 0
-    sum = cart_item.product.price * cart_item.quantity
-    return sum
-  end
-
   def total_price
     cart_items.inject(0) { |sum, cart_item| sum + (cart_item.product.price * cart_item.quantity) }
   end
