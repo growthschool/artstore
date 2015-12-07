@@ -60,6 +60,7 @@ class OrdersController < ApplicationController
       end
 
        # flash[:notice] = "ATM 付款成功"
+       # 模擬失敗是因為下面這行，所以要先關掉 (一定要收到一個訊息 )
        # redirect_to account_orders_path
 
        render text: "交易成功"
