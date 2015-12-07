@@ -76,4 +76,11 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.after_initialize do
+    Pay2go.integration_mode = :development
+  end
+
+  config.action_mailer.default_url_options = { host: 'https://guarded-taiga-8917.herokuapp.com' } # 我的 heroku app 網址
+
 end

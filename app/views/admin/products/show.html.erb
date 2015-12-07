@@ -1,0 +1,7 @@
+<div class="col-md-12">
+  <div class="product">
+    <%= link_to("Edit", edit_admin_product_path(@product), class: "btn btn-primary pull-right")%>
+  </div>
+  <h2><%= @product.title %></h2>
+  <p><%= @product.description %></p>
+</div>
