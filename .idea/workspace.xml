@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3b2a453c-0e5d-47e7-b220-73cb27007c9c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
     </list>
     <ignored path="artstore.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -580,12 +578,6 @@
       <option name="number" value="Default" />
       <updated>1447170574998</updated>
     </task>
-    <task id="LOCAL-00020" summary="已加入購物車的商品不能再被加進去">
-      <created>1447847061039</created>
-      <option name="number" value="00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1447847061039</updated>
-    </task>
     <task id="LOCAL-00021" summary="加入購物車後，應出現購物車內物品數量">
       <created>1447847302769</created>
       <option name="number" value="00021" />
@@ -874,7 +866,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449506984360</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="安裝 gem &quot;fog&quot;">
+      <created>1449508074961</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1449508074961</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView">
@@ -945,7 +943,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="用 AASM 的機制設定訂單付款" />
     <MESSAGE value="加入清空購物車功能" />
     <MESSAGE value="cart_item 新增 quantity 欄位" />
     <MESSAGE value="可以修改購物車內的單一商品數量" />
@@ -970,7 +967,8 @@
     <MESSAGE value="完成 production 寄信設定" />
     <MESSAGE value="加入mail gun帳號密碼" />
     <MESSAGE value="development.rb 加入mailgun設定" />
-    <option name="LAST_COMMIT_MESSAGE" value="development.rb 加入mailgun設定" />
+    <MESSAGE value="安裝 gem &quot;fog&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="安裝 gem &quot;fog&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
