@@ -40,7 +40,7 @@ class OrdersController < ApplicationController
     @order.set_payment_with!("credit_card")
 
     #@order.pay!
-    @order.make_payment! # use aasm
+    @order.make_payment! unless @order.is_paid? # use aasm
 
     redirect_to account_orders_path, notice: "成功完成付款"
   end
@@ -48,7 +48,7 @@ class OrdersController < ApplicationController
   def pay2go_cc_notify
     @order = Order.find_by_token(params[:id])
     if params["Status"] == "SUCCESS"
-      @order.make_payment!
+      @order.make_payment! unless @order.is_paid?
       if @order.is_paid?
         flash[:notice] = "信用卡付款成功"
         redirect_to account_orders_path
@@ -65,7 +65,7 @@ class OrdersController < ApplicationController
     json_data = JSON.parse(params["JSONData"])
     if json_data["Status"] == "SUCCESS"
       @order.set_payment_with!("atm")
-      @order.make_payment!
+      @order.make_payment! unless @order.is_paid?
       flash[:notice] = "ATM 付款成功"
       redirect_to account_orders_path
     else
