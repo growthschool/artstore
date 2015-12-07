@@ -8,7 +8,7 @@
   <%= hidden_field_tag "Version",         "1.1" %>
 
   <%= hidden_field_tag "ItemDesc",        "order_sample" %>
-  <%= hidden_field_tag "MerchantOrderNo", order.id %>
+  <%= hidden_field_tag "MerchantOrderNo", order.token %>
   <%= hidden_field_tag "TimeStamp",       order.created_at.to_i %>
   <%= hidden_field_tag "Amt",             order.total %>
 
