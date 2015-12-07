@@ -8,12 +8,13 @@
   <%= hidden_field_tag "Version",         "1.1" %>
 
   <%= hidden_field_tag "ItemDesc",        "order_sample" %>
-  <%= hidden_field_tag "MerchantOrderNo", "#{order.id}_#{Date.today.to_time.to_i}" %>
+  <%= hidden_field_tag "MerchantOrderNo", Pay2goService.new(order).gen_order_no %>
   <%= hidden_field_tag "TimeStamp",       order.created_at.to_i %>
   <%= hidden_field_tag "Amt",             order.total %>
 
   <%= hidden_field_tag "VACC",            "1" %>
   <%= hidden_field_tag "NotifyURL",       pay2go_atm_complete_order_url(order.token) %>
+  <%= hidden_field_tag "ClientBackURL",   order_path(order.token) %>
   <%= hidden_field_tag "CheckValue",      Pay2goService.new(order).check_value %>
 
   <%= submit_tag "使用ATM付款", :class => "btn btn-danger btn-lg btn-default" %>
