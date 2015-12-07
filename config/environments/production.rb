@@ -77,6 +77,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  config.action_mailer.default_url_options = { host: 'fierce-beach-1768.herokuapp.com' } # 你的 heroku app 網址
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -85,7 +86,6 @@ Rails.application.configure do
     user_name:      ENV["mailgun_user"],
     password:       ENV["mailgun_secret"],
     domain:         "ssandbox2114ba67659947d796e8ce058d099f00.mailgun.org", # 你的 mailgun domain name
-
     authentication: :plain,
   }
   config.after_initialize do
