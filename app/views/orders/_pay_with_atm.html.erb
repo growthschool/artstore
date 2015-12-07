@@ -12,9 +12,9 @@
   <%= hidden_field_tag "TimeStamp",       order.created_at.to_i %>
   <%= hidden_field_tag "Amt",             order.total %>
 
-  <%= hidden_field_tag "CREDIT",          "1" %>
-  <%= hidden_field_tag "ReturnURL",       pay2go_cc_notify_order_url(order.token) %>
+  <%= hidden_field_tag "VACC",            "1" %>
+  <%= hidden_field_tag "NotifyURL",       pay2go_atm_complete_order_url(order.token) %>
   <%= hidden_field_tag "CheckValue",      Pay2goService.new(order).check_value %>
 
-  <%= submit_tag "使用信用卡付款", class: "btn btn-danger btn-lg btn-default" %>
+  <%= submit_tag "使用ATM付款", :class => "btn btn-danger btn-lg btn-default" %>
 <% end %>

@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
+# gem "awesome-rails-console"
 gem "fog"
+gem "delayed_job_active_record"
 gem "aasm"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "roadie", "2.4.3"
