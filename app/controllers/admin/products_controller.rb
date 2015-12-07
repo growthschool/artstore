@@ -1,12 +1,12 @@
-class Admin::ProductsController < ApplicationController
+class Admin::ProductsController < AdminController
 
-  layout "admin"
+  # layout "admin"
   # AOP Start---
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   # 驗證身份，必須是admin身份。此method 因為是Global函數，
   # 所以定義在ApplicationController
-  before_action :admin_required
+  # before_action :admin_required
 
   # ---AOP End
   def index

@@ -1,9 +1,5 @@
-class Admin::UsersController < ApplicationController
+class Admin::UsersController < AdminController
 
-  layout "admin"
-
-  before_action :authenticate_user!
-  before_action :admin_required
   before_action :find_user_by_id, only: [:edit, :update]
 
   def index

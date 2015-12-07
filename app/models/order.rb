@@ -6,7 +6,7 @@ class Order < ActiveRecord::Base
 
   accepts_nested_attributes_for :info
 
-  before_create :generate_token
+  include Tokenable
 
   def recent
     self.order("id DESC")
@@ -25,10 +25,6 @@ class Order < ActiveRecord::Base
   def calculate_total!(cart)
     self.total = cart.total_price
     self.save
-  end
-
-  def generate_token
-    self.token = SecureRandom.uuid
   end
 
   def set_payment_with!(method)
