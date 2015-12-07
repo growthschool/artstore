@@ -18,6 +18,5 @@ class Pay2goService
 
   def gen_order_no
     "#{@order.id}_#{Date.today.to_time.to_i}"
-    #{}"#{@order.id}s32"
   end
 end
