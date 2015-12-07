@@ -43,4 +43,14 @@ Rails.application.configure do
   config.after_initialize do
     Pay2go.integration_mode = :development
   end
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      port: 587,
+      address: "smtp.mailgun.org",
+      user_name: ENV["mailgun_user"],
+      password: ENV["mailgun_secret"],
+      domain: "sandboxb91cb02592444783ba82e83abd61add2.mailgun.org",
+      authentication: :plain,
+  }
 end

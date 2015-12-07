@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b2a453c-0e5d-47e7-b220-73cb27007c9c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
     </list>
     <ignored path="artstore.iws" />
@@ -60,17 +62,17 @@
         <entry file="file://$PROJECT_DIR$/config/application.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="79" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="79" />
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="production.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.82722515">
-              <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -81,6 +83,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="development.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.07248521">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,7 +150,6 @@
         <option value="$PROJECT_DIR$/app/mailers/application_mailer.rb" />
         <option value="$PROJECT_DIR$/app/mailers/order_mailer.rb" />
         <option value="$PROJECT_DIR$/app/views/order_mailer/notify_order_placed.html.erb" />
-        <option value="$PROJECT_DIR$/config/environments/development.rb" />
         <option value="$PROJECT_DIR$/app/service/pay2go_service.rb" />
         <option value="$PROJECT_DIR$/app/views/orders/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/orders/_pay_with_credit_card.html.erb" />
@@ -156,6 +167,7 @@
         <option value="$PROJECT_DIR$/app/service/order_placing_service.rb" />
         <option value="$PROJECT_DIR$/config/application.yml" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/config/environments/development.rb" />
       </list>
     </option>
   </component>
@@ -599,12 +611,6 @@
       <option name="number" value="Default" />
       <updated>1447170574998</updated>
     </task>
-    <task id="LOCAL-00018" summary="實作加入購物車 ( add_product_to_cart ) 的功能，第二步未完成">
-      <created>1447846426250</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1447846426250</updated>
-    </task>
     <task id="LOCAL-00019" summary="實作加入購物車 ( add_product_to_cart ) 的功能">
       <created>1447846913171</created>
       <option name="number" value="00019" />
@@ -893,7 +899,13 @@
       <option name="project" value="LOCAL" />
       <updated>1449495252091</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="加入mail gun帳號密碼">
+      <created>1449499024999</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1449499024999</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TodoView">
@@ -918,7 +930,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31392047" sideWeight="0.49353796" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41761363" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41761363" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1264,13 +1276,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5606509">
-          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33272058">
@@ -1375,6 +1380,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/service/order_placing_service.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1383,18 +1396,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.yml">
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="79" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="79" />
+          <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.82722515">
-          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.07248521">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
