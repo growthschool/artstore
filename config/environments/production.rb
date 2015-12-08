@@ -81,4 +81,5 @@ Rails.application.configure do
     Pay2go.integration_mode = :production
   end
 
+  config.action_mailer.default_url_options = { host: 'https://morning-falls-3339.herokuapp.com' }
 end
