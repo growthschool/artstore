@@ -7,7 +7,7 @@ CarrierWave.configure do |config|
 
       aws_secret_access_key: 'SlwkRruxLkPJI46O4alGMUywtaXMKxt+K+YO7bY4',      # 你的 secret key         
 
-      region:                'US Standard' # 你的 S3 bucket 的 Region 位置   
+      region:                'us-east-1' # 你的 S3 bucket 的 Region 位置   
 
     }
     config.fog_directory  = 'rails101' # 你設定的 bucket name 
