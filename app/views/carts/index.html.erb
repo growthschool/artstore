@@ -17,9 +17,9 @@
 						<td>
 							<%= link_to product_path(product) do %>
 								<% if product.photo.present? %>
-									<%= imgae_tag(product.photo.image.thumb.url, class: "thumbnail") %>
+									<%= image_tag(product.photo.image.thumb.url, class: "thumbnail") %>
 								<% else %>
-									<%= imgae_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+									<%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
 								<% end %>
 							<% end %>
 						</td>
@@ -39,7 +39,7 @@
 
 		<div class="total clearfix">
 			<span class="pull-right">
-				<span> 總計 xxx NTD </span>
+				<span> 總計 <%= render_cart_total_price(current_cart) %> NTD </span>
 			</span>
 		</div>
 
