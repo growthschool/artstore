@@ -1,0 +1,30 @@
+<h2>使用者列表</h2>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+      		<th>#</th>
+      		<th>Email</th>
+      		<th>權限</th>
+      		<th>功能</th>
+    	</tr>
+	</thead>
+	<tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td>
+          <%= user.id %>
+        </td>
+        <td>
+          <%= user.email %>
+        </td>
+        <td>
+          權限 (待處理)
+        </td>
+        <td>
+          轉換權限的按鈕 (待處理)
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
