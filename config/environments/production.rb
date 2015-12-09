@@ -80,4 +80,6 @@ Rails.application.configure do
   config.after_initialize do
     Pay2go.integration_mode = :production
   end
+
+  config.action_mailer.default_url_options = { host: 'fathomless-springs-1745.herokuapp.com' }
 end
