@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :products
     resources :orders
-    
+
     resources :users do
       member do
         post :to_admin
@@ -38,7 +38,14 @@ Rails.application.routes.draw do
   resources :items, controller: "cart_items"
 
   namespace :account do
-    resources :orders
+    resources :orders do
+      member do
+        post :cancel
+        post :ship
+        post :shipped
+        post :return
+      end
+    end
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
