@@ -74,23 +74,22 @@ Rails.application.configure do
 
     authentication: :plain,
   }
-end
 
 
-# Enable locale fallbacks for I18n (makes lookups for any locale fall back to
-# the I18n.default_locale when a translation cannot be found).
-config.i18n.fallbacks = true
+  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+  # the I18n.default_locale when a translation cannot be found).
+  config.i18n.fallbacks = true
 
-# Send deprecation notices to registered listeners.
-config.active_support.deprecation = :notify
+  # Send deprecation notices to registered listeners.
+  config.active_support.deprecation = :notify
 
-# Use default logging formatter so that PID and timestamp are not suppressed.
-config.log_formatter = ::Logger::Formatter.new
+  # Use default logging formatter so that PID and timestamp are not suppressed.
+  config.log_formatter = ::Logger::Formatter.new
 
-# Do not dump schema after migrations.
-config.active_record.dump_schema_after_migration = false
+  # Do not dump schema after migrations.
+  config.active_record.dump_schema_after_migration = false
 
-config.after_initialize do
-  Pay2go.integration_mode = :development
-end
+  config.after_initialize do
+    Pay2go.integration_mode = :development
+  end
 end
