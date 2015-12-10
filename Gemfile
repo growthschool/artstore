@@ -21,6 +21,8 @@ gem "pay2go"
 
 gem "figaro"
 
+gem "intercom-rails"
+
 group :production do
   gem "pg"
   gem "rails_12factor"
