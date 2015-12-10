@@ -92,4 +92,5 @@ Rails.application.configure do
   config.after_initialize do
     Pay2go.integration_mode = :development
   end
+  config.action_mailer.default_url_options = { host: 'arcane-waters-5336.herokuapp.com' } # 你的 heroku app 網址
 end
