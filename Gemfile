@@ -57,6 +57,8 @@ gem "pay2go"
 
 gem "figaro"
 
+gem "fog"
+
 group :production do
   gem "pg"
   gem "rails_12factor"

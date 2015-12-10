@@ -81,7 +81,7 @@ Rails.application.configure do
     Pay2go.integration_mode = :development
   end
 
-  config.action_mailer.default_url_options = { host: 'https://morning-falls-3339.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'artstore-example.herokuapp.com' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -90,7 +90,6 @@ Rails.application.configure do
     user_name:      ENV["mailgun_user"],
     password:       ENV["mailgun_secret"],
     domain:         "sandbox5ebf9f9227b540b0a794d5550d80761a.mailgun.org",
-
     authentication: :plain,
   }
 end
