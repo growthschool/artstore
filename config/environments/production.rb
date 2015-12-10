@@ -64,20 +64,33 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
-  # the I18n.default_locale when a translation cannot be found).
-  config.i18n.fallbacks = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      ENV["mailgun_user"],
+    password:       ENV["mailgun_secret"],
+    domain:         "sandboxdbd89ee419b848e98595017580625b1a.mailgun.org", # 你的 mailgun domain name
 
-  # Send deprecation notices to registered listeners.
-  config.active_support.deprecation = :notify
+    authentication: :plain,
+  }
+end
 
-  # Use default logging formatter so that PID and timestamp are not suppressed.
-  config.log_formatter = ::Logger::Formatter.new
 
-  # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false
+# Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+# the I18n.default_locale when a translation cannot be found).
+config.i18n.fallbacks = true
 
-  config.after_initialize do
-    Pay2go.integration_mode = :development
-  end
+# Send deprecation notices to registered listeners.
+config.active_support.deprecation = :notify
+
+# Use default logging formatter so that PID and timestamp are not suppressed.
+config.log_formatter = ::Logger::Formatter.new
+
+# Do not dump schema after migrations.
+config.active_record.dump_schema_after_migration = false
+
+config.after_initialize do
+  Pay2go.integration_mode = :development
+end
 end
