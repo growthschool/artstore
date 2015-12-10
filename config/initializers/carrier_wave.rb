@@ -3,8 +3,8 @@ CarrierWave.configure do |config|
     config.storage :fog                       
     config.fog_credentials = {
       provider:              'AWS',                        
-      aws_access_key_id:     'AKIAJJZZDQ2FWGYZN7CQ',
-      aws_secret_access_key: '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',
+      aws_access_key_id:     ENV['aws_access_key_id'],
+      aws_secret_access_key: ENV['aws_secret_access_key'],
       region:                'us-west-1' 
     }
     config.fog_directory  = 'artstorekh'  
