@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'delayed_job_active_record'
+gem "fog"
 gem "pay2go"
 gem "roadie", "2.4.3"
 gem "letter_opener", group: :development
