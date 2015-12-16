@@ -1,0 +1,1384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3b2a453c-0e5d-47e7-b220-73cb27007c9c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="artstore.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.bundle/" />
+    <ignored path="$PROJECT_DIR$/components/" />
+    <ignored path="$PROJECT_DIR$/public/system/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path="$PROJECT_DIR$/vendor/bundle/" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/artstore@Development__artstore.coverage" NAME="Development: artstore Coverage Results" MODIFIED="1449494127021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="artstore" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+    </PATH>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="artstore" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="routes.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.48816568">
+              <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Erb File.html" />
+      </list>
+    </option>
+  </component>
+  <component name="GeneratorOptions">
+    <option name="VCS_SHOW_CONFIRMATION" value="true" />
+    <option name="ENVIRONMENT" value="development" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="dbtable:/ef143767/04f358d8-75b9-4614-a6a6-f0bea882d8cd/users" />
+        <option value="$PROJECT_DIR$/app/models/cart_item.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/products_controller.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+        <option value="$PROJECT_DIR$/app/helpers/carts_helper.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20151118115901_create_orders.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/models/order_info.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20151118125139_add_token_to_order.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20151118131205_add_is_paid_to_order.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20151118132139_add_payment_method_to_order.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20151118133428_add_aasm_state_to_order.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/carts_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20151119125242_add_quantity_to_cart_item.rb" />
+        <option value="$PROJECT_DIR$/app/views/products/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/cart.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/cart_items_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/carts/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/carts/checkout.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/account/orders/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/account/orders_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/common/_navbar.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/orders/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/application.rb" />
+        <option value="$PROJECT_DIR$/config/locales/zh-TW.yml" />
+        <option value="$PROJECT_DIR$/app/helpers/orders_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/admin/orders/_state_option.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/admin/orders/show.html.erb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/mailers/application_mailer.rb" />
+        <option value="$PROJECT_DIR$/app/mailers/order_mailer.rb" />
+        <option value="$PROJECT_DIR$/app/views/order_mailer/notify_order_placed.html.erb" />
+        <option value="$PROJECT_DIR$/app/service/pay2go_service.rb" />
+        <option value="$PROJECT_DIR$/app/views/orders/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/orders/_pay_with_credit_card.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/orders_controller.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20151111130037_add_is_admin_to_user.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/pay2go.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/orders_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/products_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/concerns/tokenable.rb" />
+        <option value="$PROJECT_DIR$/app/models/order.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/admin/users_controller.rb" />
+        <option value="$PROJECT_DIR$/app/service/order_placing_service.rb" />
+        <option value="$PROJECT_DIR$/config/application.yml" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/config/environments/development.rb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="RailsProjectView" />
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="artstore">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="artstore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="options.lastSelected" value="reference.settingsdialog.project.vagrant" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="Ruby.ViewRefParam.DefaultExtension" value="html.erb" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FullScreen" value="true" />
+    <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Rails.Development: artstore">
+    <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RailsRunConfigurationType" factoryName="Rails">
+      <predefined_log_file id="RUBY_RAILS_SERVER" enabled="true" />
+      <module name="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="SCRIPT_ARGS" VALUE="" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="PORT" VALUE="3000" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="IP" VALUE="0.0.0.0" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="DUMMY_APP" VALUE="test/dummy" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="RAILS_SERVER_TYPE" VALUE="Default" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
+      <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RakeRunConfigurationType" factoryName="Rake">
+      <module name="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
+      <module name="" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
+      <module name="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="heroku-deploy" factoryName="Heroku Deployment">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Heroku" type="heroku-deploy" factoryName="Heroku Deployment" server-name="Heroku">
+      <deployment type="module" name="artstore">
+        <settings>
+          <option name="host" value="" />
+        </settings>
+      </deployment>
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Heroku Deployment.Heroku" />
+      <item index="1" class="java.lang.String" itemvalue="Rails.Production: artstore" />
+      <item index="2" class="java.lang.String" itemvalue="Rails.Development: artstore" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.test: artstore" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.spec: artstore" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b2a453c-0e5d-47e7-b220-73cb27007c9c" name="Default" comment="" />
+      <created>1447170574998</created>
+      <option name="number" value="Default" />
+      <updated>1447170574998</updated>
+    </task>
+    <task id="LOCAL-00021" summary="加入購物車後，應出現購物車內物品數量">
+      <created>1447847302769</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1447847302769</updated>
+    </task>
+    <task id="LOCAL-00022" summary="加入購物車後，應出現購物車內物品數量">
+      <created>1447847623777</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1447847623777</updated>
+    </task>
+    <task id="LOCAL-00023" summary="正確顯示購物車商品明細的總金額">
+      <created>1447847783800</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1447847783800</updated>
+    </task>
+    <task id="LOCAL-00024" summary="建立 user, order, order_info, order_item 等 model 的資料庫關聯">
+      <created>1447848291451</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1447848291451</updated>
+    </task>
+    <task id="LOCAL-00025" summary="建立 前往訂單資訊頁 的連結">
+      <created>1447848467572</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1447848467572</updated>
+    </task>
+    <task id="LOCAL-00026" summary="設定訂單資訊頁">
+      <created>1447848727838</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1447848727838</updated>
+    </task>
+    <task id="LOCAL-00027" summary="設定 order.rb 的 accepts_nested_attributes_for">
+      <created>1447848772915</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1447848772915</updated>
+    </task>
+    <task id="LOCAL-00028" summary="設定訂單資訊頁">
+      <created>1447849157068</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1447849157068</updated>
+    </task>
+    <task id="LOCAL-00029" summary="加上 create action">
+      <created>1447850175599</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1447850175599</updated>
+    </task>
+    <task id="LOCAL-00030" summary="寄件和收件⼈都需填寫資訊">
+      <created>1447850807649</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1447850807649</updated>
+    </task>
+    <task id="LOCAL-00031" summary="新增 orders_controller 裡的 show action">
+      <created>1447851046520</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1447851046520</updated>
+    </task>
+    <task id="LOCAL-00032" summary="產生訂單前，先亂數產生 token 並存進去">
+      <created>1447851369420</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1447851369420</updated>
+    </task>
+    <task id="LOCAL-00033" summary="訂單建立完成導向的網址會是 token">
+      <created>1447851494532</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1447851494532</updated>
+    </task>
+    <task id="LOCAL-00034" summary="設定付款按鈕">
+      <created>1447852296165</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1447852296165</updated>
+    </task>
+    <task id="LOCAL-00035" summary="訂單要分為「已付款」、「未付款」 (order.rb 新增 is_paid 欄位)">
+      <created>1447852455379</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1447852455379</updated>
+    </task>
+    <task id="LOCAL-00036" summary="信用卡付款的按鈕 routing 設定">
+      <created>1447852616511</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1447852616511</updated>
+    </task>
+    <task id="LOCAL-00037" summary="設定 order 信用卡付款的 action">
+      <created>1447852851881</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1447852851881</updated>
+    </task>
+    <task id="LOCAL-00038" summary="order.rb 新增 payment_method 的欄位 ( 紀錄付款方式 )">
+      <created>1447852997979</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1447852997979</updated>
+    </task>
+    <task id="LOCAL-00039" summary="設定 order 付款完成與付款方式紀錄的 method">
+      <created>1447853175756</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1447853175756</updated>
+    </task>
+    <task id="LOCAL-00040" summary="訂單已付款就不會顯示付款按鈕">
+      <created>1447853323232</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1447853323232</updated>
+    </task>
+    <task id="LOCAL-00041" summary="order 新增 aasm_state 欄位">
+      <created>1447853756711</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1447853756711</updated>
+    </task>
+    <task id="LOCAL-00042" summary="設定訂單狀態機制">
+      <created>1447854022533</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1447854022533</updated>
+    </task>
+    <task id="LOCAL-00043" summary="用 AASM 的機制設定訂單付款">
+      <created>1447854244597</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1447854244597</updated>
+    </task>
+    <task id="LOCAL-00044" summary="加入清空購物車功能">
+      <created>1447935275669</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1447935275669</updated>
+    </task>
+    <task id="LOCAL-00045" summary="cart_item 新增 quantity 欄位">
+      <created>1447937642496</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1447937642497</updated>
+    </task>
+    <task id="LOCAL-00046" summary="可以修改購物車內的單一商品數量">
+      <created>1447938770213</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1447938770213</updated>
+    </task>
+    <task id="LOCAL-00047" summary="購物車加入「數量」設計 ( 總價 =&gt; 小計 x 數量 )">
+      <created>1447939747547</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1447939747547</updated>
+    </task>
+    <task id="LOCAL-00048" summary="購物車加入「數量」設計 ( 數量為 0 的貨物不能「購買」)">
+      <created>1448077547722</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1448077547722</updated>
+    </task>
+    <task id="LOCAL-00049" summary="購物車加入「數量」設計 ( 購物車不能手動更新超過庫存的數量 )">
+      <created>1448078341217</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1448078341217</updated>
+    </task>
+    <task id="LOCAL-00050" summary="訂單建立時把購物車上的商品數量存進去">
+      <created>1448078822525</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1448078822531</updated>
+    </task>
+    <task id="LOCAL-00051" summary="定義 find_cart_item 來簡化常用的程式">
+      <created>1448079474008</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1448079474008</updated>
+    </task>
+    <task id="LOCAL-00052" summary="產生訂單後，購物車應該被清空">
+      <created>1448098373624</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1448098373624</updated>
+    </task>
+    <task id="LOCAL-00053" summary=" 修改訂單頁面 ( 增加數量欄位 )">
+      <created>1448099483503</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1448099483503</updated>
+    </task>
+    <task id="LOCAL-00054" summary="建立 account/orders 可以看到該使用者過去所有訂單">
+      <created>1448127954495</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1448127954495</updated>
+    </task>
+    <task id="LOCAL-00055" summary="結賬後轉到 account/orders#index">
+      <created>1448128235575</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1448128235575</updated>
+    </task>
+    <task id="LOCAL-00056" summary="[已完成除錯] 訂單的排列順序按照 最新 - 最舊 排列">
+      <created>1448168456725</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1448168456725</updated>
+    </task>
+    <task id="LOCAL-00057" summary="建立 admin/orders 可以看到系統內所有訂單">
+      <created>1448207067461</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1448207067461</updated>
+    </task>
+    <task id="LOCAL-00058" summary="admin 的 order 列表應要能顯示訂單狀態">
+      <created>1448209833530</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1448209833530</updated>
+    </task>
+    <task id="LOCAL-00059" summary="將sqlite3納入管理">
+      <created>1448603947563</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1448603947566</updated>
+    </task>
+    <task id="LOCAL-00060" summary="heroku部署">
+      <created>1449282694693</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1449282694698</updated>
+    </task>
+    <task id="LOCAL-00061" summary="fix AddIsAdminToUser boolean">
+      <created>1449283302660</created>
+      <option name="number" value="00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1449283302660</updated>
+    </task>
+    <task id="LOCAL-00062" summary="1. 解決在 heroku 環境下無法完成刷卡流程的問題&#10;2. 將 pay2go 的環境改為開發用">
+      <created>1449371576969</created>
+      <option name="number" value="00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1449371576970</updated>
+    </task>
+    <task id="LOCAL-00063" summary="用 figaro 管理機密資訊">
+      <created>1449375652072</created>
+      <option name="number" value="00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1449375652072</updated>
+    </task>
+    <task id="LOCAL-00064" summary="新增 admin_controller.rb">
+      <created>1449418511856</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1449418511858</updated>
+    </task>
+    <task id="LOCAL-00065" summary="完成 production 寄信設定">
+      <created>1449493167348</created>
+      <option name="number" value="00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1449493167349</updated>
+    </task>
+    <task id="LOCAL-00066" summary="加入mail gun帳號密碼">
+      <created>1449495252091</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1449495252091</updated>
+    </task>
+    <task id="LOCAL-00067" summary="加入mail gun帳號密碼">
+      <created>1449499024999</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1449499024999</updated>
+    </task>
+    <task id="LOCAL-00068" summary="development.rb 加入mailgun設定">
+      <created>1449506984360</created>
+      <option name="number" value="00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1449506984360</updated>
+    </task>
+    <task id="LOCAL-00069" summary="安裝 gem &quot;fog&quot;">
+      <created>1449508074961</created>
+      <option name="number" value="00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1449508074961</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20759289" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.515625" sideWeight="0.50646204" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20355412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31392047" sideWeight="0.49353796" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41761363" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.515625" sideWeight="0.50646204" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31392047" sideWeight="0.49353796" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46448863" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20759289" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20355412" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39914772" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="BEK_SORT_TYPE" value="1" />
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="加入清空購物車功能" />
+    <MESSAGE value="cart_item 新增 quantity 欄位" />
+    <MESSAGE value="可以修改購物車內的單一商品數量" />
+    <MESSAGE value="購物車加入「數量」設計 ( 總價 =&gt; 小計 x 數量 )" />
+    <MESSAGE value="購物車加入「數量」設計 ( 數量為 0 的貨物不能「購買」)" />
+    <MESSAGE value="購物車加入「數量」設計 ( 購物車不能手動更新超過庫存的數量 )" />
+    <MESSAGE value="訂單建立時把購物車上的商品數量存進去" />
+    <MESSAGE value="定義 find_cart_item 來簡化常用的程式" />
+    <MESSAGE value="產生訂單後，購物車應該被清空" />
+    <MESSAGE value=" 修改訂單頁面 ( 增加數量欄位 )" />
+    <MESSAGE value="建立 account/orders 可以看到該使用者過去所有訂單" />
+    <MESSAGE value="結賬後轉到 account/orders#index" />
+    <MESSAGE value="[已完成除錯] 訂單的排列順序按照 最新 - 最舊 排列" />
+    <MESSAGE value="建立 admin/orders 可以看到系統內所有訂單" />
+    <MESSAGE value="admin 的 order 列表應要能顯示訂單狀態" />
+    <MESSAGE value="將sqlite3納入管理" />
+    <MESSAGE value="heroku部署" />
+    <MESSAGE value="fix AddIsAdminToUser boolean" />
+    <MESSAGE value="1. 解決在 heroku 環境下無法完成刷卡流程的問題&#10;2. 將 pay2go 的環境改為開發用" />
+    <MESSAGE value="用 figaro 管理機密資訊" />
+    <MESSAGE value="新增 admin_controller.rb" />
+    <MESSAGE value="完成 production 寄信設定" />
+    <MESSAGE value="加入mail gun帳號密碼" />
+    <MESSAGE value="development.rb 加入mailgun設定" />
+    <MESSAGE value="安裝 gem &quot;fog&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="安裝 gem &quot;fog&quot;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151118132139_add_payment_method_to_order.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19526628">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151118133428_add_aasm_state_to_order.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2928994">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/order_info.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151119125242_add_quantity_to_cart_item.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14285715">
+          <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/04f358d8-75b9-4614-a6a6-f0bea882d8cd">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>04f358d8-75b9-4614-a6a6-f0bea882d8cd</OriginalElement>
+          <nodes>
+            <node x="" y="">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:cart_items</node>
+            <node x="" y="">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_infos</node>
+            <node x="" y="">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:sqlite_sequence</node>
+            <node x="" y="">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:carts</node>
+            <node x="" y="">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:orders</node>
+            <node x="" y="">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:schema_migrations</node>
+            <node x="" y="">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:products</node>
+            <node x="" y="">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:order_items</node>
+            <node x="" y="">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:users</node>
+            <node x="" y="">04f358d8-75b9-4614-a6a6-f0bea882d8cd.TABLE:photos</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7292134831460674" x="580.0" y="455.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/cart.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/carts/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1290324">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/products/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.161291">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/carts/checkout.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.1290324">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/activerecord-4.2.2/lib/active_record/dynamic_matchers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33284023">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/cart_items_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24408284">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/ef143767/04f358d8-75b9-4614-a6a6-f0bea882d8cd/orders">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/account/orders/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28372094">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/account/orders_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19526628">
+          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/admin/orders.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/common/_navbar.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/simple_form.en.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/orders/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/locales/zh-TW.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22123894">
+          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/carts_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19526628">
+          <caret line="4" column="38" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/orders_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4393491">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/orders/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05116279">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/orders/_state_option.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3860465">
+          <caret line="9" column="61" selection-start-line="9" selection-start-column="61" selection-end-line="9" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailers/application_mailer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.967742">
+          <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/service/pay2go_service.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/products_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.09763314">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/mailers/order_mailer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2928994">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/order_mailer/notify_order_placed.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20465116">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20151111130037_add_is_admin_to_user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24408284">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/orders/_pay_with_credit_card.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33272058">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/orders_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/concerns/tokenable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="3" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/order.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/products_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="49" selection-start-line="0" selection-start-column="49" selection-end-line="0" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/orders_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2928994">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34171596">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin/users_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5857988">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09763314">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82988167">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/pay2go.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24408284">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/dev.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7573965">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/service/order_placing_service.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09763314">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31656805">
+          <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4393491">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="40" column="28" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48816568">
+          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

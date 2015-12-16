@@ -1,0 +1,11 @@
+<h2>變更會員權限</h2>
+<%= simple_form_for [:admin, @user] do |f| %>
+    <div class="group">
+      <%= f.label :email %>: <%= @user.email %>
+    </div>
+
+    <div class="group">
+      <%= f.input :is_admin, as: :boolean, checked_value: true, unchecked_value: false %>
+    </div>
+    <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+<% end %>

@@ -1,6 +1,5 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -38,4 +37,20 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+  config.action_mailer.delivery_method = :letter_opener
+
+  config.after_initialize do
+    Pay2go.integration_mode = :development
+  end
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      port: 587,
+      address: "smtp.mailgun.org",
+      user_name: ENV["mailgun_user"],
+      password: ENV["mailgun_secret"],
+      domain: "sandboxb91cb02592444783ba82e83abd61add2.mailgun.org",
+      authentication: :plain,
+  }
 end
