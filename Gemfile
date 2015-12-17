@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-#gem "fb_like_comment", github: "niclin/fb_like_comment"
+gem "fb_like_comment", github: "niclin/fb_like_comment"
 gem "figaro"
 gem "delayed_job_active_record"
 gem "fog"
