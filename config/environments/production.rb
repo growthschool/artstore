@@ -89,6 +89,6 @@ Rails.application.configure do
     authentication: :plain,
   }
   config.after_initialize do
-    Pay2go.integration_mode = :production
+    Pay2go.integration_mode = :development
   end
 end
