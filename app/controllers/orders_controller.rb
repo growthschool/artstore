@@ -50,19 +50,21 @@ class OrdersController < ApplicationController
     end
   end
 
-  def pay2go_atm_complete
-    @order = Order.find_by_token(params[:id])
+   def pay2go_atm_complete
+     @order = Order.find_by_token(params[:id])
 
-    if json_data["Status"] == "SUCCESS"
+     json_data = JSON.parse(params["JSONData"])
 
-      @order.set_payment_with("atm")
-      @order.make_payment!
+     if json_data["Status"] == "SUCCESS"
 
-      render text: "交易成功"
-    else
-      render text: "交易失敗"
-    end
-  end
+       @order.set_payment_with!("atm")
+       @order.make_payment!
+
+       render text: "交易成功"
+     else
+       render text: "交易失敗"
+     end
+   end
 
   private
 
