@@ -22,6 +22,10 @@
       <% else %>
         已銷售一空，無法購買
       <% end %>
+       <%= fb_like(product_url(@product)) %>
+    <div class="col-md-8" col-md-offset-2">
+      <%= fb_comments(product_url(@product), height: 500, width: 600) %>
     </div>
+   </div>
   </div>
 </div>

@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'delayed_job_active_record'
+gem "fb_like_comment", path: "/Users/Nic/rails_projects/fb_like_comment"
+gem "figaro"
+gem "delayed_job_active_record"
 gem "fog"
 gem "pay2go"
 gem "roadie", "2.4.3"

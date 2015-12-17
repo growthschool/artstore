@@ -1,3 +1,8 @@
+PATH
+  remote: /Users/Nic/rails_projects/fb_like_comment
+  specs:
+    fb_like_comment (1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -93,6 +98,8 @@ GEM
     erubis (2.7.0)
     excon (0.45.4)
     execjs (2.5.2)
+    figaro (1.1.1)
+      thor (~> 0.14)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
     fog (1.36.0)
@@ -348,6 +355,8 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   delayed_job_active_record
   devise
+  fb_like_comment!
+  figaro
   fog
   font-awesome-rails
   jbuilder (~> 2.0)
