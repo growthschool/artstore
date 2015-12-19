@@ -7,10 +7,10 @@ CarrierWave.configure do |config|
 
       aws_secret_access_key: ENV["aws_secret_access_key"],      # 你的 secret key
 
-      region:                'eu-west-1' # 你的 S3 bucket 的 Region 位置
+      region:                'Singapore' # 你的 S3 bucket 的 Region 位置
 
     }
-    config.fog_directory  = 'xxxx' # 你設定的 bucket name
+    config.fog_directory  = 'dataappstore' # 你設定的 bucket name
 
   else
     config.storage :file
