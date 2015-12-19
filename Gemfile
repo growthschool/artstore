@@ -23,6 +23,10 @@ gem "figaro"
 
 gem "intercom-rails"
 
+gem "fog"
+
+gem "awesome_rails_console"
+
 group :production do
   gem "pg"
   gem "rails_12factor"
