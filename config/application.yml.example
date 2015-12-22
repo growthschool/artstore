@@ -1,0 +1,14 @@
+# 放測試站的 token
+
+pay2go_merchant_id: "xxx"
+pay2go_hash_key: "xxxx"
+pay2go_hash_iv: "xxx"
+pay2go_service_url: "xxx"
+
+# 放正式站的 token
+
+production:
+  pay2go_merchant_id: "xxx"
+  pay2go_hash_key: "xxx"
+  pay2go_hash_iv: "xxx"
+  pay2go_service_url: "xxx"

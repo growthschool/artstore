@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Artstore 後台</title>
+  <%= stylesheet_link_tag       'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag     'application', 'daata-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <%= render "common/navbar" %>
+    <%= notice_message %>
+
+    <div class="row">
+      <div class="col-md-2"> <!-- col-md-1跟col-md-2都可以做出邊欄的效果,col-md-3以後就不行(和套入的yield有關) -->
+        <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+          <li> <%= link_to("Products", admin_products_path) %> </li>
+          <li> <%= link_to("Orders", admin_orders_path) %> </li>  <!--設定Orders連結，導向admin_orders的index -->
+          <li> <%= link_to("Users", admin_users_path) %> </li>      <!--設定一個Users連結, 導向admin_user的 index) -->
+        </ul>
+      </div>
+      <div class="col-md-10">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

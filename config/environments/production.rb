@@ -1,4 +1,23 @@
 Rails.application.configure do
+
+  #設定mailgun服務
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      ENV["mailgun_user"],
+    password:       ENV["mailgun_secret"],
+    domain:         "sandboxd12084d9b71b437aa3e1cc41b888db84.mailgun.org",
+    authentication: :plain
+  }
+
+  # 串接智付寶的設定之一
+  config.after_initialize do
+    #Pay2go.integration_mode = :production
+    Pay2go.integration_mode = :development
+  end
+
+  config.action_mailer.default_url_options = { host: 'https://rails-artstore.herokuapp.com'}
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
