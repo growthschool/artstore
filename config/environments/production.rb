@@ -76,4 +76,20 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.after_initialize do
+    Pay2go.integration_mode = :development
+  end
+
+  config.action_mailer.default_url_options = { host: 'artstore-example.herokuapp.com' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port:           587,
+    address:        "smtp.mailgun.org",
+    user_name:      ENV["mailgun_user"],
+    password:       ENV["mailgun_secret"],
+    domain:         "sandbox5ebf9f9227b540b0a794d5550d80761a.mailgun.org",
+    authentication: :plain,
+  }
 end
