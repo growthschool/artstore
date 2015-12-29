@@ -6,7 +6,6 @@
       <th>#</th>
       <th>Email</th>
       <th>權限</th>
-      <th>功能</th>
     </tr>
   </thead>
   <tbody>
@@ -24,9 +23,6 @@
           <% else %>
           <%= link_to("轉為管理者", admin_user_to_admin_path(user), method: :post, class: "btn btn-primary") %>
           <% end %>
-        </td>
-        <td>
-          轉換權限的按鈕 (待處理)
         </td>
       </tr>
     <% end %>
