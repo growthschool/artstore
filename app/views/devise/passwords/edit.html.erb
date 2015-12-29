@@ -1,45 +1,19 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<h2>Change your password</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
 
-  <div class="panel panel-default">
-    <div class="panel-body">
+  <%= f.input :reset_password_token, as: :hidden %>
+  <%= f.full_error :reset_password_token %>
 
-      <div class="form-inputs">
-
-      <div class="form-group">
-        <%= f.label :name %>
-        <%= f.text_field :name, class: "form-control", :autofocus => true %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, class: "form-control", :autofocus => true %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-        <%= f.password_field :password, class: "form-control", :autocomplete => "off" %>
-      </div>
-
-      <div class="form-group">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
-        <%= f.password_field :current_password, class: "form-control" %>
-      </div>
-
-      </div>
-
-      <div class="form-group">
-        <%= f.submit "Update", class: "btn btn-primary" %>
-      </div>
-
-    <% end %>
+  <div class="form-inputs">
+    <%= f.input :password, label: "New password", required: true, autofocus: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+    <%= f.input :password_confirmation, label: "Confirm your new password", required: true %>
   </div>
-  <div class="panel-footer">
 
-    <h3>Cancel my account</h3>
-
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default" %></p>
-
+  <div class="form-actions">
+    <%= f.button :submit, "Change my password" %>
   </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
