@@ -8,14 +8,17 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active">
+        <li>
           <%= link_to("產品", products_path) %>
+        </li>
+        <li>
+          <%= link_to("關於本站", "/pages/about") %>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
        <li>
          <%= link_to carts_path do  %>
-           購物車 <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
+           購物車 <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )  NT$ <%= render_cart_total_price(current_cart) %>
          <% end %>
        </li>
         <% if !current_user %>
