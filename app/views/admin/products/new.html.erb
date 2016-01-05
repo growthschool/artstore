@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <%= form_for [:admin, @product] do |f| %>
+    <div class="input-group">
+      <span class="input-group-addon"><%= f.label("標題") %></span>
+      <%= f.text_field :title ,{class: "form-control"} %>
+    </div><br />
+    <div class="input-group">
+      <span class="input-group-addon"><%= f.label("敘述") %></span>
+      <%= f.text_area :description ,{class: "form-control"} %>
+    </div><br />
+    <div class="input-group">
+      <span class="input-group-addon"><%= f.label("數量") %></span>
+      <%= f.text_field :quantity ,{class: "form-control"} %>
+    </div><br />
+    <div class="input-group">
+      <span class="input-group-addon"><%= f.label("價錢") %></span>
+      <%= f.text_field :price ,{class: "form-control"} %>
+    </div><br />x`
+    <div class="input-group">
+      <span class="input-group-addon"><%= f.label("圖片") %></span>
+      <%= f.simple_fields_for :photo do |c| %>
+        <%= c.input :image, as: :file %>
+      <% end %>
+
+    </div><br />
+
+    <%= f.submit "登錄商品", class: "btn btn-warning",  data: { disable_with: "上傳中..." } %>
+    <% end %>
+  </div>
+</div>
+

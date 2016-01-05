@@ -1,0 +1,22 @@
+<div class="row">
+	<div class="col-md-12">
+		<% @products.each do |product| %>
+      <%= link_to admin_product_path(product) do %>
+        <% if product.photo.present? %>
+          <%= image_tag(product.photo.image.thumb.url, class: "thumbnail") %>
+        <% else %>
+          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+        <% end %>
+      <% end %>
+		<div class="col-md-3 card">
+			<div class="card-block">
+			<h5 class="card-title">
+				<%= link_to(product.title, admin_product_path(product)) %> 
+			</h5>
+			<%= link_to("修改", edit_admin_product_path(product), class: "btn btn-default") %>
+			<%= link_to("刪除", admin_product_path(product), class: "btn btn-danger", method: :delete, data: { confirm: "確定要刪除此商品嗎？" }) %>
+			</div>
+		</div>
+		<% end %>	
+	</div>
+</div>
