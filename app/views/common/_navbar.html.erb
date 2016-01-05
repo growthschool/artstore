@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">電器行</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <% if !current_user %>
+          <li>
+            <%= link_to("登出", new_user_session_path) %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to("新增商品",new_admin_product_path) %>
+          </li>
+          <li>
+            <%= link_to("登出", destroy_user_session_path, method: :delete)%>
+          </li>
+        <% end %>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
