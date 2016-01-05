@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Artstore
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    = link_to "Product", admin_products_path
+    -if !current_user
+      = link_to "Login", new_user_session_path
+    -else
+      = link_to "Logout", destroy_user_session_path, method: :delete
+    = yield
