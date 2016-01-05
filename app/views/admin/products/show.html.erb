@@ -1,0 +1,23 @@
+<%= form_for [:admin, @product] do |f| %>
+
+  <div class="group">
+    <%= "標題" %>
+    <%= @product.title %>
+  </div>
+
+  <div class="group">
+    <%= "敘述" %>
+    <%= @product.description %>
+  </div>
+
+  <div class="group">
+    <%= "數量" %>
+    <%= @product.quantity %>
+  </div>
+
+  <div class="group">
+    <%= "價錢" %>
+    <%= @product.price %>
+  </div>
+
+<% end %>
