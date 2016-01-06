@@ -18,3 +18,9 @@
 
 
 config/database.yml
+ public/uploads
+
+*.jpg
+
+# Ignore application configuration
+/config/application.yml
