@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "awesome_rails_console"
 gem "devise"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
