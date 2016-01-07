@@ -1,4 +1,26 @@
 Rails.application.routes.draw do
+  
+  devise_for :users
+  # get 'user_root' => 'admin/products#index', as: :user_root
+  namespace :admin do
+    resources :users do
+      member do
+        post :to_admin
+        post :to_normal
+      end
+    end
+    resources :products
+  end
+  
+  resources :products do
+    member do
+      post :add_to_cart
+    end
+  end
+  
+  resources :carts, only: [:show]
+  
+  root 'products#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

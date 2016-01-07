@@ -1,0 +1,41 @@
+<h2> 購物車 </h2>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th width="220">Item Pic</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th width="100"> Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td>
+          <%= link_to product_path(item) do %>
+            <% if item.photo.present? %>
+              <%= image_tag(item.photo.avatar.thumb.url, class: "thumbnail") %>
+            <% else %>
+              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+            <% end %>
+          <% end %>
+        </td>
+        <td>
+          <%= item.title %>
+        </td>
+        <td>
+          <%= item.price %>
+        </td>
+        <td>
+          <%= link_to("Remove", "#") %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div class="total clearfix">
+	<div class="pull-right">
+		<!-- needschecking -->
+		<span>Total <%= current_cart.total_price %> NTD</span>
+  </div>
+</div>
