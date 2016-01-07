@@ -1,0 +1,12 @@
+<%= simple_form_for [:admin, @product], html: {multipart: true} do |f| %>
+	<div class="form-group">
+		<%= f.input :title, label: '標題', input_html: { class: "form-control"} %>
+		<%= f.input :description, label: '敘述', input_html: { rows: 10, class: "form-control"} %>
+		<%= f.input :quantity, label: '數量', input_html: { class: "form-control"} %>
+		<%= f.input :price, label: '價錢', input_html: { class: "form-control"} %>
+		<%= f.simple_fields_for :photo do |ff| %>
+			 <%= ff.input :avatar, label: '圖片', as: :file %>
+		<% end %>
+	</div>
+	<%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
+<% end %>
