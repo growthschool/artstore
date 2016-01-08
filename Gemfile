@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'devise-i18n-views'
+gem "susy"
 gem "fb_like_comment", github: "niclin/fb_like_comment"
 gem "figaro"
 gem "delayed_job_active_record"
