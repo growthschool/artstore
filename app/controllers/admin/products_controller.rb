@@ -18,10 +18,10 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new(product_params)
     # @product.avatar = params[:avatar]
     if @product.save
-      flash.now[:notice] = 'Product was created.'
-      render :show
+      flash[:success] = "Product was created."
+      redirect_to admin_products_path
     else
-      flash.now[:alert]  =  'Product was not created.'
+      flash.now[:error]  =  "Product was not created."
       render :new
     end
   end
@@ -36,21 +36,21 @@ class Admin::ProductsController < ApplicationController
 
   def update
     if @product.update(product_params)
-      flash.now[:notice] = 'Product was updated.'
-      render :show
+      flash[:success] = "Product was updated."
+      redirect_to admin_products_path
     else
-      flash.now[:alert]  =  'Product was not updated.'
+      flash.now[:error]  =  "Product was not updated."
       render :edit
     end
   end
   
   def destroy
     if @product.delete
-      flash[:warning] = 'Product was deleted.'
+      flash[:warning] = "Product was deleted."
     else
-      flash[:alert] = 'Product was not deleted!'
+      flash[:error] = "Product was not deleted."
     end
-    redirect_to :index
+    redirect_to admin_products_path
   end
 
   private

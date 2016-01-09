@@ -18,7 +18,11 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :carts, only: [:show]
+  resources :carts, only: [:show] do
+    collection do
+      post :checkout
+    end
+  end
   
   root 'products#index'
   # The priority is based upon order of creation: first created -> highest priority.

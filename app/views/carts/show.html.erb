@@ -39,3 +39,9 @@
 		<span>Total <%= current_cart.total_price %> NTD</span>
   </div>
 </div>
+<div class="total clearfix">
+	<div class="pull-right">
+		<!-- needschecking -->
+		<%= link_to "Checkout", checkout_carts_path, method: :post, class: "btn btn-primary" %>
+  </div>
+</div>

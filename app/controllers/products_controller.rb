@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
   def add_to_cart
     if !current_cart.items.include?(@product)
       current_cart.add_product_to_cart(@product)
-      flash[:notice] = "You have added #{@product.title} to your cart."
+      flash[:info] = "You have added #{@product.title} to your cart."
     else
       flash[:warning] = "You already have this item in your cart."
     end

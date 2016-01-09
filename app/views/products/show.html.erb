@@ -11,14 +11,7 @@
     </div>
     <div> 數量 : <%= @product.quantity %> </div>
     <div class="product-price"> $ <%= @product.price %> </div>
-		<% if !current_user.admin? %>
-	    <div class="pull-right">
-	      <%= link_to("加入購物車", add_to_cart_product_path(@product), method: :post, :class => "btn btn-primary btn-lg btn-danger") %>
-	    </div>
-		<% else %>
-	    <div class="pull-right">
-	      <%= link_to "edit", edit_admin_product_path(@product), class: "btn btn-primary btn-lg btn-warning" %>
-	    </div>
-		<% end %>
+			<%= link_to("加入購物車", add_to_cart_product_path(@product), method: :post, :class => "btn btn-primary btn-lg btn-danger") %>
+	  </div>
   </div>
 </div>

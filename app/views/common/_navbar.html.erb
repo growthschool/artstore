@@ -20,7 +20,7 @@
       <ul class="nav navbar-nav navbar-right">
 				<li>
 					<%= link_to cart_path(current_cart) do  %>
-					 	購物車 <i class="fa fa-shopping-cart"> </i> (<%= current_cart.cart_items_count %>)<!-- needschecking -->
+					 	購物車 <i class="fa fa-shopping-cart"> </i> <span class="badge"><%= current_cart.cart_items_count %></span><!-- needschecking -->
 					<% end %>
 				</li>
 				<% if !current_user %>

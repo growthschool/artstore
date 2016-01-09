@@ -6,10 +6,6 @@ class ApplicationController < ActionController::Base
   #helper_method allows views to access 
   helper_method :current_cart
   
-  def logout
-    session.clear
-  end
-  
   def admin_required
     if !current_user.admin?
       redirect_to "/"

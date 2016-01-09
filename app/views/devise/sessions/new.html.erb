@@ -1,0 +1,34 @@
+	<div class="col-md-offset-2">
+		<h2>Log in</h2>
+	</div>
+	<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form-horizontal" }) do |f| %>
+	  <div class="form-inputs">
+			<div class="form-group">
+				<%= f.label :email, class: "control-label col-md-2" %>
+				<div class="col-md-4">
+	    		<%= f.input :email, label: false, class: "form-control", required: false, autofocus: true %>
+				</div>
+			</div>
+			<div class="form-group">
+				<%= f.label :password, class: "control-label col-md-2" %>
+				<div class="col-md-4">
+		    	<%= f.input :password, label: false, class: "form-control", required: false %>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-md-offset-2 col-md-4">
+	    		<%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+				</div>
+			</div>
+	  </div>
+	  <div class="form-actions">
+			<div class="col-md-offset-2 col-md-4">
+	    	<%= f.button :submit, "Log in" %>
+			</div>
+	  </div>
+	<% end %>
+	<div class= "row">
+		<div class="col-md-offset-2 col-md-4">
+			<%= render "devise/shared/links" %>
+		</div>
+	</div>
