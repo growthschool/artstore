@@ -1,0 +1,33 @@
+<h2>User Lists</h2>
+<table class="table table-borded">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Email</th>
+      <th>Authority</th>
+      <th>Func</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.email %></td>
+      <td>
+        <% if user.admin? %>
+          Admin
+        <% else %>
+          Normal
+        <% end %>
+      </td>
+      <td>
+        <% if user.admin? %>
+          <%= link_to("Change to Normal", "#", class: "btn btn-info") %>
+        <% else %>
+          <%= link_to("Change to Admin", "#", class: "btn btn-primary") %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
