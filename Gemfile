@@ -1,6 +1,16 @@
 source 'https://rubygems.org'
 
+gem 'font-awesome-rails'
 
+gem 'carrierwave'
+
+gem 'mini_magick'
+
+gem 'simple_form'
+
+gem 'bootstrap-sass'
+
+gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
@@ -42,4 +52,3 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
