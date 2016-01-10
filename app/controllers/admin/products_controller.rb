@@ -1,4 +1,7 @@
 class Admin::ProductsController < ApplicationController
+	
+	layout "admin"
+
 	before_action :authenticate_user!
 	before_action :admin_required
 
@@ -6,6 +9,7 @@ class Admin::ProductsController < ApplicationController
 		@products = Product.all
 	end
 
+	
 
 	def new
 		@product = Product.new
