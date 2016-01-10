@@ -18,3 +18,4 @@
 
 
 config/database.yml
+pubic/uploads
