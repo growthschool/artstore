@@ -1,0 +1,13 @@
+<ul>
+  <% @products.each do |product| %>
+
+    <li> <%= link_to(product.title, admin_product_path(product)) %> </li>
+    <td><%= product.description %></td>
+          <td>
+              <%= link_to("Edit", edit_admin_product_path(product), class: "btn btn-sm btn-default")%>
+              <%= link_to("Delete", admin_product_path(product),    class: "btn btn-sm btn-default", 
+                          method: :delete, data: { confirm: "Are you sure?" } )%>
+          </td>
+
+  <% end %>
+</ul>
