@@ -8,7 +8,12 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+	<%= render "common/navbar" %>
+	<%= notice_message %>
+	<%= yield %>
+	<%= link_to(content_tag(:i, nil, class: 'fa fa-home fa-2x'), products_path) %>
+</div>
 
 </body>
 </html>
