@@ -10,6 +10,7 @@
         <tr>
           <th colspan="2">商品資訊</th>
           <th>單價</th>
+          <th>數量</th>
           <th>操作選項 </th>
         </tr>
       </thead>
@@ -32,6 +33,14 @@
             <td>
               <%= product.price %>
             </td>
+            <td>
+            <% item = current_cart.cart_items.find_by(product_id: product) %>
+            
+            <%= form_for item, url: item_path(product) do |f| %>
+            <%= f.select :quantity, [1,2,3,4,5] %>
+            <%= f.submit "更新", data: {disable_with: "Submiting..." } %>
+            <% end %>
+          </td>
             <td>
               <%= link_to item_path(product), method: :delete do %>
               <i class="fa fa-trash"></i>
