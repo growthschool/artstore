@@ -20,12 +20,8 @@
             <%= link_to("加入購物車", add_to_cart_product_path(@product), method: :post,
                  class: "btn btn-lg btn-danger") %>
       <% else %>
-        已銷售一空，無法購買
+      <div class="bg-danger"> 商品已售完，請等待補貨！ </div>
       <% end %>
-       <%= fb_like(product_url(@product)) %>
-    <div class="col-md-8" col-md-offset-2">
-      <%= fb_comments(product_url(@product), height: 500, width: 600) %>
-    </div>
    </div>
   </div>
 </div>
