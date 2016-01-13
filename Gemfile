@@ -6,6 +6,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem "carrierwave"
 gem "mini_magick"
+gem "aasm"
 #
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
