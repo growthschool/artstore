@@ -15,36 +15,6 @@ r * defined in the other CSS/SCSS files in this directory. It is generally bette
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
- @import "susy";
-
- /* -----SUSY setting----- */
-
-$total-columns  : 12;
-$column-width   : 60px;
-$gutter-width   : 20px;
-$grid-padding   : 10px;
-
-  /*以上是用來規劃基本格線設定 */
-
-
-$phone: 320px 6 480px;
-$pad: 12 1024px;
-$desktop: 1025px 18;
-
-
-/* ----- end SUSY setting ----- */
-
-
-@media (max-width: 320px) {
-    body {
-        padding-left: 0px;
-        padding-right: 0px;
-    }
-    .navbar-fixed-top {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-}
 
  .product-price{
    padding-top: 20px;
@@ -79,21 +49,6 @@ body {
   @include box-shadow;
   background: white;
   font-weight: bold;
-}
-
-.navbar {
-  margin-bottom: 50px;
-  @include box-shadow;
-  border: none;
-  .navbar-brand {
-    text-transform: uppercase;
-    letter-spacing: +3px;
-    font-weight: bold;
-    font-size: 25px;
-    a {
-      color: $red;
-    }
-  }
 }
 
 .product {

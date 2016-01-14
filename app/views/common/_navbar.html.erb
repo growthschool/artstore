@@ -1,21 +1,17 @@
-<nav class="navbar navbar-default" role="navigation">
+<!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<nav class="orange" role="navigation">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-brand">
-      <a class="nav navbar-nav" href="/">SSBuy</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li>
-          <%= link_to("產品", products_path) %>
-        </li>
+    <div class="nav-wrapper container">
+     <a id="logo-container" href="/" class="brand-logo">SSBuy</a>
+      <ul class="right hide-on-med-and-down">
         <li>
           <%= link_to("關於本站", "/pages/about") %>
         </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="right hide-on-med-and-down">
        <li>
          <%= link_to carts_path do  %>
            購物車 <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )  NT$ <%= render_cart_total_price(current_cart) %>
@@ -50,8 +46,12 @@
             </ul>
           </li>
         <% end %>
-
       </ul>
+
+
+      <!-- nav_for_mobile -->
+    <%= render "common/navbar_mobile" %>
+
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
