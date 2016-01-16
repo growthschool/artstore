@@ -7,6 +7,23 @@ class Cart < ActiveRecord::Base
     ci = cart.cart_items.build
     ci.product = product
     ci.save
+    # (黑魔法版)
     # items << product
   end
+
+  def total_price
+    sum = 0
+
+    items.each do |item|
+      sum = sum + item.price
+    end
+
+    return sum
+  end
+
+  # (黑魔法版)
+  # def total_price
+  #   items.inject(0) {|sum,item| sum + item.price}
+  # end
+
 end
