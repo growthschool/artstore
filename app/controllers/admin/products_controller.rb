@@ -11,6 +11,7 @@ class Admin::ProductsController < ApplicationController
 	end
 	def create
 		@product = Product.new(product_params)
+		@product.max_quantity = @product.quantity
 		if @product.save
 			redirect_to admin_products_path
 		else
