@@ -7,8 +7,8 @@ class Cart < ActiveRecord::Base
     ci = cart.cart_items.build
     ci.product = product
     ci.save
-    # (黑魔法版)
-    # items << product
+    #(黑魔法版)
+    #items << product
   end
 
   def total_price
