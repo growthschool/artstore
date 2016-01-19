@@ -1,9 +1,4 @@
-class Admin::ProductsController < ApplicationController
-	layout "admin"
-
-	before_action :authenticate_user!
-	before_action :admin_required
-	
+class Admin::ProductsController < AdminController	
 	def new
 		@product = Product.new
 		/build_photo 這是產生關聯後的一種method/
