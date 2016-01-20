@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-md-12">
+
+  <%= link_to("清空購物車", clean_carts_path ,
+              method: :delete , class: "pull-right",
+              style: "text-decoration: underline;",
+              data: { confirm: "你確定要清空整個購物車嗎？"} )%>
+
+
+    <h2> 購物車 </h2>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">商品資訊</th>
+          <th>單價</th>
+          <th>數量</th>
+          <th>操作選項</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% current_cart.items.each do |product| %>
+          <tr>
+            <td>
+              <%= link_to product_path(product) do %>
+                <% if product.photo.present? %>
+                  <%= image_tag(product.photo.image.thumb.url, class: "thumbnail") %>
+                <% else %>
+                  <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+                <% end %>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to(product.title, product_path(product)) %>
+            </td>
+            <td>
+              <%= product.price %>
+            </td>
+            <td>
+              <% item = current_cart.find_cart_item(product) %>
+
+              <%= form_for item, url: item_path(product) do |f| %>
+                <%= f.select :quantity, 1..product.quantity %>
+                <%= f.submit "更新", data: { disable_with: "Submiting..." } %>
+              <% end -%>
+            </td>
+            <td>
+              <%= link_to item_path(product), method: :delete do %>
+                <i class="fa fa-trash"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+
+    <br>
+
+    <div class="total clearfix">
+      <span class="pull-right">
+         <span> 總計 <%= render_cart_total_price(current_cart) %> NTD  </span>
+      </span>
+    </div>
+
+    <hr>
+
+    <div class="checkout clearfix">
+      <%= link_to("確認結賬", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
+    </div>
+  </div>
+</div>
