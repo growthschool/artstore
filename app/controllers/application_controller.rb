@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
      redirect_to "/"
    end
  end
+ 
   helper_method :current_cart
 
   def current_cart
