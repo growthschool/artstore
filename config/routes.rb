@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
   namespace :admin do
     resources :products 
+    resources :orders
     resources :users do 
       member do
         post :to_admin
@@ -34,6 +35,11 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :items, controller: "cart_items"
+
+  namespace :account do
+    resources :orders
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
