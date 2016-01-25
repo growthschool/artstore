@@ -46,3 +46,5 @@ class Admin::ProductsController < ApplicationController
 	params.require(:product).permit(:title, :description, :quantity, :price, photo_attributes: [:image, :id])
   end
 end
+
+
