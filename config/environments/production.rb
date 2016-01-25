@@ -76,4 +76,13 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.after_initialize do
+    # 因為我們還要測試在 heroku 的刷卡機制，所以先暫時把 production 裡的 pay2go 環境設定改成開
+    # Pay2go.integration_mode = :production 
+    Pay2go.integration_mode = :development
+  end
+
+  config.action_mailer.default_url_options = { host: 'polar-dusk-96320.herokuapp.com' } # herokuapp 網址
+
 end
