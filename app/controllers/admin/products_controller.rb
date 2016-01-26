@@ -8,6 +8,18 @@ class Admin::ProductsController < ApplicationController
   def new
     @product = Product.new
   end
+  def edit
+    @product = Product.find(params[:product_id])
+  end
+
+  def update
+    @product = Product.find(params[:product_id])
+    if @product.update(product_params)
+      redirect_to admin_products_path(@product)
+    else
+      render :edit
+    end
+  end
 
   def create
     @product = Product.new(product_params)
