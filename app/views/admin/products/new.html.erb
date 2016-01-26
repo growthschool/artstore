@@ -6,6 +6,11 @@
   <%= f.input :quantity, label: '數量'  %>
   <%= f.input :price, label: '價錢'  %>
   <%= f.button :submit  %>
+<%= f.simple_field_for :photo do |c|  %>
+  <%= c.input :image, as: :file  %>
+<% end %>
 <% end %>
 </div>
+</div>
+<%= f.submit "Submit", data: {disable_with: "Submit..."} %>
 </div>

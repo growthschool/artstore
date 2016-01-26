@@ -7,21 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="navbar navbar-default">
-    <div class="navbar-inner">
-      <div class="container">
-        <div class="nav-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <% if !current_user %>
-              <li><%= link_to "登入", new_user_session_path %></li>
-            <% else %>
-              <li><%= link_to("登出", destroy_user_session_path) %></li>
-            <% end %>
-         </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-<%= yield %>
+
+<div class="container">
+  <%= render "common/navbar"  %>
+  <%= yield  %>
+</div>
 </body>
 </html>

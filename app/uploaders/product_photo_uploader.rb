@@ -3,15 +3,15 @@
 class ProductPhotoUploader < CarrierWave::Uploader::Base
   include CarrieWave::RMagick
   version :small do
-    process :resize_and_pad => [200,200]
+    process :resize_and_fill => [200,200]
     process :convert => 'png'
   end
   version :medium do
-    process :resize_and_pad => [400,400]
+    process :resize_and_fill => [400,400]
     process :convert => 'png'
   end
   version :large do
-    process :resize_and_pad => [800,800]
+    process :resize_and_fill => [800,800]
     process :convert => 'png'
   end
   # Include RMagick or MiniMagick support:
