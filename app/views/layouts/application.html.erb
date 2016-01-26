@@ -8,13 +8,20 @@
 </head>
 <body>
   <div class="navbar navbar-default">
+    <div class="navbar-inner">
+      <div class="container">
+        <div class="nav-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% if !current_user %>
+              <li><%= link_to "登入", new_user_session_path %></li>
+            <% else %>
+              <li><%= link_to("登出", destroy_user_session_path) %></li>
+            <% end %>
+         </ul>
+        </div>
+      </div>
+    </div>
   </div>
-<% if !current_user %>
-  <%= link_to("登入", new_user_session_path) %>
-<% else %>
-  <%= link_to("登出", destroy_user_session_path) %>
-<% end %>
 <%= yield %>
-
 </body>
 </html>
