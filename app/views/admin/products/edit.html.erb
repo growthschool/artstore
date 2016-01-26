@@ -7,7 +7,7 @@
   <%= f.input :quantity, label: '數量'  %>
   <%= f.input :price, label: '價錢'  %>
   <div class="form-group">
-  <%= f.simple_field_for :photo do |c|  %>
+  <%= f.simple_fields_for :photo do |c|  %>
     <%= c.input :image, as: :file  %>
   <% end %>
   </div>

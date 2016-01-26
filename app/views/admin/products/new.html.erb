@@ -1,3 +1,4 @@
+<h2>新增產品</h2>
 <div class="row">
 <div class="col-md-5">
 <%= simple_form_for [:admin, @product] do |f| %>
@@ -5,12 +6,11 @@
   <%= f.input :description, label: '敘述', as: :text  %>
   <%= f.input :quantity, label: '數量'  %>
   <%= f.input :price, label: '價錢'  %>
-  <%= f.button :submit  %>
-<%= f.simple_field_for :photo do |c|  %>
+<%= f.simple_fields_for :photo do |c|  %>
   <%= c.input :image, as: :file  %>
 <% end %>
+<%= f.submit "Submit", data: {disable_with: "Submit..."} %>
 <% end %>
 </div>
 </div>
-<%= f.submit "Submit", data: {disable_with: "Submit..."} %>
 </div>
