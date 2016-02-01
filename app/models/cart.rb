@@ -8,4 +8,8 @@ class Cart < ActiveRecord::Base
   def total_price
     items.inject(0) {|sum, item| sum + item.price}
   end
+
+  def clean!
+    cart_items.destroy_all
+  end
 end
