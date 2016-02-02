@@ -31,7 +31,7 @@
 
                 <%= form_for item, url: item_path(product) do |f| %>
                   <%= f.select :quantity, 1..product.quantity  %>
-                  <%= f.submit "更新"，data: { diable_with: "Submitting..."}  %>
+                  <%= f.submit "更新" %>
                 <% end %>
               </td>
               <td>
