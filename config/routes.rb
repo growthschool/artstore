@@ -34,6 +34,8 @@ Rails.application.routes.draw do
   end
 
   root "products#index"
+
+  get "/pages/:action" , :controller => "pages"
   
   resources :carts do
     collection do
