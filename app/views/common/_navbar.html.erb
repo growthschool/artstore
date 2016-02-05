@@ -21,6 +21,7 @@
             購物車 <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> ) 
           <% end %>
         </li>
+      </ul>
 
         <% if !current_user %>
           <li> <%= link_to("登入", new_user_session_path) %> </li>
