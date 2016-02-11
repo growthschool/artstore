@@ -1,5 +1,19 @@
 source 'https://rubygems.org'
+ gem "bootstrap-sass"
+ gem "simple_form"
+ gem "carrierwave"
+ gem "mini_magick"
+ gem "font-awesome-rails"
+ gem "devise"
+ gem "letter_opener", group: :development
+ gem "aasm"
+ gem "pay2go"
+ gem 'sqlite3', group: :development
 
+  group :production do
+    gem "pg"
+    gem "rails_12factor"
+  end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
