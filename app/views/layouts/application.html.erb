@@ -6,13 +6,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-    <% if !current_user %>
-      <%= link_to("登入", new_user_session_path) %>
-    <% else %>
-      <%= link_to("登出", destroy_user_session_path, method: :delete) %>
-    <% end %>
-<%= yield %>
+<body background="https://s-media-cache-ak0.pinimg.com/564x/c2/14/c0/c214c0dc7b19310cff04ce8e03c12785.jpg"no-repeat>
+     <div class="container">
+       <%= render "common/navbar" %>
+       <%= notice_message %>
+       <%= yield %>
+     </div>
 
 </body>
 </html>

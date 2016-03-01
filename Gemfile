@@ -3,6 +3,16 @@ source 'https://rubygems.org'
 #安裝bootstrap-sass
 gem "bootstrap-sass"
 
+#拿來做漂亮的produtc_new頁面
+gem "simple_form"
+
+#拿來上傳圖片
+gem "carrierwave"
+gem "mini_magick"
+
+#用 icon 點綴頁面設計
+gem "font-awesome-rails"
+
 gem "devise"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
