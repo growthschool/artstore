@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem "devise"
 gem "bootstrap-sass"
 gem "simple_form"
+gem "carrierwave"
+gem "mini_magick"
 
 
 group :development, :test do
