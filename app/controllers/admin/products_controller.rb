@@ -1,9 +1,19 @@
 class Admin::ProductsController < ApplicationController
+
+  def index
+    @products = Product.all
+    end
+layout "admin"
   before_action :authenticate_user!
   before_action :admin_required
+
   def index
      @products = Product.all
    end
+   def show
+      @product = Product.find(params[:id])
+    end
+
   def new
     @product = Product.new
     @photo = @product.build_photo
