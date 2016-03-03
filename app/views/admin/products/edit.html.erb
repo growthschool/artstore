@@ -15,6 +15,11 @@
     <div class="group" >
       <%= f.input :price, label: "價格" %>
     </div>
+    <div class="form-group" >
+      <%= f.simple_fields_for :photo do |c| %>
+        <%= c.input :image, as: :file %>
+      <% end %>
+    </div>
     <br>
   <%= f.submit "Submit", data: { disable_with: "Submmitting.."} %>
 
