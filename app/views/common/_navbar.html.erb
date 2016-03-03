@@ -1,4 +1,4 @@
-<nav class="nav navbar-default" role="navigation">
+<nav class="nav navbar-default" role="navigation" style="margin-bottom:10px">
 <div class="container-fluid">
 <div class="nav navbar-header">
 <a href="/" class="nav navbar-brand">artstore</a>
@@ -8,6 +8,7 @@
   <li><%= link_to("商品", products_path) %></li>
 </ul>
 <ul class="nav navbar-nav navbar-right">
+<li><%= link_to "#" do %>購物車(0)<i class="fa fa-shopping-cart"></i><% end %></li>
 <% if !current_user %>
   <li><%= link_to("登入", new_user_session_path) %></li>
 <% else %>
@@ -19,11 +20,10 @@
 
     <ul class="dropdown-menu">
     <% if current_user.is_admin? %>
-      <li><%= link_to("後台", new_admin_product_path) %>
+      <li><%= link_to("商品後台", admin_products_path) %></li>
+      <li><%= link_to("使用者後台", admin_users_path) %></li>
+    <% end %>
       <li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li>
-      <% else %>
-      <li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li>
-      <% end %>
     </ul>
   </li>
   <% end %>
