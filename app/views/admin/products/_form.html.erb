@@ -1,0 +1,23 @@
+<%= simple_form_for [:admin, @product] do |f| %>
+
+  <div class="form-group">
+    <%= f.input :title, autofocus: true, input_html: { class: 'form-control' } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :description, input_html: { class: 'form-control' } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :quantity, input_html: { class: 'form-control' } %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :price, input_html: { class: 'form-control' } %>
+  </div>
+
+  <div class="group-actions">
+    <%= f.submit "Submit", class: 'btn btn-primary', data: { disable_with: 'Submitting...' } %>
+  </div>
+
+<% end %>
