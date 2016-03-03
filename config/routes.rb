@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   resources :products  
   namespace :admin do
 	resources :products
+	resources :users do 
+		member do
+			post :to_admin
+			post :to_normal
+		end
+	end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
