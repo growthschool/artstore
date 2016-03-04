@@ -1,0 +1,34 @@
+<h2>User List</h2>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Email</th>
+      <th>Permission</th>
+      <th>Functionality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td>
+          <% if user.admin? %>
+            Admin
+          <% else %>
+            End User
+          <% end %>
+        </td>
+        <td>
+          <% if user.admin? %>
+            <%= link_to("Demote to end user", to_normal_admin_user_path(user), method: :post, class: 'btn btn-info' ) %>
+          <% else %>
+            <%= link_to("Promote to admin", to_admin_admin_user_path(user), method: :post, class: 'btn btn-primary' ) %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

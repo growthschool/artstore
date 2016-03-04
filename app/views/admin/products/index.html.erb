@@ -1,28 +1,34 @@
-<div class="col-md-12">
-  <%= link_to("Add Product", new_admin_product_path, class: 'btn btn-primary pull-right') %>
+<h2>Product List</h2>
+<%= link_to("Add Product", new_admin_product_path, { :class => 'btn btn-primary pull-right', :style=> 'margin-bottom: 20px;' }) %>
 
-  <table class="table">
-    <thead>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th width="220">Image</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
       <tr>
-        <th>Image</th>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Price</th>
-        <th>Operation</th>
+        <td><%= product.id %></td>
+        <td>
+          <% if product.photo.present? %>
+            <%= image_tag(product.photo.image.thumb.url, class: 'thumbnail') %>
+          <% else %>
+            <%= image_tag('http://placehold.it/200x200&text=No Image', class: 'thumbnail') %>
+          <% end %>
+        </td>
+        <td><%= link_to(product.title, admin_product_path(product)) %></td>
+        <td><%= product.price %></td>
+        <td>
+          <%= link_to("Edit", edit_admin_product_path(product), class: 'btn btn-default btn-xs') %>
+          <%= link_to("Delete", admin_product_path(product), class: 'btn btn-default btn-xs', method: :delete, data: { confirm: 'Are you sure?' }) %>
+        </td>
       </tr>
-    </thead>
-    <tbody>
-      <% @products.each do |product| %>
-        <tr>
-          <td>Image</td>
-          <td><%= link_to(product.title, admin_product_path(product)) %></td>
-          <td><%= product.description %></td>
-          <td><%= product.price %></td>
-          <td>
-            <%= link_to("Edit", edit_admin_product_path(product), class: 'btn btn-default btn-xs') %>
-          </td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+    <% end %>
+  </tbody>
+</table>
