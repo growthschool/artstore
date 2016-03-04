@@ -1,4 +1,4 @@
-<h2>新增商品</h2>
+<h2>編輯商品</h2>
 <%= simple_form_for [:admin, @product] do |f| %>
 
 <div class="group">
@@ -20,7 +20,7 @@
 <% if @product.photo.present? %>
 <span>目前商品圖</span><br>
 <%= image_tag(@product.photo.image.thumb.url, class: "thumbnail") %>
-<% end %>
+<%end %>
 
 <div class="form-group">
 <%= f.simple_fields_for :photo do |c| %>
