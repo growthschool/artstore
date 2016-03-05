@@ -1,5 +1,7 @@
 class Admin::ProductsController < ApplicationController
 
+  layout "admin"
+
   before_action :authenticate_user!
   before_action :admin_required
 
@@ -16,7 +18,7 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to admin_products_path
+      redirect_to admin_products_path, notice: "New product saved!"
     else
       render :new
     end
@@ -34,7 +36,7 @@ class Admin::ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
-      redirect_to admin_products_path#, notice: "Update successful!"
+      redirect_to admin_products_path, notice: "Update successful!"
     else
       render :edit
     end
@@ -44,7 +46,7 @@ class Admin::ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     @product.destroy
-    redirect_to admin_products_path
+    redirect_to admin_products_path, alert: "Product deleted."
   end
 
   private
