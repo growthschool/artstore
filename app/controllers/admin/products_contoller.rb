@@ -1,5 +1,7 @@
 class Admin::ProductsController < ApplicationController
 
+layout "admin"
+
 before_action :authenticate_user!
 before_action :admin_required
 
@@ -13,6 +15,20 @@ before_action :admin_required
     @product = Product.new
   end
 
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+  end
+
+    if @product.update(product_params)
+      redirect_to admin_products_path
+    else
+      render :edit
+    end
+  end
   def create
     @product = Product.new(product_params)
 
