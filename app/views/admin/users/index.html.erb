@@ -1,0 +1,31 @@
+<h2>使用者列表</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>使用者email</th>
+      <th>使用者權限</th>
+      <th>使用者管理</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.email %></td>
+      <td><% if user.is_admin? %>
+          <%= "管理者" %>
+          <% else %>
+          <%= "一般用戶" %>
+          <% end %></td>
+      <td><% if user.is_admin? %>
+          <%= link_to("降為一般用戶", to_normal_admin_user_path(user), class: "btn btn-info btn-sm", method: :post) %>
+          <% else %>
+          <%= link_to("提升為管理員", to_admin_admin_user_path(user), class: "btn btn-primary btn-sm", method: :post) %>
+          <% end %>
+        </td>
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>
