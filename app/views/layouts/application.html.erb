@@ -8,13 +8,11 @@
 </head>
 <body>
 
-<% if !current_user %>
-  <%=  link_to("log in",new_user_session_path)%>
-<% else %>
-  <%= link_to("log out", destroy_user_session_path, method: :delete)%>
-<% end %>
-
-<%= yield %>
+   <div class="container">
+     <%= render "common/navbar" %>
+     <%= notice_message %>
+     <%= yield %>
+   </div>
 
 </body>
 </html>
