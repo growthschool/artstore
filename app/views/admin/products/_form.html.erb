@@ -1,0 +1,21 @@
+<%= simple_form_for product do |f| %>
+<div class="form-product">
+  <%= f.input :title, input_html: { class: "form-control"} %>
+  <%= f.input :description, input_html: { class: "form-control"} %>
+  <%= f.input :quantity, input_html: { class: "form-control"} %>
+  <%= f.input :price, input_html: { class: "form-control"} %>
+  <% if @photo.image.present? %>
+    <span>目前商品圖</span>
+    <br>
+    <%= image_tag(@photo.image.thumb.url) %>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.simple_fields_for :photo do |c| %>
+    <%= c.input :image , as: :file %>
+    <% end %>
+  </div>
+</div>
+
+<%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
+<% end %>
