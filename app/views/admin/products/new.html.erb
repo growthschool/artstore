@@ -1,25 +1,9 @@
-<%= form_for [:admin, @product] do |f| %>
-
-  <div class="group">
-    <%= f.label("標題") %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="group">
-    <%= f.label("敘述") %>
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="group">
-    <%= f.label("數量") %>
-    <%= f.text_field :quantity %>
-  </div>
-
-  <div class="group">
-    <%= f.label("價錢") %>
-    <%= f.text_field :price %>
-  </div>
-
-  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
-
+<%= simple_form_for [:admin, @product] do |f| %>
+<div class="form-group">
+  <%= f.input :title, input_html: { class: "form-control"} %>
+  <%= f.input :description, input_html: { class: "form-control"} %>
+  <%= f.input :quantity, input_html: { class: "form-control"} %>
+  <%= f.input :price, input_html: { class: "form-control"} %>
+</div>
+<%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
 <% end %>
