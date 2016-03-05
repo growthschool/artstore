@@ -1,6 +1,25 @@
-<ul>
-  <% @products.each do |product| %>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>Title</td>
+      <td>Description</td>
+      <td>Price</td>
+    </tr>
+  </thead>
+  <tbody>
 
-    <li> <%= link_to(product.title, admin_product_path(product)) %> </li>
-  <% end %>
-</ul>
+    <% @products.each do |product| %>
+    <tr>
+      <td><%= product.id %></td>
+      <td><%= link_to(product.title, admin_product_path(product)) %>
+      </td>
+      <td><%= product.description %></td>
+      <td><%= product.price %></td>
+      <td><%= link_to("Edit", edit_admin_product_path(product), class: "btn btn-sm btn-warning")%></td>
+      <td><%= link_to("Delete", admin_product_path(product), class: "btn btn-sm btn-danger",
+                  method: :delete, data: { confirm: "Are you sure?" } )%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
