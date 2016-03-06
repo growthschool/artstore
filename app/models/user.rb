@@ -7,4 +7,12 @@ class User < ActiveRecord::Base
   def admin?
     is_admin
   end
+
+  def to_admin
+    self.update_column(is_admin: true)
+  end
+
+  def to_normal
+    self.update_column(is_admin: false)
+  end
 end

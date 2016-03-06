@@ -1,4 +1,4 @@
-<h2> 新增商品 </h2>
+<h2> 編輯商品 </h2>
 
 <%= simple_form_for [:admin, @product] do |f| %>
 
@@ -19,7 +19,7 @@
   </div>
 
   <% if @photo.image.present? %>
-    <span>目前商品圖</span> <br>
+    <span>目前商品圖</span><br>
     <%= image_tag(@photo.image.thumb.url) %>
   <% end %>
 
@@ -28,7 +28,6 @@
       <%= c.input :image, as: :file %>
     <% end %>
   </div>
-
 
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 
