@@ -1,0 +1,14 @@
+<div class="col-md-4 col-md-offset-4">
+  <h1>Edit product</h1>
+
+  <hr>
+  <%= simple_form_for @product do |f| %>
+    <div class="form-group">
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :quantity %>
+      <%= f.input :price %>
+    </div>
+    <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
+  <% end %>
+</div>
