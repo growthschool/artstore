@@ -20,6 +20,17 @@
   <%= f.text_field :price %>
 </div>
 
+<% if @photo.image.present? %>
+  <span>目前商品圖</span> <br>
+  <%= image_tag(@photo.image.thumb.url) %>
+<% end %>
+
+<div class="form-group">
+  <%= f.simple_fields_for :photo do |c| %>
+    <%= c.input :image, as: :file %>
+  <% end %>
+</div>
+
   <%= f.submit "submit", data: {disable_with: "Submitting"} %>
 
 <% end %>
