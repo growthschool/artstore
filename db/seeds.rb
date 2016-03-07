@@ -12,3 +12,17 @@ u.password = "12345678"
 u.password_confirmation = "12345678"
 u.is_admin = true
 u.save
+
+u = User.new
+u.email = "observer132@gamil.com"
+u.password = "12345678"
+u.password_confirmation = "12345678"
+u.is_admin = true
+u.save
+
+u = User.new
+u.email = "uesr@test.com"
+u.password = "12345678"
+u.password_confirmation = "12345678"
+u.is_admin = false
+u.save
