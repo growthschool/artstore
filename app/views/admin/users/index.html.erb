@@ -10,7 +10,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @users.each do |user| %>
+       <% @users.each do |user| %>
       <tr>
         <td>
           <%= user.id %>
@@ -20,12 +20,17 @@
         </td>
         <td>
           <% if user.admin? %>
-+            <%= link_to("轉為一般使用者", to_normal_admin_user_path(user), method: :post, class: "btn btn-info") %>
-+         <% else %>
-+<%= link_to("轉為管理者", to_admin_admin_user_path(user), method: :post, class: "btn btn-primary") %>
-+         <% end %>        </td>
+            管理者
+          <% else %>
+            一般使用者
+          <% end %>
+        </td>
         <td>
-          轉換權限的按鈕 (待處理)
+         <% if user.admin? %>
+           <%= link_to("轉為一般使用者", "#", class: "btn btn-info") %>
+         <% else %>
+           <%= link_to("轉為管理者", "#", class: "btn btn-primary") %>
+         <% end %>
         </td>
       </tr>
     <% end %>
