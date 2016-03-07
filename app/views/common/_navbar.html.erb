@@ -15,7 +15,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
           <%= link_to "#" do %>
-          購物車 <i class="fa fa-shopping-cart"> </i> (0)
+          購物車 <i class="fa fa-shopping-cart"> </i> (<%= render_cart_items_count(current_cart) %>)
           <% end %>
         </li>
 
