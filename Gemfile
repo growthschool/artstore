@@ -24,8 +24,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :production do
-  gem "pg"
-  gem "rails_12factor"
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Use ActiveModel has_secure_password
@@ -37,12 +37,12 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem "devise"
+gem 'devise'
 gem 'simple_form'
-gem "bootstrap-sass"
-gem "carrierwave"
-gem "mini_magick"
-gem "font-awesome-rails"
+gem 'bootstrap-sass'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'font-awesome-rails'
 
 
 group :development, :test do
