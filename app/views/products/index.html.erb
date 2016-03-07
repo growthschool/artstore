@@ -1,36 +1,14 @@
-<div class="col-md-12">
-  <% if current_user.admin? %>
-    <div class="group">
-      <%= link_to("New product", new_admin_product_path, class: "btn btn-primary pull-right") %>
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-xs-6 col-md-3">
+      <%= link_to product_path(product) do %>
+        <% if product.photo.present? %>
+          <%= image_tag(product.photo.image.thumb.url, class: "thumbnail") %>
+        <% else %>
+          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+        <% end %>
+      <% end %>
+      <%= product.title %> $ <%= product.price %>
     </div>
   <% end %>
-
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <td>#</td>
-        <td>Title</td>
-        <td>Description</td>
-        <td>Quantity</td>
-        <td>Price</td>
-      </tr>
-    </thead>
-    <tbody>
-      <% @products.each do |product| %>
-        <tr>
-          <td>#</td>
-          <td><%= link_to(product.title, product_path(product)) %></td>
-          <td><%= product.description %></td>
-          <td><%= product.quantity %></td>
-          <td><%= product.price %></td>
-          <% if current_user.admin? %>
-            <td>
-                <%= link_to("Edit", edit_admin_product_path(product), class: "btn btn-sm btn-default") %>
-                <%= link_to("Delete", admin_product_path(product), class: "btn btn-sm btn-default", method: :delete, data: { confirm: "Are you sure?" }) %>
-            </td>
-          <% end %>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
 </div>

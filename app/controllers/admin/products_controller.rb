@@ -4,12 +4,10 @@ class Admin::ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    redirect_to products_path(@products)
   end
 
   def show
     @product = Product.find(params[:id])
-    redirect_to product_path(@product)
   end
 
   def new
