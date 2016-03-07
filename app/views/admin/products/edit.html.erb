@@ -18,7 +18,7 @@
     <%= f.input :price %>
   </div>
 
-  <% if @photo.image.precent? %>
+  <% if @photo.image.present? %>
     <span>目前商品圖</span><br>
     <%= image_tag(@photo.image.thumb.url) %>
   <% end %>
