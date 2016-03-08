@@ -3,7 +3,7 @@ class Admin::ProductsController < ApplicationController
   def index
     @products = Product.all
     end
-layout "admin"
+  layout "admin"
   before_action :authenticate_user!
   before_action :admin_required
 
