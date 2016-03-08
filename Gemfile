@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "devise"
 
+gem "bootstrap-sass"
+
 gem "awesome_rails_console" # 讓你的 rails console 變整齊漂亮的 gem
 
 group :development, :test do
