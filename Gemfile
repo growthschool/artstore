@@ -32,19 +32,21 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise'
+gem "devise"
 
-gem 'bootstrap-sass'
+gem "bootstrap-sass"
 
-gem 'simple_form'
+gem "simple_form"
 
-gem 'carrierwave'
+gem "carrierwave"
 
-gem 'mini_magick'
+gem "mini_magick"
 
-gem 'font-awesome-rails'
+gem "font-awesome-rails"
 
-gem 'awesome_rails_console'
+gem "awesome_rails_console"
+
+gem "aasm"
 
 group :production do
   gem "pg"
