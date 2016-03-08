@@ -1,6 +1,12 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
 
+  def show
+    @order = Order.find(params[:id])
+    @order_info = @order.info
+    @order_items = @order.items
+  end
+
   def create
     @order = current_user.orders.build(order_params)
 
