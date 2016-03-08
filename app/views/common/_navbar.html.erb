@@ -9,13 +9,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active">
-          <%= link_to("Products", "products_path") %>
+          <%= link_to("Products", products_path) %>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
 	<li>
-		<%= link_to "#" do %>
-			shopping cart <i class="fa fa-shopping-cart"> </i>(0)
+		<%= link_to carts_path do %>
+			shopping cart <i class="fa fa-shopping-cart"> </i>(<%= render_cart_items_count(current_cart)%>)
 		<% end %>
 	</li>
 
@@ -35,7 +35,7 @@
 		<% end %>
               <li>
                 <%= link_to("登出", destroy_user_session_path, method: :delete ) %>
-	
+
               </li>
             </ul>
           </li>
