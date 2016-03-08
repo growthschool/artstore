@@ -21,7 +21,6 @@ before_action :admin_required
 
   def update
     @product = Product.find(params[:id])
-  end
 
     if @product.update(product_params)
       redirect_to admin_products_path
@@ -29,6 +28,7 @@ before_action :admin_required
       render :edit
     end
   end
+
   def create
     @product = Product.new(product_params)
 
