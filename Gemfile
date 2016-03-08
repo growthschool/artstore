@@ -38,6 +38,10 @@ gem "bootstrap-sass"
 
 gem "simple_form"
 
+gem "carrierwave"
+
+gem "mini_magick"
+
 gem "awesome_rails_console" # 讓你的 rails console 變整齊漂亮的 gem
 
 group :development, :test do
