@@ -19,7 +19,11 @@
           <%= user.email %>
         </td>
         <td>
-          權限 (待處理)
+          <% if user.admin? %>
+            管理者
+          <% else %>
+            一般使用者
+          <% end %>
         </td>
         <td>
           轉換權限的按鈕 (待處理)
