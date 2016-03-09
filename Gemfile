@@ -36,6 +36,8 @@ gem "devise"
 
 gem "bootstrap-sass"
 
+gem "simple_form"
+
 gem "awesome_rails_console"
 
 group :development, :test do
