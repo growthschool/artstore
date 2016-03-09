@@ -34,6 +34,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "devise"
 
+gem "bootstrap-sass"
+
 gem "awesome_rails_console"
 
 group :development, :test do
