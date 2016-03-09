@@ -14,5 +14,7 @@ end
 
 def to_normal
   self.update_columns(is_admin: false)
-end  
+end
+
+  has_many :orders
 end
