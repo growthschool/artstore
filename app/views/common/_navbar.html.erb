@@ -30,7 +30,9 @@
               <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to("Admin Menu", admin_products_path) %></li>
+              <% if current_user.admin? %>
+                <li><%= link_to("Admin Menu", admin_products_path) %></li>
+              <% end %>
               <li><%= link_to("Sign out", destroy_user_session_path, method: :delete) %></li>
             </ul>
           </li>
