@@ -21,13 +21,14 @@
   <% if @photo.image.present? %>
     <span>目前商品圖</span> <br>
     <%= image_tag(@photo.image.thumb.url) %>
-  <% end %>
+ <% end %>
 
-  <div class="form-group">
+ <div class="form-group">
    <%= f.simple_fields_for :photo do |c| %>
-      <%= c.input :image , as: :file %>
+     <%= c.input :image , as: :file %>
    <% end %>
-  </div>
+ </div>
+
 
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 
