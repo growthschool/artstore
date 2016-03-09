@@ -1,7 +1,7 @@
 <div class="row">
 <div class="col-md-6">
-<% if @photo.present? %>
-<%= image_tag(@photo.image.medium.url, class: "thumbnail") %>
+<% if @product.photo.present? %>
+<%= image_tag(@product.photo.image.medium.url, class: "thumbnail") %>
 <% else %>
 <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
 <% end %>
@@ -18,7 +18,7 @@
 $ <%= @product.price %>
 </div>
 <div class="pull-right">
-<%= link_to("加入購物車", "#", class: "btn btn-primary btn-sm") %>
+<%= link_to("加入購物車", add_to_cart_product_path(@product), method: :post, class: "btn btn-primary btn-sm") %>
 </div>
 </div>
 </div>
