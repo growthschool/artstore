@@ -44,6 +44,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
   gem 'font-awesome-rails'
 
+  gem 'aasm'
+
 
   group :production do
     gem 'pg'
