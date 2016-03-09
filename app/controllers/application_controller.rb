@@ -8,4 +8,21 @@ class ApplicationController < ActionController::Base
       redirect_to "/"
     end
   end
+
+
+  helper_method :current_cart
+
+  def current_cart
+    @current_cart ||= find_cart
+  end
+
+  private
+
+  def find_cart
+    cart = Cart.find_by(id: session[:cart_id])
+    cart = Cart.create unless cart.present?
+
+    session[:cart_id] = cart.id
+    cart
+  end
 end
