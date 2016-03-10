@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+
+  resources :items, controller: "cart_items"
+
+  namespace :account do
+    resources :orders do
+      member do
+        post :cancel
+        post :ship
+        post :shipped
+        post :return
+      end
+    end
+  end
+
   resources :orders do
     member do
       get :pay_with_credit_card
@@ -8,6 +22,7 @@ Rails.application.routes.draw do
   resources :carts do
     collection do
       post :checkout
+      delete :clean
     end
   end
 
@@ -15,6 +30,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :products
+    resources :orders
     resources :users do
       member do
         post :to_admin
