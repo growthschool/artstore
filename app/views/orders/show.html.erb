@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="col-md-12">
+  <h2>訂單明細</h2>
+  <table class="table">
+  <thead>
+  <tr>
+  <th width="80%">商品明細</th>
+  <th>價格</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @order_items.each do |order_item| %>
+  <tr>
+  <td><%= order_item.product_name %></td>
+  <td><%= order_item.price %></td>
+  </tr>
+  <% end %>
+  </tbody>
+  </table>
+  <hr>
+  <div class="total clearfix">
+  <span class="pull-right">總計 <%= @order.total %> NTD</span>
+  </div>
+  <h2>寄送資訊</h2>
+  <table class="table">
+    <tbody>
+    <tr>
+    <td>訂購人</td>
+    </tr>
+    <tr>
+    <td><%= @order_info.billing_name %> - <%= @order_info.billing_address %></td>
+    </tr>
+    <tr>收件人</tr>
+    <tr>
+    <td><%= @order_info.shipping_name %> - <%= @order_info.shipping_address %></td>
+    </tr>
+    </tbody>
+  </table>
+  <hr>
+  <% if !@order.is_paid %>
+  <span class="pull-right">
+  <%= link_to("以ATM轉帳", "#", class: "btn btn-danger") %>
+  </span>
+  <span class="pull-right">
+  <%= link_to("以信用卡付款", pay_with_credit_card_order_path(@order.token), class: "btn btn-danger") %>
+  </span>
+  <% else %>
+  <span class="text-center">
+  此帳單已付款  </span>
+  <% end %>
+
+
+
