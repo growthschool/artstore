@@ -13,3 +13,9 @@ u.password = '12345678'
 u.password_confirmation = '12345678'
 u.is_admin = true
 u.save
+
+puts "Add products"
+
+Product.create([title: 'iMac', description: 'Desktop', quantity: 100, price: 80000])
+Product.create([title: 'iPad', description: 'Tablet', quantity: 200, price: 16000])
+Product.create([title: 'iPhone', description: 'Smart Phone', quantity: 300, price: 30000])
