@@ -38,6 +38,10 @@ gem "bootstrap-sass"
 
 gem "simple_form"
 
+gem "carrierwave"
+
+gem "mini_magick"
+
 gem "awesome_rails_console"
 
 group :development, :test do
