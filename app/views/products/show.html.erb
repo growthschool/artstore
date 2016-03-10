@@ -1,64 +1,28 @@
 <div class="row">
-  <div class="col-md-12">
-
-    <h2> 訂單明細 </h2>
-
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th width="80%">商品明細</th>
-          <th>單價</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        <% @order_items.each do |order_item| %>
-          <tr>
-            <td>
-              <%= order_item.product_name %>
-            </td>
-            <td>
-              <%= order_item.price %>
-            </td>
-          </tr>
-        <% end %>
-
-      </tbody>
-    </table>
-
-    <div class="total clearfix">
-      <span class="pull-right">
-        總計 <%= @order.total %> NTD
-      </span>
+  <div class="col-md-6">
+    <% if @product.photo.present? %>
+      <%= image_tag(@product.photo.image.medium.url, class: "thumbnail") %>
+    <% else %>
+      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+    <% end %>
+  </div>
+  <div class="col-md-6">
+    <h2> <%= @product.title %> </h2>
+    <div style="height:100px;">
+      <p>
+        <%= @product.description %>
+      </p>
     </div>
+    <div> 數量 : <%= @product.quantity %> </div>
+    <div class="product-price"> $ <%= @product.price %> </div>
+    <div class="pull-right">
+      <% if @product.quantity > 0 %>
+      <%= link_to("加入購物車", add_to_cart_product_path(@product), method: :post,
+                 class: "btn btn-lg btn-danger") %>
+                 <% else %>
+                 已銷售一空，無法購買
+                 <% end %>
 
-     <hr>
-
-     <h2> 寄送資訊 </h2>
-
-     <table class="table table-striped table-bordered">
-      <tbody>
-        <tr>
-          <td>
-            訂購人
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <%= @order_info.billing_name %> - <%= @order_info.billing_address %>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            收件人
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <%= @order_info.shipping_name %> - <%= @order_info.shipping_address %>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    </div>
   </div>
 </div>
