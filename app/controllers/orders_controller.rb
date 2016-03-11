@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-
+  before_action :authenticate_user!
   def create
    @order = current_user.orders.build(order_params)
     if @order.save
@@ -22,7 +22,7 @@ class OrdersController < ApplicationController
     @order = Order.find_by_token(params[:id])
     @order.set_payment_with!("credit_card") #更新成使用什麼付費
     @order.make_payment!#更新成已付款
-    redirect_to "/", notice: "您已成功付款!!"
+    redirect_to account_orders_path, notice: "您已成功付款!!"
   end
 
   private

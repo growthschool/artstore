@@ -4,6 +4,7 @@ class Order < ActiveRecord::Base
   has_one :info, class_name: "OrderInfo", dependent: :destroy
   accepts_nested_attributes_for :info
   before_create :generate_token
+  scope :recent, -> { order("id DESC")}
   include AASM
 
   aasm do
@@ -36,7 +37,7 @@ class Order < ActiveRecord::Base
     cart.items.each do |cart_item|
       item = items.build #訂單有哪個產品的資料建立
       item.product_name = cart_item.title#購物車中的商品名稱
-      item.quantity = cart.find_cart_item.quantity
+      item.quantity = cart.find_cart_item(cart_item).quantity
       item.price = cart_item.price
     end
   end

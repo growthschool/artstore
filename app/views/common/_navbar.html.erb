@@ -22,6 +22,7 @@
           </a>
           <ul class="dropdown-menu">
           <% if current_user.is_admin? %>
+            <li><%= link_to("訂單列表", account_orders_path) %></li>
             <li><%= link_to("商品後台", admin_products_path) %></li>
             <li><%= link_to("使用者後台", admin_users_path) %></li>
           <% end %>
