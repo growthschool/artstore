@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
     if @order.save
       @order.build_item_cache_from_cart(current_cart) #把購物車的東西塞到訂單order_item中
       @order.calculate_total!(current_cart) #把購物車的總價格塞到訂單order的total欄位中
+      current_cart.clean!
       redirect_to order_path(@order.token)
     else
       render "carts/checkout"
