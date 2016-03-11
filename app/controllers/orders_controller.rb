@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
 	@order.set_payment_with!("credit_card")
 	@order.pay!
 
-	redirect_to "/", notice:"successfully paid"
+	redirect_to account_orders_path, notice:"successfully paid"
   end
 
    def create
