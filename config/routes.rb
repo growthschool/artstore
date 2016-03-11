@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :orders do
 	member do
 		get :pay_with_credit_card
-	end	
+	end
   end
 
   root "products#index"
@@ -23,13 +23,15 @@ Rails.application.routes.draw do
 
   namespace :admin do
 	resources :products
-	resources :users do 
+	resources :users do
 		member do
 			post :to_admin
 			post :to_normal
 		end
 	end
   end
+
+  resources :items, controller: "cart_items"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
