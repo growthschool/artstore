@@ -49,6 +49,8 @@ gem "mini_magick"
 
 gem "font-awesome-rails"
 
+gem "aasm"
+
 gem "awesome_rails_console"
 
 group :development, :test do
