@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
 	@order = Order.find_by_token(params[:id])
 	@order.set_payment_with!("credit_card")
 	@order.pay!
-	
+
 	redirect_to "/", notice:"successfully paid"
   end
 
@@ -14,6 +14,7 @@ class OrdersController < ApplicationController
      if @order.save
        @order.build_item_cache_from_cart(current_cart)
        @order.calculate_total!(current_cart)
+       current_cart.clean!
        redirect_to order_path(@order.token)
      else
        render "carts/checkout"
