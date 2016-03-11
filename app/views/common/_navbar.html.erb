@@ -22,10 +22,11 @@
           </a>
           <ul class="dropdown-menu">
           <% if current_user.is_admin? %>
-            <li><%= link_to("訂單列表", account_orders_path) %></li>
+            <li><%= link_to("系統訂單", admin_orders_path) %></li>
             <li><%= link_to("商品後台", admin_products_path) %></li>
             <li><%= link_to("使用者後台", admin_users_path) %></li>
           <% end %>
+            <li><%= link_to("訂單列表", account_orders_path) %></li>
             <li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li>
           </ul>
         </li>

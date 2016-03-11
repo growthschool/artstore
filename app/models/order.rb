@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
     state :paid
     state :shipping
     state :shipped
-    state :order_canceled
+    state :order_cancelled
     state :good_return
     #先列出各個階段的狀態
     event :make_payment, after_commit: :pay! do
@@ -28,7 +28,7 @@ class Order < ActiveRecord::Base
       transitions from: :shipped, to: :good_return
     end
     event :cancel_order do
-      transitions from: [:order_placed, :paid], to: :order_canceled
+      transitions from: [:order_placed, :paid], to: :order_cancelled
     end
     #把每個狀態到每個狀態之間的過程作命名
   end

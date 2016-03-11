@@ -1,0 +1,22 @@
+<h2>商店所有訂單</h2>
+<table class="table">
+<thead>
+<tr>
+<th>#</th>
+<th>下訂時間</th>
+<th>訂購者</th>
+<th>訂單狀態</th>
+</tr>
+</thead>
+<tbody>
+<% @orders.each do |order| %>
+<tr>
+<td><%= link_to(order.id, admin_order_path(order.token)) %></td>
+<td><%= order.created_at.to_s(:long)%></td>
+<td><%= order.info.billing_name %></td>
+<td><%= render_order_state(order) %></td>
+</tr>
+<% end %>
+</tbody>
+</table>
+

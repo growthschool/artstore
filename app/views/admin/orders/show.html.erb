@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col-md-12">
+  <h2>訂單明細 <%= render_order_paid_state(@order) %></h2>
+  <%= render "state_option", order: @order %>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>商品明細</th>
+        <th>單價</th>
+        <th>數量</th>
+      </tr>
+    </thead>
+  <tbody>
+    <% @order_items.each do |order_item| %>
+    <tr>
+      <td><%= order_item.product_name %></td>
+      <td><%= order_item.price %> NTD </td>
+      <td><%= order_item.quantity %></td>
+    </tr>
+    <% end %>
+  </tbody>
+  </table>
+  <hr>
+  <div class="total clearfix">
+    <span class="pull-right">總計 <%= @order.total %> NTD </span>
+  </div>
+  <table class="table">
+  <h2>出貨資訊</h2>
+    <thead>
+      <tr>
+        <td>訂購人</td>
+      </tr>
+      <tr>
+        <td><%= @order_info.billing_name %> - <%= @order_info.billing_address %></td>
+      </tr>
+      <tr>
+        <td>收件人</td>
+      </tr>
+      <tr>
+        <td><%= @order_info.shipping_name %> - <%= @order_info.shipping_address %></td>
+      </tr>
+    </thead>
+  </table>
+</div>
+</div>
+
+

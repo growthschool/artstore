@@ -3,6 +3,14 @@ Rails.application.routes.draw do
   root "products#index"
   namespace :admin do
     resources :products
+    resources :orders do
+      member do
+        post :ship
+        post :shipped
+        post :return
+        post :cancel
+      end
+    end
     resources :users do
       member do
         post :to_admin
