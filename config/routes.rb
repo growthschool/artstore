@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :items, controller: "cart_items"
+
   devise_for :users
   namespace :admin do
     resources :products
