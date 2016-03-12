@@ -22,6 +22,7 @@ Rails.application.routes.draw do
    resources :carts do
      collection do
        post :checkout
+       delete :clean
      end
    end
 
@@ -30,6 +31,8 @@ Rails.application.routes.draw do
        get :pay_with_credit_card
      end
    end
+
+   resources :items, controller: "cart_items"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
