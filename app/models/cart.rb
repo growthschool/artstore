@@ -10,7 +10,7 @@ class Cart < ActiveRecord::Base
     sum = 0
 
     items.each do |item|
-      sum = sum   item.price
+      sum = sum + item.price
     end
 
     return sum
