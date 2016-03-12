@@ -16,4 +16,12 @@ module ApplicationHelper
 
     alerts.join("\n").html_safe
   end
+
+  def render_cart_items_count(cart)
+    return cart.cart_items.count
+  end
+
+  def render_cart_total_price(cart)
+    return cart.total_price
+  end
 end
