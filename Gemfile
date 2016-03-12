@@ -8,6 +8,7 @@ gem 'mini_magick'
 gem 'font-awesome-rails'
 gem 'aasm'
 gem 'rubocop'
+gem 'awesome_rails_console'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
