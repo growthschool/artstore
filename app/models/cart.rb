@@ -9,9 +9,9 @@ class Cart < ActiveRecord::Base
   def total_price
     sum = 0
 
-    items.each do |item|
-      sum = sum + item.price
-    end
+     cart_items.each do |cart_item|
+       sum = sum + (cart_item.product.price * cart_item.quantity)
+     end
 
     return sum
   end
