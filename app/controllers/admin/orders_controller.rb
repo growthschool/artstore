@@ -7,4 +7,38 @@ class Admin::OrdersController < ApplicationController
   def index
     @orders = Order.order("id DESC")
   end
+
+  def show
+    @order = Order.find_by_token(params[:id])
+    @order_info = @order.info
+    @order_items = @order.items
+  end
+
+  def cancel
+    @order = Order.find_by_token(params[:id])
+    @order.cancel_order!
+
+    redirect_to :back
+  end
+
+  def ship
+    @order = Order.find_by_token(params[:id])
+    @order.ship!
+
+    redirect_to :back
+  end
+
+  def shipped
+    @order = Order.find_by_token(params[:id])
+    @order.deliver!
+
+    redirect_to :back
+  end
+
+  def return
+    @order = Order.find_by_token(params[:id])
+    @order.return_good!
+
+    redirect_to :back
+  end
 end
