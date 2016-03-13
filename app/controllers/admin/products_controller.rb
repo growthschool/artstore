@@ -1,13 +1,12 @@
 class Admin::ProductsController < ApplicationController
-
-  layout "admin"
+  layout 'admin'
 
   before_action :authenticate_user!
   before_action :admin_required
 
   def index
-     @products = Product.all
-   end
+    @products = Product.all
+  end
 
   def new
     @product = Product.new
@@ -17,21 +16,21 @@ class Admin::ProductsController < ApplicationController
   def edit
     @product = Product.find(params[:id])
 
-    if @product.photo.present?
-        @photo = @product.photo
-      else
-        @photo = @product.build_photo
-      end
+    @photo = if @product.photo.present?
+               @product.photo
+             else
+               @product.build_photo
+               end
   end
 
   def update
-   @product = Product.find(params[:id])
+    @product = Product.find(params[:id])
 
-   if @product.update(product_params)
-     redirect_to admin_products_path
-   else
-     render :edit
-   end
+    if @product.update(product_params)
+      redirect_to admin_products_path
+    else
+      render :edit
+    end
  end
 
   def create
@@ -43,6 +42,12 @@ class Admin::ProductsController < ApplicationController
       render :new
     end
   end
+
+    def destroy
+      @product = Product.find(params[:id])
+      @product.destroy
+      redirect_to admin_products_path, alert: "產品已刪除"
+    end
 
   private
 
