@@ -1,6 +1,11 @@
 <div class="row">
   <div class="col-md-12">
 
+    <%= link_to("Clean Shopping Cart", clean_carts_path,
+                method: :delete, class: "pull-right",
+                style: "text-decoration: underline;",
+                data: { confirmatin: "Are you sure to clean shopping cart?" }) %>
+
     <h2> Sopping Cart </h2>
 
     <table class="table table-bordered">
@@ -8,6 +13,8 @@
         <tr>
           <th colspan="2">Product Informations</th>
           <th>Price</th>
+          <th>Quantity</th>
+          <th>Operations</th>
         </tr>
       </thead>
       <tbody>
@@ -28,6 +35,18 @@
             </td>
             <td>
               <%= product.price %>
+            </td>
+            <td>
+              <% item = current_cart.find_cart_item(product) %>
+              <%= form_for item, url: item_path(product) do |f| %>
+                <%= f.select :quantity, 1..product.quantity %>
+                <%= f.submit "Update", data: { disable_with: "Submitting..." } %>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to item_path(product), method: :delete do %>
+                <i class="fa fa-trash"> </i>
+              <% end %>
             </td>
           </tr>
         <% end %>
