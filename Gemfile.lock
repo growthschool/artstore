@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (4.9.0)
     actionmailer (4.2.2)
       actionpack (= 4.2.2)
       actionview (= 4.2.2)
@@ -40,6 +41,7 @@ GEM
     autoprefixer-rails (6.0.3)
       execjs
       json
+    awesome_print (1.6.1)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -178,6 +180,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aasm
+  awesome_print
   bootstrap-sass
   byebug
   carrierwave

@@ -43,6 +43,7 @@ gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'font-awesome-rails'
+gem 'aasm'
 
 
 group :development, :test do
@@ -54,4 +55,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # for pretty console printout
+  gem 'awesome_print', :require => 'ap'
 end
