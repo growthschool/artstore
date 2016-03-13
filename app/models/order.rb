@@ -14,7 +14,7 @@ class Order < ActiveRecord::Base
     cart.items.each do |cart_item|
       item = items.build
       item.product_name = cart_item.title
-      item.quantity = 1
+      item.quantity = cart.find_cart_item(cart_item).quantity
       item.price = cart_item.price
       item.save
     end
@@ -23,5 +23,13 @@ class Order < ActiveRecord::Base
   def calculate_total!(cart)
     self.total = cart.total_price
     self.save
+  end
+
+  def set_payment_with!(method)
+    self.update_columns(payment_method: method)
+  end
+
+  def pay!
+    self.update_columns(is_paid: true)
   end
 end
