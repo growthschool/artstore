@@ -9,6 +9,7 @@
       <td width="220">Photo</td>
       <td>Title</td>
       <td>Description</td>
+      <td>Quantity</td>
       <td width="100">Price</td>
     </tr>
   </thead>
@@ -27,6 +28,7 @@
       <td><%= link_to(product.title, product_path(product)) %>
       </td>
       <td><%= product.description %></td>
+      <td><%= product.quantity %></td>
       <td><%= product.price %></td>
       <td><%= link_to("Edit", edit_admin_product_path(product), class: "btn btn-sm btn-warning")%></td>
       <td><%= link_to("Delete", admin_product_path(product), class: "btn btn-sm btn-danger",
