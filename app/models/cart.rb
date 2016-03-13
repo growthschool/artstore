@@ -20,6 +20,12 @@ class Cart < ActiveRecord::Base
     return sum
   end
 
+  def reserve_products
+    cart_items.each do |cart_item|
+      cart_item.product.reserve_inventory!(cart_item.quantity)
+    end
+  end
+
   def clean!
     cart_items.destroy_all
   end

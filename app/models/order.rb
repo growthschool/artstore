@@ -17,6 +17,7 @@ class Order < ActiveRecord::Base
       item.product_name = cart_item.title
       item.quantity = cart.find_cart_item(cart_item).quantity
       item.price = cart_item.price
+      item.product_id = cart_item.id
       item.save
     end
   end
