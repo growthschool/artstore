@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   def find_cart
     cart = Cart.find_by(id: session[:cart_id])
 
-    unless  cart.present?
+    unless cart.present?
       cart = Cart.create
     end
 
