@@ -33,6 +33,7 @@ class Order < ActiveRecord::Base
 
   def pay!
     self.update_columns(is_paid: true )
+    # add function update product
   end
 
   include AASM
