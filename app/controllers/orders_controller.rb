@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
   def pay_with_credit_card
 	@order = Order.find_by_token(params[:id])
 	@order.set_payment_with!("credit_card")
-	@order.pay!
+	@order.make_payment!
 
 	redirect_to account_orders_path, notice:"successfully paid"
   end
