@@ -36,12 +36,12 @@
               <%= product.price %>
             </td>
                        <td>
-             <% item = current_cart.find_cart_item(product)
+             <% item = current_cart.find_cart_item(product)%>
 
              <%= form_for item, url: item_path(product) do |f| %>
                <%= f.select :quantity, 1..product.quantity%>
                <%= f.submit "更新", data: { disable_with: "Submiting..." } %>
-             <% end -%>
+             <% end %>
            </td>
             <td>
                 <%= link_to item_path(product), method: :delete do %>
