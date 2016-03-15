@@ -2,7 +2,7 @@ class CartItemsController < ApplicationController
   before_action :authenticate_user!
 
   def destroy
-    @item = current_cart.cart_items.find_by(product_id: params[:id])
+    @item = current_cart.find_cart_item.(params[:id])
     @product = @item.product
     @item.destroy
 
