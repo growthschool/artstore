@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def add_to_cart
-    @product = Prodcut.find(params[:id])
+    @product = Product.find(params[:id])
 
       current_cart.add_product_to_cart(@product)
 
