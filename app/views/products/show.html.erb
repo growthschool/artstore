@@ -14,14 +14,14 @@
           <%= @product.description %>
         </p>
     </div>
-    
+
     <div class="">數量：<%= @product.quantity  %></div>
 
 
     <div class="product-price"><%= @product.price %></div>
 
     <div class="pull-right">
-      <%= link_to( "#",:class => "btn btn-primary btn-lg btn-danger") do %>
+      <%= link_to( add_to_cart_product_path(@product),method: :post,:class => "btn btn-primary btn-lg btn-danger") do %>
       <span class="glyphicon glyphicon-shopping-cart">加入購物車</span>
       <% end %>
     </div>

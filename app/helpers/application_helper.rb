@@ -17,4 +17,10 @@ module ApplicationHelper
     end
     alerts.join("\n").html_safe
   end
+
+  def render_cart_items_count(cart)
+    cart.cart_items.count
+    #記得回來做Counter Cache
+    # https://ihower.tw/rails4/performance.html
+  end
 end
