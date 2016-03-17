@@ -10,7 +10,6 @@ class Cart < ActiveRecord::Base
 
   def total_price
     sum = 0
-
     cart_items.each do |cart_item|
       sum = sum + cart_item.product.price*cart_item.quantity
     end
@@ -19,6 +18,7 @@ class Cart < ActiveRecord::Base
   end
 
   def clean!
-    binding.pry
+    cart_items.destroy_all
+
   end
 end

@@ -18,11 +18,13 @@ Rails.application.routes.draw do
   end
   resources :carts do
     collection do
+      post :checkout
       delete :clean
     end
   end
 
   resources :items , controller: "cart_items"
+  resources :orders
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
