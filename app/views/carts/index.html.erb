@@ -31,7 +31,7 @@
                   <% item = current_cart.cart_items.find_by(product_id:product.id) %>
                   <%= simple_form_for item,url:item_path(product) do |f| %>
                     <%#= f.input :quantity, :label => "數量" do %>
-                      <%= f.select :quantity , [1,2,3,4,5] %>
+                      <%= f.select :quantity , 1..product.quantity %>
                     <%# end %>
                     <%= f.submit "更新",data:{disable_with:"submitting...."} %>
                   <% end %>
