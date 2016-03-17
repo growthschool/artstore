@@ -28,7 +28,7 @@
                 </td>
                 <td><%= product.price %></td>
                 <td>
-                  <% item = current_cart.cart_items.find_by(product_id:product.id) %>
+                  <% item = current_cart.find_cart_item(product) %>
                   <%= simple_form_for item,url:item_path(product) do |f| %>
                     <%#= f.input :quantity, :label => "數量" do %>
                       <%= f.select :quantity , 1..product.quantity %>

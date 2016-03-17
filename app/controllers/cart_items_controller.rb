@@ -2,7 +2,7 @@ class CartItemsController < ApplicationController
   before_action :authenticate_user!
   def destroy
     @cart = current_cart
-    @item = current_cart.cart_items.find_by(product_id:params[:id])
+    @item = current_cart.find_cart_item(params[:id])
     @product = @item.product
     @item.destroy
     flash[:warning] = "已將 #{@product.title} 從購物車移除"
@@ -19,7 +19,7 @@ class CartItemsController < ApplicationController
 
   def update
     @cart = current_cart
-    @item = @cart.cart_items.find_by(product_id:params[:id])
+    @item = current_cart.find_cart_item(params[:id])
     if @item.product.quantity >= item_params[:quantity].to_i
       @item.update(item_params)
       flash[:warning] = "成功變更數量"
