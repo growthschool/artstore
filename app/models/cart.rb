@@ -11,9 +11,14 @@ class Cart < ActiveRecord::Base
   def total_price
     sum = 0
 
-    goods.each do |good|
-      sum = sum + good.price
+    cart_items.each do |item|
+      sum = sum + (item.product.price * item.quantity)
+
     end
     sum
+  end
+
+  def clean!
+    cart_items.destroy_all
   end
 end
