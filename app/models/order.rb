@@ -35,4 +35,36 @@ class Order < ActiveRecord::Base
     self.update_columns(is_paid: true)
   end
 
+  include AASM
+
+  aasm do
+    state :order_placed, initial: true
+    state :paid
+    state :shipping
+    state :shipped
+    state :order_cancelled
+    state :good_returned
+
+
+    event :make_payment do
+      transition from: :order_placed, to: :paid
+    end
+
+    event :ship do
+      transition from: :paid,         to: :shipping
+    end
+
+    event :deliver do
+      transition from: :shipping,     to: :shipped
+    end
+
+    event :returned_good do
+      transition from: :shipped,      to: :good_returned
+    end
+
+    event :cancell_order do
+      transition from: [:order_placed, :paid], to: :order_cancelled
+    end
+
+
 end
