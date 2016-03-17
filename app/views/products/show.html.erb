@@ -9,22 +9,27 @@
 
   <div class="col-md-6">
     <h2><%= @product.title %></h2>
-    <div style="height:100px;">
-        <p>
-          <%= @product.description %>
-        </p>
-    </div>
+      <div style="height:100px;">
+          <p>
+            <%= @product.description %>
+          </p>
+      </div>
 
-    <div class="">數量：<%= @product.quantity  %></div>
+      <div class="">數量：<%= @product.quantity  %></div>
 
 
-    <div class="product-price"><%= @product.price %></div>
+      <div class="product-price"><%= @product.price %></div>
 
-    <div class="pull-right">
-      <%= link_to( add_to_cart_product_path(@product),method: :post,:class => "btn btn-primary btn-lg btn-danger") do %>
-      <span class="glyphicon glyphicon-shopping-cart">加入購物車</span>
-      <% end %>
-    </div>
+      <div class="pull-right">
+        <% if @product.quantity > 0 %>
+          <%= link_to( add_to_cart_product_path(@product),method: :post,:class => "btn btn-primary btn-lg btn-danger") do %>
+            <span class="glyphicon glyphicon-shopping-cart">加入購物車</span>
+          <% end %>
+        <% else %>
+          已銷售一空，無法購買
+        <% end %>
+  
+      </div>
 
   </div>
 </div>
