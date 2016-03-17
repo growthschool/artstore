@@ -8,4 +8,6 @@ class Admin::OrdersController < ApplicationController
     @orders = Order.order("id DESC")
   end
 
+
+
 end
