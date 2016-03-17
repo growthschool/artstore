@@ -13,6 +13,13 @@ class OrdersController < ApplicationController
     end
   end
 
+  def show
+    @order = Order.find(params[:id])
+    @order_info = @order.info
+    @order_items = @order.items
+  end
+
+
   private
 
   def order_params
