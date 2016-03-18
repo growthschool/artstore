@@ -1,0 +1,24 @@
+<div style="padding: 10px; float: right;">
+
+  <% case order.aasm_state %>
+  <% when 'order_placed' %>
+    <%= link_to("Cancel Order", cancel_admin_order_path(order.token), method: :post, class: 'btn btn-sm btn-default') %>
+
+  <% when 'paid' %>
+    <%= link_to("Cancel Order", cancel_admin_order_path(order.token), method: :post, class: 'btn btn-sm btn-default') %>
+    <%= link_to("Ship", ship_admin_order_path(order.token), method: :post, class: 'btn btn-sm btn-default') %>
+
+  <% when 'shipping' %>
+    <%= link_to("Shipped", shipped_admin_order_path(order.token), method: :post, class: 'btn btn-sm btn-default') %>
+
+  <% when 'shipped' %>
+    <%= link_to("Goods Return", return_admin_order_path(order.token), method: :post, class: 'btn btn-sm btn-default') %>
+
+  <% when 'order_cancelled' %>
+    <span class="label label-default">Order has been cancelled.</span>
+
+  <% when 'good_returned' %>
+    <span class="label label-default">Goods has been returned.</span>
+
+  <% end %>
+</div>

@@ -1,0 +1,58 @@
+<div class="col-md-12">
+  <h2>Order Details</h2>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Product Detail</th>
+        <th>Qty</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @order_items.each do |item| %>
+        <tr>
+          <td><%= link_to(item.product_name, product_path(item.product_id)) %></td>
+          <td><%= item.quantity %></td>
+          <td><%= item.price %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class="total clearfix">
+    <span class="pull-right">
+      Total: <%= render_order_total_price(@order) %> NTD
+    </span>
+  </div>
+
+  <hr>
+
+  <h2>Order Info</h2>
+
+  <table class="table table-striped table-bordered">
+    <tbody>
+      <tr>
+        <td>Order</td>
+      </tr>
+      <tr>
+        <td><%= @order_info.billing_name %> - <%= @order_info.billing_address %></td>
+      </tr>
+      <tr>
+        <td>Reciever</td>
+      </tr>
+      <tr>
+        <td><%= @order_info.shipping_name %> - <%= @order_info.shipping_address %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <% if @order.is_paid? %>
+    <p class="text-center">This order has been paid.</p>
+  <% else %>
+    <div class="pull-right">
+      <%= link_to("Pay with Credit Card", pay_with_credit_card_order_path(@order.token), method: :post, class: 'btn btn-lg btn-danger') %>
+      <%= link_to("Pay with ATM", pay_with_atm_order_path(@order.token), method: :post, class: 'btn btn-lg btn-danger') %>
+    </div>
+  <% end %>
+</div>

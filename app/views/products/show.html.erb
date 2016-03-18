@@ -11,10 +11,17 @@
     <div style="width: 100%;">
       <p><%= @product.description %></p>
     </div>
-    <div>Quatity: <%= @product.quantity %></div>
+    <div>Stock: <%= @product.quantity %></div>
     <div class="product-price">Price: $ <%= @product.price %></div>
     <div class="pull-right">
-      <%= link_to("Add to Cart", '#', class: 'btn btn-danger btn-lg') %>
+      <% if @product.quantity > 0 %>
+        <%= form_for @product, url: add_to_cart_product_path(@product), method: :post do |f| %>
+          <%= f.select :quantity, 1..@product.quantity, selected: 1 %>
+          <%= f.submit "Add to Cart", class: 'btn btn-danger btn-lg', data: { disable_with: 'Submitting...' } %>
+        <% end %>
+      <% else %>
+        <%= link_to("Sold Out", '#', class: 'btn btn-default btn-lg') %>
+      <% end %>
     </div>
   </div>
 </div>

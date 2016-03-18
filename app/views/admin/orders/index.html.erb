@@ -1,0 +1,24 @@
+<div class="col-md-12">
+  <h2>Order List</h2>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Created At</th>
+        <th>Order</th>
+        <th>State</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @orders.each do |order| %>
+        <tr>
+          <td><%= link_to(order.id, admin_order_path(order.token)) %></td>
+          <td><%= order.created_at.to_s(:long) %></td>
+          <td><%= order.info.billing_name %></td>
+          <td><%= render_order_state(order) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

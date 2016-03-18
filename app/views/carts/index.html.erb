@@ -1,0 +1,53 @@
+<div class="col-md-12">
+  <%= link_to("Empty Cart", empty_carts_path, method: :delete, class: 'btn btn-sm btn-default pull-right') %>
+
+  <h2>Shopping Cart Details</h2>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th colspan="2"></th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% current_cart.cart_items.each do |cart_item| %>
+        <% product = cart_item.product %>
+        <tr>
+          <td>
+            <% if product.photo.present? %>
+              <%= image_tag(product.photo.image.thumb.url, class: 'thumbnail') %>
+            <% else %>
+              <%= image_tag('http://placehold.it/200x200&text=No Pic', class: 'thumbnail') %>
+            <% end %>
+          </td>
+          <td><%= link_to(product.title, product_path(product)) %></td>
+          <td>
+            <%= form_for cart_item, url: item_path(cart_item), method: :put do |f| %>
+              <%= f.select :quantity, 1..product.quantity %>
+              <%= f.submit "Update", class: 'btn btn-xs btn-default', data: { disable_with: 'Submitting...' } %>
+            <% end %>
+          </td>
+          <td><%= product.price %></td>
+          <td>
+            <%= link_to("Delete", item_path(cart_item), method: :delete, class: 'btn btn-xs btn-default') %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class="total clearfix">
+    <span class="pull-right">
+      Total: <%= render_cart_total_prict(current_cart) %> NTD
+    </span>
+  </div>
+
+  <hr>
+
+  <div class="checkout clearfix">
+    <%= link_to("Checkout", checkout_carts_path, method: :post, class: 'btn btn-lg btn-danger pull-right') %>
+  </div>
+</div>
