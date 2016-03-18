@@ -1,8 +1,26 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!
+
+
   def create
     @order = current_user.orders.build(order_params)
-    
+    if @order.save
+      @order.build_item_cache_from_cart(current_cart)
+      @order.calculate_total!(current_cart)
+      redirect_to order_path(@order.token)
+    else
+      render "carts/checkout"
+      # render checkout_carts_path #一樣結果
+      # render carts_path #temple missing
+      # redirect_to carts_path #正常
+    end
+  end
+
+  def show
+    binding.pry
+    @order = Order.find_by_token(params[:id])
+    @order_info = @order.info
+    @order_items = @order.items
   end
 
   private
