@@ -46,6 +46,8 @@ gem "font-awesome-rails"
 
 gem "aasm"
 
+gem "letter_opener", group: :development
+
 gem "awesome_rails_console" # 讓你的 rails console 變整齊漂亮的 gem
 
 group :development, :test do
