@@ -16,4 +16,8 @@ module ApplicationHelper
 
     alerts.join("\n").html_safe
   end
+
+  def render_cart_item_count(cart)
+    return cart.cart_items.count
+  end
 end
