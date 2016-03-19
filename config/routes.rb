@@ -24,10 +24,14 @@ Rails.application.routes.draw do
         end
       end
     end
+
   resources :products do
     member do
       post :add_to_cart
     end
+
+  resources :items, controller: "cart_items"
+
   end
 
 
