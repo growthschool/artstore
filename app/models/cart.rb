@@ -16,4 +16,8 @@ class Cart < ActiveRecord::Base
     return sum
   end
 
+  def clean!
+    cart_items.destroy_all
+  end
+
 end

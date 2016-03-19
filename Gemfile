@@ -46,6 +46,8 @@ gem "font-awesome-rails"
 
 gem "awesome_rails_console"
 
+gem "aasm"
+
 group :production do
   gem "pg"
   gem "rails_12factor"
