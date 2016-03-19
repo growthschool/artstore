@@ -29,10 +29,10 @@ Rails.application.routes.draw do
     member do
       post :add_to_cart
     end
+  end
 
   resources :items, controller: "cart_items"
 
-  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
