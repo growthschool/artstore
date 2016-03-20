@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
     unless cart.present?
       cart = Cart.create
     end
-    
+    session[:cart_id] = cart.id
     cart
   end
 end
