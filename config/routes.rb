@@ -24,6 +24,10 @@ Rails.application.routes.draw do
 
   resources :items, controller: "cart_items"
 
+  namespace :account do
+    resources :orders
+  end
+
   resources :products do 
     member do
         post :add_to_cart
