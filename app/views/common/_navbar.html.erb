@@ -49,6 +49,9 @@
                     </li>
                   <% end %>
                   <li>
+                    <%= link_to("個人列表訂單", account_orders_path) %>
+                  </li>
+                  <li>
                     <%= link_to(destroy_user_session_path,method: :delete) do %>
                         <span class="glyphicon glyphicon-log-out"> 登出</span>
                     <% end %>
