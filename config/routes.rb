@@ -10,6 +10,8 @@ Rails.application.routes.draw do
         post :to_normal
       end
     end
+
+    resources :orders
   end
 
   resources :products do

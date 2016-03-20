@@ -1,0 +1,9 @@
+module Admin::OrdersHelper
+  def render_order_paid_state(order)
+    if order.is_paid?
+      return "已付款"
+    else
+      return "未付款"
+    end
+  end
+end
