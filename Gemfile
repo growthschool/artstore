@@ -3,7 +3,7 @@ gem "devise"
 gem "bootstrap-sass"
 
 gem "simple_form"
-
+gem "aasm"
 gem "carrierwave"
 gem "mini_magick"
 

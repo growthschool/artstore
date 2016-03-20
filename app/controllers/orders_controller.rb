@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
   def pay_with_credit_card
     @order = Order.find_by_token(params[:id])
     @order.set_payment_with!("credit_card")
-    @order.pay!
+    @order.make_payment!
 
     redirect_to account_orders_path, notice:"成功完成付款"
   end
@@ -31,9 +31,8 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(info_attributes: [:billing_name,
-                                                    :billing_address,
-                                                    :shipping_name,
-                                                    :shipping_address] )
+    params.require(:order).permit(info_attributes: [:billing_name, :shipping_address] )
   end
+
+  
 end
