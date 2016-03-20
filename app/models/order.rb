@@ -12,7 +12,7 @@ class Order < ActiveRecord::Base
     cart.items.each do |product|
       item = items.build
       item.product_name = product.title
-      item.quantity = 1
+      item.quantity = cart.find_cart_item(product).quantity
       item.price = product.price
       item.save
     end
