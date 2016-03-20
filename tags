@@ -5,6 +5,9 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 $.fn.emulateTransitionEnd	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^  }$/;"	f
+Account	app/controllers/account/orders_controller.rb	/^class Account::OrdersController < ApplicationController$/;"	c
+Account	app/helpers/account/orders_helper.rb	/^module Account::OrdersHelper$/;"	m
+Account	test/controllers/account/orders_controller_test.rb	/^class Account::OrdersControllerTest < ActionController::TestCase$/;"	c
 ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
 AddAasmStateToOrder	db/migrate/20160319134741_add_aasm_state_to_order.rb	/^class AddAasmStateToOrder < ActiveRecord::Migration$/;"	c
 AddIsAdminToUser	db/migrate/20160305062456_add_is_admin_to_user.rb	/^class AddIsAdminToUser < ActiveRecord::Migration$/;"	c
@@ -193,6 +196,7 @@ getStyles	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0
 getWidthOrHeight	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^function getWidthOrHeight( elem, name, extra ) {$/;"	f
 getWindow	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^function getWindow( elem ) {$/;"	f
 hooks.empty.fire	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^			oldfire = hooks.empty.fire;$/;"	f
+index	app/controllers/account/orders_controller.rb	/^  def index$/;"	f	class:Account
 index	app/controllers/admin/products_controller.rb	/^  def index$/;"	f	class:Admin
 index	app/controllers/admin/users_controller.rb	/^  def index$/;"	f	class:Admin
 index	app/controllers/products_controller.rb	/^  def index$/;"	f	class:ProductsController
