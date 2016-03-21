@@ -131,6 +131,7 @@ build_item_cache_from_cart	app/models/order.rb	/^  def build_item_cache_from_car
 bypassOnLoadPopstate	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^  })();$/;"	f
 cacheCurrentPage	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^  };$/;"	f
 calculate_total!	app/models/order.rb	/^  def calculate_total!(cart)$/;"	f	class:Order
+cancel	app/controllers/admin/orders_controller.rb	/^  def cancel$/;"	f	class:Admin
 change	db/migrate/20160304154342_create_products.rb	/^  def change$/;"	f	class:CreateProducts
 change	db/migrate/20160305061907_devise_create_users.rb	/^  def change$/;"	f	class:DeviseCreateUsers
 change	db/migrate/20160305062456_add_is_admin_to_user.rb	/^  def change$/;"	f	class:AddIsAdminToUser
@@ -184,6 +185,7 @@ fetch	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a
 fetchHistory	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^  };$/;"	f
 fetchReplacement	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^  };$/;"	f
 find_cart_item	app/models/cart.rb	/^  def find_cart_item(product)$/;"	f	class:Cart
+find_order	app/controllers/admin/orders_controller.rb	/^  def find_order$/;"	f	class:Admin
 fixCloneNodeIssues	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^function fixCloneNodeIssues( src, dest ) {$/;"	f
 fixDefaultChecked	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^function fixDefaultChecked( elem ) {$/;"	f
 fn	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^				bulk = fn;$/;"	f
@@ -279,6 +281,7 @@ processResponse	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e
 product_params	app/controllers/admin/products_controller.rb	/^  def product_params$/;"	f	class:Admin
 propFilter	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^function propFilter( props, specialEasing ) {$/;"	f
 recallScrollPosition	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^  };$/;"	f
+redirect	app/controllers/admin/orders_controller.rb	/^  def redirect$/;"	f	class:Admin
 reflectNewUrl	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^  };$/;"	f
 reflectRedirectedUrl	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^  };$/;"	f
 rememberCurrentState	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^  };$/;"	f
@@ -287,8 +290,11 @@ rememberReferer	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e
 removeNoscriptTags	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^  };$/;"	f
 render_cart_items_count	app/helpers/application_helper.rb	/^  def render_cart_items_count(cart)$/;"	f	class:ApplicationHelper
 render_cart_total_price	app/helpers/carts_helper.rb	/^  def render_cart_total_price(cart)$/;"	f	class:CartsHelper
+render_order_paid_state	app/helpers/orders_helper.rb	/^  def render_order_paid_state(order)$/;"	f	class:OrdersHelper
+render_order_state	app/helpers/orders_helper.rb	/^  def render_order_state(order)$/;"	f	class:OrdersHelper
 resetScrollPosition	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^  };$/;"	f
 restoreScript	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^function restoreScript( elem ) {$/;"	f
+return	app/controllers/admin/orders_controller.rb	/^  def return$/;"	f	class:Admin
 return	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^function Tween( elem, options, prop, end, easing ) {$/;"	c
 return.init	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^	return new Tween.prototype.init( elem, options, prop, end, easing );$/;"	m
 returnFalse	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^function returnFalse() {$/;"	f
@@ -298,6 +304,9 @@ setAutofocusElement	public/assets/application-665d5c3f225f625bfdcd91aa48b4700597
 setGlobalEval	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^function setGlobalEval( elems, refElements ) {$/;"	f
 setPositiveNumber	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^function setPositiveNumber( elem, value, subtract ) {$/;"	f
 set_payment_with!	app/models/order.rb	/^  def set_payment_with!(method)$/;"	f	class:Order
+ship	app/controllers/admin/orders_controller.rb	/^  def ship$/;"	f	class:Admin
+shipped	app/controllers/admin/orders_controller.rb	/^  def shipped$/;"	f	class:Admin
+show	app/controllers/admin/orders_controller.rb	/^  def show$/;"	f	class:Admin
 show	app/controllers/orders_controller.rb	/^  def show$/;"	f	class:OrdersController
 show	app/controllers/products_controller.rb	/^  def show$/;"	f	class:ProductsController
 showHide	public/assets/application-665d5c3f225f625bfdcd91aa48b47005974c6e2f25e0cf2a93b4814c19ccb259.js	/^function showHide( elements, show ) {$/;"	f
