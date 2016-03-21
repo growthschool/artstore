@@ -33,7 +33,15 @@ class Order < ActiveRecord::Base
 
   def pay!
     self.update_columns(is_paid: true )
-    # add function update product
+  end
+
+  # add function update product quantity
+  def update_product_quantity!(cart)
+    cart.items.each do |cart_item|
+      @product = Product.find(params[cart.find_cart_item(cart_item).product_id])
+      @product.quantity = @product.quantity - cart.find_cart_item(cart_item).quantity
+      @product.save
+    end
   end
 
   include AASM

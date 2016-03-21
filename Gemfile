@@ -51,6 +51,10 @@ gem "font-awesome-rails"
 
 gem "aasm"
 
+gem "roadie", "2.4.3"
+
+gem "pay2go"
+
 gem "awesome_rails_console"
 
 group :development, :test do
@@ -62,4 +66,8 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # install gem letter_opener preview email
+  gem "letter_opener"
+
 end
