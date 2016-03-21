@@ -9,6 +9,7 @@
           <th width="80%">商品明細</th>
           <th>單價</th>
           <th>數量</th>
+          <th>總計</th>
         </tr>
       </thead>
       <tbody>
@@ -19,10 +20,13 @@
               <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
             </td>
             <td>
+              <%= cart_item.product.price%>
+            </td>
+            <td>
              <%= cart_item.quantity %>
             </td>
             <td>
-              <%= cart_item.product.price %>
+              <%= render_cart_total_price(current_cart) %>
             </td>
           </tr>
         <% end %>
