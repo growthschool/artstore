@@ -14,13 +14,13 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order = Order.find_by_token(params[:id])
+    @order = Order.find_by(token: params[:id])
     @order_info = @order.info
     @order_items = @order.items
   end
 
   def pay_with_credit_card
-    @order = Order.find_by_token(params[:id])
+    @order = Order.find_by(token: params[:id])
     @order.set_payment_with!("credit_card")
     @order.make_payment!
 
