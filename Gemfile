@@ -38,6 +38,7 @@ gem "carrierwave"
 gem "mini_magick"
 gem "font-awesome-rails"
 gem "aasm"
+gem "letter_opener", group: :development
 
 
 group :development, :test do
