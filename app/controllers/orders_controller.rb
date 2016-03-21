@@ -8,6 +8,7 @@ class OrdersController < ApplicationController
       @order.build_item_cache_from_cart(current_cart)
       @order.calculate_total!(current_cart)
       redirect_to order_path(@order.token)
+      current_cart.clean!
     else
       render "carts/checkout"
     end
@@ -22,10 +23,33 @@ class OrdersController < ApplicationController
   def pay_with_credit_card
    @order = Order.find_by_token(params[:id])
    @order.set_payment_with!("credit_card")
-   @order.pay!
-   redirect_to "/", notice: "成功完成付款"
+   @order.make_payment!
+   redirect_to account_orders_path, notice: "成功完成付款"
   end
 
+  def ship
+    @order = Order.find(params[:id])
+    @order.ship!
+    redirect_to :back
+  end
+
+  def shipped
+    @order = Order.find(params[:id])
+    @order.deliver!
+    redirect_to :back
+  end
+
+  def cancel
+    @order = Order.find(params[:id])
+    @order.cancell_order!
+    redirect_to :back
+  end
+
+  def return
+    @order = Order.find(params[:id])
+    @order.return_good!
+    redirect_to :back
+  end
 
   private
 
