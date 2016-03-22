@@ -44,6 +44,9 @@ gem "carrierwave"
 
 gem "mini_magick"
 
+gem "font-awesome-rails"
+
+gem "aasm"
 
 group :production do
   gem "pg"
