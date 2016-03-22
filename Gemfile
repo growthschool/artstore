@@ -32,7 +32,21 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "devise"
+
+gem "bootstrap-sass"
+
+gem "simple_form"
+
+gem "carrierwave"
+
+gem "mini_magick"
+
+gem "font-awesome-rails"
+
 gem "awesome_rails_console" # 讓你的 rails console 變整齊漂亮的 gem
+
+gem "aasm"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
