@@ -1,4 +1,5 @@
 class Order < ActiveRecord::Base
+  include Tokenable
   belongs_to :user
 
   before_create :generate_token
@@ -20,10 +21,6 @@ class Order < ActiveRecord::Base
 
   def calculate_total!(cart)
     self.update_columns(total: cart.total_price)
-  end
-
-  def generate_token
-    self.token = SecureRandom.uuid
   end
 
   def set_payment_with!(method)
