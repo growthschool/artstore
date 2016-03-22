@@ -54,6 +54,8 @@ gem "letter_opener", group: :development
 
 gem "pay2go"
 
+gem "figaro"
+
 group :production do
   gem "pg"
   gem "rails_12factor"
