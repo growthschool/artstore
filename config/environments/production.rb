@@ -84,12 +84,13 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'https://floating-cliffs-23476.herokuapp.com' }
 
   config.action_mailer.delivery_method = :smtp
+
   config.action_mailer.smtp_settings = {
     port:           587,
     address:        "smtp.mailing.org",
     user_name:      ENV["mailgun_user"],
     password:       ENV["mailgun_secret"],
-    domain:         "sandbox08d47c8339d64f3395022a73a5b8c71c.mailgun.org"
+    domain:         "sandbox08d47c8339d64f3395022a73a5b8c71c.mailgun.org",
     authentication: :plain,
   }
 end
