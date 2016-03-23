@@ -36,6 +36,10 @@
               <% end %>
 
               <li>
+              <%= link_to("個人訂單列表", account_orders_path ) %>
+              </li>
+
+              <li>
                 <%= link_to("登出", destroy_user_session_path, method: :delete ) %>
               </li>
             </ul>
