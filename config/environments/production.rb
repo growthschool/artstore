@@ -78,6 +78,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.after_initialize do
-    Pay2go.integration_mode = :production
+    Pay2go.integration_mode = :development
   end
+
+  config.action_mailer.default_url_options = { host: 'blooming-fortress-10659.herokuapp.com' } # 你的 heroku app 網址
 end
