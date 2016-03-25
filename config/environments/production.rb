@@ -82,4 +82,15 @@ Rails.application.configure do
   end
 
   config.action_mailer.default_url_options = { host: 'blooming-fortress-10659.herokuapp.com' } # 你的 heroku app 網址
+
+  config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      port:           587,
+      address:        "smtp.mailgun.org",
+      user_name:      ENV["mailgun_user"],
+      password:       ENV["mailgun_secret"],
+      domain:         "sandbox6dd06affdee4447e8811180930795811.mailgun.org", # 你的 mailgun domain name
+
+      authentication: :plain,
+    }
 end
