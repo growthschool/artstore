@@ -54,6 +54,8 @@ gem "pay2go"
 
 gem "figaro"
 
+gem 'delayed_job_active_record'
+
 group :production do
   gem "pg"
   gem "rails_12factor"

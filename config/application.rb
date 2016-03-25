@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+config.active_job.queue_adapter = :delayed_job
+
 module Artstore
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
