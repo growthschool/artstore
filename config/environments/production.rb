@@ -83,7 +83,7 @@ Rails.application.configure do
     Pay2go.integration_mode = :development
   end
 
-  config.action_mailer.default_url_options = { host: 'still-shore-24520.herokuapp.com'}
+  config.action_mailer.default_url_options = { host: 'artstore-w3-mf.herokuapp.com'}
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
