@@ -6,7 +6,6 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-config.active_job.queue_adapter = :delayed_job
 
 module Artstore
   class Application < Rails::Application
@@ -25,5 +24,7 @@ module Artstore
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.active_job.queue_adapter = :delayed_job
+
   end
 end
