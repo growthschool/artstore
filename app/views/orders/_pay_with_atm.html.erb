@@ -1,0 +1,20 @@
+<%= form_tag Pay2go.service_url, method: :post do  %>
+
+  <%= hidden_field_tag "MerchantID",      Pay2go.merchant_id %>
+  <%= hidden_field_tag "HashKey",         Pay2go.hash_key %>
+  <%= hidden_field_tag "HashIV",          Pay2go.hash_iv %>
+  <%= hidden_field_tag "LoginType",       "0" %>
+  <%= hidden_field_tag "RespondType",     "JSON" %>
+  <%= hidden_field_tag "Version",         "1.1" %>
+
+  <%= hidden_field_tag "ItemDesc",        "order_sample" %>
+  <%= hidden_field_tag "MerchantOrderNo", "#{order.id}s#{Time.now.strftime("%Y%m%d%H%M%S")}" %>
+  <%= hidden_field_tag "TimeStamp",       order.created_at.to_i %>
+  <%= hidden_field_tag "Amt",             order.total %>
+
+  <%= hidden_field_tag "VACC",            "1" %>
+  <%= hidden_field_tag "NotifyURL",       pay2go_atm_complete_order_url(order.token) %>
+  <%= hidden_field_tag "CheckValue",      Pay2goService.new(order).check_value %>
+
+  <%= submit_tag "使用ATM付款", :class => "btn btn-danger btn-lg btn-default" %>
+<% end %>

@@ -6,14 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-u = User.new
+create_users = for i in 1..10 do
+  user = User.create(
+    email: "demo_user_#{i}@test.com",
+    password: "12345678", 
+    password_confirmation: "12345678"
+    )
+end
 
-u.email = "admin@test.com"           # 可以改成自己的 email
-u.password = "12345678"              # 最少要八碼
-u.password_confirmation = "12345678" # 最少要八碼
-
-u.is_admin = true
-u.save
+admin_user = User.create(
+    email: "admin@test.com",
+    password: "12345678", 
+    password_confirmation: "12345678",
+    is_admin: true
+    )
 
 # 建立二筆商品資料
 
