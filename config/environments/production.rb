@@ -77,10 +77,10 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { host: 'desolate-meadow-72416.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'wahaha-sales.herokuapp.com' }
 
   config.after_initialize do
-    Pay2go.integration_mode = :development
+    Pay2go.integration_mode = :production
   end
 
   config.action_mailer.delivery_method = :smtp

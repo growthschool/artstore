@@ -56,6 +56,8 @@ gem "figaro"
 
 gem "awesome_rails_console" # 讓你的 rails console 變整齊漂亮的 gem
 
+gem "fog"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
