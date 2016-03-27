@@ -83,7 +83,7 @@ Rails.application.configure do
     Pay2go.integration_mode = :development
   end
 
-  config.action_mailer.deafult_url_options = { host: 'still-shore-24520.herokuapp.com'}
+  config.action_mailer.default_url_options = { host: 'still-shore-24520.herokuapp.com'}
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -91,7 +91,7 @@ Rails.application.configure do
     address:        "smtp.mailgun.org",
     user_name:      ENV["mailgun_user"],
     password:       ENV["mailgun_secret"],
-    domain:         "sandbox一堆亂碼.mailgun.org", # 你的 mailgun domain name
+    domain:         "sandboxbb594aece2cc4511b204b86c111254bd.mailgun.org", # 你的 mailgun domain name
 
     authentication: :plain,
   }
