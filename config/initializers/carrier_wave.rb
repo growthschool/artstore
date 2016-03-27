@@ -3,14 +3,14 @@ CarrierWave.configure do |config|
     config.storage :fog
     config.fog_credentials = {
       provider:              'AWS',
-      aws_access_key_id:     ENV['pay2go_merchant_id'],      # 你的 key
+      aws_access_key_id:     ENV['aws_access_key_id'],      # 你的 key
 
-      aws_secret_access_key: ENV['pay2go_merchant_id'],      # 你的 secret key
+      aws_secret_access_key: ENV['aws_secret_access_key'],      # 你的 secret key
 
       region:                'Tokyo' # 你的 S3 bucket 的 Region 位置
 
     }
-    config.fog_directory  = ENV['pay2go_merchant_id'] # 你設定的 bucket name
+    config.fog_directory  = ENV['fog_directory'] # 你設定的 bucket name
 
   else
     config.storage :file
