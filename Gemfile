@@ -57,6 +57,8 @@ gem "pay2go"
 
 gem "figaro"
 
+gem "fog"
+
 gem "awesome_rails_console"
 
 group :development, :test do
