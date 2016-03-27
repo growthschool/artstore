@@ -9,7 +9,7 @@ class OrderPlacingService
     @order.calculate_total!(@cart)
     @cart.clean!
     # sent mail
-    OrderMailer.notify_order_placed(@order).deliver
-
+    # OrderMailer.notify_order_placed(@order).deliver
+    OrderMailer.delay.notify_order_placed(@order)
   end
 end

@@ -59,6 +59,8 @@ gem "figaro"
 
 gem "fog"
 
+gem 'delayed_job_active_record'
+
 gem "awesome_rails_console"
 
 group :development, :test do
