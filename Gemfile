@@ -39,6 +39,7 @@ gem "mini_magick"
 gem "font-awesome-rails"
 gem "aasm"
 gem "letter_opener", group: :development
+gem "pay2go"
 
 
 group :development, :test do
