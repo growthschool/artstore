@@ -55,6 +55,8 @@ gem "roadie", "2.4.3"
 
 gem "pay2go"
 
+gem "figaro"
+
 gem "awesome_rails_console"
 
 group :development, :test do
