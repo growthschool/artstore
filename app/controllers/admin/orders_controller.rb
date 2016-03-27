@@ -33,5 +33,4 @@ class Admin::OrdersController < AdminController
     @order.return_good!
     redirect_to :back
   end
-  
 end

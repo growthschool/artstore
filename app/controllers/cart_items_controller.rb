@@ -3,7 +3,7 @@ class CartItemsController < ApplicationController
 
   def destroy
     @cart = current_cart
-    @item = @cart.cart_items.find_by(product_id: params[:id])
+    @item = @cart.find_cart_item(params[:id])
     @product = @item.product
     @item.destroy
 
@@ -13,7 +13,7 @@ class CartItemsController < ApplicationController
 
   def update
     @cart = current_cart
-    @item = @cart.find_cart_item(params[:id])
+    @item = @cart.cart_items.find_by(product_id: params[:id])
 
     if @item.product.quantity >= item_params[:quantity].to_i
       @item.update(item_params)
@@ -30,5 +30,4 @@ class CartItemsController < ApplicationController
   def item_params
     params.require(:cart_item).permit(:quantity)
   end
-
 end

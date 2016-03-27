@@ -7,7 +7,7 @@ class Order < ActiveRecord::Base
   accepts_nested_attributes_for :info
 
   include Tokenable
-  
+
   def build_item_cache_from_cart(cart)
     cart.items.each do |cart_item|
       item = items.build
@@ -31,7 +31,7 @@ class Order < ActiveRecord::Base
     self.update_columns(is_paid: true )
   end
 
-include AASM
+  include AASM
 
   aasm do
     state :order_placed, initial: true
@@ -62,7 +62,4 @@ include AASM
       transitions from: [:order_placed, :paid], to: :order_cancelled
     end
   end
-
-
-
 end

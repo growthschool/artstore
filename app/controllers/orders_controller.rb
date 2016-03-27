@@ -1,23 +1,24 @@
 class OrdersController < ApplicationController
-
   before_action :authenticate_user!, except: :pay2go_cc_notify
 
   protect_from_forgery except: :pay2go_cc_notify
+
+  def show
+    @order = Order.find_by_token(params[:id])
+    @order_info = @order.info
+    @order_items = @order.items
+  end
 
   def create
     @order = current_user.orders.build(order_params)
 
     if @order.save
       OrderPlacingService.new(current_cart, @order).place_order!
+
+      redirect_to order_path(@order.token)
     else
       render "carts/checkout"
     end
-  end
-
-  def show
-    @order = Order.find_by_token(params[:id])
-    @order_info = @order.info
-    @order_items = @order.items
   end
 
   def pay_with_credit_card
@@ -54,5 +55,4 @@ class OrdersController < ApplicationController
                                                     :shipping_name,
                                                     :shipping_address] )
   end
-
 end

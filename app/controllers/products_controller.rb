@@ -19,6 +19,4 @@ class ProductsController < ApplicationController
 
     redirect_to :back
   end
-
-
 end

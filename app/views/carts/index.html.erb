@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-md-12">
 
-    <%= link_to("清空購物車", clean_carts_path ,
-                method: :delete , class: "pull-right",
-                style: "text-decoration: underline;",
-                data: { confirm: "你確定要清空整個購物車嗎？"} )%>
+   <%= link_to("清空購物車", clean_carts_path ,
+               method: :delete , class: "pull-right",
+               style: "text-decoration: underline;",
+               data: { confirm: "你確定要清空整個購物車嗎？"} )%>
 
     <h2> 購物車 </h2>
 
@@ -35,19 +35,19 @@
             </td>
             <td>
               <%= product.price %>
-              <td>
-                <% item = current_cart.find_cart_item(product) %>
+            </td>
+            <td>
+              <% item = current_cart.find_cart_item(product) %>
 
-                <%= form_for item, url: item_path(product) do |f| %>
-                  <%= f.select :quantity, 1..product.quantity %>
-                  <%= f.submit "更新", data: { disable_with: "Submiting..." } %>
-                <% end %>
-              </td>
-              <td>
-                <%= link_to item_path(product), method: :delete do %>
-                  <i class="fa fa-trash"></i>
-                <% end %>
-              </td>
+              <%= form_for item, url: item_path(product) do |f| %>
+                <%= f.select :quantity, 1..product.quantity %>
+                <%= f.submit "更新", data: { disable_with: "Submiting..." } %>
+              <% end -%>
+            </td>
+            <td>
+              <%= link_to item_path(product), method: :delete do %>
+                <i class="fa fa-trash"></i>
+              <% end %>
             </td>
           </tr>
         <% end %>

@@ -1,25 +1,31 @@
 class Admin::ProductsController < AdminController
-  
+
   def index
-  	@products = Product.all
+    @products = Product.all
   end
-  
+
   def new
     @product = Product.new
     @photo = @product.build_photo
-  end
-  def show
-    @product = Product.find(params[:id])
-    @photo = @product.photo
   end
 
   def edit
     @product = Product.find(params[:id])
 
     if @product.photo.present?
-      @photo = @product.photo
+       @photo = @product.photo
+     else
+       @photo = @product.build_photo
+     end
+  end
+
+  def create
+    @product = Product.new(product_params)
+
+    if @product.save
+      redirect_to admin_products_path
     else
-      @photo = @product.build_photo
+      render :new
     end
   end
 
@@ -33,20 +39,9 @@ class Admin::ProductsController < AdminController
     end
   end
 
-  def create
-    @product = Product.new(product_params)
-
-    if @product.save
-      redirect_to admin_products_path
-    else
-      render :new
-    end
-  end
-
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price)
     params.require(:product).permit(:title, :description, :quantity, :price,
                                     photo_attributes: [:image, :id])
   end

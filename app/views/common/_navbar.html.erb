@@ -9,7 +9,6 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active">
-          <!-- <%= link_to("Products", "#") %> -->
           <%= link_to("Products", products_path) %>
         </li>
       </ul>
@@ -19,6 +18,7 @@
             購物車 <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
           <% end %>
         </li>
+
         <% if !current_user %>
           <li> <%= link_to("登入", new_user_session_path) %> </li>
         <% else %>
@@ -28,6 +28,7 @@
               <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
+
               <% if current_user.admin? %>
                 <li>
                   <%= link_to("Admin 選單", admin_products_path ) %>

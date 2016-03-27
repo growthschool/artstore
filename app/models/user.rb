@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :orders
+
   def admin?
     is_admin
   end
@@ -14,6 +17,4 @@ class User < ActiveRecord::Base
   def to_normal
     self.update_columns(is_admin: false)
   end
-
-  has_many :orders
 end
