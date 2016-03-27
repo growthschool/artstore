@@ -39,9 +39,9 @@ Rails.application.routes.draw do
 
   resources :items, controller: "cart_items"
 
-  root "products#index"
+#  root "products#index"
 # =======
-  root "welcome#index"
+#  root "welcome#index"
 # >>>>>>> c8f2f862cd50f979d489185a9b87c3088039e738
 
   # The priority is based upon order of creation: first created -> highest priority.
