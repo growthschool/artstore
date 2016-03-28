@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 # <<<<<<< HEAD
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   namespace :admin do
     resources :products
     resources :orders do
