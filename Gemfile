@@ -46,6 +46,7 @@ gem "figaro"
         gem "pg"
         gem "rails_12factor"
     end
+gem "fog"
 
 
 
