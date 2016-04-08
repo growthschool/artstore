@@ -1,0 +1,18 @@
+<%= link_to("New", new_admin_product_path, class: "btn btn-primary pull-right") %>
+<h1>商品清單</h1>
+
+<div class="container marketing">
+  <!-- Three columns of text below the carousel -->
+  <div class="row">
+    <% @products.each do |product| %>
+    <div class="col-lg-4">
+      <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+      <h2><%= link_to(product.title, admin_product_path(product)) %></h2>
+      <p>描述：<%= product.description %></p>
+      <p>數量：<%= product.quantity %></p>
+      <p>價格：<%= product.price %></p>
+      <p><%= link_to("編輯", edit_admin_product_path(product), class: "btn btn-default") %></p>
+    </div><!-- /.col-lg-4 -->
+    <% end %>
+  </div><!-- /.row -->
+</div><!-- /.container -->
