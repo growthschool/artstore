@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem "simple_form"
+gem "carrierwave"
+gem "mini_magick"
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
@@ -31,6 +35,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem "devise"
+
+gem "bootstrap-sass"
 
 gem "awesome_rails_console" # 讓你的 rails console 變整齊漂亮的 gem
 
