@@ -1,0 +1,20 @@
+<%= simple_form_for [:admin, @product] do |f| %>
+  <div class="form-group">
+    <%= f.input :title, class: "form-control", label: "標題" %>
+    </div>
+    <div class="form-group">
+      <%= f.input :description , class: "form-control", label: "敘述"%>
+    </div>
+    <div class="form-group">
+      <%= f.input :quantity , class: "form-control", label: "數量" %>
+    </div>
+    <div class="form-group">
+      <%= f.input :price ,  class: "form-control" , label: "價錢"%>
+    </div>
+    <div class="form-group">
+      <%= f.simple_fields_for :photo do |c| %>
+        <%= c.input :image, as: :file %>
+      <% end %>
+    </div>
+    <%= f.submit "Submit", class:"btn btn-primary", data:{ disable_with: "Submitting..."} %>
+<% end %>

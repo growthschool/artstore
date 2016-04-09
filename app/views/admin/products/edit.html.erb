@@ -1,0 +1,23 @@
+<div class="col-md-4 col-md-offset-4">
+  <h2>修改商品</h2>
+  <hr>
+  <%= simple_form_for [:admin, @product] do |f| %>
+    <div class="form_group">
+      <%= f.input :title, class: "form-control", label: "標題" %>
+      <%= f.input :description, class: "form-control", label: "描述" %>
+      <%= f.input :quantity , class: "form-control", label: "數量" %>
+      <%= f.input :price, class: "form-control", label: "價錢" %>
+      <% if @photo.image.present? %>
+        <span>目前商品圖</span>
+        <%= image_tag(@photo.image.thumb.url) %>
+      <% end %>
+      <div class="form-group">
+        <%= f.simple_fields_for :photo do |c| %>
+          <%= c.input :image, as: :file %>
+        <% end %>
+      </div>
+
+      <%= f.submit "修改", class:"btn btn-primary center-block", data:{ disable_with: "Submitting..."} %>
+    </div>
+  <% end %>
+</div>
