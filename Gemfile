@@ -2,7 +2,15 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 gem 'rails', '4.2.2'
+gem "mini_magick"
+gem "font-awesome-rails"
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'carrierwave', '~> 0.11.0'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
+gem 'better_errors', '~> 2.1', '>= 2.1.1'
+gem 'rmagick', '~> 2.15', '>= 2.15.4'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets

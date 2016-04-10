@@ -1,0 +1,8 @@
+<li> <%= image_tag @product.photo.image_url(:medium).to_s%></li>
+<li> <%= @product.title %> </li>
+<li> <%= @product.description %> </li>
+<li> <%= @product.quantity %> </li>
+<li> <%= @product.price %> </li>
+
+<li><%= link_to 'Edit New Product', edit_admin_product_path(@product) %></li>
+<li><%= link_to 'Destroy Product', admin_product_path(@product), method: :delete, data: {confirm: "Are you sure?"}%></li>
