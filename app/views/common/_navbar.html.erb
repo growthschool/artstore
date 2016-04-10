@@ -1,0 +1,46 @@
+<nav class="navbar navbar-default" >
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="#" class="navbar-brand">Artstore </a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <%= link_to "products", products_path %>
+            </li>
+          </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to "#" do %>
+              購物車<i class="fa fa-shopping-cart"></i>(0)
+            <% end %>
+            </li>
+          <% unless current_user %>
+            <li><%= link_to "login", new_user_session_path %></li>
+          <% else %>
+          <li class="dropdown">
+            <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+              Hi!, <%= current_user.email %>
+          <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <% if current_user.admin? %>
+                  <li>
+                    <%= link_to "管理者選單", admin_products_path %>
+                  </li>
+                  <% end %>
+                <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </li>
+          <% end %>
+
+        </ul>  
+        </div><!--/.nav-collapse -->
+
+      </div>
+    </nav>
