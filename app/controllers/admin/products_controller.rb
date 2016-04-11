@@ -1,6 +1,7 @@
 class Admin::ProductsController < ApplicationController
   before_action :authenticate_user!
   before_action :admin_required
+  #mount_uploader :avatar, AvatarUploader
 
   def index
     @products = Product.all
@@ -8,6 +9,7 @@ class Admin::ProductsController < ApplicationController
   #------------------------
   def new
       @product = Product.new
+      @photo = @product.build_photo
   end
 
   def create
@@ -22,6 +24,11 @@ class Admin::ProductsController < ApplicationController
   #------------------------
   def edit
       @product = Product.find(params[:id])
+      if @product.photo.present?
+        @photo = @product.photo
+      else
+        @photo = @product.build_photo
+      end
   end
 
   def update
@@ -39,7 +46,7 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price)
+    params.require(:product).permit(:title, :description, :quantity, :price, photo_attributes: [:image, :id])
   end
 
 end
