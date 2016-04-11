@@ -28,11 +28,16 @@
            </li>-->
          </ul>
          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to "#" do  %>
+              購物車 <i class="fa fa-shopping-cart"> </i> (0)
+              <% end %>
+            </li>
            <!--<li><a href="../navbar/">Default</a></li>
            <li><a href="../navbar-static-top/">Static top</a></li>
            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>-->
            <% if !current_user %>
-             <li> <%= link_to("登入", new_user_session_path) %> </li>
+             <li> <%= link_to("登入", new_user_session_path, class: "fa fa-sign-in") %> </li>
            <% else %>
              <li class="dropdown">
                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -40,8 +45,13 @@
                  <b class="caret"></b>
                </a>
                <ul class="dropdown-menu">
+                 <% if current_user.admin? %>
                  <li>
-                   <%= link_to("登出", destroy_user_session_path, method: :delete ) %>
+                   <%= link_to(" Admin選單", admin_products_path, class: "fa fa-inbox" ) %>
+                 </li>
+                 <% end %>
+                 <li>
+                   <%= link_to(" 登出", destroy_user_session_path, method: :delete, class: "fa fa-sign-out" ) %>
                  </li>
                </ul>
              </li>

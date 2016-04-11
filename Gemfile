@@ -18,6 +18,7 @@ gem "bootstrap-sass"
 gem "simple_form"
 gem 'carrierwave'
 gem "mini_magick"
+gem "font-awesome-rails"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
