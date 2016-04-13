@@ -18,7 +18,7 @@
     <%= image_tag(@photo.image.thumb.url) %>
   <% end %>
   <div class="form-group">
-    <%= f.simple_field_for :photo do |c| %>
+    <%= f.simple_fields_for :photo do |c| %>
       <%= c.input :image, as: :file %>
     <% end %>
   </div>
