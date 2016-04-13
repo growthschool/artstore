@@ -18,7 +18,6 @@ class Admin::UsersController < ApplicationController
   def to_normal
     @user = User.find(params[:id])
     @user.to_normal
-
     redirect_to admin_users_path
   end
 end
