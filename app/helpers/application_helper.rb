@@ -1,4 +1,9 @@
 module ApplicationHelper
+    def render_cart_items_count(cart)
+      cart.cart_items.count
+    end
+      
+    
 	  def notice_message
     alert_types = { notice: :success, alert: :danger }
 
