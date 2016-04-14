@@ -43,6 +43,8 @@ gem "awesome_rails_console" # 讓你的 rails console 變整齊漂亮的 gem
  gem "mini_magick"
  gem "font-awesome-rails"
 
+ gem "aasm"
+
   group :production do
     gem "pg"
     gem "rails_12factor"
