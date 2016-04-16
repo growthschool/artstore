@@ -8,11 +8,15 @@ class Cart < ActiveRecord::Base
     ci.save
   end
 
+  def clean!
+    cart_items.destroy_all
+  end
+
   def total_price
     sum = 0
 
-    items.each do |item|
-      sum = sum + item.price
+    cart_items.each do |cart_item|
+      sum = sum + (cart_item.price * cart_item.quantity)
     end
     sum
   end
