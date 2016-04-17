@@ -30,6 +30,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :item, controller: "cart_items"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
