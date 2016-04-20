@@ -10,10 +10,15 @@ class Cart < ActiveRecord::Base
 
   def total_price
     sum = 0
-    items.each do |item|
-      sum += item.price
+    cart_items.each do |cart_item|
+      sum += cart_item.product.price * cart_item.quantity
     end
+
     sum
+  end
+
+  def find_cart_item(product)
+    cart_items.find_by(product_id: product)
   end
 
   def clean!

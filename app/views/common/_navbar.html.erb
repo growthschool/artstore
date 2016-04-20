@@ -34,6 +34,7 @@
                     <%= link_to "管理者選單", admin_products_path %>
                   </li>
                   <% end %>
+                <li> <%= link_to "個人訂單列表", account_orders_path%> </li>
                 <li><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
               </ul>
             </li>
