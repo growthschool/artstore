@@ -15,7 +15,7 @@
 /log/*
 !/log/.keep
 /tmp
-
+/erd.pdf
 
 config/database.yml
 public/uploads
