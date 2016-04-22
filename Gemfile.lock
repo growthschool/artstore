@@ -57,6 +57,11 @@ GEM
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
+    carrierwave (0.11.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -76,6 +81,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.5.2)
+    font-awesome-rails (4.6.0.0)
+      railties (>= 3.2, < 5.1)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     hirb (0.7.3)
@@ -97,6 +104,7 @@ GEM
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
     mime-types (2.6.1)
+    mini_magick (4.5.1)
     mini_portile (0.6.2)
     minitest (5.7.0)
     multi_json (1.11.2)
@@ -195,10 +203,13 @@ DEPENDENCIES
   awesome_rails_console
   bootstrap-sass
   byebug
+  carrierwave
   coffee-rails (~> 4.1.0)
   devise
+  font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
+  mini_magick
   rails (= 4.2.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
