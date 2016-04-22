@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "products#index"
 
+  resources :items, controller: "cart_items"
+
   resources :carts do
     collection do
       post :chenkout
