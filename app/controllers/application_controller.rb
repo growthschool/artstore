@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
       redirect_to "/"
     end
   end
-  
+
   private
 
   def find_cart
