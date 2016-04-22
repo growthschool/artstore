@@ -5,7 +5,6 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :products
-
     resources :users do
       member do
         post :to_admin
@@ -14,7 +13,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :products
+  #前台與後台產品容易搞錯，注意！
+  resources :products do
+    member do
+      post :add_to_cart
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
