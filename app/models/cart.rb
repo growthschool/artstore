@@ -7,4 +7,8 @@ class Cart < ActiveRecord::Base
     ci.product = product
     ci.save
   end
+
+  def clean!
+    cart_items.destroy_all
+  end
 end

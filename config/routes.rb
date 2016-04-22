@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   root "products#index"
 
-  resources :carts
+  resources :carts do
+    collection do
+      post :chenkout
+      delete :clean
+    end
+  end
 
   devise_for :users
 
