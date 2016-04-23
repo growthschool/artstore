@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   resources :items, controller: "cart_items"
 
+  resources :orders
+
   resources :carts do
     collection do
-      post :chenkout
+      post :checkout
       delete :clean
     end
   end
