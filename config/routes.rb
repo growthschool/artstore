@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  resources :orders
   root "products#index"
 
-  resources :items, controller: "cart_items"
 
-  resources :orders
+
+  resources :items, controller: "cart_items"
 
   resources :carts do
     collection do
