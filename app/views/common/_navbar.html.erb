@@ -9,7 +9,8 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li class="active">
-					<%= link_to("Products", products_path) %>
+					<%= link_to("Products", admin_products_path) %>
+					<%= link_to("Order",    admin_orders_path) %>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
@@ -29,13 +30,10 @@
 						</a>
 						<ul class="dropdown-menu">
 							<% if current_user.admin? %>
-								<li>
-									<%= link_to("Admin 選單", admin_products_path) %>
-								</li>
+								<li><%= link_to("Admin 選單", admin_products_path) %></li>
 							<% end %>
-							<li>
-								<%= link_to("登出", destroy_user_session_path, method: :delete) %>
-							</li>
+							<li><%= link_to("個人訂單列表",account_orders_path) %></li>
+							<li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li>
 						</ul>
 					</li>
 				<% end %>
