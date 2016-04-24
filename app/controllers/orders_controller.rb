@@ -21,12 +21,13 @@ class OrdersController < ApplicationController
     @order_items = @order.items
   end
 
+  #設定注意
   def pay_with_credit_card
     @order = Order.find_by_token(params[:id])
     @order.set_payment_with!("credit_card")
     @order.pay!
 
-    redirect_to order_path(@order.token), notice: "已付款完成"
+    redirect_to account_orders_path, notice: "已付款完成"
   end
 
 

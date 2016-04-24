@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   end
 
 
+  namespace :account do
+    resources :orders
+  end
+
 
   resources :items, controller: "cart_items"
 
