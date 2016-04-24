@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  resources :orders
+
   root "products#index"
+
+  resources :orders do
+    member do
+      get :pay_with_credit_card
+    end
+  end
 
 
 
