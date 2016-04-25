@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem "aasm"
 gem "font-awesome-rails"
 gem "carrierwave"
 gem "mini_magick"
