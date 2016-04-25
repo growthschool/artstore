@@ -12,7 +12,24 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :products
+  resources :orders do
+    member do
+      get :pay_with_credit_card
+    end
+  end
+  
+
+  resources :products do
+    member do
+      post :add_to_cart
+    end
+  end
+
+  resources :carts do
+    collection do
+      post :checkout
+    end
+  end  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
