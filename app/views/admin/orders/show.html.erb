@@ -1,7 +1,9 @@
 <div class="row">
-  <div class="col-md-12">
+   <div class="col-md-12">
 
-    <h2> 訂單明細 </h2>
+    <h2> 訂單明細 (<%= render_order_paid_state(@order) %>) </h2>
+
+    <%= render "admin/orders/state_option", order: @order %>
 
     <table class="table table-bordered">
       <thead>
@@ -32,9 +34,9 @@
 
     <div class="total clearfix">
       <span class="pull-right">
-        總計 <%= @order.total %> NTD
-      </span>
-    </div>
+       <span> 總計 <%= @order.total %> NTD
+       </span>
+     </div>
 
      <hr>
 
@@ -64,13 +66,6 @@
         </tr>
       </tbody>
     </table>
-    <% if @order.is_paid? %>
-      <p class="text-center">此訂單已完成付款</p>
-    <% else %>
-      <div class="pull-right">
-        <%= link_to("以信用卡付款", pay_with_credit_card_order_path(@order.token), class: "btn btn-lg btn-danger") %>
-        <%= link_to("以 ATM 付款", "#", class: "btn btn-lg btn-danger") %>
-      </div>
-    <% end %>
+
   </div>
 </div>
