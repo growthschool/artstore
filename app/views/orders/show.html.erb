@@ -1,0 +1,91 @@
+<div class="row">
+  <div class="col-md-12">
+
+    <h2>訂單明細</h2>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <td width="80%">商品資訊</td>
+          <td>單價</td>
+          <td>數量</td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @order_items.each do |order_item| %>
+          <tr>
+            <td>
+              <%= order_item.product_name %>
+            </td>
+            <td>
+              <%= order_item.price %>
+            </td>
+            <td>
+              <%= order_item.quantity %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <div class="total clearfix">
+      <span class="pull-right">
+        <span>金額總計 NTD <%= @order.total %></span>
+      </span>
+    </div>
+
+    <hr>
+
+    <table class="table table-striped table-bordered">
+      <tbody>
+        <tr>
+          <td colspan="2">訂購人</td>
+        </tr>
+        <tr>
+          <td width="20%">Name</td>
+          <td>
+            <%= @order_info.billing_name %>
+          </td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>
+            <%= @order_info.billing_address %>
+          </td>
+        </tr>
+        <tr>
+          <td>Telephone</td>
+          <td>#</td>
+        </tr>
+        <tr>
+          <td colspan="2">收件人</td>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>
+            <%= @order_info.shipping_name %>
+          </td>
+        </tr>
+        <tr>
+          <td>Address</td>
+          <td>
+            <%= @order_info.shipping_address %>
+          </td>
+        </tr>
+        <tr>
+          <td>Telephone</td>
+          <td>#</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <% if !@order.is_paid? %>
+      <div class="pull-right">
+        <%= link_to("信用卡付款", pay_with_credit_card_order_path(@order.token), class: "btn btn-lg btn-danger") %>
+        <%= link_to("ATM付款", "#", class: "btn btn-lg btn-danger") %>
+      </div>
+    <% else %>
+      <p class="text-center">已付款完成</p>
+    <% end %>
+  </div>
+</div>

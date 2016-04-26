@@ -1,10 +1,60 @@
 Rails.application.routes.draw do
 
+  root "products#index"
+
+  resources :orders do
+    member do
+      get :pay_with_credit_card
+    end
+  end
+
+
+  namespace :account do
+    resources :orders
+  end
+
+
+  resources :items, controller: "cart_items"
+
+  resources :carts do
+    collection do
+      post :checkout
+      delete :clean
+    end
+  end
+
+  devise_for :users
+
+  namespace :admin do
+    resources :products
+    resources :orders do
+      member do
+        post :cancel
+        post :ship
+        post :shipped
+        post :return
+      end
+    end
+    resources :users do
+      member do
+        post :to_admin
+        post :to_normal
+      end
+    end
+  end
+
+  #前台與後台產品容易搞錯，注意！
+  resources :products do
+    member do
+      post :add_to_cart
+    end
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
