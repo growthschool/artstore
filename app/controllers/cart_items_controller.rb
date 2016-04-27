@@ -3,7 +3,7 @@ class CartItemsController < ApplicationController
 
   def destroy
     @cart = current_cart
-    @item = @cart.cart_items.find_by(product_id: params[:id])
+    @item = @cart.find_cart_item(params[:id])
     @product = @item.product
     @item.destroy
 
@@ -14,6 +14,8 @@ class CartItemsController < ApplicationController
   def update
     @cart = current_cart
     @item = @cart.cart_items.find_by(product_id: params[:id])
+
+    # 若 庫存數量 >= 訂單要求量
     if @item.product.quantity >= item_params[:quantity].to_i
       @item.update(item_params)
       flash[:notice] = "成功變更數量"
