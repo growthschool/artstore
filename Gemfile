@@ -4,9 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use sqlite3 as the database for Active Record
-group :development, :test do
-  gem 'sqlite3'
-end
+gem 'sqlite3', group: :development
 
 group :production do
   gem 'pg'
@@ -40,7 +38,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem "devise"
+gem 'devise', '~> 4.0', '>= 4.0.1'
 
 gem "bootstrap-sass"
 
