@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+gem "pay2go"
+gem "letter_opener", group: :development
+gem "roadie", "2.4.3"
 gem "aasm"
 gem "devise"
 gem "bootstrap-sass"
