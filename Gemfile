@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem "aasm"
 gem "devise"
 gem "bootstrap-sass"
 gem "simple_form"
