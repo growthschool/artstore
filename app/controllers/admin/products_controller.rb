@@ -1,5 +1,10 @@
 class Admin::ProductsController < ApplicationController
-	def new
+	
+    def index
+        @products = Product.all
+    end
+
+    def new
 		@product = Product.new
     end
 
