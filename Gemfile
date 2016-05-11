@@ -32,6 +32,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem "devise"
+
 gem "awesome_rails_console" # 讓你的 rails console 變整齊漂亮的 gem
 
 group :development, :test do
