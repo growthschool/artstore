@@ -10,4 +10,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # def admin_required
+  #   if !current_user.admin?
+  #     redirect_to admin_products_path
+  #   end
+  # end
+
 end

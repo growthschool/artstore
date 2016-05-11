@@ -1,4 +1,4 @@
-<h3>新增產品</h3>
+<h3>編輯產品</h3>
 <%= simple_form_for [:admin, @product] do |f| %>
 
   <div class="group">
@@ -17,11 +17,18 @@
     <%= f.input :price %>
   </div>
 
+
+  <% if @photo.image.present? %>
+   <span>目前商品圖</span> <br>
+   <%= image_tag(@photo.image.thumb.url) %>
+  <% end %>
+
   <div class="form-group">
-    <%= f.simple_fields_for :photo do |c| %>
-    <%= c.input :image, as: :file %>
-    <% end %>
+   <%= f.simple_fields_for :photo do |c| %>
+     <%= c.input :image , as: :file %>
+   <% end %>
   </div>
+
 
   <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
 
