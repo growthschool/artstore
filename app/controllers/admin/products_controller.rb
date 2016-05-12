@@ -9,10 +9,17 @@ class Admin::ProductsController < ApplicationController
     @products = Product.all
   end
 
+  # is a page
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  # is a page
   def new
     @product = Product.new
   end
 
+  # is an action
   def create
     @product = Product.new(product_params)
 

@@ -1,5 +1,25 @@
-<ul>
-  <% @products.each do |product| %>
-    <li> <%= link_to(product.title, admin_product_path(product)) %></li>
-  <% end %>
-</ul>
+<div class="col-md-12">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Product Pic</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Options</td>
+      </tr>
+    </thead>
+    <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td>#</td>
+        <td>NA</td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+        <td> <%= link_to("Edit", edit_admin_product_path(product), class: "btn btn-sm btn-default")%> </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+</div>
