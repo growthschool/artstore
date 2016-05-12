@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+  def after_sign_in_path_for(current_user)
+    admin_products_path
+  end
+
   def admin_required
     if !current_user.admin?
       redirect_to("/")
