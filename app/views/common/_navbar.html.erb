@@ -17,7 +17,11 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-
+          <li>
+            <%= link_to "#" do %>
+            購物車 <i class= "fa fa-shopping-basket"> </i> (0)
+            <% end %>
+          </li>
         <% if !current_user %>
           <li> <%= link_to("登入", new_user_session_path) %> </li>
         <% else %>
@@ -27,6 +31,12 @@
               <b class="caret"></b>
             </a>
             <ul class="dropdown-menu">
+              <% if current_user.admin? %>
+              <li>
+                <%= link_to("Admin選單", admin_products_path) %>
+              </li>
+              <% end %>
+
               <li>
                 <%= link_to("登出", destroy_user_session_path, method: :delete ) %>
               </li>
@@ -34,7 +44,7 @@
           </li>
         <% end %>
 
-      </ul>
+      </ul> <!-- class="nav navbar-nav navbar-right" -->
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

@@ -1,8 +1,9 @@
-<h3>這是/products 首頁</h3>
+<h3>任何人都看的到/products 首頁</h3>
 
 <div class="row">
   <% @products.each do |product| %>
-    <div class="col-xs-6 col-md-3">
+    <!-- <div class="col-xs-6 col-md-2"> -->
+      <div class="col-md-3 col-xs-4 ">
       <%= link_to product_path(product) do %>
         <% if product.photo.present? %>
           <%= image_tag(product.photo.image.thumb.url, class: "thumbnail") %>
