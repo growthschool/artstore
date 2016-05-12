@@ -1,25 +1,25 @@
-<%= form_for [:admin, @product] do |f| %>
+<%= simple_form_for [:admin, @product] do |f| %>
 
-    <div class="group">
-      <%= f.label("標題") %>
-      <%= f.text_field :title %>
+    <div class="form-group">
+      <%= f.input :title, label: "標題", input_html: { class: "form-control"} %>
     </div>
 
-    <div class="group" >
-      <%= f.label("敘述") %>
-      <%= f.text_area :description %>
+    <div class="form-group" >
+      <!--
+      https://github.com/plataformatec/simple_form
+      a column created with type :text in the database will use a textarea input by default
+      -->
+      <%= f.input :description, label: "敘述", as: :text, input_html: {class: "form-control"} %>
     </div>
 
-    <div class="group" >
-      <%= f.label("數量") %>
-      <%= f.text_field :quantity %>
+    <div class="form-group" >
+      <%= f.input :quantity, label: "數量", input_html: { class: "form-control"} %>
     </div>
 
-    <div class="group" >
-      <%= f.label("價錢") %>
-      <%= f.text_field :price %>
+    <div class="form-group" >
+      <%= f.input :price, label: "價錢", input_html: { class: "form-control" } %>
     </div>
 
-    <%= f.submit "Submit", data: {disable_with: "Submitting..." } %>
+    <%= f.submit "Submit", class: "btn btn-primary", data: {disable_with: "Submitting..." } %>
 
 <% end %>
