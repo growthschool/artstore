@@ -1,0 +1,14 @@
+<h1>Products I’m Selling</h1>
+
+<div class="pageNav">
+  <%= link_to("Add A Product", new_admin_product_path, class: "btn btn-primary pull-right") %>
+</div>
+
+<div class="clearfix"></div>
+<hr>
+
+<ul>
+  <% @products.each do |product| %>
+  <li><%= link_to(product.title, admin_product_path(product)) %></li>
+  <% end %>
+</ul>
