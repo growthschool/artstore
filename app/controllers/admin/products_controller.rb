@@ -9,6 +9,7 @@ class Admin::ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @form_options = { submit_text: "Add", disable_text: "Adding" }
   end
 
   def create
@@ -19,6 +20,32 @@ class Admin::ProductsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @product = Product.find(params[:id])
+  end
+
+  def edit
+    @product = Product.find(params[:id])
+    @form_options = { submit_text: "Update", disable_text: "Updating" }
+  end
+
+  def update
+    @product = Product.find(params[:id])
+
+    if @product.update(product_params)
+      redirect_to(admin_products_path)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    product = Product.find(params[:id])
+
+    product.destroy
+    redirect_to(admin_products_path)
   end
 
   private
