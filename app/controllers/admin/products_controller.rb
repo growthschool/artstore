@@ -34,6 +34,7 @@ class Admin::ProductsController < ApplicationController
   # is a page
   def new
     @product = Product.new
+    @photo = @product.build_photo
   end
 
   # is an action
