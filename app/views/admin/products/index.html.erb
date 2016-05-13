@@ -13,7 +13,7 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.id %></td>
-        <td>NA</td>
+        <td><%= product.photo %></td>
         <td><%= product.description %></td>
         <td><%= product.price %></td>
         <td> <%= link_to("Edit", edit_admin_product_path(product), class: "btn btn-sm btn-default")%> </td>
