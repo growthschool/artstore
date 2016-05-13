@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Artstore</title>
+  <title>Artstore Administration</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -17,7 +17,18 @@
   </div>
 
   <div class="container-fluid">
-    <%= yield %>
+    <div class="row">
+      <div class="col-md-2">
+        <ul class="nav nav-pills nav-stacked">
+          <li><%= link_to("I’m Selling...", admin_products_path) %></li>
+          <li><%= link_to("User List", admin_users_path) %></li>
+        </ul>
+      </div>
+
+      <div class="col-md-10">
+        <%= yield %>
+      </div>
+    </div>
   </div>
 
   <div class="container-fluid">

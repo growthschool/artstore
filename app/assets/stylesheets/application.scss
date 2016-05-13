@@ -13,7 +13,10 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 
 @import "partial/atom/footer";
 
 @import "partial/molecule/deviseForm";
+@import "partial/molecule/productListTable";
+@import "partial/molecule/productPage";

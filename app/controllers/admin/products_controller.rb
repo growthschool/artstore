@@ -1,5 +1,7 @@
 class Admin::ProductsController < ApplicationController
 
+  layout "admin"
+
   before_action :authenticate_user!
   before_action :admin_required
 
@@ -18,8 +20,10 @@ class Admin::ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
+      flash[:success] = "Product added successfully."
       redirect_to admin_products_path
     else
+      flash[:alert] = "Oops... Something went wrong. Please add again."
       render :new
     end
   end
@@ -43,8 +47,10 @@ class Admin::ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     if @product.update(product_params)
+      flash[:success] = "Product updated successfully."
       redirect_to(admin_products_path)
     else
+      flash[:alert] = "Oops... Something went wrong. Please try again."
       render :edit
     end
   end
@@ -53,6 +59,8 @@ class Admin::ProductsController < ApplicationController
     product = Product.find(params[:id])
 
     product.destroy
+
+    flash[:success] = "Product deleted successfully."
     redirect_to(admin_products_path)
   end
 

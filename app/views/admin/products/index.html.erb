@@ -9,12 +9,13 @@
 <div class="clearfix"></div>
 <hr>
 
-<table class="table table-striped table-hover">
+<table class="table table-striped table-hover product-listTable">
   <thead>
     <tr>
       <th>#</th>
-      <th>Product Name</th>
-      <th>Product Description</th>
+      <th>Product</th>
+      <th>Description</th>
+      <th>Price</th>
       <th>Added Date</th>
       <th>Operations</th>
     </tr>
@@ -25,8 +26,15 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product_count %></td>
-        <td><%= link_to(truncate(product.title, length: 30), admin_product_path(product)) %></td>
+        <td>
+          <%#= link_to(truncate(product.title, length: 30), admin_product_path(product)) %>
+          <%= link_to(admin_product_path(product)) do %>
+            <%= image_tag(product.photo.image.thumb.url, class: "img-thumbnail") %>
+            <br><%= truncate(product.title, length: 30) %>
+          <% end %>
+        </td>
         <td><%= truncate(product.description, length: 20) %></td>
+        <td>$<%= product.price %></td>
         <td><%= product.created_at.to_s(:short) %></td>
         <td>
           <%= link_to(edit_admin_product_path(product), html_options = {class: "btn btn-primary btn-xs" } ) do %>

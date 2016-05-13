@@ -16,4 +16,5 @@
 //= require bootstrap-sprockets
 //= require bootstrap/collapse
 //= require bootstrap/dropdown
+//= require bootstrap/alert
 //= require_tree .
