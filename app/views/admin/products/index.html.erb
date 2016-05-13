@@ -13,7 +13,9 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.id %></td>
-        <td><%= product.photo %></td>
+        <% if product.photo.present? %>
+          <td><%= image_tag(product.photo.image.thumb.url) %></td>
+        <% end %>
         <td><%= product.description %></td>
         <td><%= product.price %></td>
         <td> <%= link_to("Edit", edit_admin_product_path(product), class: "btn btn-sm btn-default")%> </td>

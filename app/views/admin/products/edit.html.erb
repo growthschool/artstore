@@ -8,7 +8,21 @@
       <%= product.input :description %>
       <%= product.input :quantity %>
       <%= product.input :price %>
-      <%= product.input :photo %>
+
+      <% if @photo.image.present? %>
+        <span>目前商品圖</span> <br>
+        <%= image_tag(@photo.image.thumb.url) %>
+      <% end %>
+
+      <div class="form-group">
+        <%= product.simple_fields_for :photo do |c| %>
+          <%= c.input :image, as: :file %>
+        <% end %>
+      </div>
+
+      <!-- <%= product.label :photo %>
+      <%= product.file_field :photo %>
+      -->
     </div>
     <%= product.submit "Submit", class: "btn btn-primary", data: {disable_with: "Submitting..." } %>
   <% end %>
