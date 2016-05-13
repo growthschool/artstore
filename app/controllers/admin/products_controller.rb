@@ -1,0 +1,73 @@
+class Admin::ProductsController < ApplicationController
+
+  layout "admin"
+
+  before_action :authenticate_user!
+  before_action :admin_required
+
+  def index
+    @products = Product.all
+  end
+
+  def new
+    @product = Product.new
+    @form_options = { submit_text: "Add", disable_text: "Adding" }
+
+    @photo = @product.build_photo
+  end
+
+  def create
+    @product = Product.new(product_params)
+
+    if @product.save
+      flash[:success] = "Product added successfully."
+      redirect_to admin_products_path
+    else
+      flash[:alert] = "Oops... Something went wrong. Please add again."
+      render :new
+    end
+  end
+
+  def show
+    @product = Product.find(params[:id])
+  end
+
+  def edit
+    @product = Product.find(params[:id])
+    @form_options = { submit_text: "Update", disable_text: "Updating" }
+
+    if @product.photo.present?
+      @photo = @product.photo
+    else
+      @photo = @product.build_photo
+    end
+  end
+
+  def update
+    @product = Product.find(params[:id])
+
+    if @product.update(product_params)
+      flash[:success] = "Product updated successfully."
+      redirect_to(admin_products_path)
+    else
+      flash[:alert] = "Oops... Something went wrong. Please try again."
+      render :edit
+    end
+  end
+
+  def destroy
+    product = Product.find(params[:id])
+
+    product.destroy
+
+    flash[:success] = "Product deleted successfully."
+    redirect_to(admin_products_path)
+  end
+
+  private
+
+  def product_params
+    params.require(:product).permit(:title, :description, :quantity, :price, photo_attributes: [:image, :id])
+  end
+
+end
