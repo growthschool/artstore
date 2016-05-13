@@ -7,6 +7,32 @@
     <%= f.input :price, required: true, label: "Price", input_html: { class: "form-control", placeholder: "$" } %>
   </div>
 
+  <% if params[:action] == "edit" %>
+    <% if @photo.image.present? %>
+      <h4>Current Product Photo</h4>
+      <%= image_tag(@photo.image.thumb.url) %>
+
+      <div class="form-group">
+        <%= f.simple_fields_for :photo do |c| %>
+          <%= c.input :image, label: "Update Product Photo", as: :file %>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="form-group">
+        <%= f.simple_fields_for :photo do |c| %>
+          <%= c.input :image, as: :file %>
+        <% end %>
+      </div>
+    <% end %>
+  <% elsif params[:action] == "new" %>
+    <div class="form-group">
+    <%= f.simple_fields_for :photo do |c| %>
+      <%= c.input :image, label: "Product Photo", as: :file %>
+    <% end %>
+    </div>
+  <% end %>
+
+
   <%= f.submit @form_options[:submit_text], class: "btn btn-primary", data: { disable_with: @form_options[:disable_text] } %>
   <%= link_to("Cancel", admin_products_path, class: "btn btn-sm btn-warning") %>
 
