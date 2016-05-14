@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'mini_magick'
 
+gem 'font-awesome-rails'
+
 gem 'carrierwave'
 
 gem "simple_form"
