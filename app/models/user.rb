@@ -5,6 +5,14 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   def admin?
-    is_admin
+    return is_admin
+  end
+
+  def to_admin_model
+    self.update_columns(is_admin: true)
+  end
+
+  def to_normal_model
+    self.update_columns(is_admin: false)
   end
 end
