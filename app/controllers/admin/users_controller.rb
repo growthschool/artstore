@@ -9,16 +9,18 @@ end
 def to_admin
 	@user = User.find(params[:id])
 	@user.to_admin
+	flash[:warning] = "User level changed"
 	redirect_to admin_users_path
 end
 
 def to_normal
   @user = User.find(params[:id])
-  if current_user.id != @user.id
-  	flash[:warning] = "Illegal operation attempted on current user",@user,"vs",current_user
+  if current_user.email == @user.email
+  	flash[:alert] = "Illegal operation attempted on current user. You're loggin as",(current_user.email)
 	redirect_to admin_users_path
   else
   	@user.to_normal
+ 	flash[:warning] = "User level changed"
  	redirect_to admin_users_path
   end
 end

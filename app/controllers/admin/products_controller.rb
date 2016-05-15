@@ -17,17 +17,16 @@ class Admin::ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
-  end
-
-  def update
-    @product = Product.find(params[:id])
-    
     if @product.photo.present?
       @photo = @product.photo
     else
       @photo = @product.build_photo
     end
 
+  end
+
+  def update
+    @product = Product.find(params[:id])
     if @product.update(product_params)
       redirect_to admin_products_path
     else
