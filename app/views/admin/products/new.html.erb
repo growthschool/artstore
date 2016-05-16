@@ -1,0 +1,30 @@
+<h2> 新增產品 </h2>
+
+<%= simple_form_for [:admin, @product] do |f| %>
+	
+	<div class="form-group">
+		<%= f.input :title, label: '名稱', input_html: { class: 'form-control' } %>
+	</div>
+
+	<div class="form-group">
+		<%= f.input :description, input_html: { class: 'form-control' } %>
+	</div>
+
+	<div class="form-group">
+		<%= f.input :quantity, input_html: { class: 'form-control' } %>
+	</div>
+
+	<div class="form-group">
+		<%= f.input :price, input_html: { class: 'form-control' } %>
+	</div>
+
+	<div class="form-group">
+		<%= f.simple_fields_for :photo do |c| %>
+			<%= c.input :image, as: :file %>
+		<% end %>		
+	</div>
+
+
+	<%= f.submit "Submit", date: { disable_with: "Submitting..."} %>
+
+<% end %>	
