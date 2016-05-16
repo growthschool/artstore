@@ -35,6 +35,7 @@ gem "awesome_rails_console" # 讓你的 rails console 變整齊漂亮的 gem
 gem "devise"
 gem "bootstrap-sass"
 gem "simple_form"
+gem "aasm"
 
 gem "carrierwave"
 gem "mini_magick"
