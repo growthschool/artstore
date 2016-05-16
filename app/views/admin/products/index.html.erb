@@ -1,0 +1,76 @@
+<h2> Product List </h2>
+<div class="pull-right" style="padding-bottom: 20px;">
+  <%= link_to("新增產品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th width="220">Product Pic</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th width="100"> Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td>
+          <%= product.id %>
+        </td>
+        <td>
+          <%= link_to product_path(product) do %>
+            <% if product.photo.present? %>
+              <%= image_tag(product.photo.image.thumb.url, class: "thumbnail") %>
+            <% else %>
+              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+            <% end %>
+          <% end %>
+        </td>
+        <td>
+          <%= product.title %>
+        </td>
+        <td>
+          <%= product.price %>
+        </td>
+        <td>
+          <%= link_to("Edit", edit_admin_product_path(product)) %>
+          <%= link_to("Delete", admin_products_path, method: :delete, data: {confirm: "Are you sure?"}) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+<!--<div class="col-md-12">
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav navbar-right"> #bootstrap自動做成橫式
+		<li>新增</li>
+		<li>貓</li>
+	</ul>
+</div>
+
+<table class="table table-hover">  
+   <thead>
+   	  <tr>
+   	    <td>商品名稱</td>
+        <td>商品內容</td>
+        <td>商品庫存</td>
+        <td>商品價錢</td>
+   	  </tr>
+
+   </thead>
+   <tbody>
+  <% @products.each do |product| %>
+   <tr>
+      <td> <%= link_to(product.title, admin_product_path(product)) %> </td>
+      <td> <%= product.description %></td>
+      <td> <%= product.quaniity %></td>
+      <td></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>-->

@@ -1,0 +1,36 @@
+<%= simple_form_for [:admin, @product] do |f| %>
+<!--本來是form_for-->
+
+  <div class="group">    <!--101中是用form-group-->
+    <%= f.label("標題") %>
+    <%= f.text_field :title %>
+    <%= f.input :title, label:'商品名稱'%>
+  </div>
+
+  <div class="group">
+    <!--<%= f.label("敘述") %>
+    <%= f.text_area :description %>-->
+    <%= f.input :description, label: "商品內容" %>
+  </div>
+
+  <div class="group">
+    <!--%= f.label("數量") %>
+    <%= f.text_field :quaniity %>-->
+    <%= f.input :quaniity, label: "庫存數量"%>
+  </div>
+
+  <div class="group">
+    <!--<%= f.label("價錢") %>
+    <%= f.text_field :price %>-->
+    <%= f.input :price, label: "價錢"%>
+  </div>
+
+  <div class="group">
+    <%= f.simple_fields_for :photo do |c| %>
+    <%= c.input :image, as: :file %>
+    <% end %>
+  </div>
+
+  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+
+<% end %>
