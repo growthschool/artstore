@@ -7,7 +7,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">Artstore</a>
+    <a class="navbar-brand" href="/">Artstore</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,7 +19,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li>
         <%= link_to "#" do  %>
-          My Cart <i class="fa fa-shopping-cart"></i> (0)
+          My Cart <i class="fa fa-shopping-cart"></i> (<%= render_cart_items_count(current_cart) %>)
         <% end %>
       </li>
 
