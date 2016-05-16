@@ -1,7 +1,7 @@
 class Admin::UsersController < ApplicationController
 layout "admin"
-#before_action :authenticate_user!
-#before_action :admin_required
+before_action :authenticate_user!
+before_action :admin_required
 
 
 
