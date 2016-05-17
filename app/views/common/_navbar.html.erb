@@ -14,8 +14,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
          <li>
-          <%= link_to "#" do  %>
-            購物車 <i class="fa fa-shopping-cart"> </i> (0)
+          <%= link_to carts_path do  %>
+            購物車 <i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
           <% end %>
         </li>
 
@@ -33,6 +33,9 @@
                   <%= link_to("Admin 選單", admin_products_path ) %>
                 </li>
               <% end %>
+              <li>
+                <%= link_to("個人訂單列表", account_orders_path ) %>
+              </li>
               <li>
                 <%= link_to("登出", destroy_user_session_path, method: :delete ) %>
               </li>
