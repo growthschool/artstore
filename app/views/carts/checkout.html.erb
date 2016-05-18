@@ -6,8 +6,9 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th width="80%">商品明細</th>
+          <th width="50%">商品明細</th>
           <th>單價</th>
+          <th>數量</th>
         </tr>
       </thead>
       <tbody>
@@ -18,7 +19,11 @@
               <%= link_to(product.title, product_path(product)) %>
             </td>
             <td>
-              <%= product.price %>
+               <%= product.price %>
+            </td>
+
+            <td>
+               請補上程式碼
             </td>
           </tr>
         <% end %>
