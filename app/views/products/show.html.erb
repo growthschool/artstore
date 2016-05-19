@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-md-6">
+    <% if @product.photo.present? %>
+      <%= image_tag(@product.photo.image.medium.url, class: "img-thumbnail") %>
+    <% else %>
+      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "img-thumbnail") %>
+    <% end %>
+  </div>
+
+  <div class="col-md-6">
+    <h2><%= @product.title %></h2>
+
+    <div style="height: 100px;">
+      <p><%= @product.description %></p>
+    </div>
+
+    <div>Stock: <%= @product.quantity %></div>
+    <div class="product-price">$<%= @product.price %></div>
+
+    <div class="pull-right">
+      <% if @product.quantity > 0 %>
+        <%= link_to("Add to Cart", add_to_cart_product_path(@product), method: :post, class: "btn btn-lg btn-danger") %>
+      <% else %>
+        We’re sorry. This product is out of stock.
+      <% end %>
+    </div>
+  </div>
+</div>
