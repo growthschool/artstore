@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
     cart = Cart.find_by(id: session[:cart_id])
 
     unless cart.present?
+      # if !cart.present? #測試看看直觀寫法行不行。if cart 不存在
       cart = Cart.create
     end
 

@@ -5,7 +5,6 @@
     <tr>
       <th>#</th>
       <th>生成時間</th>
-
     </tr>
   </thead>
   <tbody>
@@ -19,3 +18,35 @@
 
   </tbody>
 </table>
+
+<h6>=== 另外排版 ===</h6>
+
+<div class="container-fluid" id="MD">
+	<div class="row-fluid">
+		<div class="span12">
+			<table class="table table-hover">
+
+<h2>訂單列表 </h2>
+
+				<thead>
+          <tr>
+            <th>order id</th>
+            <th>生成時間</th>
+          </tr>
+				</thead>
+
+				<tbody>
+          <% @orders.each do |order| %>
+          <tr>
+            <td> <%= link_to(order.id, order_path(order.token)) %> </td>
+            <td> <%= order.created_at.to_s(:long) %> </td>
+          </tr>
+          <% end %>
+
+				</tbody>
+
+
+			</table>
+		</div>
+	</div>
+</div>
