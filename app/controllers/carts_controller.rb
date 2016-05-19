@@ -7,4 +7,10 @@ class CartsController < ApplicationController
     @info = @order.build_info
   end
 
+  def clean
+    current_cart.clean!
+    flash[:warning] = "Shopping cart cleared."
+    redirect_to(carts_path)
+  end
+
 end

@@ -8,6 +8,7 @@
         <tr>
           <th width="80%">Items</th>
           <th>Unit Price</th>
+          <th>Amount</th>
         </tr>
       </thead>
       <tbody>
@@ -15,6 +16,7 @@
           <tr>
             <td><%= order_item.product_name %></td>
             <td><%= order_item.price %></td>
+            <td><%= order_item.quantity %></td>
           </tr>
         <% end %>
       </tbody>

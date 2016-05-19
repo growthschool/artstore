@@ -18,7 +18,11 @@
     <div class="product-price">$<%= @product.price %></div>
 
     <div class="pull-right">
-      <%= link_to("Add to Cart", add_to_cart_product_path(@product), method: :post, class: "btn btn-lg btn-danger") %>
+      <% if @product.quantity > 0 %>
+        <%= link_to("Add to Cart", add_to_cart_product_path(@product), method: :post, class: "btn btn-lg btn-danger") %>
+      <% else %>
+        We’re sorry. This product is out of stock.
+      <% end %>
     </div>
   </div>
 </div>

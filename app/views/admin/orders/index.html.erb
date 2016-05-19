@@ -1,0 +1,24 @@
+<h2>All Orders</h2>
+
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Generated on</th>
+      <th>Buyer</th>
+      <th>State</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @orders.each do |order| %>
+    <tr>
+      <td> <%= link_to(order.id, admin_order_path(order) ) %> </td>
+      <td> <%= order.created_at.to_s(:long) %> </td>
+      <td> <%= order.user.email %></td>
+      <td> <%= render_order_state(order) %> </td>
+    </tr>
+    <% end %>
+
+  </tbody>
+</table>
