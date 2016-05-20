@@ -1,6 +1,6 @@
 <h2> Product List </h2>
 <div class="pull-right" style="padding-bottom: 20px;">
-  <%= link_to("新增產品", new_admin_product_path, class: "btn btn-primary btn-sm") %>
+  <%= link_to("新增產品", new_admin_product_path, class: "btn btn-primary btn-lg") %>
 </div>
 <table class="table table-bordered">
   <thead>
@@ -34,7 +34,11 @@
           <%= product.price %>
         </td>
         <td>
-          <%= link_to("Edit", edit_admin_product_path(product)) %>
+
+          <%= link_to( edit_admin_product_path(product), class: 'btn btn-lg btn-info') do %>
+          <i class="glyphicon glyphicon-edit"></i>
+          <% end %>
+
         </td>
       </tr>
     <% end %>
