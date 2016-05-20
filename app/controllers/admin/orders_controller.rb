@@ -37,4 +37,10 @@ class Admin::OrdersController < ApplicationController
         @order.return_good!
         redirect_to :back
     end
+    
+    def show
+      @order = Order.find(params[:id])
+      @order_info = @order.info
+      @order_items = @order.items
+    end
 end
