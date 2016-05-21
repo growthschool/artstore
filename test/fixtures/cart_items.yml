@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cart_id: MyString
+  interger: MyString
+  product_id: MyString
+  interger: MyString
+
+two:
+  cart_id: MyString
+  interger: MyString
+  product_id: MyString
+  interger: MyString
