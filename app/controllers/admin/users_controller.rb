@@ -16,7 +16,7 @@ end
 def to_normal
   @user = User.find(params[:id])
   if current_user.email == @user.email
-  	flash[:alert] = "Illegal operation attempted on current user. You're loggin as",(current_user.email)
+  	flash[:alert] = "Illegal operation attempted on current user. You're loggin as #{(current_user.email)}."
 	redirect_to admin_users_path
   else
   	@user.to_normal
