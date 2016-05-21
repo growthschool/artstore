@@ -57,11 +57,7 @@ root 'products#index'
   #     resources :products
   #   end
   namespace :admin do
-    resources :products do
-      member do
-        post :add_to_cart
-      end
-    end
+    resources :products 
     resources :users do
       member do
         post :to_admin
@@ -69,8 +65,12 @@ root 'products#index'
       end
     end
   end
-  
-  resources :products
+
+  resources :products do
+      member do
+        post :add_to_cart
+      end
+  end
   resources :carts do
     collection do
       post :checkout
