@@ -4,7 +4,7 @@
     <% @products.each do |product| %>
       <div class="col-md-4">
         <div>
-          <%= link_to admin_product_path(product) do %>
+          <%= link_to product_path(product) do %>
             <% if product.photo.present? %>
               <%= image_tag(product.photo.image.thumb.url, class: "thumbnail") %>
             <% else %>
