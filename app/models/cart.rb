@@ -7,4 +7,14 @@ class Cart < ActiveRecord::Base
 		ci.product = product
 		ci.save
 	end
+
+	def total_price
+		sum = 0
+
+		items.each do |item|
+			sum = sum + item.price
+		end
+
+		sum
+	end
 end
