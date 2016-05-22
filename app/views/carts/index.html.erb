@@ -1,11 +1,14 @@
 <div class="row">
 	<div class="col-md-12">
+		<%= link_to("Clear cart", clean_carts_path, method: :delete, class: "pull-right",
+					style: "text-decoration: underline;", data: { Confirmation: "Are you sure?"}) %>
 		<h2> 購物車 </h2>
 		<table class="table table-bordered">
 			<thead>
 				<tr>
 					<th colspan="2"> 商品資訊 </th>
 					<th>單價</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,6 +28,11 @@
 					</td>
 					<td>
 						<%= product.price %>
+					</td>
+					<td>
+						<%= link_to item_path(product), method: :delete do %>
+							<i class="fa fa-trash"></i>
+						<% end %>
 					</td>
 				</tr>
 				<% end %>
