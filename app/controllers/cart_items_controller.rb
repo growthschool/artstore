@@ -3,7 +3,7 @@ class CartItemsController < ApplicationController
 
   def destroy
     @cart = current_cart
-    @item = @cart.cart_items.find_by(product_id: params[:id])
+    @item = @cart.find_cart_item(params[:id])
     @product = @item.product
     @item.destroy
     flash[:warning] = "Remove #{@product.title} Success!"
@@ -25,6 +25,6 @@ class CartItemsController < ApplicationController
   private
 
   def item_params
-  	params.require(:cart_items).permit(:quantity)
+  	params.require(:cart_item).permit(:quantity)
   end
 end
