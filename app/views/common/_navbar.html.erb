@@ -18,6 +18,7 @@
 						<% if !current_user %>
    							<li><%= link_to("登入", new_user_session_path) %></li>
    						<% else %>
+   							<li><%= link_to("個人訂單列表", account_orders_path ) %></li>
    							<% if  current_user.admin? %>
    								<li><%= link_to("Manage products", admin_products_path) %></li>
    								<li> <%= link_to("Manage users", admin_users_path) %> </li>

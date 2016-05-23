@@ -12,6 +12,10 @@
     <div class="row">
       <%= notice_message %>
       <div class="col-md-12">
+        <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+          <li> <%= link_to("Products", admin_products_path) %> </li>
+          <li> <%= link_to("Orders", admin_orders_path) %> </li>
+        </ul>
         <%= yield %>
       </div>
     </div>
