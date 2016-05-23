@@ -75,9 +75,14 @@ root 'products#index'
         post :add_to_cart
       end
   end
+  
   resources :carts do
     collection do
       post :checkout
+      delete :clear
     end
   end
+
+  resources :items, controller: "cart_items"
+
 end

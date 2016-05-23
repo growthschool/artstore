@@ -1,13 +1,16 @@
 <div class="row">
   <div class="col-md-12">
-
     <h2> 購物車 </h2>
-
+    <div class="clear">
+      <%= link_to("清空購物", clear_carts_path, method: :delete, class: "btn btn-lg btn-danger pull-right", data: { confirm: "你確定要清空整個購物車嗎？"} ) %>
+    </div>
     <table class="table table-bordered">
       <thead>
         <tr>
           <th colspan="2">商品資訊</th>
           <th>單價</th>
+          <th>數量</th>
+          <th>更改</th>
         </tr>
       </thead>
       <tbody>
@@ -29,6 +32,19 @@
             <td>
               <%= product.price %>
             </td>
+            <td>
+              <%= item = current_cart.cart_items.find_by(product_id: product) %>
+              <%=  form_for item, url: item_path(product) do |f|%>
+                <%= f.select :quantity, [1,2,3,4,5] %>
+                <%= f.submit "更新", data: { disable_with:"更改中"} %>
+              <% end %>
+            </td>
+            <td>
+              <%= link_to item_path(product), method: :delete do %>
+              <i class="fa fa-trash"></i>
+              <% end %>
+            </td>
+
           </tr>
         <% end %>
 
@@ -44,7 +60,6 @@
     </div>
 
     <hr>
-
     <div class="checkout clearfix">
       <%= link_to("確認結賬", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
     </div>
