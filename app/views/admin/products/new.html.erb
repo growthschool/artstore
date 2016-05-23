@@ -1,0 +1,16 @@
+<%= simple_form_for [:admin, @product] do |f| %>
+
+  <div class="form-group col-md-6">
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :quantity %>
+    <%= f.input :price %>
+    <div class="form-group">
+      <%= f.simple_fields_for :photo do |c| %>
+      <%= c.input :image , as: :file %>
+    <% end %>
+    </div>
+    <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+  </div>
+
+<% end %>
