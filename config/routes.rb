@@ -1,14 +1,45 @@
 Rails.application.routes.draw do
 
+resources :orders do
+  member do
+    get :pay_with_credit_card
+  end
+end
 root 'products#index'
+
+resources :items, controller: "cart_items"
+
+resources :carts do
+  collection do     #複數
+    post :checkout
+    delete :clean  
+  end
+end
 
   devise_for :users
   namespace :admin do
-    resources :products 
+    resources :products
     resources :users
+    resources :orders do
+    member do
+      post :cancel
+      post :ship
+      post :shipped
+      post :return
+    end
+  end
+                  
   end
 
-resources :products  #要加resources才會把這個controller讀進來
+  namespace :account do
+    resources :orders
+  end
+
+resources :products do
+    member do      #單數
+      post :add_to_cart
+    end
+end  #要加resources才會把這個controller讀進來
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

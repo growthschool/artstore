@@ -17,5 +17,9 @@ def notice_message
 
     alerts.join("\n").html_safe
   end
+
+ def render_cart_items_count(cart)  #將程式碼用簡易的語言包裝起來
+   cart.cart_items.count
+ end
 	
 end

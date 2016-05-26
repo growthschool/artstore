@@ -3,10 +3,36 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+   helper_method :current_cart
+
+ def current_cart
+   @current_cart ||= find_cart
+ end
+
+ 
+
  def admin_required
    if !current_user.admin?
      redirect_to "/"
    end
+ end
+
+ private
+
+ def find_cart
+   cart = Cart.find_by(id: session[:cart_id])    
+
+   #find_by用法  若有筆資料id=1但該筆不存在
+   #Order.find(1)->error
+   #Order.find_by(1)->nil
+   #延伸參考where
+
+   unless cart.present?
+     cart = Cart.create
+   end
+
+   session[:cart_id] = cart.id
+   cart
  end
 
 end

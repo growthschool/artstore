@@ -10,8 +10,8 @@
       
      <ul class="nav navbar-nav navbar-right">
       <li>
-          <%= link_to "#" do %>
-          購物車<i class="fa fa-shopping-cart"> </i> (0)
+          <%= link_to carts_path do %>
+          購物車<i class="fa fa-shopping-cart"> </i> ( <%= render_cart_items_count(current_cart) %> )
           <% end %>
       </li>
       <% if !current_user %>
@@ -26,7 +26,9 @@
          <% if current_user.admin? %>
            <li><%= link_to("Admin", admin_products_path ) %></li>
            <li> <%= link_to("Users", admin_users_path) %> </li>
+           <li> <%= link_to("All order", admin_orders_path) %></li>
          <% end %>
+         <li><%= link_to("我的訂單", account_orders_path) %></li>
            <li><%= link_to("登出", destroy_user_session_path, method: :delete) %>
          </ui>
          </li>
