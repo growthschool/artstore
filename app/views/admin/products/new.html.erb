@@ -1,23 +1,41 @@
-<h2> 新增產品 </h2>
-
-<%= simple_form_for [:admin, @product] do |f| %>
-
-  <div class="group">
-  	<%= f.input :title %>
-  </div>
-
-  <div class="group">
-  	<%= f.input :description %>
-  </div>
-
-  <div class="group">
-  	<%= f.input :quantity %>
-  </div>
-
-  <div class="group">
-  	<%= f.input :price %>
-  </div>
-
-  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
-
-<% end %>
+<h2> Product List </h2>
+<div class="pull-right" style="padding-bottom: 20px;">
+</div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th width="220">Product Pic</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th width="100"> Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |Product| %>
+      <tr>
+        <td>
+          <% Product.id %>
+        </td>
+        <td>
+          <%= link_to product_path(product) do %>
+            <% if Product.photo.present? %>
+              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+            <% else %>
+              <%= image_tag(product.photo.image.thumb.url class: "thumbnail") %>
+            <% end %>
+          <% end %>
+        </td>
+        <td>
+          <%= product.title %>
+        </td>
+        <td>
+          <%= product.price %>
+        </td>
+        <td>
+          <%= link_to("Edit", edit_admin_product_path(product)) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
