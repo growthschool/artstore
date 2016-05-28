@@ -2,7 +2,7 @@ class Admin::UsersController < ApplicationController
 
 	layout "admin"
 
-	before_action :autheticate_user!
+	before_action :authenticate_user!
 	before_action :admin_required
 
 	def index

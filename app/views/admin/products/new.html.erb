@@ -12,14 +12,14 @@
     </tr>
   </thead>
   <tbody>
-    <% @products.each do |Product| %>
+    <% @products.each do |product| %>
       <tr>
         <td>
-          <% Product.id %>
+          <% product.id %>
         </td>
         <td>
           <%= link_to product_path(product) do %>
-            <% if Product.photo.present? %>
+            <% if product.photo.present? %>
               <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
             <% else %>
               <%= image_tag(product.photo.image.thumb.url class: "thumbnail") %>
