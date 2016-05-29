@@ -14,10 +14,10 @@ class OrdersController < ApplicationController
 	end
 
 	def show
-		@order = Order.find(params[:id])
-		@order_info = @order.info
-		@order_items = @order_items
-	end
+    @order = Order.find(params[:id])
+    @order_info = @order.info
+    @order_items = @order.items
+  end
 
 	private
 
