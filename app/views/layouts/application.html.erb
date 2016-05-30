@@ -9,9 +9,10 @@
 <body>
 
   <div class="container">
- +    <%= render "common/navbar" %>
- +    <%= yield %>
- +  </div>
+    <%= render "common/navbar" %>
+    <%= notice_message %>
+     <%= yield %>
+   </div>
 
 </body>
 </html>
